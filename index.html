@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Servicios</title>
+    <style>
+        :root {
+            --azul-claro: #e6f0ff;
+            --azul-oscuro: #002B5B;
+            --blanco: #ffffff;
+            --dorado: #FFD700;
+            --negro: #1c1c1c;
+            --mostaza: #e1ad01;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--azul-claro);
+            color: var(--negro);
+        }
+
+        header {
+            background: linear-gradient(to right, var(--azul-oscuro), #004080);
+            color: var(--blanco);
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        header img {
+            max-width: 100px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            color: var(--azul-oscuro);
+            margin-bottom: 1rem;
+        }
+
+        .servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .servicio {
+            background-color: var(--blanco);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .servicio:hover {
+            transform: translateY(-5px);
+        }
+
+        form {
+            background-color: var(--blanco);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: var(--mostaza);
+            color: var(--negro);
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--dorado);
+        }
+
+        footer {
+            background-color: var(--azul-oscuro);
+            color: var(--blanco);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1ebe57;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="tu-logo.png" alt="Logo" />
+        <h1>Tu Nombre o Empresa</h1>
+        <p>Soluciones profesionales a tu alcance</p>
+    </header>
+
+    <section>
+        <h2>Sobre mí</h2>
+        <p>Cuenta aquí quién eres, tu experiencia, tus valores y por qué los clientes deberían elegirte.</p>
+    </section>
+
+    <section>
+        <h2>Servicios</h2>
+        <div class="servicios">
+            <div class="servicio">
+                <h3>Asesoría Financiera</h3>
+                <p>Brindamos soluciones de crédito, cartera y análisis financiero personalizado.</p>
+            </div>
+            <div class="servicio">
+                <h3>Soluciones Digitales</h3>
+                <p>Páginas web, formularios interactivos, automatización de procesos comerciales.</p>
+            </div>
+            <div class="servicio">
+                <h3>Consultoría Comercial</h3>
+                <p>Optimización de tu flujo de ventas, enfoque en resultados y adquisición de clientes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Contacto</h2>
+        <form action="#">
+            <input type="text" placeholder="Tu nombre" required />
+            <input type="email" placeholder="Tu correo electrónico" required />
+            <textarea rows="5" placeholder="Tu mensaje..." required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tu Nombre o Marca. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Botón de WhatsApp -->
+    <a class="whatsapp-btn" href="https://wa.me/573001112223" target="_blank" title="Chatea conmigo por WhatsApp">
+        💬
+    </a>
+
+</body>
+
+</html>
