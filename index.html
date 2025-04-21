@@ -25,14 +25,30 @@
         header {
             background: linear-gradient(to right, var(--azul-oscuro), #004080);
             color: var(--blanco);
-            text-align: center;
             padding: 2rem 1rem;
         }
 
-        header img {
-            max-width: 100px;
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            text-align: left;
+        }
+
+        .header-content img {
+            max-width: 120px;
             border-radius: 50%;
-            margin-bottom: 1rem;
+        }
+
+        .header-content h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .header-content p {
+            margin: 0.2rem 0 0;
         }
 
         section {
@@ -110,20 +126,36 @@
             right: 20px;
             background-color: #25D366;
             color: white;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
+            border-radius: 50px;
+            padding: 1rem 1.5rem;
             display: flex;
-            justify-content: center;
             align-items: center;
-            font-size: 28px;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
             text-decoration: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             z-index: 999;
+            transition: background-color 0.3s ease;
         }
 
         .whatsapp-btn:hover {
             background-color: #1ebe57;
+        }
+
+        .whatsapp-btn .icono {
+            font-size: 1.6rem;
+        }
+
+        .whatsapp-btn .texto {
+            white-space: nowrap;
+        }
+
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -131,9 +163,13 @@
 <body>
 
     <header>
-        <img src="logo.png" alt="Logo" />
-        <h1>Suconsultorfinanciero.online</h1>
-        <p>Soluciones profesionales a tu alcance</p>
+        <div class="header-content">
+            <img src="logo.png" alt="Logo" />
+            <div>
+                <h1>Suconsultorfinanciero.online</h1>
+                <p>Soluciones profesionales a tu alcance</p>
+            </div>
+        </div>
     </header>
 
     <section>
@@ -142,17 +178,11 @@
             gracias a mis más de 15 años de experiencia en varias entidades financieras. Ofrezco actualmente soluciones
             en:
 
-
-
             💰 Compra de cartera
-
-
 
             🏠 Crédito hipotecario: vis(trámite de subsidio si aplica) y no vis
 
-
-
-            🚗 Libre inversión y financiación de vehículoberían elegirte.</p>
+            🚗 Libre inversión y financiación de vehículos</p>
     </section>
 
     <section>
@@ -173,23 +203,14 @@
         </div>
     </section>
 
-    <section>
-        <h2>Contacto</h2>
-        <form action="#">
-            <input type="text" placeholder="Tu nombre" required />
-            <input type="email" placeholder="Tu correo electrónico" required />
-            <textarea rows="5" placeholder="Tu mensaje..." required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
     <footer>
-        <p>&copy; 2025 Tu Nombre o Marca. Todos los derechos reservados.</p>
+        <p>&copy; 2025 SrGetionfinanciera, Suconsultorfinanciero.online. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Botón de WhatsApp -->
-    <a class="whatsapp-btn" href="https://wa.me/573001112223" target="_blank" title="Chatea conmigo por WhatsApp">
-        💬
+    <a class="whatsapp-btn" href="https://wa.me/573167443613" target="_blank" title="Chatea conmigo por WhatsApp">
+        <span class="icono">💬</span>
+        <span class="texto">¡Escríbeme!</span>
     </a>
 
 </body>
