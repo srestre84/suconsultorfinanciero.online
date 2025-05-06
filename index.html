@@ -2,266 +2,196 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mis Servicios</title>
-    <style>
-        :root {
-            --azul-claro: #e6f0ff;
-            --azul-oscuro: #002B5B;
-            --blanco: #ffffff;
-            --dorado: #FFD700;
-            --negro: #1c1c1c;
-            --mostaza: #e1ad01;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Servicios</title>
+  <style>
+    :root {
+      --azul-claro: #e6f0ff;
+      --azul-oscuro: #002B5b;
+      --blanco: #ffffff;
+      --dorado: #ffd700;
+      --negro: #1c1c1c;
+      --mostaza: #e1ad01;
+    }
 
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: var(--azul-claro);
-            color: var(--negro);
-        }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--azul-claro);
+      color: var(--negro);
+    }
 
-        header {
-            background: linear-gradient(to right, var(--azul-oscuro), #004080);
-            color: var(--blanco);
-            padding: 2rem 1rem;
-        }
+    header {
+      background: linear-gradient(to right, var(--azul-oscuro), #004080);
+      color: var(--blanco);
+      padding: 2rem 1rem;
+    }
 
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            text-align: left;
-        }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      text-align: center;
+    }
 
-        .header-content img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            border-radius: 50%;
-        }
+    .header-content img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      border-radius: 50%;
+    }
 
-        .header-content h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
+    .header-content h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
 
-        .header-content p {
-            margin: 0.2rem 0 0;
-        }
+    .header-content p {
+      margin: 0.5rem 0 0;
+      font-size: 1rem;
+    }
 
-        section {
-            padding: 2rem 1rem;
-            max-width: 1000px;
-            margin: auto;
-        }
+    section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-        h2 {
-            color: var(--azul-oscuro);
-            margin-bottom: 1rem;
-        }
+    h2 {
+      color: var(--azul-oscuro);
+      margin-bottom: 1rem;
+    }
 
-        .servicios {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-        }
+    .servicios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
 
-        .servicio {
-            background-color: var(--blanco);
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease;
-        }
+    .servicio {
+      background-color: var(--blanco);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
 
-        .servicio:hover {
-            transform: translateY(-5px);
-        }
+    form {
+      background-color: var(--blanco);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      max-width: 600px;
+      margin: auto;
+    }
 
-        .servicio p {
-            word-wrap: break-word;
-        }
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
 
-        form {
-            background-color: var(--blanco);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            max-width: 600px;
-            margin: auto;
-        }
+    button {
+      background-color: var(--mostaza);
+      color: var(--negro);
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      max-width: 300px;
+    }
 
-        input,
-        textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
+    button:hover {
+      background-color: var(--dorado);
+    }
 
-        button {
-            background-color: var(--mostaza);
-            color: var(--negro);
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            width: 100%;
-            max-width: 300px;
-        }
+    footer {
+      background-color: var(--azul-oscuro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
 
-        button:hover {
-            background-color: var(--dorado);
-        }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50px;
+      padding: 0.8rem 1rem;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+    }
 
-        footer {
-            background-color: var(--azul-oscuro);
-            color: var(--blanco);
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
+    .whatsapp-btn span.icono {
+      font-size: 1.4rem;
+      margin-right: 0.5rem;
+    }
 
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: white;
-            border-radius: 50px;
-            padding: 1rem 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 999;
-            transition: background-color 0.3s ease;
-        }
+    @media (max-width: 600px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+      }
 
-        .whatsapp-btn:hover {
-            background-color: #1ebe57;
-        }
+      .whatsapp-btn span.texto {
+        display: none;
+      }
 
-        .whatsapp-btn .icono {
-            font-size: 1.6rem;
-        }
+      .header-content h1 {
+        font-size: 1.5rem;
+      }
 
-        .whatsapp-btn .texto {
-            white-space: nowrap;
-        }
-
-        @media (max-width: 600px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .servicio {
-                padding: 1rem;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .whatsapp-btn {
-                padding: 0.6rem 1rem;
-                font-size: 1rem;
-            }
-
-            .whatsapp-btn .texto {
-                display: none;
-            }
-        }
-    </style>
+      .header-content p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <header>
-        <div class="header-content">
-            <img src="logo.png" alt="Logo" />
-            <div>
-                <h1>Suconsultorfinanciero.online</h1>
-                <p>Soluciones profesionales a tu alcance con diferentes entidades del mercado financiero Colombiano.</p>
-            </div>
-        </div>
-    </header>
+  <header>
+    <div class="header-content">
+      <img src="logo.png" alt="Logo" />
+      <div>
+        <h1>Suconsultorfinanciero.online</h1>
+        <p>Soluciones profesionales a tu alcance con diferentes entidades del mercado financiero Colombiano.</p>
+      </div>
+    </div>
+  </header>
 
-    <section>
-        <h2>Experiencia y Eficacia.</h2>
-        <p>Como asesor especializado en crédito hipotecario y de consumo, doy una excelente asesoría personalizada
-            gracias a mis más de 15 años de experiencia en varias entidades financieras. Ofrezco actualmente soluciones
-            en:</p>
-        <div>💰 Compra de cartera</div>
-        <div>🏠 Crédito hipotecario: vis(trámite de subsidio si aplica) y no vis</div>
-        <div>🚗 Libre inversión y financiación de vehículos</div>
-    </section>
+  <section>
+    <h2>Experiencia y Eficacia.</h2>
+    <p>Como asesor especializado en crédito hipotecario y de consumo...</p>
+    <!-- resto del contenido -->
+  </section>
 
-    <section>
-        <h2>Servicios</h2>
-        <div class="servicios">
-            <div class="servicio">
-                <h3>Crédito de libre inversión o compra de cartera</h3>
-                <p>Con nuestra asesoría integral se puede enfocar en lo que quiera y el trámite lo realizamos nosotros.
-                    Puede utilizar los recursos del crédito para libre destinación o para mejorar su flujo de caja a
-                    través del producto compra de cartera.
-                    Tasas competitivas y plazos desde 36 meses hasta 72 meses sin codeudor.</p>
-            </div>
-            <div class="servicio">
-                <h3>Crédito para inmuebles</h3>
-                <p>Le brindamos una asesoría integral, si nos informa sobre su proyecto le damos a conocer como quedaría
-                    su plan de pagos y lo que necesita para hacerlo realidad.
-                    Lo asesoramos para una financiación de su futuro hogar o vivienda de inversión con plazos desde 5
-                    años hasta 20 años.
-                    También ofrecemos la asesoría para financiar locales, bodegas, oficinas o créditos de libre
-                    inversión con garantía hipotecaria.</p>
-            </div>
-            <div class="servicio">
-                <h3>Crédito de vehículo, crédito de libranza y asesoría financiera en general</h3>
-                <p>Le brindamos una asesoría integral para que pueda hacer realidad el proyecto de adquirir el vehículo
-                    de sus sueños. Si nos cuenta cuánto necesita, le ayudamos a construir un plan de pagos
-                    personalizado, ajustado a su perfil.
-                    También ofrecemos compra de cartera en créditos de vehículo y la posibilidad de recibir su vehículo
-                    en prenda para obtener un crédito de libre inversión.
-                    Además, contamos con créditos atados a la colilla de pago de pensión. ¡Consulte por los convenios
-                    disponibles y elija la opción que más le convenga! </p>
-            </div>
-        </div>
-    </section>
+  <footer>
+    <p>&copy; 2025 SrGestión Financiera. Todos los derechos reservados.</p>
+  </footer>
 
-    <section>
-        <h2>Simulaciones y Asesoría</h2>
-        <p>💡 Podemos realizar una simulación sin compromiso, para evaluar si alguna de las opciones disponibles te
-            puede beneficiar.</p>
-        <p>🧾 Si lo deseas, puedo enviarte mis datos y números de contacto para que verifiques mi vínculo con las
-            entidades con las que trabajo.</p>
-        <p>Esta información es 100% comercial y sin ninguna obligación de responder.</p>
-        <p>🔒 No utilizo bases de datos externas ni contactos no autorizados. Mi ofrecimiento se basa en referencias
-            construidas a lo largo de mi labor comercial. Solo brindo información si hay interés, y la simulación del
-            producto es totalmente sin compromiso.</p>
-        <p>📈 Las tasas que se presentan en la simulación pueden variar según la entidad financiera y el plazo elegido.
-            Siempre serán comunicadas con total transparencia, ya que están sujetas a cambios del mercado.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 SrGestión Financiera, Suconsultorfinanciero.online. Todos los derechos reservados.</p>
-    </footer>
-
-    <a class="whatsapp-btn" href="https://wa.me/573167443613" target="_blank" title="Chatea conmigo por WhatsApp">
-        <span class="icono">💬</span>
-        <span class="texto">¡Escríbeme!</span>
-    </a>
+  <a class="whatsapp-btn" href="https://wa.me/573167443613" target="_blank" title="Chatea conmigo por WhatsApp">
+    <span class="icono">💬</span>
+    <span class="texto">¡Escríbeme!</span>
+  </a>
 
 </body>
 
 </html>
+
