@@ -38,7 +38,9 @@
         }
 
         .header-content img {
+            width: 100%;
             max-width: 200px;
+            height: auto;
             border-radius: 50%;
         }
 
@@ -52,7 +54,7 @@
         }
 
         section {
-            padding: 2rem;
+            padding: 2rem 1rem;
             max-width: 1000px;
             margin: auto;
         }
@@ -80,11 +82,17 @@
             transform: translateY(-5px);
         }
 
+        .servicio p {
+            word-wrap: break-word;
+        }
+
         form {
             background-color: var(--blanco);
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            max-width: 600px;
+            margin: auto;
         }
 
         input,
@@ -106,6 +114,8 @@
             font-weight: bold;
             cursor: pointer;
             transition: background-color 0.3s;
+            width: 100%;
+            max-width: 300px;
         }
 
         button:hover {
@@ -156,6 +166,21 @@
                 flex-direction: column;
                 text-align: center;
             }
+
+            .servicio {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .whatsapp-btn {
+                padding: 0.6rem 1rem;
+                font-size: 1rem;
+            }
+
+            .whatsapp-btn .texto {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -202,7 +227,6 @@
                     inversión con garantía hipotecaria.</p>
             </div>
             <div class="servicio">
-
                 <h3>Crédito de vehículo, crédito de libranza y asesoría financiera en general</h3>
                 <p>Le brindamos una asesoría integral para que pueda hacer realidad el proyecto de adquirir el vehículo
                     de sus sueños. Si nos cuenta cuánto necesita, le ayudamos a construir un plan de pagos
@@ -215,7 +239,6 @@
         </div>
     </section>
 
-    <!-- Nueva sección agregada -->
     <section>
         <h2>Simulaciones y Asesoría</h2>
         <p>💡 Podemos realizar una simulación sin compromiso, para evaluar si alguna de las opciones disponibles te
@@ -234,7 +257,6 @@
         <p>&copy; 2025 SrGestión Financiera, Suconsultorfinanciero.online. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Botón de WhatsApp -->
     <a class="whatsapp-btn" href="https://wa.me/573167443613" target="_blank" title="Chatea conmigo por WhatsApp">
         <span class="icono">💬</span>
         <span class="texto">¡Escríbeme!</span>
