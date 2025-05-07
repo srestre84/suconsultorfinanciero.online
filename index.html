@@ -29,20 +29,21 @@
     }
 
 .header-content img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  border-radius: 10px; /* O mantenlo en 50% si quieres que siga siendo redonda */
-  border: 2px solid red; /* Solo si quieres ver claramente el borde */
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid red;
+  flex-shrink: 0;
+}
+.header-content div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
 }
 
 
-    .header-content img {
-      width: 100%;
-      max-width: 130px;
-      height: auto;
-      border-radius: 50%;
-    }
 
     .header-content h1 {
       margin: 0;
