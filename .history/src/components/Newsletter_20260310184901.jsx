@@ -45,17 +45,16 @@ function Newsletter() {
                 return;
             }
 
-            // 2. Guardar en Base de Datos Real (Firestore) de forma optimista
-            console.log('2. Guardando nuevo suscriptor en Firestore (en segundo plano)...');
-            // Quitamos el await para que no bloquee si hay problemas de red con el WebSocket de Firebase
-            const firestorePromise = addDoc(collection(db, "subscribers"), {
+            // 2. Guardar en Base de Datos Real (Firestore)
+            console.log('2. Guardando nuevo suscriptor en Firestore...');
+            await addDoc(collection(db, "subscribers"), {
                 email: email.toLowerCase(),
                 subscribedAt: serverTimestamp(),
                 source: "Website Lead Magnet"
-            }).then(() => console.log('2.5. Guardado exitoso en Firestore'))
-                .catch(err => console.error('Error silencioso en Firestore:', err));
+            });
+            console.log('2.5. Guardado exitoso en Firestore');
 
-            // 3. EmailJS para la respuesta automática al cliente
+            // 3. Mantener EmailJS para la respuesta automática al cliente
             console.log('3. Configurando EmailJS...');
             const SERVICE_ID = 'service_63my3xq';
             const TEMPLATE_ID = 'template_dx8wg88';
