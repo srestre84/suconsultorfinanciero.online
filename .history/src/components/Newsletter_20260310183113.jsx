@@ -52,9 +52,9 @@ function Newsletter() {
             // 3. Mantener EmailJS para la respuesta automática al cliente
             const SERVICE_ID = 'service_63my3xq';
             const TEMPLATE_ID = 'template_dx8wg88';
-            const PUBLIC_KEY = 'qko6zRF0TXzmgmBlU';
+            const PUBLIC_KEY = 'TU_PUBLIC_KEY_AQUI'; // Falta rellenar
 
-            if (PUBLIC_KEY !== 'TU_PUBLIC_KEY_AQUI') {
+            if (!PUBLIC_KEY.includes('TU_PUBLIC_KEY')) {
                 const templateParams = { user_email: email };
                 await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
             }
