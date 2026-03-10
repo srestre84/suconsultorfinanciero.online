@@ -1,0 +1,64 @@
+.header-glass {
+    background: linear-gradient(135deg, rgba(0, 43, 91, 0.95) 0%, rgba(0, 64, 128, 0.9) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--blanco-puro);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 12px;
+    background-color: var(--blanco-puro);
+    padding: 5px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--blanco-puro);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-text p {
+    margin: 0.25rem 0 0;
+    font-size: 0.95rem;
+    color: var(--azul-claro);
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .header-text h1 {
+        font-size: 1.3rem;
+    }
+}

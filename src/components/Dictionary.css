@@ -1,0 +1,108 @@
+.dictionary-wrapper {
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.dict-subtitle {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #a0aec0;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3.5rem;
+    font-size: 1.1rem;
+    border: 2px solid var(--glass-border);
+    border-radius: 50px;
+    outline: none;
+    background: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.search-input:focus {
+    border-color: var(--mostaza);
+    box-shadow: 0 4px 20px rgba(225, 173, 1, 0.15);
+}
+
+.terms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.term-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--azul-oscuro);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.term-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.term-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.term-header h3 {
+    margin: 0;
+    color: var(--azul-oscuro);
+    font-size: 1.2rem;
+}
+
+.term-category {
+    font-size: 0.75rem;
+    background: var(--azul-claro);
+    color: var(--azul-oscuro);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.term-def {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.term-val {
+    font-size: 0.9rem;
+    background: #f7fafc;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin: 0;
+    color: var(--negro);
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: #718096;
+    font-size: 1.1rem;
+}
