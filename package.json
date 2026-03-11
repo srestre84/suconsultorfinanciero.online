@@ -3,13 +3,13 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://srestre84.github.io/suconsultorfinanciero.online/",
+  "homepage": "https://suconsultorfinanciero.online",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "echo suconsultorfinanciero.online > dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
