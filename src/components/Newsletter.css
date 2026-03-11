@@ -83,7 +83,7 @@
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
     box-shadow: 0 4px 15px rgba(225, 173, 1, 0.4) !important;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 .newsletter-btn:hover:not(:disabled) {

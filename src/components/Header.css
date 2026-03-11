@@ -122,6 +122,8 @@
 
     .header-title {
         font-size: 1.1rem;
+        white-space: normal;
+        text-align: center;
     }
 
     .header-nav {

@@ -115,4 +115,8 @@
     .insta-icon-wrapper {
         margin: 0 auto;
     }
+
+    .insta-btn {
+        white-space: normal;
+    }
 }
