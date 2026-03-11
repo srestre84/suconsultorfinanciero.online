@@ -6,6 +6,7 @@ import Dictionary from '../components/Dictionary';
 import Newsletter from '../components/Newsletter';
 import Consulting from '../components/Consulting';
 import Testimonials from '../components/Testimonials';
+import RateCalculator from '../components/RateCalculator';
 
 function Home() {
     return (
@@ -43,20 +44,15 @@ function Home() {
             <InstagramSection />
             <Dictionary />
 
-            {/* Sección de Chatbot Avanzado */}
-            <section className="section-padding container">
-                <div className="glass animate-fade-in delay-2" style={{ padding: '3rem 2rem', borderRadius: '20px', textAlign: 'center', background: 'linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,248,220,0.9) 100%)', boxShadow: '0 10px 30px rgba(225, 173, 1, 0.1)' }}>
-                    <h2 style={{ color: 'var(--azul-oscuro)' }}>Asistente Financiero Inteligente 🤖</h2>
-                    <p style={{ maxWidth: '800px', margin: '1rem auto', fontSize: '1.1rem' }}>
-                        Nuestro chatbot interactivo ubicado en la esquina inferior derecha <strong>ahora puede convertir cualquier tipo de tasa de interés</strong>.
+            {/* Sección de Calculadora de Tasas en línea */}
+            <section className="section-padding container" id="calculadora">
+                <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+                    <h2 style={{ color: 'var(--azul-oscuro)' }}>Convierte tus Tasas Fácilmente 🧮</h2>
+                    <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem' }}>
+                        Ya no dependas del chatbot. Usa directamente nuestra calculadora interactiva para convertir cualquier tasa de crédito del mercado.
                     </p>
-                    <ul style={{ textAlign: 'left', maxWidth: '600px', margin: '1.5rem auto', fontSize: '1.05rem', lineHeight: '1.8' }}>
-                        <li>✅ <strong>Versatilidad:</strong> Ingresa la tasa que te ofrece tu banco (Ej: <em>15% EA</em>, <em>2% MV</em>, o <em>5% TV</em>).</li>
-                        <li>✅ <strong>Detección Automática:</strong> Reconoce el tipo de tasa (Efectiva Anual, Mes Vencido, Trimestre Vencido o Semestre Vencido).</li>
-                        <li>✅ <strong>Conversión Total:</strong> Te entrega al instante las equivalencias exactas en el resto de los formatos del mercado colombiano.</li>
-                    </ul>
-                    <p style={{ fontWeight: '600', color: 'var(--mostaza)', fontSize: '1.1rem' }}>¡Abre el chat y pruébalo ahora mismo!</p>
                 </div>
+                <RateCalculator />
             </section>
 
             {/* Nueva Sección de Testimonios (Social Proof) */}

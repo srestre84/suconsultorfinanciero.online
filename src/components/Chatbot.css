@@ -156,10 +156,8 @@
     background: var(--mostaza);
 }
 
-@media (max-width: 480px) {
-    .chatbot-window {
-        width: calc(100vw - 40px);
-        right: 20px;
-        bottom: 90px;
+@media (max-width: 768px) {
+    .chatbot-container {
+        display: none !important;
     }
 }
