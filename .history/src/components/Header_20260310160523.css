@@ -1,0 +1,103 @@
+.header-glass {
+    background: var(--header-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--blanco-puro);
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: background 0.4s ease;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.header-brand {
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 50px;
+    /* Logo más pequeño para un diseño slim */
+    height: 50px;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: var(--blanco-puro);
+    padding: 4px;
+    box-shadow: 0 2px 10px rgba(255, 215, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.header-title {
+    margin: 0;
+    font-size: 1.3rem;
+    /* Título un poco más pequeño */
+    color: var(--blanco-puro);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+}
+
+/* --- Nuevos Estilos de Navegación --- */
+.header-nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--blanco-puro);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--mostaza);
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+/* Enlace resaltado (Ej: Blog) */
+.nav-highlight {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    color: var(--mostaza);
+}
+
+.nav-highlight:hover {
+    background-color: var(--mostaza);
+    color: var(--azul-oscuro);
+    text-shadow: none;
+}
+
+/* --- Ajuste para móviles --- */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .header-title {
+        font-size: 1.1rem;
+    }
+
+    .header-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}

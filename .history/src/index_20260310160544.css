@@ -1,0 +1,121 @@
+:root {
+  --azul-claro: #e6f0ff;
+  --azul-oscuro: #002B5b;
+  --blanco: rgba(255, 255, 255, 0.9);
+  --blanco-puro: #ffffff;
+  --dorado: #ffd700;
+  --mostaza: #e1ad01;
+
+  /* Theming Variables */
+  --bg-gradient: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
+  --text-main: #1c1c1c;
+  --text-muted: #4a5568;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+body.dark-mode {
+  --azul-oscuro: #60A5FA;
+  /* Brighter blue for contrast on dark bg */
+  --bg-gradient: linear-gradient(135deg, #0a1128 0%, #1a202c 100%);
+  --text-main: #f0f8ff;
+  --text-muted: #a0aec0;
+  --glass-bg: rgba(10, 25, 47, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  min-height: 100vh;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+/* Global typography */
+h1,
+h2,
+h3 {
+  color: var(--azul-oscuro);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--mostaza);
+  border-radius: 2px;
+}
+
+p {
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
