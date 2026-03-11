@@ -58,9 +58,9 @@ function Newsletter() {
 
             // 3. EmailJS para la respuesta automática al cliente
             console.log('3. Configurando EmailJS...');
-            const SERVICE_ID = 'service_63my3xq';
-            const TEMPLATE_ID = 'template_dx8wg88';
-            const PUBLIC_KEY = 'qko6zRF0TXzmgmBlU';
+            const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+            const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+            const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
             if (PUBLIC_KEY !== 'TU_PUBLIC_KEY_AQUI') {
                 const templateParams = { user_email: email };
