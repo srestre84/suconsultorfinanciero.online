@@ -31,13 +31,16 @@ const Header = () => {
             <div className="container header-container">
                 <div className="header-brand">
                     <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '1rem', textDecoration: 'none' }}>
-                        <img src="/logo.png" alt="Su Consultor Financiero Logo" className="logo" />
+                        <div className="logo-wrapper">
+                            <img src="/logo.png" alt="Su Consultor Financiero Logo" className="logo" />
+                        </div>
                         <h1 className="header-title">Suconsultorfinanciero.online</h1>
                     </Link>
                 </div>
 
-                <nav className="header-nav" style={{ display: 'flex', alignItems: 'center' }}>
+                <nav className="header-nav" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                     <Link to="/" className="nav-link">Inicio</Link>
+                    <Link to="/privacidad" className="nav-link">Privacidad</Link>
                     <Link to="/blog" className="nav-link nav-highlight" style={{ marginRight: '1rem' }}>Blog Financiero</Link>
 
                     {/* Botón Toggle Dark Mode */}

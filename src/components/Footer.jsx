@@ -15,7 +15,8 @@ const Footer = () => {
                     <div className="footer-section">
                         <h3>Contacto</h3>
                         <p>📱 WhatsApp: <a href="https://wa.me/573167443613">+57 316 744 3613</a></p>
-                        <p>✉️ info@suconsultorfinanciero.online</p>
+                        <p>📸 Instagram: <a href="https://www.instagram.com/sebastian.restrepor/" target="_blank" rel="noopener noreferrer">@sebastian.restrepor</a></p>
+                        <p>✉️ sebastian.restrepo@suconsultorfinanciero.online</p>
                     </div>
                 </div>
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { collection, addDoc, serverTimestamp, query, where, getDocs } from 'firebase/firestore';
 import { db } from '../config/firebase';
+import './Newsletter.css';
 
 function Newsletter() {
     const [email, setEmail] = useState('');
@@ -84,55 +85,60 @@ function Newsletter() {
 
     if (isSubscribed) {
         return (
-            <div className="glass" style={{ padding: '2rem', borderRadius: '15px', textAlign: 'center', marginTop: '2rem', borderLeft: '4px solid var(--mostaza)' }}>
-                <h3 style={{ color: 'var(--azul-oscuro)' }}>¡Material Desbloqueado! 🎁</h3>
-                <p>Revisa tu bandeja de entrada (y la carpeta de Spam por si acaso). Ya te hemos enviado la **Plantilla de Gastos Inteligente**. ¡Disfruta tu nuevo superpoder financiero y participa en los comentarios de nuestro blog! 🚀</p>
-                {message && message.includes('Nota') && (
-                    <p style={{ marginTop: '1rem', color: '#856404', fontSize: '0.9rem' }}>{message}</p>
-                )}
+            <div className="newsletter-container">
+                <div className="newsletter-blob-1"></div>
+                <div className="newsletter-blob-2"></div>
+                <div className="newsletter-content-wrapper">
+                    <h3 className="newsletter-title" style={{color: 'var(--blanco-puro) !important'}}>¡Material Desbloqueado! 🎁</h3>
+                    <p className="newsletter-desc">
+                        Revisa tu bandeja de entrada (y la carpeta de Spam por si acaso). Ya te hemos enviado la <strong>Plantilla de Gastos Inteligente</strong>. ¡Disfruta tu nuevo superpoder financiero y participa en los comentarios de nuestro blog! 🚀
+                    </p>
+                    {message && message.includes('Nota') && (
+                        <p className="newsletter-message" style={{ color: '#ffd700' }}>{message}</p>
+                    )}
+                </div>
             </div>
         );
     }
 
     return (
-        <div className="glass shadow-hover" style={{ padding: '2rem', borderRadius: '15px', textAlign: 'center', marginTop: '2rem', transition: 'all 0.3s ease', position: 'relative', overflow: 'hidden' }}>
-            <div style={{ position: 'absolute', top: '-20px', right: '-20px', background: 'var(--mostaza)', color: 'var(--azul-oscuro)', padding: '2rem 3rem 0.5rem 3rem', transform: 'rotate(45deg)', fontWeight: 'bold' }}>
-                GRATIS
+        <div className="newsletter-container animate-fade-in delay-3">
+            <div className="newsletter-blob-1"></div>
+            <div className="newsletter-blob-2"></div>
+            
+            <div className="newsletter-badge">GRATIS</div>
+            
+            <div className="newsletter-content-wrapper">
+                <h3 className="newsletter-title">Descarga la Plantilla de Gastos Inteligente</h3>
+                <p className="newsletter-desc">
+                    Descubre cómo optimizar tus finanzas en minutos. Ingresa tu mejor correo y te enviaremos nuestra herramienta en Excel para que tomes el control de tu dinero al instante.
+                </p>
+
+                <form onSubmit={handleSubmit} className="newsletter-form">
+                    <input
+                        type="email"
+                        placeholder="Tu mejor correo electrónico..."
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        disabled={isLoading}
+                        className="newsletter-input"
+                        required
+                    />
+                    <button
+                        type="submit"
+                        className="newsletter-btn"
+                        disabled={isLoading}
+                    >
+                        {isLoading ? 'Enviando...' : 'Descargar Plantilla Ahora 👉'}
+                    </button>
+                </form>
+
+                {message && (
+                    <div className="newsletter-message" style={{ color: message.includes('error') ? '#ff6b6b' : '#a7f3d0' }}>
+                        {message}
+                    </div>
+                )}
             </div>
-            <h3 style={{ color: 'var(--azul-oscuro)', marginBottom: '1rem', fontSize: '1.8rem' }}>Descarga la Plantilla de Gastos Inteligente</h3>
-            <p style={{ marginBottom: '1.5rem', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 1.5rem auto' }}>
-                Descubre cómo optimizar tus finanzas en minutos. Ingresa tu mejor correo y te enviaremos nuestra herramienta en Excel para que tomes el control de tu dinero al instante.
-            </p>
-
-            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px', margin: '0 auto' }}>
-                <input
-                    type="email"
-                    placeholder="Tu correo electrónico"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    disabled={isLoading}
-                    style={{
-                        padding: '0.8rem 1rem',
-                        borderRadius: '8px',
-                        border: '1px solid #ccc',
-                        fontSize: '1rem'
-                    }}
-                />
-                <button
-                    type="submit"
-                    className="btn btn-primary"
-                    disabled={isLoading}
-                    style={{
-                        width: '100%',
-                        opacity: isLoading ? 0.7 : 1,
-                        cursor: isLoading ? 'not-allowed' : 'pointer'
-                    }}
-                >
-                    {isLoading ? 'Enviando...' : 'Descargar Plantilla Ahora 👉'}
-                </button>
-            </form>
-
-            {message && <p style={{ marginTop: '1rem', color: message.includes('error') ? 'red' : 'var(--azul-oscuro)' }}>{message}</p>}
         </div>
     );
 }

@@ -88,6 +88,6 @@ export const blogData = [
         `,
         date: "2026-03-15",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1589758438368-0e1ce403ef88?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "https://images.unsplash.com/photo-1556740714-a8395b3bf30f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     }
 ];

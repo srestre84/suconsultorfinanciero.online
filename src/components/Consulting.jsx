@@ -44,12 +44,14 @@ const Consulting = () => {
                     <h3 style={{ color: 'var(--azul-oscuro)', marginBottom: '1rem', fontSize: '1.8rem', fontWeight: '800' }}>¿Necesitas una Sesión de Trabajo?</h3>
                     <p style={{ marginBottom: '1.5rem', fontSize: '1.15rem', fontWeight: '500' }}>Agenda una consultoría 1 a 1 para estructurar un plan de acción real, basado en números, no en intuición.</p>
 
-                    {/* Botón CTA (Llamado a la Acción). Redirige al correo electrónico predeterminado del dispositivo */}
+                    {/* Botón CTA (Llamado a la Acción). Redirige al WhatsApp para mejor conversión */}
                     <a
-                        href="mailto:contacto@suconsultorfinanciero.online?subject=Solicitud%20de%20Consultoría%20Financiera&body=Hola,%20me%20gustaría%20agendar%20una%20consultoría%20financiera%20para%20evaluar%20mi%20caso."
+                        href="https://wa.me/573167443613?text=Hola,%20Sebastián.%20Me%20gustaría%20agendar%20una%20consultoría%20financiera%20para%20evaluar%20mi%20caso."
+                        target="_blank"
+                        rel="noopener noreferrer"
                         style={{ display: 'inline-block', fontSize: '1.2rem', padding: '1rem 2.5rem', backgroundColor: 'var(--azul-oscuro)', color: '#ffffff', fontWeight: 'bold', borderRadius: '30px', textDecoration: 'none', boxShadow: '0 4px 15px rgba(0, 43, 91, 0.4)', transition: 'transform 0.2s ease' }}
                     >
-                        Solicitar Consultoría
+                        Solicitar Consultoría por WhatsApp 📱
                     </a>
                 </div>
             </div>

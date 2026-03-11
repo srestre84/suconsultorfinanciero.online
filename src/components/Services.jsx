@@ -16,6 +16,16 @@ const servicesData = [
         title: "Crédito de vehículo, libranza y asesoría general",
         description: "Le brindamos una asesoría integral para que pueda hacer realidad el proyecto de adquirir el vehículo de sus sueños. Si nos cuenta cuánto necesita, le ayudamos a construir un plan de pagos personalizado, ajustado a su perfil. También ofrecemos compra de cartera en créditos de vehículo y la posibilidad de recibir su vehículo en prenda para obtener un crédito de libre inversión. Además, contamos con créditos atados a la colilla de pago de pensión.",
         icon: "🚗"
+    },
+    {
+        title: "Crédito constructor individual en condominios",
+        description: "Recibe el acompañamiento experto para financiar la construcción de tu vivienda a medida. Te ayudamos a estructurar la mejor opción de crédito que te permita ir obteniendo desembolsos conforme al avance de obra de tu nuevo hogar dentro del condominio soñado.",
+        icon: "🏗️"
+    },
+    {
+        title: "Venta de lotes y apartamentos (Próximamente)",
+        description: "Sección en construcción 🚧. Muy pronto encontrarás aquí excelentes oportunidades de inversión inmobiliaria con opciones de lotes y apartamentos que nos refieren directamente, ideales para construir tu patrimonio.",
+        icon: "🏢"
     }
 ];
 

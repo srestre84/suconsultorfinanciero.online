@@ -15,7 +15,7 @@ const InstagramSection = () => {
                             <p>Mantente actualizado con los mejores consejos financieros, tips de ahorro y novedades del mercado en Colombia.</p>
                         </div>
                         <a
-                            href="https://www.instagram.com/tu_perfil_aqui"
+                            href="https://www.instagram.com/sebastian.restrepor/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="insta-btn"

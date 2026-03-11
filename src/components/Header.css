@@ -1,15 +1,15 @@
 .header-glass {
-    background: var(--header-bg);
+    background: var(--glass-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--blanco-puro);
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--azul-oscuro);
     padding: 0.8rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    transition: background 0.4s ease;
+    box-shadow: var(--shadow);
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
 .header-container {
@@ -23,28 +23,37 @@
     flex-shrink: 0;
 }
 
-.logo {
-    width: 50px;
-    /* Logo más pequeño para un diseño slim */
-    height: 50px;
-    object-fit: contain;
+.logo-wrapper {
+    width: 55px;
+    height: 55px;
     border-radius: 8px;
     background-color: var(--blanco-puro);
-    padding: 4px;
     box-shadow: 0 2px 10px rgba(255, 215, 0, 0.2);
     transition: transform 0.3s ease;
+    overflow: hidden; /* Crucial para recortar el texto */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.logo:hover {
+.logo-wrapper:hover {
     transform: scale(1.05);
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Hacemos un zoom al logo y lo anclamos arriba (barras) para que el texto (abajo) quede oculto */
+    transform: scale(1.6) translateY(8%);
+    transform-origin: top center;
 }
 
 .header-title {
     margin: 0;
     font-size: 1.3rem;
-    /* Título un poco más pequeño */
-    color: var(--blanco-puro);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 800;
+    color: var(--azul-oscuro);
     white-space: nowrap;
 }
 
@@ -56,32 +65,32 @@
 }
 
 .nav-link {
-    color: var(--blanco-puro);
+    color: var(--azul-oscuro);
     text-decoration: none;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     padding: 0.5rem;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .nav-link:hover {
     color: var(--mostaza);
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
 }
 
 /* Enlace resaltado (Ej: Blog) */
 .nav-highlight {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 215, 0, 0.4);
+    background-color: var(--azul-claro);
+    border: 1px solid var(--azul-claro);
     border-radius: 20px;
     padding: 0.4rem 1rem;
-    color: var(--mostaza);
+    color: var(--azul-oscuro);
+    transition: all 0.3s ease;
 }
 
 .nav-highlight:hover {
     background-color: var(--mostaza);
-    color: var(--azul-oscuro);
-    text-shadow: none;
+    border-color: var(--mostaza);
+    color: var(--blanco-puro);
 }
 
 /* Dark Mode Toggle Button */
@@ -96,11 +105,11 @@
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    color: var(--blanco-puro);
+    color: var(--azul-oscuro);
 }
 
 .theme-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--glass-bg);
     transform: scale(1.1);
 }
 
