@@ -6,19 +6,27 @@ const Consulting = () => {
         {
             icon: "💵",
             title: "Optimización de Flujo de Caja",
-            description: "Análisis exhaustivo de ingresos y egresos para liberar liquidez mensual. Reestructuramos tus deudas actuales para evitar asfixia financiera."
+            description: "Análisis exhaustivo de ingresos y egresos para liberar liquidez mensual. Reestructuramos tus deudas actuales para evitar asfixia financiera.",
+            whatsappMessage: "Hola, me interesa la Optimización de Flujo de Caja."
         },
         {
             icon: "📈",
             title: "Manejo de Capital",
-            description: "Estrategias personalizadas para destinar excedentes o abonos a capital. ¿Pagar la cuota, reducir el plazo o invertir el dinero? Te damos la respuesta matemática."
+            description: "Estrategias personalizadas para destinar excedentes o abonos a capital. ¿Pagar la cuota, reducir el plazo o invertir el dinero? Te damos la respuesta matemática.",
+            whatsappMessage: "Hola, me interesa el Manejo de Capital y reducción de deuda."
         },
         {
             icon: "📊",
             title: "Análisis del Mercado",
-            description: "Interpretamos por ti los movimientos de tasas (EA, MV, etc.) y la macroeconomía actual para decidir en qué banco o entidad te conviene estar hoy."
+            description: "Interpretamos por ti los movimientos de tasas (EA, MV, etc.) y la macroeconomía actual para decidir en qué banco o entidad te conviene estar hoy.",
+            whatsappMessage: "Hola, me interesa un Análisis del Mercado para mi crédito."
         }
     ];
+
+    const handleWhatsAppClick = (message) => {
+        const encodedMessage = encodeURIComponent(message);
+        window.open(`https://wa.me/573167443613?text=${encodedMessage}`, '_blank');
+    };
 
     return (
         <section className="consulting-section section-padding container">
@@ -32,10 +40,24 @@ const Consulting = () => {
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
                     {consultingAreas.map((area, index) => (
-                        <div key={index} className="glass shadow-hover" style={{ padding: '2rem', borderRadius: '15px', display: 'flex', flexDirection: 'column', alignItems: 'center', transition: 'transform 0.3s ease' }}>
+                        <div 
+                            key={index} 
+                            className="glass shadow-hover" 
+                            onClick={() => handleWhatsAppClick(area.whatsappMessage)}
+                            style={{ 
+                                padding: '2rem', 
+                                borderRadius: '15px', 
+                                display: 'flex', 
+                                flexDirection: 'column', 
+                                alignItems: 'center', 
+                                transition: 'transform 0.3s ease',
+                                cursor: 'pointer'
+                            }}
+                        >
                             <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>{area.icon}</div>
                             <h3 style={{ color: 'var(--azul-oscuro)', fontSize: '1.3rem', marginBottom: '1rem' }}>{area.title}</h3>
                             <p style={{ fontSize: '1rem', color: '#444', lineHeight: '1.6' }}>{area.description}</p>
+                            <span style={{ marginTop: '1rem', color: 'var(--azul-oscuro)', fontWeight: '700', fontSize: '0.9rem' }}>Consultar ahora →</span>
                         </div>
                     ))}
                 </div>

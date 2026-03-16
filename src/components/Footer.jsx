@@ -8,7 +8,7 @@ const Footer = () => {
             <footer className="footer">
                 <div className="container footer-content">
                     <div className="footer-section">
-                        <img src="/logo.png" alt="Su Consultor Financiero Logo" className="footer-logo" />
+                        <img src="/logo.png" alt="Logotipo de Su Consultor Financiero - Estrategia y Control" className="footer-logo" />
                         <p>Soluciones profesionales a tu alcance con diferentes entidades del mercado financiero Colombiano.</p>
                     </div>
 

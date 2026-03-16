@@ -1,10 +1,14 @@
-import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Privacy = () => {
     return (
-        <div className="container" style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto', color: '#444' }}>
-            <div className="glass" style={{ padding: '3rem', borderRadius: '20px' }}>
-                <h1 style={{ color: 'var(--azul-oscuro)', marginBottom: '2rem', fontSize: '2.5rem' }}>Política de Privacidad y Tratamiento de Datos</h1>
+        <main className="container" style={{ padding: '2rem 1rem', maxWidth: '800px', margin: '0 auto', color: '#444' }}>
+            <Helmet>
+                <title>Política de Privacidad | Su Consultor Financiero</title>
+                <meta name="description" content="Conoce cómo protegemos tus datos y garantizamos tu privacidad y habeas data." />
+            </Helmet>
+            <div className="glass" style={{ padding: '2rem', borderRadius: '20px' }}>
+                <h1 style={{ color: 'var(--azul-oscuro)', marginBottom: '2rem', fontSize: '2.2rem' }}>Política de Privacidad y Tratamiento de Datos</h1>
 
                 <p style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>
                     Última actualización: {new Date().toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}
@@ -44,7 +48,7 @@ const Privacy = () => {
                     Al utilizar nuestro sitio web, usted acepta nuestra política de privacidad. Todo el tratamiento se rige bajo la buena fe, las políticas y leyes del marco aplicable en la recolección internacional de los datos. Para más inquietudes contáctenos a nuestro modelo oficial de gestión de correo o canal empresarial de mensajería (WhatsApp).
                 </p>
             </div>
-        </div>
+        </main>
     );
 };
 

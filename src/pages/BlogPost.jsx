@@ -56,9 +56,42 @@ function BlogPost() {
                         <h1 style={{ color: 'var(--azul-oscuro)', fontSize: '2.5rem', marginBottom: '1rem', lineHeight: '1.2' }}>
                             {post.title}
                         </h1>
-                        <div style={{ fontSize: '0.9rem', color: '#666', marginBottom: '2rem', display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                        <div style={{ fontSize: '0.9rem', color: '#666', marginBottom: '2rem', display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
                             <span style={{ fontWeight: 'bold' }}>✍️ {post.author}</span>
                             <span>📅 {post.date}</span>
+                            
+                            {/* Compartir */}
+                            <div className="prop-share" style={{ borderTop: 'none', padding: 0, margin: 0 }}>
+                                <div className="prop-share-btns">
+                                    <button 
+                                        onClick={() => {
+                                            const shareText = `¡Mira este artículo! ${post.title}`;
+                                            window.open(`https://wa.me/?text=${encodeURIComponent(shareText + ' ' + currentUrl)}`, '_blank');
+                                        }} 
+                                        title="Compartir en WhatsApp" 
+                                        className="prop-share-btn prop-share-btn--ws"
+                                    >
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-7.6 8.38 8.38 0 0 1 3.8.9L22 7l-1.5 5.5Z"/></svg>
+                                    </button>
+                                    <button 
+                                        onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`, '_blank')} 
+                                        title="Compartir en Facebook" 
+                                        className="prop-share-btn prop-share-btn--fb"
+                                    >
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                                    </button>
+                                    <button 
+                                        onClick={() => {
+                                            navigator.clipboard.writeText(currentUrl);
+                                            alert('¡Enlace copiado al portapapeles!');
+                                        }} 
+                                        title="Copiar enlace" 
+                                        className="prop-share-btn prop-share-btn--copy"
+                                    >
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </header>
 

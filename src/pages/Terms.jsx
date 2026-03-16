@@ -1,10 +1,14 @@
-import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Terms = () => {
     return (
-        <div className="container" style={{ padding: '4rem 2rem', maxWidth: '800px', margin: '0 auto', color: '#444' }}>
-            <div className="glass" style={{ padding: '3rem', borderRadius: '20px' }}>
-                <h1 style={{ color: 'var(--azul-oscuro)', marginBottom: '2rem', fontSize: '2.5rem' }}>Términos y Condiciones</h1>
+        <main className="container" style={{ padding: '2rem 1rem', maxWidth: '800px', margin: '0 auto', color: '#444' }}>
+            <Helmet>
+                <title>Términos y Condiciones | Su Consultor Financiero</title>
+                <meta name="description" content="Lee nuestros términos y condiciones de uso para entender el marco legal de nuestras asesorías financieras." />
+            </Helmet>
+            <div className="glass" style={{ padding: '2rem', borderRadius: '20px' }}>
+                <h1 style={{ color: 'var(--azul-oscuro)', marginBottom: '2rem', fontSize: '2.2rem' }}>Términos y Condiciones</h1>
 
                 <p style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>
                     Última actualización: {new Date().toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}
@@ -35,7 +39,7 @@ const Terms = () => {
                     Podemos revisar estos términos de servicio para nuestro sitio web en cualquier momento sin previo aviso. Al utilizar este sitio web, usted acepta estar sujeto a la versión actual de estos términos de servicio.
                 </p>
             </div>
-        </div>
+        </main>
     );
 };
 

@@ -7,6 +7,8 @@ import Newsletter from '../components/Newsletter';
 import Consulting from '../components/Consulting';
 import Testimonials from '../components/Testimonials';
 import RateCalculator from '../components/RateCalculator';
+import Mission from '../components/Mission';
+import Hero from '../components/Hero';
 
 function Home() {
     return (
@@ -30,16 +32,9 @@ function Home() {
                 <meta property="twitter:image" content="https://suconsultorfinanciero.online/logo.png" />
             </Helmet>
 
-            {/* Sección de Experiencia/Confianza (Simplificada del index.html original) */}
-            <section className="section-padding container">
-                <div className="glass" style={{ padding: '3rem 2rem', borderRadius: '20px', textAlign: 'center' }}>
-                    <h2 className="animate-fade-in delay-1">Experiencia y Eficacia</h2>
-                    <p className="animate-fade-in delay-2" style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem' }}>
-                        Como asesor especializado en crédito hipotecario y de consumo, he ayudado a decenas de clientes a mejorar su flujo de caja. Trabajo con entidades reconocidas para ofrecer las mejores tasas y condiciones para compra de cartera, libre inversión y financiación de vivienda.
-                    </p>
-                </div>
-            </section>
+            <Hero />
 
+            <Mission />
             <Services />
             <InstagramSection />
             <Dictionary />
@@ -74,7 +69,6 @@ function Home() {
                 </div>
             </section>
 
-            {/* Newsletter Subscription */}
             <section className="section-padding container">
                 <Newsletter />
             </section>

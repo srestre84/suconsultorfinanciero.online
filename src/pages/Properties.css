@@ -1,0 +1,154 @@
+/* ==========================================
+   PROPERTIES PAGE
+   ========================================== */
+
+.properties-page {
+    min-height: 80vh;
+}
+
+/* Hero */
+.prop-hero {
+    background: linear-gradient(160deg, #f0f6ff 0%, #e8f2ff 50%, #fffbf0 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.prop-hero::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 86, 179, 0.07) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.prop-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.prop-hero-title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    color: var(--azul-oscuro, #002b5b);
+    margin: 1rem 0;
+    line-height: 1.25;
+}
+
+.prop-hero-subtitle {
+    font-size: 1.05rem;
+    color: #4a5568;
+    line-height: 1.75;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Section label */
+.prop-section-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--azul-oscuro, #002b5b);
+    margin-bottom: 2rem;
+    letter-spacing: 0.03em;
+}
+
+/* Grid */
+.prop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.prop-grid--sold {
+    opacity: 0.65;
+    filter: grayscale(0.4);
+}
+
+/* Empty state */
+.prop-empty {
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    color: #4a5568;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.prop-empty span {
+    font-size: 3rem;
+}
+
+/* Advisory banner */
+.prop-advisory-banner {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 2.5rem;
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+.prop-advisory-icon {
+    font-size: 2.8rem;
+    flex-shrink: 0;
+}
+
+.prop-advisory-banner h3 {
+    font-size: 1.2rem;
+    color: var(--azul-oscuro, #002b5b);
+    margin: 0 0 0.4rem;
+}
+
+.prop-advisory-banner p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin: 0;
+    line-height: 1.65;
+}
+
+.prop-advisory-banner > div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.prop-advisory-btn {
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--azul-oscuro, #002b5b), var(--azul-claro, #0056b3));
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.prop-advisory-btn:hover {
+    opacity: 0.88;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .prop-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prop-advisory-banner {
+        padding: 1.5rem 1.2rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .prop-advisory-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

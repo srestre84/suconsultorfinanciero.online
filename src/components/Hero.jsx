@@ -1,0 +1,63 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Hero.css';
+
+const Hero = () => {
+    return (
+        <section className="hero-section">
+            <div className="hero-overlay"></div>
+            <div className="container hero-container">
+                <div className="hero-content">
+                    <div className="hero-badge animate-fade-in">
+                        <span className="badge-dot"></span>
+                        Asesoría Financiera Especializada
+                    </div>
+                    
+                    <h1 className="hero-title animate-fade-in delay-1">
+                        Tu Futuro <span className="text-gradient">Económico</span>, <br />
+                        Bajo Tu Propio <span className="text-highlight">Control</span>
+                    </h1>
+                    
+                    <p className="hero-subtitle animate-fade-in delay-2">
+                        Dejamos de lado las conjeturas. Usamos estrategia matemática y perfilamiento experto para optimizar tus deudas y maximizar tu flujo de caja.
+                    </p>
+                    
+                    <div className="hero-actions animate-fade-in delay-3">
+                        <a 
+                            href="https://wa.me/573167443613?text=Hola%2C%20quiero%20una%20consultor%C3%ADa%20financiera" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="btn-hero-primary"
+                        >
+                            <span className="btn-icon">💬</span>
+                            Consultoría Gratis
+                        </a>
+                        <Link to="/#servicios" className="btn-hero-secondary">
+                            Ver Servicios
+                        </Link>
+                    </div>
+
+                    <div className="hero-stats animate-fade-in delay-3">
+                        <div className="stat-item">
+                            <span className="stat-value">+10</span>
+                            <span className="stat-label">Años de Experiencia</span>
+                        </div>
+                        <div className="stat-divider"></div>
+                        <div className="stat-item">
+                            <span className="stat-value">100%</span>
+                            <span className="stat-label">Transparencia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div className="hero-scroll-indicator">
+                <div className="mouse">
+                    <div className="wheel"></div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Hero;
