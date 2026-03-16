@@ -1,0 +1,55 @@
+
+.prop-preview-section {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.prop-preview-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.prop-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.prop-preview-footer {
+    text-align: center;
+}
+
+.btn-view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: var(--azul-oscuro);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 43, 91, 0.2);
+}
+
+.btn-view-all:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 43, 91, 0.3);
+    background: #004080; /* A slightly lighter blue for hover effect */
+}
+
+.prop-preview-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(46, 204, 113, 0.1);
+    color: #2ecc71;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

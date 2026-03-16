@@ -6,7 +6,7 @@ const InstagramSection = () => {
         <section className="insta-section delay-2 animate-fade-in" id="instagram">
             <div className="container">
                 <div className="insta-card glass">
-                    <div className="insta-content">
+                    <div className="insta-header">
                         <div className="insta-icon-wrapper">
                             <span className="insta-icon">📸</span>
                         </div>
@@ -22,6 +22,19 @@ const InstagramSection = () => {
                         >
                             Visitar Perfil
                         </a>
+                    </div>
+                    
+                    {/* Nueva cuadrícula de vista previa */}
+                    <div className="insta-grid">
+                        {[1, 2, 3, 4, 5, 6].map(i => (
+                            <div key={i} className="insta-grid-item">
+                                <img src={`/instagram/post${i}.png?v=1`} alt={`Instagram post ${i}`} />
+                                <div className="insta-grid-overlay">
+                                    <span>❤️</span>
+                                    <span>💬</span>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

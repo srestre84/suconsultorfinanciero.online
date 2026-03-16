@@ -9,6 +9,10 @@ import Testimonials from '../components/Testimonials';
 import RateCalculator from '../components/RateCalculator';
 import Mission from '../components/Mission';
 import Hero from '../components/Hero';
+import PropertyCard from '../components/PropertyCard';
+import { properties } from '../data/properties';
+import './PropertyPreview.css';
+
 
 function Home() {
     return (
@@ -37,6 +41,34 @@ function Home() {
             <Mission />
             <Services />
             <InstagramSection />
+
+            {/* Nueva Sección de Vista Previa de Inmuebles */}
+            <section className="section-padding container prop-preview-section" id="inmuebles">
+                <div className="prop-preview-header">
+                    <span className="prop-preview-badge">Oportunidades</span>
+                    <h2 style={{ color: 'var(--azul-oscuro)' }}>Inmuebles Destacados 🏠</h2>
+                    <p style={{ maxWidth: '700px', margin: '1rem auto', fontSize: '1.1rem' }}>
+                        Propiedades seleccionadas para tu próxima inversión con acompañamiento financiero garantizado.
+                    </p>
+                </div>
+
+                <div className="prop-preview-grid">
+                    {properties
+                        .filter(p => p.estado === 'Disponible')
+                        .slice(0, 3)
+                        .map(prop => (
+                            <PropertyCard key={prop.id} property={prop} />
+                        ))}
+                </div>
+
+                <div className="prop-preview-footer">
+                    <a href="#/inmuebles" className="btn-view-all">
+                        Ver todos los inmuebles
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </a>
+                </div>
+            </section>
+
             <Dictionary />
 
             {/* Sección de Calculadora de Tasas en línea */}
