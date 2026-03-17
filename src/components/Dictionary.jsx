@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { dictionaryData } from '../data/dictionaryData';
 import './Dictionary.css';
 
@@ -11,20 +12,21 @@ const Dictionary = () => {
         item.category.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    const handleShare = async (item) => {
+    const handleShare = async (e, item) => {
+        e.stopPropagation();
+        const shareUrl = `${window.location.origin}/diccionario/${item.id}`;
         const shareData = {
             title: `${item.term} | Diccionario Financiero`,
             text: `Aprende qué es ${item.term}: ${item.definition}`,
-            url: window.location.href, // Compartirá la URL actual (idealmente apuntaría a un anchor link del diccionario)
+            url: shareUrl,
         };
 
         try {
             if (navigator.share) {
                 await navigator.share(shareData);
             } else {
-                // Fallback para navegadores que no soportan Web Share API
                 await navigator.clipboard.writeText(`${shareData.title}\n${shareData.text}\n${shareData.url}`);
-                alert("¡Definición copiada al portapapeles! Puedes pegarla en tus redes.");
+                alert("¡Definición copiada al portapapeles!");
             }
         } catch (err) {
             console.error('Error compartiendo:', err);
@@ -60,17 +62,26 @@ const Dictionary = () => {
                                     <p className="term-def">{item.definition}</p>
                                     {item.value && <p className="term-val"><strong>Dato clave:</strong> {item.value}</p>}
 
-                                    <button
-                                        onClick={() => handleShare(item)}
-                                        className="share-btn"
-                                        title="Compartir en redes"
-                                        style={{ marginTop: '1rem', background: 'none', border: '1px solid var(--mostaza)', color: 'var(--azul-oscuro)', borderRadius: '20px', padding: '0.4rem 1rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem', transition: 'all 0.3s ease', fontSize: '0.9rem', fontWeight: 'bold' }}
-                                    >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                            <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .6 1.6l-3.3 1.65a2.5 2.5 0 0 1 0 1.5l3.3 1.65a2.5 2.5 0 1 1-.8 1.45l-3.3-1.65a2.5 2.5 0 1 1 0-2.4l3.3-1.65A2.5 2.5 0 0 1 11 2.5zm-5 5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
-                                        </svg>
-                                        Compartir
-                                    </button>
+                                    <div style={{ display: 'flex', gap: '0.5rem', marginTop: '1rem', flexWrap: 'wrap' }}>
+                                        <Link
+                                            to={`/diccionario/${item.id}`}
+                                            className="btn btn-outline"
+                                            style={{ padding: '0.4rem 0.8rem', fontSize: '0.85rem', flex: 1, textAlign: 'center' }}
+                                        >
+                                            🔍 Ver significado
+                                        </Link>
+                                        <button
+                                            onClick={(e) => handleShare(e, item)}
+                                            className="share-btn"
+                                            title="Compartir en redes"
+                                            style={{ background: 'none', border: '1px solid var(--mostaza)', color: 'var(--azul-oscuro)', borderRadius: '20px', padding: '0.4rem 1rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem', transition: 'all 0.3s ease', fontSize: '0.9rem', fontWeight: 'bold' }}
+                                        >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .6 1.6l-3.3 1.65a2.5 2.5 0 0 1 0 1.5l3.3 1.65a2.5 2.5 0 1 1-.8 1.45l-3.3-1.65a2.5 2.5 0 1 1 0-2.4l3.3-1.65A2.5 2.5 0 0 1 11 2.5zm-5 5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
+                                            </svg>
+                                            Compartir
+                                        </button>
+                                    </div>
                                 </div>
                             ))
                         ) : (

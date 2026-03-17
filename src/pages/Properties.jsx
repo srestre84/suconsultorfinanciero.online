@@ -4,7 +4,22 @@ import PropertyCard from '../components/PropertyCard';
 import { properties } from '../data/properties';
 import './Properties.css';
 
+import { useParams } from 'react-router-dom';
+
 function Properties() {
+    const { id: routeId } = useParams();
+
+    React.useEffect(() => {
+        if (routeId) {
+            const element = document.getElementById(routeId);
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+            }
+        }
+    }, [routeId]);
+
     const disponibles = properties.filter(p => p.estado === 'Disponible');
     const vendidos = properties.filter(p => p.estado !== 'Disponible');
 
@@ -19,14 +34,14 @@ function Properties() {
 
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://suconsultorfinanciero.online/#/inmuebles" />
+                <meta property="og:url" content="https://suconsultorfinanciero.online/inmuebles" />
                 <meta property="og:title" content="Inmuebles en Venta | Su Consultor Financiero" />
                 <meta property="og:description" content="Encuentra apartamentos y lotes en venta con asesoría financiera incluida. Itagüí, Medellín y Antioquia." />
                 <meta property="og:image" content="https://suconsultorfinanciero.online/apt-la-inmaculada.png" />
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://suconsultorfinanciero.online/#/inmuebles" />
+                <meta property="twitter:url" content="https://suconsultorfinanciero.online/inmuebles" />
                 <meta property="twitter:title" content="Inmuebles en Venta | Su Consultor Financiero" />
                 <meta property="twitter:description" content="Encuentra apartamentos y lotes en venta con asesoría financiera incluida. Itagüí, Medellín y Antioquia." />
                 <meta property="twitter:image" content="https://suconsultorfinanciero.online/apt-la-inmaculada.png" />

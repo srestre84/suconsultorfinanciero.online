@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Services from '../components/Services';
 import InstagramSection from '../components/InstagramSection';
 import Dictionary from '../components/Dictionary';
@@ -14,7 +15,22 @@ import { properties } from '../data/properties';
 import './PropertyPreview.css';
 
 
+import { useParams } from 'react-router-dom';
+
 function Home() {
+    const { id: routeId } = useParams();
+
+    React.useEffect(() => {
+        if (routeId) {
+            const element = document.getElementById(routeId);
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+            }
+        }
+    }, [routeId]);
+
     return (
         <main>
             <Helmet>
@@ -62,10 +78,10 @@ function Home() {
                 </div>
 
                 <div className="prop-preview-footer">
-                    <a href="#/inmuebles" className="btn-view-all">
+                    <Link to="/inmuebles" className="btn-view-all">
                         Ver todos los inmuebles
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-                    </a>
+                    </Link>
                 </div>
             </section>
 

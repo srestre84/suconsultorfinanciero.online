@@ -6,6 +6,20 @@ const Terms = () => {
             <Helmet>
                 <title>Términos y Condiciones | Su Consultor Financiero</title>
                 <meta name="description" content="Lee nuestros términos y condiciones de uso para entender el marco legal de nuestras asesorías financieras." />
+                
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://suconsultorfinanciero.online/terminos" />
+                <meta property="og:title" content="Términos y Condiciones | Su Consultor Financiero" />
+                <meta property="og:description" content="Lee nuestros términos y condiciones de uso para entender el marco legal de nuestras asesorías financieras." />
+                <meta property="og:image" content="https://suconsultorfinanciero.online/logo.png" />
+
+                {/* Twitter */}
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://suconsultorfinanciero.online/terminos" />
+                <meta property="twitter:title" content="Términos y Condiciones | Su Consultor Financiero" />
+                <meta property="twitter:description" content="Lee nuestros términos y condiciones de uso para entender el marco legal de nuestras asesorías financieras." />
+                <meta property="twitter:image" content="https://suconsultorfinanciero.online/logo.png" />
             </Helmet>
             <div className="glass" style={{ padding: '2rem', borderRadius: '20px' }}>
                 <h1 style={{ color: 'var(--azul-oscuro)', marginBottom: '2rem', fontSize: '2.2rem' }}>Términos y Condiciones</h1>

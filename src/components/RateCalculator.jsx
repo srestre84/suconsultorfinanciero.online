@@ -49,9 +49,25 @@ const RateCalculator = () => {
 
     return (
         <div className="rate-calculator animate-fade-in delay-2">
-            <div className="rate-calculator-header">
+            <div className="rate-calculator-header" style={{ position: 'relative' }}>
                 <h3>🧮 Calculadora de Tasas</h3>
                 <p>Convierte cualquier tasa de interés a todas sus equivalencias al instante.</p>
+                <div style={{ marginTop: '0.5rem' }}>
+                    <button 
+                        onClick={() => {
+                            const url = `${window.location.origin}/calculadora`;
+                            if (navigator.share) {
+                                navigator.share({ title: 'Calculadora de Tasas', url }).catch(console.error);
+                            } else {
+                                navigator.clipboard.writeText(url);
+                                alert('Link de calculadora copiado');
+                            }
+                        }}
+                        style={{ background: 'none', border: 'none', color: 'var(--mostaza)', cursor: 'pointer', fontSize: '0.9rem', fontWeight: 'bold', textDecoration: 'underline', padding: 0 }}
+                    >
+                        🔗 Compartir herramienta
+                    </button>
+                </div>
             </div>
 
             <form onSubmit={calculateRates} className="rate-form">

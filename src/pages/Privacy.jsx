@@ -6,6 +6,20 @@ const Privacy = () => {
             <Helmet>
                 <title>Política de Privacidad | Su Consultor Financiero</title>
                 <meta name="description" content="Conoce cómo protegemos tus datos y garantizamos tu privacidad y habeas data." />
+                
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://suconsultorfinanciero.online/privacidad" />
+                <meta property="og:title" content="Política de Privacidad | Su Consultor Financiero" />
+                <meta property="og:description" content="Conoce cómo protegemos tus datos y garantizamos tu privacidad y habeas data." />
+                <meta property="og:image" content="https://suconsultorfinanciero.online/logo.png" />
+
+                {/* Twitter */}
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://suconsultorfinanciero.online/privacidad" />
+                <meta property="twitter:title" content="Política de Privacidad | Su Consultor Financiero" />
+                <meta property="twitter:description" content="Conoce cómo protegemos tus datos y garantizamos tu privacidad y habeas data." />
+                <meta property="twitter:image" content="https://suconsultorfinanciero.online/logo.png" />
             </Helmet>
             <div className="glass" style={{ padding: '2rem', borderRadius: '20px' }}>
                 <h1 style={{ color: 'var(--azul-oscuro)', marginBottom: '2rem', fontSize: '2.2rem' }}>Política de Privacidad y Tratamiento de Datos</h1>

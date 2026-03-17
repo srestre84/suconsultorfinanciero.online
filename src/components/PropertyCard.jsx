@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './PropertyCard.css';
 
 const formatPrice = (price) =>
@@ -22,7 +23,7 @@ const PropertyCard = ({ property }) => {
 
     const whatsappUrl = `https://wa.me/${contacto.whatsapp}?text=${encodeURIComponent(contacto.texto)}`;
 
-    const shareUrl = `${window.location.origin}${window.location.pathname}#/inmuebles#${property.id}`;
+    const shareUrl = `${window.location.origin}/inmuebles/${property.id}`;
     const shareText = `¡Mira esta propiedad! ${titulo} - ${precioFormateado}`;
 
     const handleShare = (platform) => {
@@ -168,14 +169,24 @@ const PropertyCard = ({ property }) => {
                 </div>
 
                 {/* CTA */}
-                <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="prop-card-btn"
-                >
-                    💬 Consultar por WhatsApp
-                </a>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                    <Link
+                        to={`/inmuebles/${property.id}`}
+                        className="btn btn-outline"
+                        style={{ width: '100%', textAlign: 'center', padding: '0.8rem' }}
+                    >
+                        🔍 Ver detalles completos
+                    </Link>
+                    <a
+                        href={whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="prop-card-btn"
+                        style={{ margin: 0 }}
+                    >
+                        💬 Consultar por WhatsApp
+                    </a>
+                </div>
             </div>
         </article>
     );

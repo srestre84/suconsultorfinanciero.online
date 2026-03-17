@@ -17,14 +17,14 @@ function Blog() {
                 
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://suconsultorfinanciero.online/#/blog" />
+                <meta property="og:url" content="https://suconsultorfinanciero.online/blog" />
                 <meta property="og:title" content="Blog Financiero | Educación y Estrategia" />
                 <meta property="og:description" content="Artículos y guías para tomar mejores decisiones con tu dinero y entender el sistema financiero colombiano." />
                 <meta property="og:image" content="https://suconsultorfinanciero.online/logo.png" />
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://suconsultorfinanciero.online/#/blog" />
+                <meta property="twitter:url" content="https://suconsultorfinanciero.online/blog" />
                 <meta property="twitter:title" content="Blog Financiero | Educación y Estrategia" />
                 <meta property="twitter:description" content="Artículos y guías para tomar mejores decisiones con tu dinero." />
                 <meta property="twitter:image" content="https://suconsultorfinanciero.online/logo.png" />
@@ -74,7 +74,7 @@ function Blog() {
                                                 onClick={(e) => {
                                                     e.preventDefault();
                                                     e.stopPropagation();
-                                                    const shareUrl = `${window.location.origin}${window.location.pathname}#/blog/${post.id}`;
+                                                    const shareUrl = `${window.location.origin}/blog/${post.id}`;
                                                     const shareText = `¡Mira este artículo! ${post.title}`;
                                                     window.open(`https://wa.me/?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`, '_blank');
                                                 }} 
@@ -87,7 +87,7 @@ function Blog() {
                                                 onClick={(e) => {
                                                     e.preventDefault();
                                                     e.stopPropagation();
-                                                    const shareUrl = `${window.location.origin}${window.location.pathname}#/blog/${post.id}`;
+                                                    const shareUrl = `${window.location.origin}/blog/${post.id}`;
                                                     window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank');
                                                 }} 
                                                 title="Compartir en Facebook" 

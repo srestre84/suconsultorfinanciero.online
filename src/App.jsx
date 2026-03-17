@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { useEffect } from 'react';
 import Header from './components/Header';
@@ -10,8 +10,12 @@ import BlogPost from './pages/BlogPost';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Properties from './pages/Properties';
+import PropertyDetail from './pages/PropertyDetail';
+import ServiceDetail from './pages/ServiceDetail';
+import DictionaryDetail from './pages/DictionaryDetail';
+import CalculatorDetail from './pages/CalculatorDetail';
 
-// Componente para manejar el scroll a anclas (ID) con HashRouter
+// Componente para manejar el scroll a anclas (ID)
 function ScrollToHash() {
     const { hash } = useLocation();
 
@@ -35,7 +39,7 @@ function ScrollToHash() {
 function App() {
     return (
         <HelmetProvider>
-            <HashRouter 
+            <BrowserRouter 
                 future={{ 
                     v7_startTransition: true, 
                     v7_relativeSplatPath: true 
@@ -51,11 +55,15 @@ function App() {
                         <Route path="/terminos" element={<Terms />} />
                         <Route path="/privacidad" element={<Privacy />} />
                         <Route path="/inmuebles" element={<Properties />} />
+                        <Route path="/inmuebles/:id" element={<PropertyDetail />} />
+                        <Route path="/servicios/:id" element={<ServiceDetail />} />
+                        <Route path="/diccionario/:id" element={<DictionaryDetail />} />
+                        <Route path="/calculadora" element={<CalculatorDetail />} />
                     </Routes>
                     <Footer />
                     <Chatbot />
                 </div>
-            </HashRouter>
+            </BrowserRouter>
         </HelmetProvider>
     );
 }

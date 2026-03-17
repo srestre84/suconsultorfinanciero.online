@@ -22,7 +22,7 @@ function BlogPost() {
         );
     }
 
-    const currentUrl = `https://suconsultorfinanciero.online/#/blog/${post.id}`;
+    const currentUrl = `https://suconsultorfinanciero.online/blog/${post.id}`;
 
     return (
         <main>
