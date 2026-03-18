@@ -31,6 +31,10 @@ function DictionaryDetail() {
                 <meta property="og:description" content={item.definition} />
                 <meta property="og:url" content={currentUrl} />
                 <meta property="og:image" content="https://suconsultorfinanciero.online/dictionary-preview.png" />
+                <meta property="og:image:secure_url" content="https://suconsultorfinanciero.online/dictionary-preview.png" />
+                <meta property="og:image:type" content="image/png" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:title" content={`${item.term} - Diccionario Financiero`} />
                 <meta property="twitter:description" content={item.definition} />

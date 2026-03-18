@@ -34,6 +34,10 @@ function ServiceDetail() {
                 <meta property="og:description" content={service.description} />
                 <meta property="og:url" content={currentUrl} />
                 <meta property="og:image" content={`https://suconsultorfinanciero.online/${serviceImage}`} />
+                <meta property="og:image:secure_url" content={`https://suconsultorfinanciero.online/${serviceImage}`} />
+                <meta property="og:image:type" content="image/png" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:title" content={service.title} />
                 <meta property="twitter:description" content={service.description} />

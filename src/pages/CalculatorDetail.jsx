@@ -21,6 +21,10 @@ function CalculatorDetail() {
                 <meta property="og:description" content={description} />
                 <meta property="og:url" content={currentUrl} />
                 <meta property="og:image" content="https://suconsultorfinanciero.online/calculator-preview.png" />
+                <meta property="og:image:secure_url" content="https://suconsultorfinanciero.online/calculator-preview.png" />
+                <meta property="og:image:type" content="image/png" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={title} />
                 <meta name="twitter:description" content={description} />
