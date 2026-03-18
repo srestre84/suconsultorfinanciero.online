@@ -14,7 +14,7 @@ export const servicesData = [
         description: "Mejora tu flujo de caja a través del producto compra de cartera. Unificamos tus deudas con tasas preferenciales para que pagues menos intereses mensualmente y recuperes tu tranquilidad financiera.",
         icon: "📉",
         whatsappMessage: "Hola, me interesa el servicio de Compra de Cartera.",
-        shareMessage: "📉 **Ahorra en Intereses con Compra de Cartera** | Mejor tu flujo de caja y unifica tus deudas con una asesoría profesional. ¡Mira cómo aquí!",
+        shareMessage: "📉 **Ahorra en Intereses con Compra de Cartera** | Mejora tu flujo de caja y unifica tus deudas con una asesoría profesional. ¡Mira cómo aquí!",
         image: "service_libre_inversion.png"
     },
     {
