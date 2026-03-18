@@ -21,6 +21,25 @@ function DictionaryDetail() {
     }
 
     const currentUrl = `https://suconsultorfinanciero.online/diccionario/${item.id}`;
+    const shareMessage = `📖 **Glosario Financiero | ${item.term}**: ${item.definition.substring(0, 100)}... Aprende más términos financieros aquí:`;
+
+    const handleShare = async () => {
+        const shareData = {
+            title: `${item.term} | Diccionario Financiero`,
+            text: shareMessage,
+            url: currentUrl
+        };
+
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+            } catch (err) {
+                console.log("Error sharing", err);
+            }
+        } else {
+            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareMessage + ' ' + currentUrl)}`, '_blank');
+        }
+    };
 
     return (
         <main className="dictionary-detail-page">

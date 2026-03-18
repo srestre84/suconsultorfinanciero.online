@@ -21,7 +21,25 @@ function ServiceDetail() {
     }
 
     const currentUrl = `https://suconsultorfinanciero.online/servicios/${service.id}`;
-    const whatsappUrl = `https://wa.me/573167443613?text=${encodeURIComponent(service.whatsappMessage)}`;
+    const whatsappConsultUrl = `https://api.whatsapp.com/send?phone=573167443613&text=${encodeURIComponent(service.whatsappMessage)}`;
+
+    const handleShare = async () => {
+        const shareData = {
+            title: service.title,
+            text: service.shareMessage,
+            url: currentUrl
+        };
+
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+            } catch (err) {
+                console.log("Error sharing", err);
+            }
+        } else {
+            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(service.shareMessage + ' ' + currentUrl)}`, '_blank');
+        }
+    };
 
     const serviceImage = service.image || 'services-preview.png';
 
@@ -60,15 +78,24 @@ function ServiceDetail() {
 
                     <div className="share-links-top" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '2rem' }}>
                         <span style={{ fontSize: '0.9rem', color: '#666', alignSelf: 'center' }}>Compartir:</span>
-                        <button onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent(service.shareMessage + ' ' + currentUrl)}`, '_blank')} className="prop-share-btn prop-share-btn--ws" style={{ width: '35px', height: '35px' }}>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-7.6 8.38 8.38 0 0 1 3.8.9L22 7l-1.5 5.5Z" /></svg>
-                        </button>
-                        <button onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`, '_blank')} className="prop-share-btn prop-share-btn--fb" style={{ width: '35px', height: '35px' }}>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
-                        </button>
-                        <button onClick={() => { navigator.clipboard.writeText(service.shareMessage + ' ' + currentUrl); alert('¡Copiado!'); }} className="prop-share-btn prop-share-btn--copy" style={{ width: '35px', height: '35px' }}>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>
-                        </button>
+                        {navigator.share ? (
+                            <button onClick={handleShare} className="btn btn-secondary btn-sm" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderRadius: '12px', padding: '0.5rem 1rem' }}>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                                Compartir servicio
+                            </button>
+                        ) : (
+                            <>
+                                <button onClick={() => window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(service.shareMessage + ' ' + currentUrl)}`, '_blank')} className="prop-share-btn prop-share-btn--ws" style={{ width: '35px', height: '35px' }}>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-7.6 8.38 8.38 0 0 1 3.8.9L22 7l-1.5 5.5Z" /></svg>
+                                </button>
+                                <button onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`, '_blank')} className="prop-share-btn prop-share-btn--fb" style={{ width: '35px', height: '35px' }}>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+                                </button>
+                                <button onClick={() => { navigator.clipboard.writeText(service.shareMessage + ' ' + currentUrl); alert('¡Copiado!'); }} className="prop-share-btn prop-share-btn--copy" style={{ width: '35px', height: '35px' }}>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>
+                                </button>
+                            </>
+                        )}
                     </div>
 
                     <div className="glass" style={{ padding: '3rem', borderRadius: '30px', textAlign: 'left', marginBottom: '3rem' }}>
@@ -78,7 +105,7 @@ function ServiceDetail() {
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
-                        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg" style={{ padding: '1.2rem 3rem', fontSize: '1.2rem' }}>
+                        <a href={whatsappConsultUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg" style={{ padding: '1.2rem 3rem', fontSize: '1.2rem' }}>
                             💬 Consultar por WhatsApp
                         </a>
                     </div>

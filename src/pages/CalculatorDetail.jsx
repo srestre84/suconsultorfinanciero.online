@@ -9,6 +9,25 @@ function CalculatorDetail() {
     }, []);
 
     const currentUrl = `https://suconsultorfinanciero.online/calculadora`;
+    const shareMessage = "🧮 **Calculadora de Tasas Financieras** | Convierte tasas Efectiva Anual, Nominal Mes Vencido y más de forma instantánea. Una herramienta esencial para tus finanzas:";
+
+    const handleShare = async () => {
+        const shareData = {
+            title: "Calculadora de Tasas | Su Consultor Financiero",
+            text: shareMessage,
+            url: currentUrl
+        };
+
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+            } catch (err) {
+                console.log("Error sharing", err);
+            }
+        } else {
+            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareMessage + ' ' + currentUrl)}`, '_blank');
+        }
+    };
     const title = "Calculadora de Tasas de Interés | Su Consultor Financiero";
     const description = "Convierte fácilmente entre tasas Efectiva Anual (EA), Mes Vencido (MV), Trimestre Vencido y más. La herramienta esencial para entender tus préstamos e inversiones.";
 
