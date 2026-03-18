@@ -17,7 +17,7 @@ const Services = () => {
         if (navigator.share) {
             navigator.share({
                 title: service.title,
-                text: service.description,
+                text: shareText,
                 url: shareUrl,
             }).catch(console.error);
         } else {
