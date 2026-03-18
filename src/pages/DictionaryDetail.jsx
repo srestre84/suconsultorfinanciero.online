@@ -72,15 +72,24 @@ function DictionaryDetail() {
                         </div>
 
                         <div className="share-links-top" style={{ display: 'flex', gap: '0.8rem', marginBottom: '1.5rem' }}>
-                            <button onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent('Aprende qué es ' + item.term + ': ' + currentUrl)}`, '_blank')} className="prop-share-btn prop-share-btn--ws" style={{ width: '30px', height: '30px' }}>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-7.6 8.38 8.38 0 0 1 3.8.9L22 7l-1.5 5.5Z" /></svg>
-                            </button>
-                            <button onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`, '_blank')} className="prop-share-btn prop-share-btn--fb" style={{ width: '30px', height: '30px' }}>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
-                            </button>
-                            <button onClick={() => { navigator.clipboard.writeText(currentUrl); alert('¡Copiado!'); }} className="prop-share-btn prop-share-btn--copy" style={{ width: '30px', height: '30px' }}>
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>
-                            </button>
+                            {navigator.share ? (
+                                <button onClick={handleShare} className="btn btn-secondary btn-sm" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderRadius: '12px', padding: '0.4rem 0.8rem', fontSize: '0.85rem' }}>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                                    Compartir término
+                                </button>
+                            ) : (
+                                <>
+                                    <button onClick={() => window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareMessage + ' ' + currentUrl)}`, '_blank')} className="prop-share-btn prop-share-btn--ws" style={{ width: '30px', height: '30px' }}>
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-7.6 8.38 8.38 0 0 1 3.8.9L22 7l-1.5 5.5Z" /></svg>
+                                    </button>
+                                    <button onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`, '_blank')} className="prop-share-btn prop-share-btn--fb" style={{ width: '30px', height: '30px' }}>
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+                                    </button>
+                                    <button onClick={() => { navigator.clipboard.writeText(shareMessage + ' ' + currentUrl); alert('¡Copiado!'); }} className="prop-share-btn prop-share-btn--copy" style={{ width: '30px', height: '30px' }}>
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>
+                                    </button>
+                                </>
+                            )}
                         </div>
 
                         <h1 style={{ color: 'var(--azul-oscuro)', fontSize: '3rem', marginBottom: '1.5rem', marginTop: '0.5rem' }}>
