@@ -6,8 +6,9 @@ import InstagramSection from '../components/InstagramSection';
 import Dictionary from '../components/Dictionary';
 import Newsletter from '../components/Newsletter';
 import Consulting from '../components/Consulting';
-import Testimonials from '../components/Testimonials';
+// import Testimonials from '../components/Testimonials'; // Ocultado temporalmente hasta tener calificaciones
 import RateCalculator from '../components/RateCalculator';
+
 import Mission from '../components/Mission';
 import Hero from '../components/Hero';
 import PropertyCard from '../components/PropertyCard';
@@ -103,8 +104,8 @@ function Home() {
                 <RateCalculator />
             </section>
 
-            {/* Nueva Sección de Testimonios (Social Proof) */}
-            <Testimonials />
+            {/* Nueva Sección de Testimonios (Social Proof) oculta temporalmente */}
+            {/* <Testimonials /> */}
 
             {/* Nueva Sección de Consultorías */}
             <Consulting />
