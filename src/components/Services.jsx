@@ -36,20 +36,41 @@ const Services = () => {
                             className={`service-card glass animate-fade-in delay-${index + 1}`}
                             key={index}
                             id={service.id}
-                            onClick={() => handleWhatsAppClick(service.whatsappMessage)}
-                            style={{ cursor: 'pointer', position: 'relative' }}
+                            style={{ position: 'relative', zIndex: 1 }}
                         >
-                            <div className="service-icon">{service.icon}</div>
-                            <h3>{service.title}</h3>
-                            <p>{service.description}</p>
+                            {/* Parte superior clicable para WhatsApp */}
+                            <div 
+                                onClick={() => handleWhatsAppClick(service.whatsappMessage)}
+                                style={{ 
+                                    cursor: 'pointer', 
+                                    width: '100%', 
+                                    display: 'flex', 
+                                    flexDirection: 'column', 
+                                    alignItems: 'center',
+                                    zIndex: 2,
+                                    position: 'relative'
+                                }}
+                            >
+                                <div className="service-icon">{service.icon}</div>
+                                <h3>{service.title}</h3>
+                                <p>{service.description}</p>
+                            </div>
                             
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', marginTop: 'auto' }}>
+                            <div style={{ 
+                                display: 'flex', 
+                                flexDirection: 'column', 
+                                gap: '0.8rem', 
+                                marginTop: 'auto',
+                                position: 'relative',
+                                zIndex: 10,  /* Asegurar que los botones estén por encima de cualquier overlay */
+                                paddingTop: '1rem'
+                            }}>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <Link 
                                         to={`/servicios/${service.id}`}
                                         className="service-card-cta"
                                         style={{ color: 'var(--mostaza)', fontWeight: 'bold', textDecoration: 'none' }}
-                                        onClick={(e) => e.stopPropagation()}
+                                        onClick={() => {}} 
                                     >
                                         🔍 Ver más info
                                     </Link>
