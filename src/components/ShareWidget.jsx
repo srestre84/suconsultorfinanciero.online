@@ -1,13 +1,28 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { servicesData } from '../data/servicesData';
 import './ShareWidget.css';
 
 const ShareWidget = () => {
+    const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
     const [canNativeShare, setCanNativeShare] = useState(false);
 
     const shareUrl = typeof window !== 'undefined' ? window.location.href : "https://suconsultorfinanciero.online/";
     const shareTitle = typeof document !== 'undefined' ? document.title : "Su Consultor Financiero | Estrategia y Control";
-    const shareText = "Te invito a descubrir los servicios profesionales de Su Consultor Financiero. Optimiza tu flujo de caja, controla tus deudas y más. ¡Mira lo que hacen y sus valores agregados aquí!";
+    
+    // Lógica para detectar si estamos en una página de servicio y usar su mensaje personalizado
+    const getDynamicShareText = () => {
+        const path = location.pathname;
+        if (path.includes('/servicios/')) {
+            const serviceId = path.split('/').pop();
+            const service = servicesData.find(s => s.id === serviceId);
+            if (service) return service.shareMessage;
+        }
+        return "🥇 **Su Consultor Financiero | Asesoría Integral**\n\nTe invito a descubrir soluciones profesionales en:\n✅ Crédito Hipotecario\n✅ Libre Inversión\n✅ Compra de Cartera\n✅ Construcción en Sitio Propio\n\nOptimiza tu flujo de caja y toma el control de tus finanzas. Mira más aquí:";
+    };
+
+    const shareText = getDynamicShareText();
 
     useEffect(() => {
         if (navigator.share) {

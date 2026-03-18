@@ -1,37 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { servicesData } from '../data/servicesData';
 import './Services.css';
-
-const servicesData = [
-    {
-        id: "libre-inversion",
-        title: "Crédito de libre inversión o compra de cartera",
-        description: "Con nuestra asesoría integral se puede enfocar en lo que quiera y el trámite lo realizamos nosotros. Puede utilizar los recursos del crédito para libre destinación o para mejorar su flujo de caja a través del producto compra de cartera. Tasas competitivas y plazos desde 36 meses hasta 72 meses sin codeudor.",
-        icon: "💼",
-        whatsappMessage: "Hola, me interesa el servicio de Crédito de libre inversión o compra de cartera."
-    },
-    {
-        id: "inmuebles",
-        title: "Crédito para inmuebles",
-        description: "Le brindamos una asesoría integral, si nos informa sobre su proyecto le damos a conocer como quedaría su plan de pagos y lo que necesita para hacerlo realidad. Lo asesoramos para una financiación de su futuro hogar o vivienda de inversión con plazos desde 5 años hasta 20 años. También ofrecemos la asesoría para financiar locales, bodegas, oficinas o créditos de libre inversión con garantía hipotecaria.",
-        icon: "🏠",
-        whatsappMessage: "Hola, me interesa el servicio de Crédito para inmuebles."
-    },
-    {
-        id: "vehiculo",
-        title: "Crédito de vehículo, libranza y asesoría general",
-        description: "Le brindamos una asesoría integral para que pueda hacer realidad el proyecto de adquirir el vehículo de sus sueños. Si nos cuenta cuánto necesita, le ayudamos a construir un plan de pagos personalizado, ajustado a su perfil. También ofrecemos compra de cartera en créditos de vehículo y la posibilidad de recibir su vehículo en prenda para obtener un crédito de libre inversión. Además, contamos con créditos atados a la colilla de pago de pensión.",
-        icon: "🚗",
-        whatsappMessage: "Hola, me interesa el servicio de Crédito de vehículo o libranza."
-    },
-    {
-        id: "constructor",
-        title: "Crédito constructor individual en condominios",
-        description: "Recibe el acompañamiento experto para financiar la construcción de tu vivienda a medida. Te ayudamos a estructurar la mejor opción de crédito que te permita ir obteniendo desembolsos conforme al avance de obra de tu nuevo hogar dentro del condominio soñado.",
-        icon: "🏗️",
-        whatsappMessage: "Hola, me interesa el servicio de Crédito constructor individual."
-    },
-];
 
 const Services = () => {
     const handleWhatsAppClick = (message) => {
@@ -42,7 +12,7 @@ const Services = () => {
     const handleShare = (e, service) => {
         e.stopPropagation();
         const shareUrl = `${window.location.origin}/servicios/${service.id}`;
-        const shareText = `¡Mira este servicio financiero! ${service.title}`;
+        const shareText = service.shareMessage;
 
         if (navigator.share) {
             navigator.share({
