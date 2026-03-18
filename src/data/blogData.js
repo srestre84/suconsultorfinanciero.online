@@ -89,5 +89,57 @@ export const blogData = [
         date: "2026-03-15",
         author: "Sebastián - Consultor",
         imageUrl: "https://images.unsplash.com/photo-1556740714-a8395b3bf30f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 6,
+        title: "Leasing Habitacional vs Crédito Hipotecario",
+        excerpt: "¿Sabías que en el Leasing la casa no es tuya legalmente hasta el final? Comparamos beneficios tributarios y costos reales.",
+        content: `
+            <p>A la hora de comprar vivienda en Colombia, estas son las dos rutas principales. Aunque ambas sirven para el mismo fin, su estructura legal y financiera es radicalmente distinta.</p>
+            <h3>¿Qué es el Leasing Habitacional?</h3>
+            <p>En el leasing, el banco compra la vivienda y te la "arrienda" por un periodo determinado. Tú pagas un canon mensual que incluye capital e intereses. Al final del contrato, ejerces la <strong>opción de compra</strong> (generalmente entre el 0% y el 10% del valor inicial) para que pase a tu nombre.</p>
+            <h3>Ventajas del Leasing</h3>
+            <ul>
+                <li><strong>Mayor financiación:</strong> El leasing suele financiar hasta el 80% o incluso el 90% del valor del inmueble, mientras que el crédito tradicional llega al 70%.</li>
+                <li><strong>Beneficios tributarios:</strong> Los intereses son deducibles de renta, y el inmueble no figura a tu nombre en el patrimonio inicialmente, lo cual puede ser estratégico para ciertos perfiles fiscales.</li>
+            </ul>
+            <h3>¿Cuándo elegir Crédito Hipotecario?</h3>
+            <p>Si prefieres que la propiedad esté a tu nombre desde el primer día y no te importa dar una cuota inicial más alta (30%), el crédito es la vía tradicional y más sencilla de entender.</p>
+        `,
+        date: "2026-03-18",
+        author: "Sebastián - Consultor",
+        imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 7,
+        title: "Cómo prepararte para comprar tu primera vivienda",
+        excerpt: "No solo es tener la cuota inicial. Te contamos los gastos 'ocultos' de escrituración y cómo pre-aprobar tu crédito con éxito.",
+        content: `
+            <p>Comprar casa es la inversión más grande de la mayoría de las familias. El error más común es lanzarse a buscar proyectos sin haber saneado primero las finanzas personales.</p>
+            <h3>El Plan de 3 Pasos</h3>
+            <p>1. <strong>Ahorro Programado:</strong> Debes tener al menos el 30% del valor total para la cuota inicial. Pero ojo, guarda un 5% adicional para gastos de escrituración, registro, avalúo y estudio de títulos. Muchos olvidan este "pequeño" detalle de varios millones.</p>
+            <p>2. <strong>Capacidad de Endeudamiento:</strong> Tu cuota mensual no debería superar el 30% de tus ingresos familiares netos. Los bancos rechazarán tu solicitud si tus deudas actuales sumadas a la nueva cuota te dejan sin margen de maniobra.</p>
+            <p>3. <strong>Pre-aprobado:</strong> Antes de firmar la promesa de compraventa o separar en preventa, solicita una pre-aprobación con nosotros. Esto te da seguridad sobre cuánto te prestarán realmente.</p>
+        `,
+        date: "2026-03-20",
+        author: "Sebastián - Consultor",
+        imageUrl: "https://images.unsplash.com/photo-1582408921715-18e7806365c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 8,
+        title: "Mitos y Realidades de las Centrales de Riesgo",
+        excerpt: "¿Estar en Datacrédito es malo? Desmentimos los temores sobre los reportes y te enseñamos a usarlos a tu favor.",
+        content: `
+            <p>Existe un miedo generalizado a "aparecer en Datacrédito". La realidad es que todos los que tenemos una cuenta bancaria o un plan de celular aparecemos allí. El punto es <strong>CÓMO</strong> aparecemos.</p>
+            <h3>Mito 1: Estar reportado es el fin del mundo</h3>
+            <p>Estar reportado positivamente es excelente. Significa que eres alguien confiable. Lo "malo" es tener reportes negativos por mora. Pero incluso estos tienen fecha de vencimiento según la ley de borrón y cuenta nueva.</p>
+            <h3>Mito 2: Si pago la deuda, el reporte negativo desaparece de inmediato</h3>
+            <p>Falso. Si pagas una deuda que estuvo en mora, el reporte negativo permanecerá por el doble del tiempo que estuviste en mora (máximo 4 años). Por eso, es mejor renegociar antes de que el reporte se asiente.</p>
+            <h3>Realidad: Tú puedes mejorar tu puntaje</h3>
+            <p>Utilizar nuestras herramientas de consultoría te permite entender cómo los bancos evalúan ese puntaje para conseguirte tasas preferenciales. No le temas al reporte, domínalo.</p>
+        `,
+        date: "2026-03-22",
+        author: "Sebastián - Consultor",
+        imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     }
 ];
