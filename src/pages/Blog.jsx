@@ -99,9 +99,10 @@ function Blog() {
                                                 onClick={(e) => {
                                                     e.preventDefault();
                                                     e.stopPropagation();
-                                                    const shareUrl = `${window.location.origin}${window.location.pathname}#/blog/${post.id}`;
-                                                    navigator.clipboard.writeText(shareUrl);
-                                                    alert('¡Enlace copiado al portapapeles!');
+                                                    const shareUrl = `${window.location.origin}/blog/${post.id}`;
+                                                    const shareText = `¡Mira este artículo! "${post.title}" - Su Consultor Financiero:`;
+                                                    navigator.clipboard.writeText(`${shareText}\n${shareUrl}`);
+                                                    alert('¡Enlace y descripción copiados al portapapeles!');
                                                 }} 
                                                 title="Copiar enlace" 
                                                 className="prop-share-btn prop-share-btn--copy"
