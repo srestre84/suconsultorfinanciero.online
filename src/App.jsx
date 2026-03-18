@@ -16,6 +16,9 @@ import ServiceDetail from './pages/ServiceDetail';
 import DictionaryDetail from './pages/DictionaryDetail';
 import CalculatorDetail from './pages/CalculatorDetail';
 
+import { analytics } from './config/firebase';
+import { logEvent } from 'firebase/analytics';
+
 // Componente para manejar el scroll a anclas (ID)
 function ScrollToHash() {
     const { hash } = useLocation();
@@ -37,6 +40,23 @@ function ScrollToHash() {
     return null;
 }
 
+// Componente para rastreo de analíticas (Google/Firebase)
+function AnalyticsTracker() {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (analytics) {
+            logEvent(analytics, 'page_view', {
+                page_path: location.pathname + location.search + location.hash,
+                page_location: window.location.href,
+                page_title: document.title
+            });
+        }
+    }, [location]);
+
+    return null;
+}
+
 function App() {
     return (
         <HelmetProvider>
@@ -47,6 +67,7 @@ function App() {
                 }}
             >
                 <ScrollToHash />
+                <AnalyticsTracker />
                 <div className="app-container">
                     <Header />
                     <Routes>
