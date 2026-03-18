@@ -35,15 +35,16 @@ function BlogPost() {
                 <meta property="og:url" content={currentUrl} />
                 <meta property="og:title" content={post.title} />
                 <meta property="og:description" content={post.excerpt} />
-                {/* Asumimos que la imagen es una ruta base. En prod real sería una URL absoluta */}
-                <meta property="og:image" content={`https://suconsultorfinanciero.online${post.imageUrl?.startsWith('/') ? post.imageUrl : `/${post.imageUrl}`}`} />
+                <meta property="og:image" content={post.imageUrl?.startsWith('http') ? post.imageUrl : `https://suconsultorfinanciero.online${post.imageUrl?.startsWith('/') ? post.imageUrl : `/${post.imageUrl}`}`} />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content={currentUrl} />
                 <meta property="twitter:title" content={post.title} />
                 <meta property="twitter:description" content={post.excerpt} />
-                <meta property="twitter:image" content={`https://suconsultorfinanciero.online${post.imageUrl?.startsWith('/') ? post.imageUrl : `/${post.imageUrl}`}`} />
+                <meta property="twitter:image" content={post.imageUrl?.startsWith('http') ? post.imageUrl : `https://suconsultorfinanciero.online${post.imageUrl?.startsWith('/') ? post.imageUrl : `/${post.imageUrl}`}`} />
             </Helmet>
 
             <article className="section-padding container">

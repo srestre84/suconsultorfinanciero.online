@@ -51,15 +51,15 @@ function ServiceDetail() {
                 <meta property="og:title" content={service.title} />
                 <meta property="og:description" content={service.description} />
                 <meta property="og:url" content={currentUrl} />
-                <meta property="og:image" content={`https://suconsultorfinanciero.online/${serviceImage}`} />
-                <meta property="og:image:secure_url" content={`https://suconsultorfinanciero.online/${serviceImage}`} />
+                <meta property="og:image" content={serviceImage.startsWith('http') ? serviceImage : `https://suconsultorfinanciero.online/${serviceImage}`} />
+                <meta property="og:image:secure_url" content={serviceImage.startsWith('http') ? serviceImage : `https://suconsultorfinanciero.online/${serviceImage}`} />
                 <meta property="og:image:type" content="image/png" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:title" content={service.title} />
                 <meta property="twitter:description" content={service.description} />
-                <meta property="twitter:image" content={`https://suconsultorfinanciero.online/${serviceImage}`} />
+                <meta property="twitter:image" content={serviceImage.startsWith('http') ? serviceImage : `https://suconsultorfinanciero.online/${serviceImage}`} />
             </Helmet>
 
             <section className="section-padding container">

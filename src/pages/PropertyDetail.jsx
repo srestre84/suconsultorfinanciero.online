@@ -36,14 +36,16 @@ function PropertyDetail() {
                 <meta property="og:url" content={currentUrl} />
                 <meta property="og:title" content={property.titulo} />
                 <meta property="og:description" content={property.descripcion} />
-                <meta property="og:image" content={`https://suconsultorfinanciero.online${property.fotos[0]}`} />
+                <meta property="og:image" content={property.fotos[0]?.startsWith('http') ? property.fotos[0] : `https://suconsultorfinanciero.online${property.fotos[0]?.startsWith('/') ? '' : '/'}${property.fotos[0]}`} />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content={currentUrl} />
                 <meta property="twitter:title" content={property.titulo} />
                 <meta property="twitter:description" content={property.descripcion} />
-                <meta property="twitter:image" content={`https://suconsultorfinanciero.online${property.fotos[0]}`} />
+                <meta property="twitter:image" content={property.fotos[0]?.startsWith('http') ? property.fotos[0] : `https://suconsultorfinanciero.online${property.fotos[0]?.startsWith('/') ? '' : '/'}${property.fotos[0]}`} />
             </Helmet>
 
             <section className="section-padding container">
