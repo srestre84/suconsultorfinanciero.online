@@ -53,6 +53,15 @@ function ServiceDetail() {
     const currentUrl = `https://suconsultorfinanciero.online/servicios/${service.id}`;
     const whatsappUrl = `https://wa.me/573167443613?text=${encodeURIComponent(service.whatsappMessage)}`;
 
+    let serviceImage = 'services-preview.png';
+    switch(service.id) {
+        case 'libre-inversion': serviceImage = 'service_libre_inversion.png'; break;
+        case 'inmuebles': serviceImage = 'service_inmuebles.png'; break;
+        case 'vehiculo': serviceImage = 'service_vehiculo.png'; break;
+        case 'constructor': serviceImage = 'service_constructor.png'; break;
+        default: serviceImage = 'services-preview.png';
+    }
+
     return (
         <main className="service-detail-page">
             <Helmet>
@@ -61,7 +70,11 @@ function ServiceDetail() {
                 <meta property="og:title" content={service.title} />
                 <meta property="og:description" content={service.description} />
                 <meta property="og:url" content={currentUrl} />
-                <meta property="og:image" content="https://suconsultorfinanciero.online/logo.png" />
+                <meta property="og:image" content={`https://suconsultorfinanciero.online/${serviceImage}`} />
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:title" content={service.title} />
+                <meta property="twitter:description" content={service.description} />
+                <meta property="twitter:image" content={`https://suconsultorfinanciero.online/${serviceImage}`} />
             </Helmet>
 
             <section className="section-padding container">
@@ -74,9 +87,22 @@ function ServiceDetail() {
                         {service.icon}
                     </div>
 
-                    <h1 style={{ color: 'var(--azul-oscuro)', fontSize: '2.5rem', marginBottom: '2rem' }}>
+                    <h1 style={{ color: 'var(--azul-oscuro)', fontSize: '2.5rem', marginBottom: '0.5rem' }}>
                         {service.title}
                     </h1>
+
+                    <div className="share-links-top" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '2rem' }}>
+                        <span style={{ fontSize: '0.9rem', color: '#666', alignSelf: 'center' }}>Compartir:</span>
+                        <button onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent(service.title + ' ' + currentUrl)}`, '_blank')} className="prop-share-btn prop-share-btn--ws" style={{ width: '35px', height: '35px' }}>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-7.6 8.38 8.38 0 0 1 3.8.9L22 7l-1.5 5.5Z" /></svg>
+                        </button>
+                        <button onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`, '_blank')} className="prop-share-btn prop-share-btn--fb" style={{ width: '35px', height: '35px' }}>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+                        </button>
+                        <button onClick={() => { navigator.clipboard.writeText(currentUrl); alert('¡Copiado!'); }} className="prop-share-btn prop-share-btn--copy" style={{ width: '35px', height: '35px' }}>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>
+                        </button>
+                    </div>
 
                     <div className="glass" style={{ padding: '3rem', borderRadius: '30px', textAlign: 'left', marginBottom: '3rem' }}>
                         <p style={{ fontSize: '1.25rem', lineHeight: '1.8', color: '#444' }}>
@@ -88,21 +114,6 @@ function ServiceDetail() {
                         <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg" style={{ padding: '1.2rem 3rem', fontSize: '1.2rem' }}>
                             💬 Consultar por WhatsApp
                         </a>
-
-                        <div className="share-section" style={{ marginTop: '2rem', borderTop: '1px solid #ddd', paddingTop: '2rem', width: '100%' }}>
-                            <p style={{ fontWeight: 'bold', marginBottom: '1rem' }}>Compartir este servicio:</p>
-                            <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
-                                <button onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent(service.title + ' ' + currentUrl)}`, '_blank')} className="prop-share-btn prop-share-btn--ws">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-7.6 8.38 8.38 0 0 1 3.8.9L22 7l-1.5 5.5Z"/></svg>
-                                </button>
-                                <button onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`, '_blank')} className="prop-share-btn prop-share-btn--fb">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-                                </button>
-                                <button onClick={() => { navigator.clipboard.writeText(currentUrl); alert('¡Copiado!'); }} className="prop-share-btn prop-share-btn--copy">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-                                </button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>

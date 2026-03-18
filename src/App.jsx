@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
+import ShareWidget from './components/ShareWidget';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
@@ -62,6 +63,7 @@ function App() {
                     </Routes>
                     <Footer />
                     <Chatbot />
+                    <ShareWidget />
                 </div>
             </BrowserRouter>
         </HelmetProvider>

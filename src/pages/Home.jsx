@@ -41,15 +41,15 @@ function Home() {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://suconsultorfinanciero.online/" />
                 <meta property="og:title" content="Su Consultor Financiero | Estrategia y Control" />
-                <meta property="og:description" content="Optimiza tu flujo de caja, estructura tus deudas y toma el control matemático de tus finanzas con nuestras consultorías especializadas." />
-                <meta property="og:image" content="https://suconsultorfinanciero.online/logo.png" />
+                <meta property="og:description" content="Descubre cómo optimizar tu flujo de caja, estructurar tus deudas y tomar el control matemático de tus finanzas con nuestras consultorías." />
+                <meta property="og:image" content="https://suconsultorfinanciero.online/share-preview.png" />
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://suconsultorfinanciero.online/" />
                 <meta property="twitter:title" content="Su Consultor Financiero | Estrategia y Control" />
-                <meta property="twitter:description" content="Optimiza tu flujo de caja, estructura tus deudas y toma el control matemático de tus finanzas con nuestras consultorías especializadas." />
-                <meta property="twitter:image" content="https://suconsultorfinanciero.online/logo.png" />
+                <meta property="twitter:description" content="Descubre cómo optimizar tu flujo de caja, estructurar tus deudas y tomar el control matemático de tus finanzas con nuestras consultorías." />
+                <meta property="twitter:image" content="https://suconsultorfinanciero.online/share-preview.png" />
             </Helmet>
 
             <Hero />

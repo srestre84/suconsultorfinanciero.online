@@ -1,0 +1,115 @@
+.share-widget-container {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    z-index: 9998;
+    display: flex;
+    flex-direction: column; /* menú hacia abajo */
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.share-widget-toggle {
+    background: linear-gradient(135deg, var(--azul-oscuro) 0%, #002b5e 100%);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px 0 0 20px; /* pestaña pegada a la derecha */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: -4px 4px 15px rgba(0, 31, 63, 0.4);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.share-widget-toggle:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #001f3f 0%, var(--mostaza) 100%);
+}
+
+.share-widget-container.active .share-widget-toggle {
+    background: linear-gradient(135deg, #e63946 0%, #c1121f 100%);
+    box-shadow: 0 4px 15px rgba(193, 18, 31, 0.4);
+}
+
+.share-widget-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-right: 5px;
+    animation: slideInRight 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.share-item {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.share-item:hover {
+    transform: scale(1.15);
+}
+
+.share-item.wa {
+    background-color: #25D366;
+}
+.share-item.wa:hover {
+    background-color: #128C7E;
+}
+
+.share-item.fb {
+    background-color: #1877F2;
+}
+.share-item.fb:hover {
+    background-color: #165eab;
+}
+
+.share-item.copy {
+    background-color: #64748b;
+}
+.share-item.copy:hover {
+    background-color: #475569;
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .share-widget-container {
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    .share-widget-toggle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .share-widget-toggle svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .share-item {
+        width: 45px;
+        height: 45px;
+    }
+}
