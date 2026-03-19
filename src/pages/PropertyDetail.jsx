@@ -94,36 +94,64 @@ function PropertyDetail() {
                                 Características Principales
                             </h3>
                             <div className="prop-detail-specs" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1.5rem', marginBottom: '2rem' }}>
-                                <div className="spec-item glass" style={{ padding: '1rem', textAlign: 'center', borderRadius: '10px' }}>
+                                <div className="spec-item glass" style={{ padding: '1rem', textAlign: 'center', borderRadius: '10px', color: '#333' }}>
                                     <span style={{ fontSize: '1.5rem', display: 'block' }}>📐</span>
-                                    <strong>Área</strong>
-                                    <p>{property.caracteristicas.area} m²</p>
+                                    <strong style={{ color: 'var(--azul-oscuro)' }}>Área</strong>
+                                    <p style={{ fontWeight: '600' }}>{property.caracteristicas.area} m²</p>
                                 </div>
-                                <div className="spec-item glass" style={{ padding: '1rem', textAlign: 'center', borderRadius: '10px' }}>
+                                <div className="spec-item glass" style={{ padding: '1rem', textAlign: 'center', borderRadius: '10px', color: '#333' }}>
                                     <span style={{ fontSize: '1.5rem', display: 'block' }}>🛏️</span>
-                                    <strong>Habitaciones</strong>
-                                    <p>{property.caracteristicas.habitaciones || 'N/A'}</p>
+                                    <strong style={{ color: 'var(--azul-oscuro)' }}>Habitaciones</strong>
+                                    <p style={{ fontWeight: '600' }}>{property.caracteristicas.habitaciones || 'N/A'}</p>
                                 </div>
-                                <div className="spec-item glass" style={{ padding: '1rem', textAlign: 'center', borderRadius: '10px' }}>
+                                <div className="spec-item glass" style={{ padding: '1rem', textAlign: 'center', borderRadius: '10px', color: '#333' }}>
                                     <span style={{ fontSize: '1.5rem', display: 'block' }}>🚿</span>
-                                    <strong>Baños</strong>
-                                    <p>{property.caracteristicas.banos || 'N/A'}</p>
+                                    <strong style={{ color: 'var(--azul-oscuro)' }}>Baños</strong>
+                                    <p style={{ fontWeight: '600' }}>{property.caracteristicas.banos || 'N/A'}</p>
                                 </div>
-                                <div className="spec-item glass" style={{ padding: '1rem', textAlign: 'center', borderRadius: '10px' }}>
+                                <div className="spec-item glass" style={{ padding: '1rem', textAlign: 'center', borderRadius: '10px', color: '#333' }}>
                                     <span style={{ fontSize: '1.5rem', display: 'block' }}>⭐</span>
-                                    <strong>Estrato</strong>
-                                    <p>{property.caracteristicas.estrato}</p>
+                                    <strong style={{ color: 'var(--azul-oscuro)' }}>Estrato</strong>
+                                    <p style={{ fontWeight: '600' }}>{property.caracteristicas.estrato || 'N/A'}</p>
                                 </div>
+                                {property.caracteristicas.parqueadero && (
+                                    <div className="spec-item glass" style={{ padding: '1rem', textAlign: 'center', borderRadius: '10px', color: '#333' }}>
+                                        <span style={{ fontSize: '1.5rem', display: 'block' }}>🚗</span>
+                                        <strong style={{ color: 'var(--azul-oscuro)' }}>Parqueadero</strong>
+                                        <p style={{ fontWeight: '600' }}>{typeof property.caracteristicas.parqueadero === 'string' ? property.caracteristicas.parqueadero : 'Privado'}</p>
+                                    </div>
+                                )}
+                                {property.caracteristicas.cuartoUtil && (
+                                    <div className="spec-item glass" style={{ padding: '1rem', textAlign: 'center', borderRadius: '10px', color: '#333' }}>
+                                        <span style={{ fontSize: '1.5rem', display: 'block' }}>📦</span>
+                                        <strong style={{ color: 'var(--azul-oscuro)' }}>Cuarto Útil</strong>
+                                        <p style={{ fontWeight: '600' }}>Sí</p>
+                                    </div>
+                                )}
+                                {property.caracteristicas.administracion && (
+                                    <div className="spec-item glass" style={{ padding: '1rem', textAlign: 'center', borderRadius: '10px', color: '#333' }}>
+                                        <span style={{ fontSize: '1.5rem', display: 'block' }}>📋</span>
+                                        <strong style={{ color: 'var(--azul-oscuro)' }}>Administración</strong>
+                                        <p style={{ fontWeight: '600' }}>${property.caracteristicas.administracion.toLocaleString()}</p>
+                                    </div>
+                                )}
+                                {property.caracteristicas.piso && (
+                                    <div className="spec-item glass" style={{ padding: '1rem', textAlign: 'center', borderRadius: '10px', color: '#333' }}>
+                                        <span style={{ fontSize: '1.5rem', display: 'block' }}>🏢</span>
+                                        <strong style={{ color: 'var(--azul-oscuro)' }}>Piso</strong>
+                                        <p style={{ fontWeight: '600' }}>{property.caracteristicas.piso}</p>
+                                    </div>
+                                )}
                             </div>
 
                             {property.amenidadesUnidad && (
                                 <>
                                     <h3 style={{ color: 'var(--azul-oscuro)', marginBottom: '1.5rem', borderBottom: '2px solid var(--mostaza)', paddingBottom: '0.5rem', display: 'inline-block' }}>
-                                        Amenidades de la Unidad
+                                        Detalles de la Unidad
                                     </h3>
                                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem', marginBottom: '2rem' }}>
                                         {property.amenidadesUnidad.map((amenidad, i) => (
-                                            <span key={i} className="prop-tag" style={{ background: 'var(--azul-claro)', color: 'white', padding: '0.5rem 1rem', borderRadius: '20px', fontWeight: 'bold' }}>
+                                            <span key={i} className="prop-tag" style={{ background: 'var(--azul-oscuro)', color: 'white', padding: '0.6rem 1.2rem', borderRadius: '20px', fontWeight: 'bold', fontSize: '1rem' }}>
                                                 {amenidad}
                                             </span>
                                         ))}
