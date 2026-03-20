@@ -14,12 +14,11 @@ const Hero = () => {
                     </div>
                     
                     <h1 className="hero-title animate-fade-in delay-1">
-                        Tu Futuro <span className="text-gradient">Económico</span>, <br />
-                        Bajo Tu Propio <span className="text-highlight">Control</span>
+                        Toma el control de tu <span className="text-gradient">libertad financiera</span> con <span className="text-highlight">estrategia matemática</span>.
                     </h1>
                     
                     <p className="hero-subtitle animate-fade-in delay-2">
-                        Dejamos de lado las conjeturas. Usamos estrategia matemática y perfilamiento experto para optimizar tus deudas y maximizar tu flujo de caja.
+                        Más de 15 años transformando deudas en liquidez. Soy Sebastián Restrepo, y mi objetivo es que tu dinero trabaje para ti, no para el banco.
                     </p>
                     
                     <div className="hero-actions animate-fade-in delay-3">

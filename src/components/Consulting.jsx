@@ -63,8 +63,8 @@ const Consulting = () => {
                 </div>
 
                 <div className="animate-fade-in delay-3" style={{ background: 'var(--mostaza)', padding: '2rem', borderRadius: '15px', color: 'var(--azul-oscuro)', maxWidth: '650px', margin: '0 auto', boxShadow: '0 8px 30px rgba(255, 215, 0, 0.3)' }}>
-                    <h3 style={{ color: 'var(--azul-oscuro)', marginBottom: '1rem', fontSize: '1.8rem', fontWeight: '800' }}>¿Necesitas una Sesión de Trabajo?</h3>
-                    <p style={{ marginBottom: '1.5rem', fontSize: '1.15rem', fontWeight: '500' }}>Agenda una consultoría 1 a 1 para estructurar un plan de acción real, basado en números, no en intuición.</p>
+                    <h3 style={{ color: 'var(--azul-oscuro)', marginBottom: '1rem', fontSize: '1.8rem', fontWeight: '800' }}>¿Hablamos de tus metas? Agendemos una sesión hoy.</h3>
+                    <p style={{ marginBottom: '1.5rem', fontSize: '1.15rem', fontWeight: '500' }}>Recibe una asesoría experta y personalizada. Analicemos tu caso bajo una lupa financiera para encontrar la mejor opción del mercado para ti.</p>
 
                     {/* Botón CTA (Llamado a la Acción). Redirige al WhatsApp para mejor conversión */}
                     <a
@@ -73,7 +73,7 @@ const Consulting = () => {
                         rel="noopener noreferrer"
                         style={{ display: 'inline-block', fontSize: '1.2rem', padding: '1rem 2.5rem', backgroundColor: 'var(--azul-oscuro)', color: '#ffffff', fontWeight: 'bold', borderRadius: '30px', textDecoration: 'none', boxShadow: '0 4px 15px rgba(0, 43, 91, 0.4)', transition: 'transform 0.2s ease' }}
                     >
-                        Solicitar Consultoría por WhatsApp 📱
+                        Haz clic aquí para tu diagnóstico gratuito 📱
                     </a>
                 </div>
             </div>

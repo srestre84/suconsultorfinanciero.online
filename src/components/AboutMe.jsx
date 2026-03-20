@@ -22,11 +22,10 @@ const AboutMe = () => {
           
           <div className="about-me-content animate-fade-in delay-1">
             <span className="section-subtitle">¿Quién es Sebastián Restrepo?</span>
-            <h2 className="section-title">Más que un asesor, tu aliado estratégico</h2>
+            <h2 className="section-title">La transparencia es la base de cada decisión financiera.</h2>
             
             <p className="about-intro">
-              ¡Hola! Soy <strong>Sebastián Restrepo</strong>, Ingeniero Administrador y apasionado de la tecnología, 
-              con más de 15 años de experiencia transformando la realidad financiera de personas y empresas en Colombia.
+              Como <strong>Ingeniero Administrador</strong> y consultor con más de una década en el sector, entiendo que cada número cuenta una historia. Te ayudo a escribir la tuya con claridad, sin letras pequeñas y con resultados reales en tu flujo de caja.
             </p>
             
             <p className="about-description">
