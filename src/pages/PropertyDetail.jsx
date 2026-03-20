@@ -70,18 +70,17 @@ function PropertyDetail() {
                     </div>
 
                     {/* Galería Principal */}
-                    <div className="prop-detail-gallery" style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', marginBottom: '3rem' }}>
+                    <div className="prop-detail-gallery">
                         {property.fotos.map((foto, index) => (
                             <img
                                 key={index}
                                 src={foto}
                                 alt={`${property.titulo} - vista ${index + 1}`}
-                                style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '15px' }}
                             />
                         ))}
                     </div>
 
-                    <div className="prop-detail-content" style={{ display: 'grid', gridTemplateColumns: '1fr 350px', gap: '3rem' }}>
+                    <div className="prop-detail-content">
                         <div className="prop-info-main">
                             <h3 style={{ color: 'var(--azul-oscuro)', marginBottom: '1.5rem', borderBottom: '2px solid var(--mostaza)', paddingBottom: '0.5rem', display: 'inline-block' }}>
                                 Descripción
@@ -93,7 +92,7 @@ function PropertyDetail() {
                             <h3 style={{ color: 'var(--azul-oscuro)', marginBottom: '1.5rem', borderBottom: '2px solid var(--mostaza)', paddingBottom: '0.5rem', display: 'inline-block' }}>
                                 Características Principales
                             </h3>
-                            <div className="prop-detail-specs" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1.5rem', marginBottom: '2rem' }}>
+                            <div className="prop-detail-specs">
                                 <div className="spec-item glass" style={{ padding: '1rem', textAlign: 'center', borderRadius: '10px', color: '#333' }}>
                                     <span style={{ fontSize: '1.5rem', display: 'block' }}>📐</span>
                                     <strong style={{ color: 'var(--azul-oscuro)' }}>Área</strong>
@@ -161,7 +160,7 @@ function PropertyDetail() {
                         </div>
 
                         <aside className="prop-contact-sidebar">
-                            <div className="glass sticky" style={{ padding: '2rem', borderRadius: '20px', position: 'sticky', top: '100px' }}>
+                            <div className="glass sticky">
                                 <h3 style={{ color: 'var(--azul-oscuro)', marginBottom: '1rem' }}>¿Te interesa este inmueble?</h3>
                                 <p style={{ marginBottom: '2rem', fontSize: '1rem', color: '#666' }}>
                                     Contáctanos para agendar una visita o recibir asesoría financiera personalizada.
