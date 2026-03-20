@@ -10,6 +10,7 @@ import Consulting from '../components/Consulting';
 import RateCalculator from '../components/RateCalculator';
 
 import Mission from '../components/Mission';
+import AboutMe from '../components/AboutMe';
 import Hero from '../components/Hero';
 import PropertyCard from '../components/PropertyCard';
 import { properties } from '../data/properties';
@@ -61,6 +62,7 @@ function Home() {
             <Hero />
 
             <Mission />
+            <AboutMe />
             <Services />
             <InstagramSection />
 

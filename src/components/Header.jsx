@@ -40,6 +40,7 @@ const Header = () => {
 
                 <nav className="header-nav" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                     <Link to="/" className="nav-link">Inicio</Link>
+                    <Link to="/#sobre-mi" className="nav-link">Sobre mí</Link>
                     <Link to="/#servicios" className="nav-link">Servicios</Link>
                     <Link to="/#inmuebles" className="nav-link">Inmuebles</Link>
                     <Link to="/privacidad" className="nav-link">Privacidad</Link>
