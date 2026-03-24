@@ -93,7 +93,7 @@ function Newsletter() {
 
     if (isSubscribed) {
         return (
-            <div className="newsletter-container">
+            <div className="newsletter-container" id="descarga-pdf">
                 <div className="newsletter-blob-1"></div>
                 <div className="newsletter-blob-2"></div>
                 <div className="newsletter-content-wrapper">
@@ -115,7 +115,7 @@ function Newsletter() {
                             <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.8)', marginBottom: '1rem', fontWeight: 'bold' }}>¡Ayúdanos compartiendo este recurso!</p>
                             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                                 <a 
-                                    href={`https://api.whatsapp.com/send?text=${encodeURIComponent('¡Acabo de descargar mi PDF de Flujo de Caja by SRR! 📉 Optimiza tus finanzas tú también aquí: https://suconsultorfinanciero.online')}`}
+                                    href={`https://api.whatsapp.com/send?text=${encodeURIComponent('¡Acabo de descargar mi PDF de Flujo de Caja by SRR! 📉 Optimiza tus finanzas tú también aquí: https://suconsultorfinanciero.online#descarga-pdf')}`}
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className="newsletter-btn newsletter-btn--whatsapp"
@@ -124,7 +124,7 @@ function Newsletter() {
                                     WhatsApp
                                 </a>
                                 <a 
-                                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://suconsultorfinanciero.online')}`}
+                                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://suconsultorfinanciero.online#descarga-pdf')}`}
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     style={{ background: '#1877F2', color: 'white', padding: '0.7rem 1.5rem', borderRadius: '50px', display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', fontSize: '0.95rem', fontWeight: 'bold', boxShadow: '0 4px 15px rgba(24, 119, 242, 0.4)' }}
@@ -143,7 +143,7 @@ function Newsletter() {
     }
 
     return (
-        <div className="newsletter-container animate-fade-in delay-3">
+        <div className="newsletter-container animate-fade-in delay-3" id="descarga-pdf">
             <div className="newsletter-blob-1"></div>
             <div className="newsletter-blob-2"></div>
             
@@ -159,7 +159,7 @@ function Newsletter() {
                     <p style={{ fontSize: '1.1rem', color: 'var(--mostaza)', fontWeight: '700', margin: 0 }}>🚀 ¡Ayúdanos a llegar a más personas!</p>
                     <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                         <a 
-                            href={`https://api.whatsapp.com/send?text=${encodeURIComponent('🎁 ¡Mira este PDF gratuito de Flujo de Caja! Me pareció súper útil para organizar las finanzas: https://suconsultorfinanciero.online')}`}
+                            href={`https://api.whatsapp.com/send?text=${encodeURIComponent('🎁 ¡Mira este PDF gratuito de Flujo de Caja! Me pareció súper útil para organizar las finanzas: https://suconsultorfinanciero.online#descarga-pdf')}`}
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="newsletter-btn newsletter-btn--whatsapp"
@@ -168,7 +168,7 @@ function Newsletter() {
                             Compartir en WhatsApp
                         </a>
                         <a 
-                            href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://suconsultorfinanciero.online')}`}
+                            href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://suconsultorfinanciero.online#descarga-pdf')}`}
                             target="_blank" 
                             rel="noopener noreferrer" 
                             style={{ background: '#1877F2', color: 'white', padding: '0.8rem 1.6rem', borderRadius: '50px', display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', fontSize: '1rem', fontWeight: 'bold', boxShadow: '0 4px 15px rgba(24, 119, 242, 0.4)' }}
