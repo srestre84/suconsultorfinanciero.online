@@ -81,7 +81,7 @@ function Newsletter() {
             console.log('4. Terminando con éxito...');
             localStorage.setItem('isSubscribed', 'true');
             setIsSubscribed(true);
-            setMessage('¡Gracias! En breve recibirás la plantilla en tu correo electrónico. Además, ya tienes acceso para comentar en el blog (tus datos están seguros en nuestra BD).');
+            setMessage('¡Gracias! En breve recibirás el enlace del PDF en tu correo electrónico. Además, ya tienes acceso para comentar en el blog (tus datos están seguros en nuestra BD).');
         } catch (error) {
             console.error("Error CATCH AL ENVIAR: ", error);
             setMessage('Ocurrió un error al procesar tu suscripción. Intenta nuevamente más tarde.');
@@ -99,8 +99,19 @@ function Newsletter() {
                 <div className="newsletter-content-wrapper">
                     <h3 className="newsletter-title" style={{color: 'var(--blanco-puro) !important'}}>¡Material Desbloqueado! 🎁</h3>
                     <p className="newsletter-desc">
-                        Revisa tu bandeja de entrada (y la carpeta de Spam por si acaso). Ya te hemos enviado la <strong>Plantilla de Gastos Inteligente</strong>. ¡Disfruta tu nuevo superpoder financiero y participa en los comentarios de nuestro blog! 🚀
+                        Revisa tu bandeja de entrada (y la carpeta de Spam por si acaso). Ya te hemos enviado el PDF: <strong>Flujo de Caja by SRR</strong>. ¡Disfruta tu nuevo superpoder financiero y participa en los comentarios de nuestro blog! 🚀
                     </p>
+                    <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+                        <a 
+                            href="https://drive.google.com/file/d/1jm3TLgeVblEjg13T9faQm7Kl6VFtSti9/view?usp=sharing" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="newsletter-btn"
+                            style={{ textDecoration: 'none', display: 'inline-block', padding: '1rem 2rem' }}
+                        >
+                            📥 Descargar PDF Ahora
+                        </a>
+                    </div>
                     {message && message.includes('Nota') && (
                         <p className="newsletter-message" style={{ color: '#ffd700' }}>{message}</p>
                     )}
@@ -117,9 +128,9 @@ function Newsletter() {
             <div className="newsletter-badge">GRATIS</div>
             
             <div className="newsletter-content-wrapper">
-                <h3 className="newsletter-title">Descarga la Plantilla de Gastos Inteligente</h3>
+                <h3 className="newsletter-title">Descarga el PDF: Flujo de Caja by SRR</h3>
                 <p className="newsletter-desc">
-                    Descubre cómo optimizar tus finanzas en minutos. Ingresa tu mejor correo y te enviaremos nuestra herramienta en Excel para que tomes el control de tu dinero al instante.
+                    Domina el control de tus ingresos y egresos con nuestra metodología exclusiva. Ingresa tu mejor correo y recibe el PDF con el paso a paso matemático para optimizar tu dinero al instante.
                 </p>
 
                 <form onSubmit={handleSubmit} className="newsletter-form-container">
@@ -138,7 +149,7 @@ function Newsletter() {
                             className="newsletter-btn"
                             disabled={isLoading}
                         >
-                            {isLoading ? 'Enviando...' : 'Descargar Plantilla Ahora 👉'}
+                            {isLoading ? 'Enviando...' : 'Descargar PDF Ahora 👉'}
                         </button>
                     </div>
                     
@@ -151,7 +162,7 @@ function Newsletter() {
                             required
                         />
                         <label htmlFor="newsletter-consent">
-                            Acepto el tratamiento de mis datos y recibir promociones e información de productos según la <a href="/privacidad" target="_blank">Política de Privacidad</a>.
+                            Autorizo el tratamiento de mis datos personales (Habeas Data) para recibir el PDF, promociones e información de productos según la <a href="/privacidad" target="_blank">Política de Privacidad</a>. Podré darme de baja en cualquier momento.
                         </label>
                     </div>
                 </form>
