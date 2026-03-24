@@ -110,14 +110,29 @@ function Newsletter() {
                         >
                             📥 Descargar PDF Ahora
                         </a>
-                        <a 
-                            href={`https://api.whatsapp.com/send?text=${encodeURIComponent('¡Acabo de descargar mi PDF de Flujo de Caja by SRR! 📉 Optimiza tus finanzas tú también aquí: https://suconsultorfinanciero.online')}`}
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="newsletter-btn newsletter-btn--whatsapp newsletter-btn-link"
-                        >
-                            🤳 Compartir
-                        </a>
+                        
+                        <div className="newsletter-share-section" style={{ marginTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1.5rem', width: '100%' }}>
+                            <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.8)', marginBottom: '1rem', fontWeight: 'bold' }}>¡Ayúdanos compartiendo este recurso!</p>
+                            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                                <a 
+                                    href={`https://api.whatsapp.com/send?text=${encodeURIComponent('¡Acabo de descargar mi PDF de Flujo de Caja by SRR! 📉 Optimiza tus finanzas tú también aquí: https://suconsultorfinanciero.online')}`}
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="newsletter-btn newsletter-btn--whatsapp"
+                                    style={{ textDecoration: 'none', padding: '0.7rem 1.5rem', fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '0.5rem', borderRadius: '50px' }}
+                                >
+                                    WhatsApp
+                                </a>
+                                <a 
+                                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://suconsultorfinanciero.online')}`}
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    style={{ background: '#1877F2', color: 'white', padding: '0.7rem 1.5rem', borderRadius: '50px', display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', fontSize: '0.95rem', fontWeight: 'bold', boxShadow: '0 4px 15px rgba(24, 119, 242, 0.4)' }}
+                                >
+                                    Facebook
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     {message && message.includes('Nota') && (
                         <p className="newsletter-message" style={{ color: '#ffd700' }}>{message}</p>
@@ -139,6 +154,29 @@ function Newsletter() {
                 <p className="newsletter-desc">
                     Domina el control de tus ingresos y egresos con nuestra metodología exclusiva. Ingresa tu mejor correo y recibe el PDF con el paso a paso matemático para optimizar tu dinero al instante.
                 </p>
+
+                <div className="newsletter-share-pre" style={{ marginBottom: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.25rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '2rem' }}>
+                    <p style={{ fontSize: '1.1rem', color: 'var(--mostaza)', fontWeight: '700', margin: 0 }}>🚀 ¡Ayúdanos a llegar a más personas!</p>
+                    <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                        <a 
+                            href={`https://api.whatsapp.com/send?text=${encodeURIComponent('🎁 ¡Mira este PDF gratuito de Flujo de Caja! Me pareció súper útil para organizar las finanzas: https://suconsultorfinanciero.online')}`}
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="newsletter-btn newsletter-btn--whatsapp"
+                            style={{ textDecoration: 'none', padding: '0.8rem 1.6rem', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem', borderRadius: '50px' }}
+                        >
+                            Compartir en WhatsApp
+                        </a>
+                        <a 
+                            href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://suconsultorfinanciero.online')}`}
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            style={{ background: '#1877F2', color: 'white', padding: '0.8rem 1.6rem', borderRadius: '50px', display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', fontSize: '1rem', fontWeight: 'bold', boxShadow: '0 4px 15px rgba(24, 119, 242, 0.4)' }}
+                        >
+                            Facebook
+                        </a>
+                    </div>
+                </div>
 
                 <form onSubmit={handleSubmit} className="newsletter-form-container">
                     <div className="newsletter-form">
