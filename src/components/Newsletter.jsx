@@ -6,6 +6,7 @@ import './Newsletter.css';
 
 function Newsletter() {
     const [email, setEmail] = useState('');
+    const [consent, setConsent] = useState(false);
     const [isSubscribed, setIsSubscribed] = useState(false);
     const [message, setMessage] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -23,6 +24,11 @@ function Newsletter() {
 
         if (!email) {
             setMessage('Por favor, ingresa un correo electrónico.');
+            return;
+        }
+
+        if (!consent) {
+            setMessage('Debes aceptar el tratamiento de datos para suscribirte.');
             return;
         }
 
@@ -52,7 +58,9 @@ function Newsletter() {
             const firestorePromise = addDoc(collection(db, "subscribers"), {
                 email: email.toLowerCase(),
                 subscribedAt: serverTimestamp(),
-                source: "Website Lead Magnet"
+                source: "Website Lead Magnet",
+                consent: true,
+                consent_date: new Date().toISOString()
             }).then(() => console.log('2.5. Guardado exitoso en Firestore'))
                 .catch(err => console.error('Error silencioso en Firestore:', err));
 
@@ -114,23 +122,38 @@ function Newsletter() {
                     Descubre cómo optimizar tus finanzas en minutos. Ingresa tu mejor correo y te enviaremos nuestra herramienta en Excel para que tomes el control de tu dinero al instante.
                 </p>
 
-                <form onSubmit={handleSubmit} className="newsletter-form">
-                    <input
-                        type="email"
-                        placeholder="Tu mejor correo electrónico..."
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        disabled={isLoading}
-                        className="newsletter-input"
-                        required
-                    />
-                    <button
-                        type="submit"
-                        className="newsletter-btn"
-                        disabled={isLoading}
-                    >
-                        {isLoading ? 'Enviando...' : 'Descargar Plantilla Ahora 👉'}
-                    </button>
+                <form onSubmit={handleSubmit} className="newsletter-form-container">
+                    <div className="newsletter-form">
+                        <input
+                            type="email"
+                            placeholder="Tu mejor correo electrónico..."
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            disabled={isLoading}
+                            className="newsletter-input"
+                            required
+                        />
+                        <button
+                            type="submit"
+                            className="newsletter-btn"
+                            disabled={isLoading}
+                        >
+                            {isLoading ? 'Enviando...' : 'Descargar Plantilla Ahora 👉'}
+                        </button>
+                    </div>
+                    
+                    <div className="newsletter-consent">
+                        <input 
+                            type="checkbox" 
+                            id="newsletter-consent" 
+                            checked={consent}
+                            onChange={(e) => setConsent(e.target.checked)}
+                            required
+                        />
+                        <label htmlFor="newsletter-consent">
+                            Acepto el tratamiento de mis datos y recibir promociones e información de productos según la <a href="/privacidad" target="_blank">Política de Privacidad</a>.
+                        </label>
+                    </div>
                 </form>
 
                 {message && (

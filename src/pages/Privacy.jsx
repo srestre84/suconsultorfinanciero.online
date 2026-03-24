@@ -28,9 +28,12 @@ const Privacy = () => {
                     Última actualización: {new Date().toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}
                 </p>
 
-                <h3 style={{ color: 'var(--azul-oscuro)', marginTop: '2rem', marginBottom: '1rem' }}>1. Información que Recopilamos</h3>
+                <h3 style={{ color: 'var(--azul-oscuro)', marginTop: '2rem', marginBottom: '1rem' }}>1. Filosofía de "Zero-Trust" y No Acumulación de Datos</h3>
                 <p style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>
-                    Al suscribirse a nuestro boletín o contactarnos para una sesión de consultoría, podemos solicitar que nos proporcione información de identificación personal que podemos utilizar para contactarlo y brindarle el servicio solicitado. Esta información puede incluir, pero no se limita a: su nombre, dirección de correo electrónico y número de teléfono.
+                    Nuestra plataforma opera bajo una arquitectura de <strong>"Zero-Trust" (Confianza Cero)</strong>. Esto significa que <strong>no almacenamos, acumulamos ni conservamos datos sensibles de identificación personal</strong> en nuestros servidores tras la generación de documentos o el uso de nuestras calculadoras.
+                </p>
+                <p style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>
+                    Cualquier información que usted ingrese en nuestros formularios se procesa de manera efímera para el fin solicitado y se elimina automáticamente o permanece bajo su control local en su navegador. No mantenemos bases de datos con su información privada.
                 </p>
 
                 <h3 style={{ color: 'var(--azul-oscuro)', marginTop: '2rem', marginBottom: '1rem' }}>2. Tratamiento Exclusivo y Uso de la Información</h3>
@@ -38,15 +41,15 @@ const Privacy = () => {
                     La información que recopilamos de usted tiene como único y exclusivo fin:
                 </p>
                 <ul style={{ paddingLeft: '2rem', marginBottom: '1.5rem', lineHeight: '1.8' }}>
-                    <li><strong>Medir su perfil y viabilidad financiera</strong> para determinar la factibilidad de los diferentes productos de crédito.</li>
-                    <li>Personalizar su experiencia y responder a sus necesidades individuales de asesoría.</li>
-                    <li>Mejorar nuestro sitio web y la calidad del servicio al cliente.</li>
-                    <li>Enviar correos electrónicos periódicos sobre publicaciones del blog, siempre con opción de darse de baja.</li>
+                    <li><strong>Procesamiento local:</strong> La información se utiliza únicamente para generar el resultado o documento que usted requiere en tiempo real.</li>
+                    <li><strong>Personalizar su experiencia:</strong> Ajustar las herramientas a sus necesidades individuales de asesoría sin guardar los datos.</li>
+                    <li><strong>Mejorar nuestro sitio web:</strong> Análisis de uso anónimo para optimizar la calidad del servicio.</li>
+                    <li><strong>Canales Voluntarios:</strong> Solo si usted decide contactarnos vía WhatsApp o correo, de forma manual, conservaremos dicha comunicación para atender su solicitud.</li>
                 </ul>
 
                 <h3 style={{ color: 'var(--azul-oscuro)', marginTop: '2rem', marginBottom: '1rem' }}>3. Protección, Confidencialidad y Habeas Data</h3>
                 <p style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>
-                    Sus datos son estrictamente confidenciales y <strong>no serán vendidos, intercambiados, compartidos ni transferidos</strong> a bases de datos de terceros bajo ninguna circunstancia. La información recolectada se utiliza meramente a nivel de análisis interno.
+                    Al no recolectar bases de datos masivas, garantizamos el máximo estándar de <strong>Habeas Data</strong>. Sus datos son tratados con estricta confidencialidad durante el tiempo de la sesión y <strong>no son vendidos, intercambiados ni transferidos</strong> a terceros.
                 </p>
                 <p style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>
                     En caso de ser perfilado de manera exitosa para un producto de crédito, <strong>la autorización de centrales de riesgo (Habeas Data) y demás documentos de formalización se firmarán o aceptarán de forma directa con la entidad bancaria o financiera correspondiente</strong> en los canales oficiales de la misma. Nosotros no fungimos como central ni emitimos créditos de forma directa.

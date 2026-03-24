@@ -76,6 +76,7 @@ function PropertyDetail() {
                                 key={index}
                                 src={foto}
                                 alt={`${property.titulo} - vista ${index + 1}`}
+                                loading={index === 0 ? "eager" : "lazy"}
                             />
                         ))}
                     </div>

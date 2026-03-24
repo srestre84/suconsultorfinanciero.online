@@ -56,6 +56,7 @@ const PropertyCard = ({ property }) => {
                         src={imagenSrc}
                         alt={`${titulo} - foto ${activePhoto + 1}`}
                         className="prop-card-img"
+                        loading="lazy"
                     />
                     <span className={`prop-badge prop-badge--${estado === 'Disponible' ? 'available' : 'sold'}`}>
                         {estado}
@@ -81,7 +82,11 @@ const PropertyCard = ({ property }) => {
                                 className={`prop-thumb ${i === activePhoto ? 'prop-thumb--active' : ''}`}
                                 onClick={() => setActivePhoto(i)}
                             >
-                                <img src={foto} alt={`Vista ${i + 1}`} />
+                                <img 
+                                    src={foto} 
+                                    alt={`Vista ${i + 1}`} 
+                                    loading="lazy"
+                                />
                             </button>
                         ))}
                     </div>

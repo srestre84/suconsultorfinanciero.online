@@ -33,9 +33,9 @@ const Terms = () => {
                     Al acceder y utilizar el sitio web SuConsultorFinanciero.online, usted acepta estar sujeto a estos Términos y Condiciones de uso, todas las leyes y regulaciones aplicables, y acepta que es responsable de cumplir con las leyes locales aplicables. Si no está de acuerdo con alguno de estos términos, tiene prohibido utilizar o acceder a este sitio.
                 </p>
 
-                <h3 style={{ color: 'var(--azul-oscuro)', marginTop: '2rem', marginBottom: '1rem' }}>2. Uso de la Licencia</h3>
+                <h3 style={{ color: 'var(--azul-oscuro)', marginTop: '2rem', marginBottom: '1rem' }}>2. Uso de la Licencia y Protección de Datos</h3>
                 <p style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>
-                    Se concede permiso para descargar temporalmente una copia de los materiales (información o software) en el sitio web de SuConsultorFinanciero.online solo para uso transitorio personal y no comercial.
+                    Se concede permiso para descargar temporalmente una copia de los materiales en el sitio web para uso personal. Bajo nuestra política de <strong>Habeas Data</strong>, garantizamos que el uso de nuestras herramientas no implica la recolección ni el almacenamiento de sus datos personales en servidores externos; toda interacción técnica se rige por un principio de no acumulación de información sensible.
                 </p>
 
                 <h3 style={{ color: 'var(--azul-oscuro)', marginTop: '2rem', marginBottom: '1rem' }}>3. Exención de Responsabilidad Financiera</h3>
