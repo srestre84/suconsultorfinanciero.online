@@ -101,15 +101,22 @@ function Newsletter() {
                     <p className="newsletter-desc">
                         Revisa tu bandeja de entrada (y la carpeta de Spam por si acaso). Ya te hemos enviado el PDF: <strong>Flujo de Caja by SRR</strong>. ¡Disfruta tu nuevo superpoder financiero y participa en los comentarios de nuestro blog! 🚀
                     </p>
-                    <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+                    <div className="newsletter-success-actions">
                         <a 
                             href="https://drive.google.com/file/d/1jm3TLgeVblEjg13T9faQm7Kl6VFtSti9/view?usp=sharing" 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="newsletter-btn"
-                            style={{ textDecoration: 'none', display: 'inline-block', padding: '1rem 2rem' }}
+                            className="newsletter-btn newsletter-btn-link"
                         >
                             📥 Descargar PDF Ahora
+                        </a>
+                        <a 
+                            href={`https://api.whatsapp.com/send?text=${encodeURIComponent('¡Acabo de descargar mi PDF de Flujo de Caja by SRR! 📉 Optimiza tus finanzas tú también aquí: https://suconsultorfinanciero.online')}`}
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="newsletter-btn newsletter-btn--whatsapp newsletter-btn-link"
+                        >
+                            🤳 Compartir
                         </a>
                     </div>
                     {message && message.includes('Nota') && (
