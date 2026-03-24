@@ -64,16 +64,29 @@ function Newsletter() {
             }).then(() => console.log('2.5. Guardado exitoso en Firestore'))
                 .catch(err => console.error('Error silencioso en Firestore:', err));
 
-            // 3. EmailJS para la respuesta automática al cliente
+            // 3. EmailJS para la respuesta automática al cliente y notificación al admin
             console.log('3. Configurando EmailJS...');
             const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_63my3xq';
             const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_dx8wg88';
+            const ADMIN_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_ADMIN_TEMPLATE_ID; // Solo si está configurado
             const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'qko6zRF0TXzmgmBlU';
 
             if (PUBLIC_KEY !== 'TU_PUBLIC_KEY_AQUI') {
                 const templateParams = { user_email: email };
-                console.log('3.5. Llamando a emailjs.send()');
+                console.log('3.5. Llamando a emailjs.send() para el cliente');
                 await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+                
+                // Si existe un template para el admin, enviamos la notificación
+                if (ADMIN_TEMPLATE_ID) {
+                    console.log('3.7. Llamando a emailjs.send() para el admin');
+                    const adminParams = {
+                        user_email: email,
+                        subject: "🔔 Nuevo Prospecto: Flujo de Caja",
+                        message: `¡Hola Sebastián! Tienes un nuevo suscriptor interesado en el PDF: ${email}. Revisa Firebase para más detalles.`,
+                        to_email: "srestre84@gmail.com" // Puedes cambiar esto en la plantilla de EmailJS
+                    };
+                    await emailjs.send(SERVICE_ID, ADMIN_TEMPLATE_ID, adminParams, PUBLIC_KEY);
+                }
                 console.log('3.8. Respuesta de emailjs recibida');
             }
 
