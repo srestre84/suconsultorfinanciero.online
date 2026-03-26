@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import { collection, addDoc, serverTimestamp, query, where, getDocs } from 'firebase/firestore';
+import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../config/firebase';
 import './Newsletter.css';
 
@@ -37,13 +37,14 @@ function Newsletter() {
         console.log('--- EMPEZANDO SUBMIT ---');
 
         try {
-            // 1. Verificar si el correo ya existe en Firestore
-            console.log('1. Consultando Firestore para:', email);
-            const q = query(collection(db, "subscribers"), where("email", "==", email.toLowerCase()));
-            const querySnapshot = await getDocs(q);
-            console.log('1.5. Firestore Respondió:', querySnapshot.empty ? 'Nuevo' : 'Existente');
+            // 1. Verificar si el correo ya existe en Firestore (usando email como ID de documento)
+            const emailId = email.toLowerCase().replace(/[.#$[\]/]/g, '_');
+            console.log('1. Consultando Firestore para:', emailId);
+            const docRef = doc(db, "subscribers", emailId);
+            const docSnap = await getDoc(docRef);
+            console.log('1.5. Firestore Respondió:', docSnap.exists() ? 'Existente' : 'Nuevo');
 
-            if (!querySnapshot.empty) {
+            if (docSnap.exists()) {
                 // El usuario ya existe en la BD
                 localStorage.setItem('isSubscribed', 'true');
                 setIsSubscribed(true);
@@ -52,10 +53,9 @@ function Newsletter() {
                 return;
             }
 
-            // 2. Guardar en Base de Datos Real (Firestore) de forma optimista
-            console.log('2. Guardando nuevo suscriptor en Firestore (en segundo plano)...');
-            // Quitamos el await para que no bloquee si hay problemas de red con el WebSocket de Firebase
-            const firestorePromise = addDoc(collection(db, "subscribers"), {
+            // 2. Guardar en Base de Datos Real (Firestore)
+            console.log('2. Guardando nuevo suscriptor en Firestore...');
+            const firestorePromise = setDoc(docRef, {
                 email: email.toLowerCase(),
                 subscribedAt: serverTimestamp(),
                 source: "Website Lead Magnet",
