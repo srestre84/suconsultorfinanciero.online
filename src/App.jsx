@@ -21,7 +21,7 @@ import { logEvent } from 'firebase/analytics';
 
 // Componente para manejar el scroll a anclas (ID)
 function ScrollToHash() {
-    const { hash } = useLocation();
+    const { pathname, hash } = useLocation();
 
     useEffect(() => {
         if (hash) {
@@ -35,7 +35,7 @@ function ScrollToHash() {
         } else {
             window.scrollTo(0, 0);
         }
-    }, [hash]);
+    }, [pathname, hash]);
 
     return null;
 }

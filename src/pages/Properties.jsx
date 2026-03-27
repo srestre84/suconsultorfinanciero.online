@@ -106,7 +106,7 @@ function Properties() {
                         </p>
                     </div>
                     <a
-                        href="https://wa.me/573209999999?text=Hola%2C%20me%20interesa%20saber%20sobre%20financiaci%C3%B3n%20para%20inmuebles"
+                        href="https://wa.me/573167443613?text=Hola%2C%20me%20interesa%20saber%20sobre%20financiaci%C3%B3n%20para%20inmuebles"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="prop-advisory-btn"
