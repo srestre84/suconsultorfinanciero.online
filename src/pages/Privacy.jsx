@@ -30,7 +30,7 @@ const Privacy = () => {
 
                 <h3 style={{ color: 'var(--azul-oscuro)', marginTop: '2rem', marginBottom: '1rem' }}>1. Filosofía de "Zero-Trust" y No Acumulación de Datos</h3>
                 <p style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>
-                    Nuestra plataforma opera bajo una arquitectura de <strong>"Zero-Trust" (Confianza Cero)</strong>. Esto significa que <strong>no almacenamos, acumulamos ni conservamos datos sensibles de identificación personal</strong> en nuestros servidores tras la generación de documentos o el uso de nuestras calculadoras.
+                    Nuestra plataforma opera bajo una arquitectura de <strong>"Zero-Trust" (Confianza Cero)</strong>. Esto significa que <strong>no almacenamos, acumulamos ni conservamos datos sensibles de identificación personal</strong> en nuestros servidores tras el procesamiento de simulaciones o el uso de nuestras calculadoras.
                 </p>
                 <p style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>
                     Cualquier información que usted ingrese en nuestros formularios se procesa de manera efímera para el fin solicitado y se elimina automáticamente o permanece bajo su control local en su navegador. No mantenemos bases de datos con su información privada.
@@ -41,7 +41,7 @@ const Privacy = () => {
                     La información que recopilamos de usted tiene como único y exclusivo fin:
                 </p>
                 <ul style={{ paddingLeft: '2rem', marginBottom: '1.5rem', lineHeight: '1.8' }}>
-                    <li><strong>Procesamiento local:</strong> La información se utiliza únicamente para generar el resultado o documento que usted requiere en tiempo real.</li>
+                    <li><strong>Procesamiento local:</strong> La información se utiliza únicamente para generar la simulación que usted requiere en tiempo real.</li>
                     <li><strong>Personalizar su experiencia:</strong> Ajustar las herramientas a sus necesidades individuales de asesoría sin guardar los datos.</li>
                     <li><strong>Mejorar nuestro sitio web:</strong> Análisis de uso anónimo para optimizar la calidad del servicio.</li>
                     <li><strong>Canales Voluntarios:</strong> Solo si usted decide contactarnos vía WhatsApp o correo, de forma manual, conservaremos dicha comunicación para atender su solicitud.</li>
