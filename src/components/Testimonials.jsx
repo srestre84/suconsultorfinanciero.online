@@ -58,6 +58,9 @@ const Testimonials = () => {
                         <div style={{ marginBottom: '1rem', fontSize: '1.2rem' }}>
                             {renderStars(testimonial.rating)}
                         </div>
+                        <div style={{ fontWeight: '800', color: 'var(--azul-oscuro)', fontSize: '1.1rem', marginBottom: '0.5rem' }}>
+                            {testimonial.name}
+                        </div>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid rgba(0,0,0,0.05)' }}>
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem', fontSize: '0.8rem' }}>
                                 <span style={{ width: '100%', fontWeight: '700', color: 'var(--azul-oscuro)', marginBottom: '0.2rem' }}>
