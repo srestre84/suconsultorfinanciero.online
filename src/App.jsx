@@ -16,6 +16,8 @@ import ServiceDetail from './pages/ServiceDetail';
 import DictionaryDetail from './pages/DictionaryDetail';
 import CalculatorDetail from './pages/CalculatorDetail';
 import AboutMe from './pages/AboutMe';
+import RateService from './pages/RateService';
+import ManageReviews from './pages/ManageReviews';
 
 import { analytics } from './config/firebase';
 import { logEvent } from 'firebase/analytics';
@@ -79,6 +81,8 @@ function App() {
                         <Route path="/privacidad" element={<Privacy />} />
                         <Route path="/inmuebles" element={<Properties />} />
                         <Route path="/sobre-mi" element={<AboutMe />} />
+                        <Route path="/valorar" element={<RateService />} />
+                        <Route path="/admin-reseñas" element={<ManageReviews />} />
                         <Route path="/inmuebles/:id" element={<PropertyDetail />} />
                         <Route path="/servicios/:id" element={<ServiceDetail />} />
                         <Route path="/diccionario/:id" element={<DictionaryDetail />} />

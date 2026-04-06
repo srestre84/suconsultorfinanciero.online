@@ -1,0 +1,168 @@
+.rate-service-page {
+  padding-top: 100px;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+}
+
+.rate-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.rate-form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.rate-form {
+  padding: 3rem;
+}
+
+.form-section {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 2rem;
+}
+
+.form-section:last-child {
+  border-bottom: none;
+}
+
+.form-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--azul-oscuro);
+  text-align: left;
+}
+
+.form-section h3::after {
+  display: none;
+}
+
+/* Star Rating Styling */
+.star-rating {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: #ccc;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.star-btn.on {
+  color: var(--mostaza);
+}
+
+.star-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Criteria Grid */
+.criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.criteria-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.criteria-item label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.criteria-item select {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--blanco-puro);
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+/* Inputs */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.input-group input,
+.input-group textarea {
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--blanco-puro);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.input-group textarea {
+  resize: vertical;
+}
+
+/* Checkbox */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.checkbox-label input {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.checkbox-label span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--azul-oscuro);
+}
+
+/* Success Card */
+.success-card {
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.submit-btn {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .rate-form {
+    padding: 1.5rem;
+  }
+}

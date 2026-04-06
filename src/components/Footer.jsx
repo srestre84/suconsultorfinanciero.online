@@ -23,8 +23,9 @@ const Footer = () => {
                 <div className="footer-bottom">
                     <p>&copy; {new Date().getFullYear()} Suconsultorfinanciero.online. Todos los derechos reservados.</p>
                     <div style={{ marginTop: '0.5rem', fontSize: '0.85rem' }}>
-                        <Link to="/terminos" style={{ color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'none', marginRight: '1rem' }}>Términos y Condiciones</Link>
-                        <Link to="/privacidad" style={{ color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'none' }}>Política de Privacidad</Link>
+                        <Link to="/terminos" style={{ color: 'rgba(255, 255, 255, 0.4)', textDecoration: 'none', marginRight: '1rem' }}>Términos</Link>
+                        <Link to="/privacidad" style={{ color: 'rgba(255, 255, 255, 0.4)', textDecoration: 'none', marginRight: '1rem' }}>Privacidad</Link>
+                        <Link to="/admin-reseñas" style={{ color: 'rgba(255, 255, 255, 0.1)', textDecoration: 'none', fontSize: '0.7rem' }}>Admin</Link>
                     </div>
                 </div>
             </footer>
