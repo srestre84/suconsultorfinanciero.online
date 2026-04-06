@@ -30,8 +30,7 @@ const ManageReviews = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        const cleanPass = password.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-        if (cleanPass === 'sebastian' || cleanPass === 'sebas') {
+        if (password === 'goku1714*') {
             setIsAuthenticated(true);
         } else {
             alert('Palabra clave incorrecta');
