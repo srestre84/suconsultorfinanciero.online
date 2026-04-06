@@ -62,7 +62,6 @@ function Home() {
             <Hero />
 
             <Mission />
-            <AboutMe />
             <Services />
             <InstagramSection />
 

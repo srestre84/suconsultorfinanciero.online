@@ -15,6 +15,7 @@ import PropertyDetail from './pages/PropertyDetail';
 import ServiceDetail from './pages/ServiceDetail';
 import DictionaryDetail from './pages/DictionaryDetail';
 import CalculatorDetail from './pages/CalculatorDetail';
+import AboutMe from './pages/AboutMe';
 
 import { analytics } from './config/firebase';
 import { logEvent } from 'firebase/analytics';
@@ -77,6 +78,7 @@ function App() {
                         <Route path="/terminos" element={<Terms />} />
                         <Route path="/privacidad" element={<Privacy />} />
                         <Route path="/inmuebles" element={<Properties />} />
+                        <Route path="/sobre-mi" element={<AboutMe />} />
                         <Route path="/inmuebles/:id" element={<PropertyDetail />} />
                         <Route path="/servicios/:id" element={<ServiceDetail />} />
                         <Route path="/diccionario/:id" element={<DictionaryDetail />} />

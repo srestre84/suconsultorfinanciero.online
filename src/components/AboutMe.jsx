@@ -1,7 +1,7 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import './AboutMe.css';
 
-const AboutMe = () => {
+const AboutMe = ({ showReadMore = false }) => {
   return (
     <section className="about-me-section section-padding" id="sobre-mi">
       <div className="container">
@@ -60,13 +60,19 @@ const AboutMe = () => {
               </p>
             </div>
 
-            <div className="about-cta">
+            <div className="about-cta" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <a href="#consultoria" className="btn-primary">
                 ¡Quiero mi asesoría gratuita ahora!
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </a>
-              <span className="cta-note">Simulación 100% gratuita y sin compromisos</span>
+              {showReadMore && (
+                <Link to="/sobre-mi" className="btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'var(--azul-oscuro)', fontWeight: '600' }}>
+                  Conocer trayectoria completa
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </Link>
+              )}
             </div>
+            <span className="cta-note" style={{ marginTop: '1rem', display: 'block' }}>Simulación 100% gratuita y sin compromisos</span>
           </div>
         </div>
       </div>

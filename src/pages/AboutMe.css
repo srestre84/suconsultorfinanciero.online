@@ -1,0 +1,127 @@
+.about-page {
+  padding-top: 80px; /* Space for fixed header */
+  background: var(--bg-gradient);
+}
+
+.about-hero {
+  text-align: center;
+  background: var(--azul-claro);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--azul-oscuro);
+  line-height: 1.1;
+}
+
+.text-highlight {
+  color: var(--mostaza);
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-muted);
+}
+
+/* Methodlogy */
+.methodology-grid {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.steps-container {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.step-item {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  background: var(--blanco-puro);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.step-item:hover {
+  transform: translateY(-5px);
+}
+
+.step-num {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--mostaza);
+  opacity: 0.5;
+  line-height: 1;
+}
+
+.step-content h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: var(--azul-oscuro);
+  text-align: left;
+}
+
+.step-content h3::after {
+  display: none;
+}
+
+.step-content p {
+  margin-bottom: 0;
+}
+
+/* Trust Badges */
+.trust-container {
+  padding: 3rem;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.trust-container h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.trust-container h3::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode .about-hero {
+  background: rgba(10, 25, 47, 0.4);
+}
+
+body.dark-mode .step-item {
+  background: var(--glass-bg);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .step-item {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .step-content h3 {
+    text-align: center;
+  }
+  
+  .step-num {
+    font-size: 2rem;
+  }
+}
