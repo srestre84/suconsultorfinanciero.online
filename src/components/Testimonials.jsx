@@ -58,8 +58,11 @@ const Testimonials = () => {
                         <div style={{ marginBottom: '1rem', fontSize: '1.2rem' }}>
                             {renderStars(testimonial.rating)}
                         </div>
-                        <div style={{ fontWeight: '800', color: 'var(--azul-oscuro)', fontSize: '1.1rem', marginBottom: '0.5rem' }}>
+                        <div style={{ fontWeight: '800', color: 'var(--azul-oscuro)', fontSize: '1.1rem', marginBottom: '0.2rem' }}>
                             {testimonial.name}
+                        </div>
+                        <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '0.5rem', opacity: '0.8' }}>
+                            {testimonial.createdAt?.toDate().toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid rgba(0,0,0,0.05)' }}>
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem', fontSize: '0.8rem' }}>
