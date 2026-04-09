@@ -74,10 +74,14 @@ function Newsletter() {
             if (PUBLIC_KEY !== 'TU_PUBLIC_KEY_AQUI') {
                 const templateParams = { user_email: email };
                 console.log('3.5. Llamando a emailjs.send() para el cliente');
-                await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+                try {
+                    await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+                } catch (emailError) {
+                    console.error("Error enviando email al cliente:", emailError);
+                }
                 
                 // Si existe un template para el admin, enviamos la notificación
-                if (ADMIN_TEMPLATE_ID) {
+                if (ADMIN_TEMPLATE_ID && !ADMIN_TEMPLATE_ID.includes('AQUI_PONES')) {
                     console.log('3.7. Llamando a emailjs.send() para el admin');
                     const adminParams = {
                         user_email: email,
@@ -85,9 +89,13 @@ function Newsletter() {
                         message: `¡Hola Sebastián! Tienes un nuevo suscriptor interesado en el PDF: ${email}. Revisa Firebase para más detalles.`,
                         to_email: "srestre84@gmail.com" // Puedes cambiar esto en la plantilla de EmailJS
                     };
-                    await emailjs.send(SERVICE_ID, ADMIN_TEMPLATE_ID, adminParams, PUBLIC_KEY);
+                    try {
+                        await emailjs.send(SERVICE_ID, ADMIN_TEMPLATE_ID, adminParams, PUBLIC_KEY);
+                    } catch (adminEmailError) {
+                        console.error("Error enviando email al admin:", adminEmailError);
+                    }
                 }
-                console.log('3.8. Respuesta de emailjs recibida');
+                console.log('3.8. Respuesta de emailjs recibida o saltada por error');
             }
 
             // 4. Éxito Final

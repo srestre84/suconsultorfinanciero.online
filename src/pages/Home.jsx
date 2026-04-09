@@ -61,9 +61,13 @@ function Home() {
 
             <Hero />
 
+            <section className="section-padding container" style={{ paddingBottom: '0' }}>
+                <Newsletter />
+            </section>
+
+
             <Mission />
             <Services />
-            <InstagramSection />
 
             {/* Nueva Sección de Vista Previa de Inmuebles */}
             <section className="section-padding container prop-preview-section" id="inmuebles">
@@ -91,6 +95,8 @@ function Home() {
                     </Link>
                 </div>
             </section>
+
+            <InstagramSection />
 
             <Dictionary />
 
@@ -124,9 +130,6 @@ function Home() {
                 </div>
             </section>
 
-            <section className="section-padding container">
-                <Newsletter />
-            </section>
         </main>
     );
 }
