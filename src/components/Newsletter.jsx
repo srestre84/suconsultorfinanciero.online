@@ -41,10 +41,17 @@ function Newsletter() {
             const emailId = email.toLowerCase().replace(/[.#$[\]/]/g, '_');
             console.log('1. Consultando Firestore para:', emailId);
             const docRef = doc(db, "subscribers", emailId);
-            const docSnap = await getDoc(docRef);
-            console.log('1.5. Firestore Respondió:', docSnap.exists() ? 'Existente' : 'Nuevo');
+            
+            let userExists = false;
+            try {
+                const docSnap = await getDoc(docRef);
+                userExists = docSnap.exists();
+                console.log('1.5. Firestore Respondió:', userExists ? 'Existente' : 'Nuevo');
+            } catch (firestoreError) {
+                console.warn('Aviso: No se pudo verificar suscripción (posible error de permisos), continuando...', firestoreError.message);
+            }
 
-            if (docSnap.exists()) {
+            if (userExists) {
                 // El usuario ya existe en la BD
                 localStorage.setItem('isSubscribed', 'true');
                 setIsSubscribed(true);
@@ -55,14 +62,21 @@ function Newsletter() {
 
             // 2. Guardar en Base de Datos Real (Firestore)
             console.log('2. Guardando nuevo suscriptor en Firestore...');
-            const firestorePromise = setDoc(docRef, {
-                email: email.toLowerCase(),
-                subscribedAt: serverTimestamp(),
-                source: "Website Lead Magnet",
-                consent: true,
-                consent_date: new Date().toISOString()
-            }).then(() => console.log('2.5. Guardado exitoso en Firestore'))
-                .catch(err => console.error('Error silencioso en Firestore:', err));
+            let firestoreSuccess = false;
+            try {
+                await setDoc(docRef, {
+                    email: email.toLowerCase(),
+                    subscribedAt: serverTimestamp(),
+                    source: "Website Lead Magnet",
+                    consent: true,
+                    consent_date: new Date().toISOString()
+                });
+                console.log('2.5. Guardado exitoso en Firestore');
+                firestoreSuccess = true;
+            } catch (firestoreWriteError) {
+                console.error('Error al guardar en Firestore:', firestoreWriteError);
+                // No bloqueamos todo el proceso, pero lo registramos
+            }
 
             // 3. EmailJS para la respuesta automática al cliente y notificación al admin
             console.log('3. Configurando EmailJS...');
@@ -100,9 +114,16 @@ function Newsletter() {
 
             // 4. Éxito Final
             console.log('4. Terminando con éxito...');
-            localStorage.setItem('isSubscribed', 'true');
-            setIsSubscribed(true);
-            setMessage('¡Gracias! En breve recibirás el enlace del PDF en tu correo electrónico. Además, ya tienes acceso para comentar en el blog (tus datos están seguros en nuestra BD).');
+            
+            if (firestoreSuccess) {
+                localStorage.setItem('isSubscribed', 'true');
+                setIsSubscribed(true);
+                setMessage('¡Gracias! En breve recibirás el enlace del PDF en tu correo electrónico. Además, ya tienes acceso para comentar en el blog.');
+            } else {
+                // Si Firestore falló (permisos), igual damos el PDF pero no habilitamos comentarios aún
+                setIsSubscribed(true); // Permitimos ver la zona de descarga
+                setMessage('¡Gracias! Procesamos tu PDF. (Nota: No pudimos activar tu cuenta del blog automáticamente por un error técnico, pero ya puedes descargar el material abajo).');
+            }
         } catch (error) {
             console.error("Error CATCH AL ENVIAR: ", error);
             setMessage('Ocurrió un error al procesar tu suscripción. Intenta nuevamente más tarde.');
@@ -124,7 +145,7 @@ function Newsletter() {
                     </p>
                     <div className="newsletter-success-actions">
                         <a 
-                            href="https://drive.google.com/file/d/1jm3TLgeVblEjg13T9faQm7Kl6VFtSti9/view?usp=sharing" 
+                            href="https://drive.google.com/uc?export=download&id=1jm3TLgeVblEjg13T9faQm7Kl6VFtSti9" 
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="newsletter-btn newsletter-btn-link"

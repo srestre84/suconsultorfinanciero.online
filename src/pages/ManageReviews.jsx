@@ -64,9 +64,9 @@ const ManageReviews = () => {
                     <div className="glass login-card animate-fade-in">
                         <h2>Panel de Moderación</h2>
                         <form onSubmit={handleLogin} className="login-form">
-                            <input 
-                                type="password" 
-                                placeholder="Ingresa la palabra clave..." 
+                            <input
+                                type="password"
+                                placeholder="Ingresa la palabra clave..."
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
@@ -133,23 +133,23 @@ const ManageReviews = () => {
 
                                 <div className="card-actions">
                                     {review.status !== 'approved' && (
-                                        <button 
-                                            onClick={() => updateStatus(review.id, 'approved')} 
+                                        <button
+                                            onClick={() => updateStatus(review.id, 'approved')}
                                             className="btn-approve"
                                         >
                                             Aprobar
                                         </button>
                                     )}
                                     {review.status !== 'rejected' && (
-                                        <button 
-                                            onClick={() => updateStatus(review.id, 'rejected')} 
+                                        <button
+                                            onClick={() => updateStatus(review.id, 'rejected')}
                                             className="btn-reject"
                                         >
                                             Rechazar
                                         </button>
                                     )}
-                                    <button 
-                                        onClick={() => deleteReview(review.id)} 
+                                    <button
+                                        onClick={() => deleteReview(review.id)}
                                         className="btn-delete"
                                     >
                                         Eliminar
