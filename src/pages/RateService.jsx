@@ -41,7 +41,11 @@ const RateService = () => {
             setSubmitted(true);
         } catch (error) {
             console.error("Error enviando calificación:", error);
-            alert("No se pudo enviar la calificación. Inténtalo de nuevo.");
+            if (error.code === 'permission-denied') {
+                alert("⚠ Error de Permisos: Tu calificación no pudo guardarse en la base de datos (Habeas Data). Por favor, contacta a Sebastián para informarle sobre este fallo de configuración.");
+            } else {
+                alert("No se pudo enviar la calificación debido a un error técnico. Por favor, inténtalo más tarde.");
+            }
         } finally {
             setLoading(false);
         }

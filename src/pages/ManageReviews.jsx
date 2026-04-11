@@ -23,6 +23,12 @@ const ManageReviews = () => {
             }));
             setReviews(reviewsData);
             setLoading(false);
+        }, (error) => {
+            console.error("Error obteniendo reseñas:", error);
+            setLoading(false);
+            if (error.code === 'permission-denied') {
+                alert("🔒 Error de Acceso: No tienes permisos suficientes para leer las reseñas. Por favor, revisa tus reglas de seguridad en Firebase Database.");
+            }
         });
 
         return () => unsubscribe();

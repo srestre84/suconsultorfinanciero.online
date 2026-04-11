@@ -28,6 +28,10 @@ const Testimonials = () => {
 
             setTestimonials(sortedData);
             setLoading(false);
+        }, (error) => {
+            console.error("Error en testimonios (silencio):", error);
+            setLoading(false);
+            // Si hay error de permisos (unsubscribed/no rules), simplemente no mostramos nada
         });
 
         return () => unsubscribe();
