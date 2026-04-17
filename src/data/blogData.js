@@ -141,5 +141,26 @@ export const blogData = [
         date: "2026-03-22",
         author: "Sebastián - Consultor",
         imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 9,
+        title: "5 Claves para negociar con tu banco en 2026",
+        excerpt: "No aceptes la primera tasa que te ofrezcan. Te enseñamos cómo los expertos logran condiciones preferenciales en el mercado de Medellín.",
+        content: `
+            <p>El mercado financiero en Medellín es altamente competitivo. Los bancos están constantemente luchando por captar clientes con buen perfil crediticio. Si tú eres uno de ellos, tienes el poder de negociación en tus manos.</p>
+            <h3>1. Conoce tu Score de antemano</h3>
+            <p>Nunca vayas a una oficina bancaria sin saber tu puntaje en Datacrédito. Si tu score es superior a 750, eres un cliente "diamante" y puedes exigir tasas por debajo de la oferta estándar de cartelera.</p>
+            <h3>2. La técnica de la contraoferta</h3>
+            <p>Solicita una simulación en el Banco A y llévala al Banco B. Muchas entidades tienen políticas de "Match" o igualación de tasas para compras de cartera. Esta es la forma más rápida de bajar medio o un punto porcentual en tu tasa EA.</p>
+            <h3>3. Mira más allá de la tasa</h3>
+            <p>A veces una tasa ligeramente más alta es mejor si el seguro de vida asociado es mucho más económico. Pide siempre que te coticen el <strong>Costo Total Anual</strong>, que incluye seguros y comisiones.</p>
+            <h3>4. Vinculación inteligente</h3>
+            <p>Ofrecer pasar tu nómina o adquirir un seguro adicional puede bajarte la tasa del crédito hipotecario. Haz la cuenta: ¿el ahorro en la cuota compensa el costo del nuevo producto? A menudo la respuesta es sí.</p>
+            <h3>5. Usa un Consultor Financiero</h3>
+            <p>Como profesionales que manejamos volúmenes altos de créditos, tenemos acceso a canales preferenciales en las áreas de riesgos de los bancos que no están disponibles para el público general en ventanilla. Nosotros negociamos por ti.</p>
+        `,
+        date: "2026-04-10",
+        author: "Sebastián - Consultor",
+        imageUrl: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     }
 ];

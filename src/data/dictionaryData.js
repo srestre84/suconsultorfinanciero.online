@@ -82,5 +82,26 @@ export const dictionaryData = [
         definition: "Capacidad de un activo para convertirse rápidamente en dinero en efectivo sin perder su valor. Una cuenta de ahorros tiene alta liquidez; una casa tiene baja liquidez.",
         value: "",
         category: "Economía"
+    },
+    {
+        id: "amortizacion",
+        term: "Amortización",
+        definition: "Proceso financiero mediante el cual se paga una deuda junto con sus intereses a través de pagos periódicos a lo largo del tiempo.",
+        value: "Existen diferentes sistemas como el Francés (cuota fija) o el Alemán (abono a capital fijo).",
+        category: "Finanzas"
+    },
+    {
+        id: "capacidad-endeudamiento",
+        term: "Capacidad de Endeudamiento",
+        definition: "Monto máximo de crédito que una persona puede asumir sin poner en riesgo su solvencia financiera básica.",
+        value: "Se recomienda que las cuotas de deudas no superen el 30% o 35% de los ingresos netos mensuales.",
+        category: "Finanzas"
+    },
+    {
+        id: "pignoracion",
+        term: "Pignoración",
+        definition: "Garantía real constituida sobre bienes muebles (como un vehículo, maquinaria o un CDT) para asegurar el cumplimiento de una obligación financiera.",
+        value: "El bien queda como respaldo del crédito hasta que se complete el pago.",
+        category: "Garantías"
     }
 ];
