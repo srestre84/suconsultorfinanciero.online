@@ -12,6 +12,7 @@ import RateCalculator from '../components/RateCalculator';
 import Mission from '../components/Mission';
 import AboutMe from '../components/AboutMe';
 import Hero from '../components/Hero';
+import BankSearch from '../components/BankSearch';
 import PropertyCard from '../components/PropertyCard';
 import { properties } from '../data/properties';
 import './PropertyPreview.css';
@@ -60,6 +61,7 @@ function Home() {
             </Helmet>
 
             <Hero />
+            <BankSearch />
 
             <section className="section-padding container" style={{ paddingBottom: '0' }}>
                 <Newsletter />
