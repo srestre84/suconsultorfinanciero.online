@@ -162,5 +162,37 @@ export const blogData = [
         date: "2026-04-10",
         author: "Sebastián - Consultor",
         imageUrl: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 10,
+        title: "¿Hacia dónde van las tasas del Banrep en 2026?",
+        excerpt: "Analizamos las últimas decisiones del Banco de la República y cómo impactan tu bolsillo, desde el crédito hipotecario hasta las tarjetas.",
+        content: `
+            <p>El Banco de la República ha sido el protagonista de las noticias financieras en Colombia durante los últimos meses. Con una inflación que empieza a dar tregua, la gran pregunta para los antioqueños es: ¿cuándo bajarán realmente las cuotas de mis créditos?</p>
+            <h3>El impacto en el Crédito Hipotecario</h3>
+            <p>Históricamente, las tasas de vivienda reaccionan con un ligero retraso a las decisiones del Banrep. Si el emisor baja sus tasas de intervención, es el momento ideal para empezar a buscar un <strong>pre-aprobado</strong> o considerar una compra de cartera hipotecaria para amarrar una mejor tasa a largo plazo.</p>
+            <h3>Consejo del Consultor</h3>
+            <p>No esperes a que las tasas lleguen al mínimo histórico para comprar vivienda. En Medellín y el Oriente Antioqueño, el precio de los inmuebles suele subir más rápido que lo que bajan las tasas. Es mejor comprar con la tasa actual y luego hacer una <strong>compra de cartera</strong> cuando el Banrep baje más sus intereses.</p>
+            <p><small>Fuente de datos: Análisis basado en reportes técnicos del Banco de la República y Valora Analitik.</small></p>
+        `,
+        date: "2026-04-15",
+        author: "Sebastián - Consultor",
+        imageUrl: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 11,
+        title: "Medellín: Epicentro de Inversión Inmobiliaria en Antioquia",
+        excerpt: "Por qué barrios como Calasanz, Prado Centro y sectores de Itagüí siguen siendo minas de oro para la inversión en 2026.",
+        content: `
+            <p>A pesar de la incertidumbre global, Medellín y su área metropolitana mantienen una dinámica inmobiliaria envidiable. Según reportes de La República y gremios locales, la valorización en sectores estratégicos no se detiene.</p>
+            <h3>Sectores con mayor potencial</h3>
+            <p>Barrios como <strong>Calasanz</strong> ofrecen un equilibrio perfecto entre precio por metro cuadrado y calidad de vida. Por otro lado, la renovación urbana en <strong>Prado Centro</strong> está atrayendo a inversionistas que buscan conservar el patrimonio con rentabilidades modernas.</p>
+            <h3>¿Cómo financiar estas inversiones?</h3>
+            <p>La clave en Antioquia es el uso del <strong>Leasing Habitacional</strong> para inversionistas. Permite apalancarse con menos cuota inicial y tener beneficios tributarios que mejoran la rentabilidad neta del arrendamiento.</p>
+            <p><small>Nota: Resumen con datos de actualidad económica regional.</small></p>
+        `,
+        date: "2026-04-17",
+        author: "Sebastián - Consultor",
+        imageUrl: "https://images.unsplash.com/photo-1590490333555-4679375e2f75?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     }
 ];
