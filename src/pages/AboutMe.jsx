@@ -7,8 +7,8 @@ const AboutMe = () => {
   return (
     <main className="about-page">
       <Helmet>
-        <title>Sobre Mí | Sebastián Restrepo - Su Consultor Financiero</title>
-        <meta name="description" content="Conoce la trayectoria de Sebastián Restrepo, Ingeniero Administrador y consultor financiero con más de 15 años de experiencia." />
+        <title>Sobre Mí | Sebastián Restrepo - Asesor Bancario en Medellín</title>
+        <meta name="description" content="Conoce a Sebastián Restrepo, ingeniero y asesor bancario en Medellín con más de 15 años de experiencia en consultoría financiera y gestión de créditos." />
       </Helmet>
 
       {/* Hero Section for About Page */}

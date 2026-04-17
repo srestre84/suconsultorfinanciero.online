@@ -36,14 +36,14 @@ function Home() {
     return (
         <main>
             <Helmet>
-                <title>Su Consultor Financiero | Inicio</title>
-                <meta name="description" content="Toma el control absoluto de tus finanzas. Evaluación de perfil, optimización de flujo de caja y reducción de deudas." />
+                <title>Su Consultor Financiero | Asesor Bancario en Medellín</title>
+                <meta name="description" content="¿Buscas un asesor bancario en Medellín? Toma el control de tus finanzas con evaluación de perfil, créditos y reducción de deudas." />
 
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://suconsultorfinanciero.online/" />
-                <meta property="og:title" content="Su Consultor Financiero | Estrategia y Control" />
-                <meta property="og:description" content="Descubre cómo optimizar tu flujo de caja, estructurar tus deudas y tomar el control matemático de tus finanzas con nuestras consultorías." />
+                <meta property="og:title" content="Su Consultor Financiero | Asesor Bancario en Medellín" />
+                <meta property="og:description" content="Asesoría financiera y bancaria profesional en Medellín. Optimiza tu flujo de caja y optimiza tus deudas con expertos." />
                 <meta property="og:image" content="https://suconsultorfinanciero.online/share-preview.png" />
                 <meta property="og:image:secure_url" content="https://suconsultorfinanciero.online/share-preview.png" />
                 <meta property="og:image:type" content="image/png" />
