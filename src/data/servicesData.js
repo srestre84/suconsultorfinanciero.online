@@ -53,4 +53,13 @@ export const servicesData = [
         shareMessage: "📋 **Crédito de Libranza** | La forma más sencilla de financiarte con descuento de nómina y tasas preferenciales. Mira los detalles:",
         image: "service_libranza.png"
     },
+    {
+        id: "busqueda-banco-vivienda",
+        title: "Búsqueda del Mejor Banco para tu Vivienda",
+        description: "Encontrar la financiación ideal es el primer paso para tu hogar. Analizamos tu perfil financiero para identificar la entidad bancaria que te ofrece la mejor tasa y plazo en Medellín y toda Antioquia. Ya sea para tu primera casa o para una inversión inmobiliaria, negociamos por ti las mejores condiciones del mercado.",
+        icon: "🏙️",
+        whatsappMessage: "Hola, me interesa que me ayudes a buscar el mejor banco para mi crédito de vivienda.",
+        shareMessage: "🏡 **¡Tu Casa Propia es Posible!** | Según tu perfil buscamos el mejor Banco para que por fin tengas tu casa propia. Mira cómo lo logramos aquí:",
+        image: "bank-search.png"
+    },
 ];
