@@ -44,4 +44,13 @@ export const servicesData = [
         shareMessage: "🏗️ **Construye tu Hogar a Medida** | Financia la obra de tu nuevo hogar con desembolsos por avance. Detalles del Crédito Constructor aquí:",
         image: "service_constructor.png"
     },
+    {
+        id: "libranza",
+        title: "Crédito de Libranza",
+        description: "Financiación ágil para empleados y pensionados con descuento directo de nómina. Accede a tasas preferenciales y plazos flexibles sin necesidad de codeudor y con requisitos mínimos. Trámite simplificado y respuesta rápida.",
+        icon: "📋",
+        whatsappMessage: "Hola, me interesa el servicio de Crédito de Libranza.",
+        shareMessage: "📋 **Crédito de Libranza** | La forma más sencilla de financiarte con descuento de nómina y tasas preferenciales. Mira los detalles:",
+        image: "service_libranza.png"
+    },
 ];

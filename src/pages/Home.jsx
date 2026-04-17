@@ -37,14 +37,14 @@ function Home() {
     return (
         <main>
             <Helmet>
-                <title>Su Consultor Financiero | Asesoría en Medellín y Antioquia</title>
-                <meta name="description" content="¿Buscas financiación de vivienda en Medellín, Rionegro, Envigado o Bello? Te ayudamos con créditos hipotecarios y leasing habitacional en toda Antioquia." />
+                <title>Su Consultor Financiero | Crédito Hipotecario y Compra de Cartera</title>
+                <meta name="description" content="Especialistas en Crédito Hipotecario y Compra de Cartera en Medellín y Antioquia. Asesoría integral en Libre Inversión, Vehículo y Libranza." />
 
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://suconsultorfinanciero.online/" />
                 <meta property="og:title" content="Su Consultor Financiero | Créditos en Medellín y Antioquia" />
-                <meta property="og:description" content="Encuentra el mejor banco para tu vivienda en Medellín, Rionegro, Envigado y Bello con nuestra asesoría personalizada." />
+                <meta property="og:description" content="Especialistas en Crédito Hipotecario, Compra de Cartera, Libre Inversión, Vehículo y Libranza. Encuentra el banco ideal para tu perfil." />
                 <meta property="og:image" content="https://suconsultorfinanciero.online/share-preview.png" />
                 <meta property="og:image:secure_url" content="https://suconsultorfinanciero.online/share-preview.png" />
                 <meta property="og:image:type" content="image/png" />
@@ -55,8 +55,8 @@ function Home() {
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://suconsultorfinanciero.online/" />
-                <meta property="twitter:title" content="Su Consultor Financiero | Estrategia y Control" />
-                <meta property="twitter:description" content="Descubre cómo optimizar tu flujo de caja, estructurar tus deudas y tomar el control matemático de tus finanzas con nuestras consultorías." />
+                <meta property="twitter:title" content="Crédito Hipotecario y Compra de Cartera | Medellín" />
+                <meta property="twitter:description" content="Mejora tus finanzas con Crédito Hipotecario, Compra de Cartera, Libre Inversión, Vehículo y Libranza. Asesoría experta en Antioquia." />
                 <meta property="twitter:image" content="https://suconsultorfinanciero.online/share-preview.png" />
             </Helmet>
 
