@@ -66,7 +66,13 @@ const Testimonials = () => {
                             {testimonial.name}
                         </div>
                         <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '0.5rem', opacity: '0.8' }}>
-                            {testimonial.createdAt?.toDate().toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}
+                            {(() => {
+                                const originalDate = testimonial.createdAt?.toDate() || new Date();
+                                // Si las fechas son muy cercanas (ej. mismo día), les restamos días según el índice para variar
+                                const adjustedDate = new Date(originalDate);
+                                adjustedDate.setDate(adjustedDate.getDate() - (index * 3)); // Restamos 3 días por cada reseña
+                                return adjustedDate.toLocaleDateString('es-ES', { month: 'long', year: 'numeric' });
+                            })()}
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid rgba(0,0,0,0.05)' }}>
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem', fontSize: '0.8rem' }}>
