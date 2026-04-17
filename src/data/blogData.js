@@ -177,7 +177,7 @@ export const blogData = [
         `,
         date: "2026-04-15",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_banrep.png"
     },
     {
         id: 11,
@@ -193,6 +193,6 @@ export const blogData = [
         `,
         date: "2026-04-17",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1590490333555-4679375e2f75?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_medellin.png"
     }
 ];
