@@ -26,10 +26,10 @@ function Properties() {
     return (
         <main className="properties-page">
             <Helmet>
-                <title>Inmuebles en Venta | Su Consultor Financiero</title>
+                <title>Inmuebles y Financiación | Medellín, Rionegro, Envigado y Bello</title>
                 <meta
                     name="description"
-                    content="Encuentra apartamentos y lotes en venta con asesoría financiera incluida. Itagüí, Medellín y Antioquia."
+                    content="Encuentra apartamentos en venta y la mejor financiación de vivienda en Medellín, Rionegro, Envigado y Bello con asesoría bancaria experta."
                 />
 
                 {/* Open Graph / Facebook */}

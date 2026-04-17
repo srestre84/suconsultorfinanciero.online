@@ -37,14 +37,14 @@ function Home() {
     return (
         <main>
             <Helmet>
-                <title>Su Consultor Financiero | Asesor Bancario en Medellín</title>
-                <meta name="description" content="¿Buscas un asesor bancario en Medellín? Toma el control de tus finanzas con evaluación de perfil, créditos y reducción de deudas." />
+                <title>Su Consultor Financiero | Asesoría en Medellín y Antioquia</title>
+                <meta name="description" content="¿Buscas financiación de vivienda en Medellín, Rionegro, Envigado o Bello? Te ayudamos con créditos hipotecarios y leasing habitacional en toda Antioquia." />
 
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://suconsultorfinanciero.online/" />
-                <meta property="og:title" content="Su Consultor Financiero | Asesor Bancario en Medellín" />
-                <meta property="og:description" content="Asesoría financiera y bancaria profesional en Medellín. Optimiza tu flujo de caja y optimiza tus deudas con expertos." />
+                <meta property="og:title" content="Su Consultor Financiero | Créditos en Medellín y Antioquia" />
+                <meta property="og:description" content="Encuentra el mejor banco para tu vivienda en Medellín, Rionegro, Envigado y Bello con nuestra asesoría personalizada." />
                 <meta property="og:image" content="https://suconsultorfinanciero.online/share-preview.png" />
                 <meta property="og:image:secure_url" content="https://suconsultorfinanciero.online/share-preview.png" />
                 <meta property="og:image:type" content="image/png" />
