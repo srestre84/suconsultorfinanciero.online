@@ -26,7 +26,7 @@ const InstagramSection = () => {
                     
                     {/* Nueva cuadrícula de vista previa */}
                     <div className="insta-grid">
-                        {[1, 2, 3, 4, 5, 6].map(i => (
+                        {[1, 2, 3, 4].map(i => (
                             <div key={i} className="insta-grid-item">
                                 <img src={`/instagram/post${i}.png?v=1`} alt={`Instagram post ${i}`} />
                                 <div className="insta-grid-overlay">

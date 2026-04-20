@@ -98,7 +98,7 @@ function Home() {
                 </div>
             </section>
 
-            <InstagramSection />
+
 
             <Dictionary />
 
@@ -131,6 +131,8 @@ function Home() {
                     </div>
                 </div>
             </section>
+
+            <InstagramSection />
 
         </main>
     );

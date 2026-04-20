@@ -34,7 +34,7 @@ const Consulting = () => {
                 <h2 className="animate-fade-in delay-1" style={{ color: 'var(--azul-oscuro)', fontSize: '2.5rem', marginBottom: '1rem' }}>
                     Consultoría Financiera Especializada
                 </h2>
-                <p className="animate-fade-in delay-2" style={{ maxWidth: '800px', margin: '0 auto 3rem auto', fontSize: '1.2rem', color: '#555' }}>
+                <p className="animate-fade-in delay-2" style={{ maxWidth: '800px', margin: '0 auto 3rem auto', fontSize: '1.2rem', color: 'var(--text-muted)' }}>
                     Toma el control absoluto de tus finanzas. Evaluamos tu perfil para encontrar la estrategia matemáticamente más eficiente.
                 </p>
 
@@ -54,10 +54,10 @@ const Consulting = () => {
                                 cursor: 'pointer'
                             }}
                         >
-                            <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>{area.icon}</div>
-                            <h3 style={{ color: 'var(--azul-oscuro)', fontSize: '1.3rem', marginBottom: '1rem' }}>{area.title}</h3>
-                            <p style={{ fontSize: '1rem', color: '#444', lineHeight: '1.6' }}>{area.description}</p>
-                            <span style={{ marginTop: '1rem', color: 'var(--azul-oscuro)', fontWeight: '700', fontSize: '0.9rem' }}>Consultar ahora →</span>
+                            <div style={{ fontSize: '3.2rem', marginBottom: '1rem', filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))' }}>{area.icon}</div>
+                            <h3 style={{ color: 'var(--azul-oscuro)', fontSize: '1.4rem', marginBottom: '1rem', fontWeight: '800' }}>{area.title}</h3>
+                            <p style={{ fontSize: '1.05rem', color: 'var(--text-muted)', lineHeight: '1.7' }}>{area.description}</p>
+                            <span style={{ marginTop: 'auto', paddingTop: '1.2rem', color: 'var(--azul-claro)', fontWeight: '800', fontSize: '0.95rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Consultar ahora →</span>
                         </div>
                     ))}
                 </div>

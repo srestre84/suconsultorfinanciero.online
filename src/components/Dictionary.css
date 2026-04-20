@@ -1,5 +1,5 @@
 .dictionary-wrapper {
-    padding: 3rem 2rem;
+    padding: 2rem 1.5rem;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.85);
 }
@@ -42,18 +42,35 @@
 }
 
 .terms-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
+    display: flex;
+    overflow-x: auto;
+    gap: 1.2rem;
+    padding: 0.5rem 0.2rem 1.5rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--mostaza) transparent;
+}
+
+.terms-grid::-webkit-scrollbar {
+    height: 6px;
+}
+
+.terms-grid::-webkit-scrollbar-thumb {
+    background: var(--mostaza);
+    border-radius: 10px;
 }
 
 .term-card {
     background: white;
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 12px;
     border-left: 4px solid var(--azul-oscuro);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-width: 280px;
+    max-width: 320px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
 }
 
 .term-card:hover {
@@ -91,12 +108,20 @@
 }
 
 .term-val {
-    font-size: 0.9rem;
-    background: #f7fafc;
+    font-size: 0.85rem;
+    background: rgba(0, 43, 91, 0.05);
     padding: 0.8rem;
     border-radius: 8px;
-    margin: 0;
-    color: var(--negro);
+    margin: 0.5rem 0;
+    color: var(--azul-oscuro);
+    line-height: 1.4;
+    border: 1px solid rgba(0, 43, 91, 0.1);
+}
+
+.term-val strong {
+    color: var(--mostaza);
+    display: block;
+    margin-bottom: 2px;
 }
 
 .no-results {

@@ -3,7 +3,7 @@
    ========================================== */
 
 .mission-section {
-    background: linear-gradient(160deg, #f0f6ff 0%, #ffffff 60%, #fffbf0 100%);
+    background: var(--bg-gradient);
     position: relative;
     overflow: hidden;
 }
@@ -69,7 +69,7 @@
     max-width: 680px;
     margin: 0 auto;
     font-size: 1.05rem;
-    color: #4a5568;
+    color: var(--text-muted);
     line-height: 1.75;
 }
 
@@ -131,14 +131,15 @@
 }
 
 .mission-card h3 {
-    font-size: 1.2rem;
-    color: var(--azul-oscuro, #002b5b);
+    font-size: 1.25rem;
+    color: var(--azul-oscuro);
     margin-bottom: 0.9rem;
+    font-weight: 700;
 }
 
 .mission-card p {
     font-size: 0.95rem;
-    color: #4a5568;
+    color: var(--text-muted);
     line-height: 1.75;
     margin: 0;
 }
@@ -155,7 +156,7 @@
 
 .mission-cta-text {
     font-size: 1rem;
-    color: #4a5568;
+    color: var(--text-muted);
     line-height: 1.75;
     margin: 0;
     text-align: center;
