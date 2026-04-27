@@ -5,61 +5,6 @@
 
 export const properties = [
     {
-        id: 'casa-abedules-itagui',
-        tipo: 'Casa',
-        titulo: 'Casa en venta — Unidad Abedules, Suramérica',
-        estado: 'Disponible',
-        precio: 980000000,
-        precioFormateado: '$980.000.000',
-        ubicacion: {
-            direccion: 'Unidad Abedules',
-            barrio: 'Suramérica',
-            ciudad: 'Itagüí',
-            departamento: 'Antioquia',
-            referencia: 'Unidad cerrada en el sector de Suramérica, Itagüí',
-        },
-        caracteristicas: {
-            area: 163,
-            niveles: 2,
-            habitaciones: 4,
-            banos: 5,
-            parqueadero: 'Doble lineal',
-            jardin: true,
-            salaComedor: true,
-            cocinaIntegral: true,
-            estrato: 4, // Asumiendo estrato 4 para Suramérica, ajustar si es diferente
-            parqueaderoBool: true,
-            administracion: 450000,
-            predialAnual: 1200000,
-            anoPredial: 2025,
-        },
-        amenidadesUnidad: [
-            'Piscina',
-            'Portería 24 horas',
-            'Salón social',
-            'Turco',
-            'Sauna',
-        ],
-        descripcion:
-            'Espectacular casa de 163 m² distribuidos en dos niveles, ubicada en la exclusiva Unidad Abedules en el ' +
-            'sector de Suramérica, Itagüí. Cuenta con 4 habitaciones, 5 baños, jardín privado, sala comedor, cocina ' +
-            'integral y parqueadero doble lineal. La unidad ofrece piscina, portería 24 horas, salón social, turco y sauna, ' +
-            'garantizando confort y seguridad para toda la familia en un entorno residencial de alto nivel.',
-        etiquetas: ['Casa', '163 m²', '4 habitaciones', 'Jardín', 'Piscina', 'Seguridad 24h'],
-        fotos: [
-            '/inmuebles/abedules/foto1.png',
-            '/inmuebles/abedules/foto2.png',
-            '/inmuebles/abedules/foto3.png',
-            '/inmuebles/abedules/foto4.png',
-            '/inmuebles/abedules/foto5.png',
-        ],
-        contacto: {
-            whatsapp: '573167443613', // Actualizar con número real
-            texto: '¡Hola! Me interesa la casa en Unidad Abedules, Suramérica, Itagüí. ¿Podría darme más información?',
-        },
-        fechaPublicacion: '2026-03-14',
-    },
-    {
         id: 'apto-vivare-plaza-sabaneta',
         tipo: 'Apartamento',
         titulo: 'Apartamento en venta — Vivare Plaza Residencial, Sabaneta',

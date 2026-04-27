@@ -10,7 +10,7 @@ const Hero = () => {
                 <div className="hero-content">
                     <div className="hero-badge animate-fade-in">
                         <span className="badge-dot"></span>
-                        Asesoría Financiera Especializada
+                        Asesor Financiero: Compra de Cartera y Crédito
                     </div>
                     
                     <h1 className="hero-title animate-fade-in delay-1">
@@ -18,7 +18,7 @@ const Hero = () => {
                     </h1>
                     
                     <p className="hero-subtitle animate-fade-in delay-2">
-                        Más de 15 años transformando deudas en liquidez. Soy Sebastián Restrepo, y mi objetivo es que tu dinero trabaje para ti, no para el banco.
+                        Más de 15 años como <strong>asesor financiero</strong> en Medellín y Antioquia, transformando deudas en liquidez a través de compra de cartera y créditos estratégicos.
                     </p>
                     
                     <div className="hero-actions animate-fade-in delay-3">

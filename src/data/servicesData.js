@@ -10,11 +10,11 @@ export const servicesData = [
     },
     {
         id: "compra-cartera",
-        title: "Compra de Cartera",
-        description: "Mejora tu flujo de caja a través del producto compra de cartera. Unificamos tus deudas con tasas preferenciales para que pagues menos intereses mensualmente y recuperes tu tranquilidad financiera.",
+        title: "Compra de Cartera con Asesor Financiero",
+        description: "Optimiza tus finanzas con el servicio de compra de cartera. Como asesor financiero experto, te ayudo a unificar tus deudas en una sola cuota con tasas preferenciales, mejorando tu flujo de caja y ahorrando millones en intereses. Atención personalizada en Medellín y toda Colombia.",
         icon: "📉",
-        whatsappMessage: "Hola, me interesa el servicio de Compra de Cartera.",
-        shareMessage: "📉 **Ahorra en Intereses con Compra de Cartera** | Mejora tu flujo de caja y unifica tus deudas con una asesoría profesional. ¡Mira cómo aquí!",
+        whatsappMessage: "Hola, me interesa la asesoría para Compra de Cartera.",
+        shareMessage: "📉 **Asesoría en Compra de Cartera** | Unifica tus deudas y paga menos intereses con la guía de un experto. ¡Consulta aquí!",
         image: "service_libre_inversion.png"
     },
     {

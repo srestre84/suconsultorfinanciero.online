@@ -19,16 +19,16 @@ export const blogData = [
     },
     {
         id: 2,
-        title: "¿Compra de Cartera o Rediferir a mayor plazo?",
-        excerpt: "Analizamos matemáticamente cuál es la mejor opción cuando sientes que las cuotas mensuales te están ahogando.",
+        title: "Compra de Cartera: La estrategia del Asesor Financiero para ahorrar",
+        excerpt: "Analizamos cómo un asesor financiero te ayuda a elegir entre compra de cartera o rediferir deudas para maximizar tu ahorro.",
         content: `
-            <p>Cuando el flujo de caja mensual se aprieta, los bancos suelen ofrecer dos salidas principales: la compra de cartera (por otro banco) o rediferir la deuda actual a más meses. ¿Cuál conviene más?</p>
+            <p>Cuando el flujo de caja mensual se aprieta, los bancos suelen ofrecer dos salidas principales: la compra de cartera (por otro banco) o rediferir la deuda actual a más meses. ¿Cuál conviene más? Como tu asesor financiero, te explico por qué la compra de cartera suele ser la ganadora.</p>
             <h3>La Trampa del Plazo</h3>
             <p>Rediferir la deuda con tu banco actual bajará tu cuota de inmediato, sí. Pero estarás pagando la misma o peor tasa de interés por mucho más tiempo. Al final, pagarás muchísimo más dinero en intereses totales.</p>
             <h3>El Poder de la Compra de Cartera</h3>
-            <p>La compra de cartera implica que otro banco compra tu deuda, pero lo hace para robar el cliente. Por eso, casi siempre ofrecen una tasa de interés preferencial (más baja). Esto significa que no solo puedes bajar la cuota mensual, sino que el costo total del crédito será menor.</p>
-            <h3>Conclusión</h3>
-            <p>Siempre que tu perfil crediticio te lo permita, busca una compra de cartera con reducción de tasa. Utiliza nuestra herramienta de simulación si deseas evaluar tus opciones actuales.</p>
+            <p>La compra de cartera implica que otro banco compra tu deuda, pero lo hace para atraer nuevos clientes. Por eso, casi siempre ofrecen una tasa de interés preferencial (más baja). Esto significa que no solo puedes bajar la cuota mensual, sino que el costo total del crédito será menor.</p>
+            <h3>Conclusión del Asesor</h3>
+            <p>Siempre que tu perfil crediticio te lo permita, busca una compra de cartera con reducción de tasa. Como asesor financiero en Medellín, te ayudo a comparar todas las entidades para encontrar la que mejor se adapte a tu situación real.</p>
         `,
         date: "2026-03-05",
         author: "Asesor Financiero",
@@ -194,5 +194,24 @@ export const blogData = [
         date: "2026-04-17",
         author: "Sebastián - Consultor",
         imageUrl: "/blog_medellin.png"
+    },
+    {
+        id: 12,
+        title: "Por qué necesitas un Asesor Financiero para tu Compra de Cartera",
+        excerpt: "No todas las compras de cartera son iguales. Descubre cómo un asesor experto en Medellín puede ahorrarte millones negociando con los bancos.",
+        content: `
+            <p>Si estás buscando <strong>compra de cartera</strong>, probablemente ya te diste cuenta de que cada banco tiene una tasa diferente y condiciones que parecen escritas en otro idioma. Aquí es donde la figura del <strong>asesor financiero</strong> se vuelve indispensable.</p>
+            <h3>1. Acceso a Tasas Preferenciales</h3>
+            <p>Como asesores financieros, manejamos convenios y canales directos con los bancos que no están disponibles en la ventanilla normal. Esto nos permite conseguirte tasas de compra de cartera mucho más bajas que las que podrías obtener por tu cuenta.</p>
+            <h3>2. Análisis de Costo Real</h3>
+            <p>Muchos bancos te ofrecen una tasa baja pero te cobran seguros carísimos. Un buen asesor financiero analiza el <strong>Costo Total</strong> de la operación, asegurando que el ahorro sea real y no solo un movimiento contable en el papel.</p>
+            <h3>3. Agilidad en el Trámite</h3>
+            <p>En Medellín y toda Antioquia, los procesos bancarios pueden ser lentos. Nosotros gestionamos toda la documentación y hacemos el seguimiento diario para que tu compra de cartera se haga efectiva en tiempo récord, deteniendo el cobro de intereses altos de inmediato.</p>
+            <h3>¿Cómo empezar?</h3>
+            <p>Si quieres que analicemos tu caso sin costo, contáctanos hoy mismo. Un asesor financiero revisará tus extractos y te dirá exactamente cuánto podrías ahorrar cada mes con una compra de cartera estratégica.</p>
+        `,
+        date: "2026-04-27",
+        author: "Asesor Financiero",
+        imageUrl: "https://images.unsplash.com/photo-1454165833767-027ffea9e77b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     }
 ];
