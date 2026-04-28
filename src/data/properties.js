@@ -327,6 +327,58 @@ export const properties = [
         },
         fechaPublicacion: '2026-04-17',
     },
+    {
+        id: 'casa-la-doctora-sabaneta',
+        tipo: 'Casa',
+        titulo: 'Casa en venta — Sabaneta, La Doctora',
+        estado: 'Disponible',
+        precio: 0,
+        precioFormateado: 'Consultar precio',
+        ubicacion: {
+            barrio: 'La Doctora',
+            ciudad: 'Sabaneta',
+            departamento: 'Antioquia',
+            referencia: 'Ubicada en Sabaneta, sector La Doctora, en unidad cerrada',
+        },
+        caracteristicas: {
+            area: 530,
+            habitaciones: 4,
+            banos: 5,
+            parqueadero: '4 (2 cubiertos + 2 externos)',
+            unidadCerrada: true,
+            cocina: 'Amplia',
+            salaComedor: true,
+        },
+        descripcion:
+            'Espectacular casa de 530 m² ubicada en el exclusivo sector de La Doctora en Sabaneta. ' +
+            'Situada en una unidad cerrada con total seguridad y tranquilidad. ' +
+            'La propiedad cuenta con 4 alcobas amplias, 5 baños, sala comedor independiente y una cocina de gran tamaño. ' +
+            'Dispone de garaje cubierto para 2 carros y espacio para 2 parqueaderos adicionales externos.',
+        etiquetas: ['530 m²', '4 Alcobas', 'La Doctora', 'Unidad Cerrada', 'Amplios Espacios'],
+        fotos: [
+            '/inmuebles/casa-la-doctora-sabaneta/1.jpeg',
+            '/inmuebles/casa-la-doctora-sabaneta/2.jpeg',
+            '/inmuebles/casa-la-doctora-sabaneta/3.jpeg',
+            '/inmuebles/casa-la-doctora-sabaneta/4.jpeg',
+            '/inmuebles/casa-la-doctora-sabaneta/5.jpeg',
+            '/inmuebles/casa-la-doctora-sabaneta/6.jpeg',
+            '/inmuebles/casa-la-doctora-sabaneta/7.jpeg',
+            '/inmuebles/casa-la-doctora-sabaneta/8.jpeg',
+            '/inmuebles/casa-la-doctora-sabaneta/9.jpeg',
+            '/inmuebles/casa-la-doctora-sabaneta/10.jpeg',
+            '/inmuebles/casa-la-doctora-sabaneta/11.jpeg',
+            '/inmuebles/casa-la-doctora-sabaneta/12.jpeg',
+            '/inmuebles/casa-la-doctora-sabaneta/13.jpeg',
+            '/inmuebles/casa-la-doctora-sabaneta/14.jpeg',
+            '/inmuebles/casa-la-doctora-sabaneta/15.jpeg',
+            '/inmuebles/casa-la-doctora-sabaneta/16.jpeg',
+        ],
+        contacto: {
+            whatsapp: '573167443613',
+            texto: '¡Hola! Me interesa la casa en Sabaneta, La Doctora (530 m²). ¿Podría darme más información?',
+        },
+        fechaPublicacion: '2026-04-28',
+    },
 ];
 
 export default properties;
