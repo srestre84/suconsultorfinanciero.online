@@ -212,6 +212,6 @@ export const blogData = [
         `,
         date: "2026-04-27",
         author: "Asesor Financiero",
-        imageUrl: "https://images.unsplash.com/photo-1454165833767-027ffea9e77b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/asesoria-blog.png"
     }
 ];

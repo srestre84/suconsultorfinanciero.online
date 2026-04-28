@@ -132,6 +132,7 @@ function Home() {
                 </div>
             </section>
 
+            <AboutMe />
             <InstagramSection />
 
         </main>
