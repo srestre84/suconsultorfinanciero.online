@@ -182,8 +182,8 @@ export const properties = [
         tipo: 'Apartamento',
         titulo: 'Apartamento en venta — Barrio Pilsen, Itagüí',
         estado: 'Disponible',
-        precio: 340000000,
-        precioFormateado: '$340.000.000',
+        precio: 325000000,
+        precioFormateado: '$325.000.000',
         ubicacion: {
             barrio: 'Pilsen',
             ciudad: 'Itagüí',
