@@ -379,6 +379,54 @@ export const properties = [
         },
         fechaPublicacion: '2026-04-28',
     },
+    {
+        id: 'apto-vista-verde-el-carmen',
+        tipo: 'Apartamento',
+        titulo: 'Apartamento en venta — Urbanización Vista Verde, El Carmen de Viboral',
+        estado: 'Disponible',
+        precio: 320000000,
+        precioFormateado: '$320.000.000',
+        ubicacion: {
+            edificio: 'Urbanización Vista Verde',
+            barrio: 'Vista Verde',
+            ciudad: 'El Carmen de Viboral',
+            departamento: 'Antioquia',
+            referencia: 'Ubicado en la Urbanización Vista Verde, El Carmen de Viboral',
+        },
+        caracteristicas: {
+            area: 50,
+            habitaciones: 3,
+            banos: 2,
+            piso: 7,
+            estrato: 3,
+            parqueadero: false, // No tiene parqueadero
+            cuartoUtil: false,  // Ni cuarto útil
+            balcon: true,
+            administracion: 100000,
+        },
+        descripcion:
+            'Excelente apartamento de 50 m² ubicado en el séptimo piso de la Urbanización Vista Verde, El Carmen de Viboral. ' +
+            'Cuenta con ascensor (dos ascensores en la torre) y ofrece una excelente distribución con 3 habitaciones, 3 closets, ' +
+            '2 baños completos, cocina integral, sala comedor, zona de ropas y un agradable balcón con hermosa vista libre y campestre. ' +
+            'Cuenta además con red de gas y una administración económica de $100.000. Una magnífica oportunidad de inversión o vivienda propia.',
+        etiquetas: ['El Carmen de Viboral', 'Piso 7', 'Vista Campestre', '3 Habitaciones', '2 Baños', 'Balcón', 'Ascensor'],
+        fotos: [
+            '/inmuebles/apto-703/1.jpg',
+            '/inmuebles/apto-703/9.jpg',
+            '/inmuebles/apto-703/8.jpg',
+            '/inmuebles/apto-703/5.png',
+            '/inmuebles/apto-703/2.jpg',
+            '/inmuebles/apto-703/6.jpg',
+            '/inmuebles/apto-703/3.jpg',
+            '/inmuebles/apto-703/7.jpg',
+            '/inmuebles/apto-703/4.jpg',
+        ],
+        contacto: {
+            whatsapp: '573167443613',
+            texto: '¡Hola! Me interesa el apartamento en la Urbanización Vista Verde, El Carmen de Viboral. ¿Podría darme más información?',
+        },
+        fechaPublicacion: '2026-05-19',
+    },
 ];
 
 export default properties;

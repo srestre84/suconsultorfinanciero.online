@@ -104,7 +104,6 @@ const Services = () => {
                                 </div>
                                 <span style={{ 
                                     fontSize: '0.75rem', 
-                                    color: 'var(--azul-oscuro)', 
                                     opacity: 0.8,
                                     fontWeight: '600',
                                     textAlign: 'center',
