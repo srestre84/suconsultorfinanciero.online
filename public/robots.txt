@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://suconsultorfinanciero.online/sitemap.xml

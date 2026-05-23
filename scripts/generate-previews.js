@@ -116,6 +116,93 @@ async function start() {
         'https://suconsultorfinanciero.online/calculadora'
     );
 
+
+    // 6. Generación de sitemap.xml y robots.txt
+    console.log('--- Generando sitemap.xml y robots.txt ---');
+    const domain = 'https://suconsultorfinanciero.online';
+    const sitemapUrls = [
+        '/',
+        '/blog',
+        '/calculadora',
+        '/inmuebles',
+        '/sobre-mi',
+        '/privacidad',
+        '/terminos',
+        '/valorar'
+    ];
+
+    // Agregar artículos de blog
+    for (const post of blogData) {
+        sitemapUrls.push(`/blog/${post.id}`);
+    }
+
+    // Agregar inmuebles
+    for (const prop of properties) {
+        sitemapUrls.push(`/inmuebles/${prop.id}`);
+    }
+
+    // Agregar servicios
+    for (const service of services) {
+        sitemapUrls.push(`/servicios/${service.id}`);
+    }
+
+    // Agregar términos del diccionario
+    for (const item of dictionaryData) {
+        sitemapUrls.push(`/diccionario/${item.id}`);
+    }
+
+    // Generar XML del Sitemap
+    let xmlContent = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    xmlContent += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    
+    const today = new Date().toISOString().split('T')[0];
+    
+    for (const urlPath of sitemapUrls) {
+        const fullUrl = `${domain}${urlPath === '/' ? '' : urlPath}`;
+        let priority = '0.5';
+        let changefreq = 'monthly';
+        
+        if (urlPath === '/') {
+            priority = '1.0';
+            changefreq = 'daily';
+        } else if (urlPath === '/blog' || urlPath === '/inmuebles' || urlPath.startsWith('/servicios/')) {
+            priority = '0.8';
+            changefreq = 'weekly';
+        } else if (urlPath.startsWith('/blog/') || urlPath.startsWith('/inmuebles/')) {
+            priority = '0.7';
+            changefreq = 'weekly';
+        }
+        
+        xmlContent += '  <url>\n';
+        xmlContent += `    <loc>${fullUrl}</loc>\n`;
+        xmlContent += `    <lastmod>${today}</lastmod>\n`;
+        xmlContent += `    <changefreq>${changefreq}</changefreq>\n`;
+        xmlContent += `    <priority>${priority}</priority>\n`;
+        xmlContent += '  </url>\n';
+    }
+    xmlContent += '</urlset>\n';
+    
+    // Escribir a dist y a public
+    const publicDir = path.join(rootDir, 'public');
+    
+    fs.writeFileSync(path.join(distDir, 'sitemap.xml'), xmlContent);
+    if (fs.existsSync(publicDir)) {
+        fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), xmlContent);
+    }
+    console.log('sitemap.xml generado con éxito en dist y public.');
+
+    // Generar robots.txt
+    const robotsContent = `User-agent: *
+Allow: /
+
+Sitemap: ${domain}/sitemap.xml
+`;
+    fs.writeFileSync(path.join(distDir, 'robots.txt'), robotsContent);
+    if (fs.existsSync(publicDir)) {
+        fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsContent);
+    }
+    console.log('robots.txt generado con éxito en dist y public.');
+
     console.log('--- Generación completada con éxito ---');
 }
 

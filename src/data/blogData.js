@@ -1,7 +1,7 @@
 export const blogData = [
     {
         id: 1,
-        title: "Cómo mejorar tu historial crediticio en 6 meses",
+        title: "Cómo Mejorar tu Historial Crediticio Rápido",
         excerpt: "Descubre los pasos esenciales para limpiar tu reporte en las centrales de riesgo y acceder a mejores tasas de interés.",
         content: `
             <p>Tener un buen historial crediticio es la llave maestra para acceder a financiación barata. Sin embargo, muchas personas no saben por dónde empezar cuando tienen reportes negativos o simplemente no tienen experiencia crediticia.</p>
@@ -19,7 +19,7 @@ export const blogData = [
     },
     {
         id: 2,
-        title: "Compra de Cartera: La estrategia del Asesor Financiero para ahorrar",
+        title: "Compra de Cartera: Ahorra en tus Deudas",
         excerpt: "Analizamos cómo un asesor financiero te ayuda a elegir entre compra de cartera o rediferir deudas para maximizar tu ahorro.",
         content: `
             <p>Cuando el flujo de caja mensual se aprieta, los bancos suelen ofrecer dos salidas principales: la compra de cartera (por otro banco) o rediferir la deuda actual a más meses. ¿Cuál conviene más? Como tu asesor financiero, te explico por qué la compra de cartera suele ser la ganadora.</p>
@@ -36,7 +36,7 @@ export const blogData = [
     },
     {
         id: 3,
-        title: "Guía Definitiva: Tasas de Interés en Colombia",
+        title: "Tasas de Interés en Colombia 2026",
         excerpt: "Aprende a diferenciar entre la Efectiva Anual (EA), la Tasa Nominal y la importancia de la cuota variable vs fija.",
         content: `
             <p>El mayor error al tomar un crédito hipotecario o de libre inversión es no entender en qué idioma nos está hablando el banco. Cuando ves un "1.5%" gigante, ¿es mensual? ¿es anual?</p>
@@ -52,7 +52,7 @@ export const blogData = [
     },
     {
         id: 4,
-        title: "El Fondo de Emergencia: Tu primer blindaje financiero",
+        title: "Crear un Fondo de Emergencia desde Cero",
         excerpt: "Por qué necesitas tener ahorrado de 3 a 6 meses de tus gastos fijos y cómo empezar a construirlo sin desequilibrar tu presupuesto.",
         content: `
             <p>Muchas personas creen que el primer paso en las finanzas personales es invertir para hacerse ricos. Sin embargo, matemáticamente hablando, el primer paso obligatorio es construir un <strong>Fondo de Emergencia</strong>. Sin él, cualquier imprevisto te obligará a usar tarjetas de crédito a tasas elevadísimas, destruyendo cualquier ganancia de tus inversiones.</p>
@@ -73,7 +73,7 @@ export const blogData = [
     },
     {
         id: 5,
-        title: "Las 3 peores trampas de las Tarjetas de Crédito",
+        title: "3 Trampas de las Tarjetas de Crédito",
         excerpt: "Cómo los bancos ganan dinero con tus errores y cómo puedes usar tu tarjeta como un experto sin pagar un solo peso en intereses.",
         content: `
             <p>La tarjeta de crédito no es dinero extra, es un instrumento de financiación a 30 días con el costo de intermediación más alto del mercado (generalmente al límite de la tasa de usura). Sin embargo, si la sabes usar, es la mejor herramienta para construir crédito y ganar beneficios. Cuidado con estas 3 trampas mortales:</p>
@@ -92,7 +92,7 @@ export const blogData = [
     },
     {
         id: 6,
-        title: "Leasing Habitacional vs Crédito Hipotecario",
+        title: "Leasing vs Crédito Hipotecario",
         excerpt: "¿Sabías que en el Leasing la casa no es tuya legalmente hasta el final? Comparamos beneficios tributarios y costos reales.",
         content: `
             <p>A la hora de comprar vivienda en Colombia, estas son las dos rutas principales. Aunque ambas sirven para el mismo fin, su estructura legal y financiera es radicalmente distinta.</p>
@@ -112,7 +112,7 @@ export const blogData = [
     },
     {
         id: 7,
-        title: "Cómo prepararte para comprar tu primera vivienda",
+        title: "Guía para Comprar Vivienda en Colombia",
         excerpt: "No solo es tener la cuota inicial. Te contamos los gastos 'ocultos' de escrituración y cómo pre-aprobar tu crédito con éxito.",
         content: `
             <p>Comprar casa es la inversión más grande de la mayoría de las familias. El error más común es lanzarse a buscar proyectos sin haber saneado primero las finanzas personales.</p>
@@ -127,7 +127,7 @@ export const blogData = [
     },
     {
         id: 8,
-        title: "Mitos y Realidades de las Centrales de Riesgo",
+        title: "Datacrédito y Centrales de Riesgo: Mitos",
         excerpt: "¿Estar en Datacrédito es malo? Desmentimos los temores sobre los reportes y te enseñamos a usarlos a tu favor.",
         content: `
             <p>Existe un miedo generalizado a "aparecer en Datacrédito". La realidad es que todos los que tenemos una cuenta bancaria o un plan de celular aparecemos allí. El punto es <strong>CÓMO</strong> aparecemos.</p>
@@ -144,7 +144,7 @@ export const blogData = [
     },
     {
         id: 9,
-        title: "5 Claves para negociar con tu banco en 2026",
+        title: "5 Claves para Negociar Tasa con el Banco",
         excerpt: "No aceptes la primera tasa que te ofrezcan. Te enseñamos cómo los expertos logran condiciones preferenciales en el mercado de Medellín.",
         content: `
             <p>El mercado financiero en Medellín es altamente competitivo. Los bancos están constantemente luchando por captar clientes con buen perfil crediticio. Si tú eres uno de ellos, tienes el poder de negociación en tus manos.</p>
@@ -165,7 +165,7 @@ export const blogData = [
     },
     {
         id: 10,
-        title: "¿Hacia dónde van las tasas del Banrep en 2026?",
+        title: "Tasas del Banco de la República 2026",
         excerpt: "Analizamos las últimas decisiones del Banco de la República y cómo impactan tu bolsillo, desde el crédito hipotecario hasta las tarjetas.",
         content: `
             <p>El Banco de la República ha sido el protagonista de las noticias financieras en Colombia durante los últimos meses. Con una inflación que empieza a dar tregua, la gran pregunta para los antioqueños es: ¿cuándo bajarán realmente las cuotas de mis créditos?</p>
@@ -181,7 +181,7 @@ export const blogData = [
     },
     {
         id: 11,
-        title: "Medellín: Epicentro de Inversión Inmobiliaria en Antioquia",
+        title: "Inversión Inmobiliaria en Medellín",
         excerpt: "Por qué barrios como Calasanz, Prado Centro y sectores de Itagüí siguen siendo minas de oro para la inversión en 2026.",
         content: `
             <p>A pesar de la incertidumbre global, Medellín y su área metropolitana mantienen una dinámica inmobiliaria envidiable. Según reportes de La República y gremios locales, la valorización en sectores estratégicos no se detiene.</p>
@@ -197,7 +197,7 @@ export const blogData = [
     },
     {
         id: 12,
-        title: "Por qué necesitas un Asesor Financiero para tu Compra de Cartera",
+        title: "Asesor Financiero: Compra de Cartera",
         excerpt: "No todas las compras de cartera son iguales. Descubre cómo un asesor experto en Medellín puede ahorrarte millones negociando con los bancos.",
         content: `
             <p>Si estás buscando <strong>compra de cartera</strong>, probablemente ya te diste cuenta de que cada banco tiene una tasa diferente y condiciones que parecen escritas en otro idioma. Aquí es donde la figura del <strong>asesor financiero</strong> se vuelve indispensable.</p>
