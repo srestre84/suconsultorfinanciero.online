@@ -58,6 +58,48 @@ function Home() {
                 <meta property="twitter:title" content="Crédito Hipotecario y Compra de Cartera | Medellín" />
                 <meta property="twitter:description" content="Mejora tus finanzas con Crédito Hipotecario, Compra de Cartera, Libre Inversión, Vehículo y Libranza. Asesoría experta en Antioquia." />
                 <meta property="twitter:image" content="https://suconsultorfinanciero.online/share-preview.png" />
+
+                {/* JSON-LD LocalBusiness / FinancialService Schema */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FinancialService",
+                        "name": "Su Consultor Financiero",
+                        "image": "https://suconsultorfinanciero.online/logo.png",
+                        "@id": "https://suconsultorfinanciero.online/#financialservice",
+                        "url": "https://suconsultorfinanciero.online",
+                        "telephone": "+573167443613",
+                        "priceRange": "$$",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "Medellín, Antioquia",
+                            "addressLocality": "Medellín",
+                            "addressRegion": "Antioquia",
+                            "postalCode": "050001",
+                            "addressCountry": "CO"
+                        },
+                        "geo": {
+                            "@type": "GeoCoordinates",
+                            "latitude": 6.2442,
+                            "longitude": -75.5812
+                        },
+                        "openingHoursSpecification": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": [
+                                "Monday",
+                                "Tuesday",
+                                "Wednesday",
+                                "Thursday",
+                                "Friday"
+                            ],
+                            "opens": "08:00",
+                            "closes": "18:00"
+                        },
+                        "sameAs": [
+                            "https://www.instagram.com/suconsultorfinanciero.online"
+                        ]
+                    })}
+                </script>
             </Helmet>
 
             <Hero />

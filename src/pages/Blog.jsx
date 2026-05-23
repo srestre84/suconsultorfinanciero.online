@@ -60,7 +60,7 @@ function Blog() {
                                 </p>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto' }}>
                                     <Link
-                                        to={`/blog/${post.id}`}
+                                        to={`/blog/${post.slug || post.id}`}
                                         className="btn btn-outline"
                                         style={{ padding: '0.5rem 1rem' }}
                                     >
@@ -74,7 +74,7 @@ function Blog() {
                                                 onClick={(e) => {
                                                     e.preventDefault();
                                                     e.stopPropagation();
-                                                    const shareUrl = `${window.location.origin}/blog/${post.id}`;
+                                                    const shareUrl = `${window.location.origin}/blog/${post.slug || post.id}`;
                                                     const shareText = `¡Mira este artículo! ${post.title}`;
                                                     window.open(`https://wa.me/?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`, '_blank');
                                                 }} 
@@ -87,7 +87,7 @@ function Blog() {
                                                 onClick={(e) => {
                                                     e.preventDefault();
                                                     e.stopPropagation();
-                                                    const shareUrl = `${window.location.origin}/blog/${post.id}`;
+                                                    const shareUrl = `${window.location.origin}/blog/${post.slug || post.id}`;
                                                     window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank');
                                                 }} 
                                                 title="Compartir en Facebook" 
@@ -99,7 +99,7 @@ function Blog() {
                                                 onClick={(e) => {
                                                     e.preventDefault();
                                                     e.stopPropagation();
-                                                    const shareUrl = `${window.location.origin}/blog/${post.id}`;
+                                                    const shareUrl = `${window.location.origin}/blog/${post.slug || post.id}`;
                                                     const shareText = `¡Mira este artículo! "${post.title}" - Su Consultor Financiero:`;
                                                     navigator.clipboard.writeText(`${shareText}\n${shareUrl}`);
                                                     alert('¡Enlace y descripción copiados al portapapeles!');

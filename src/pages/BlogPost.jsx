@@ -5,12 +5,12 @@ import { blogData } from '../data/blogData';
 import Comments from '../components/Comments';
 
 function BlogPost() {
-    const { id } = useParams();
-    const post = blogData.find(p => p.id === parseInt(id));
+    const { slug } = useParams();
+    const post = blogData.find(p => p.slug === slug || p.id === parseInt(slug));
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [id]);
+    }, [slug]);
 
     if (!post) {
         return (
@@ -22,7 +22,7 @@ function BlogPost() {
         );
     }
 
-    const currentUrl = `${window.location.origin}/blog/${post.id}`;
+    const currentUrl = `${window.location.origin}/blog/${post.slug || post.id}`;
 
     return (
         <main>
@@ -45,6 +45,34 @@ function BlogPost() {
                 <meta property="twitter:title" content={post.title} />
                 <meta property="twitter:description" content={post.excerpt} />
                 <meta property="twitter:image" content={post.imageUrl?.startsWith('http') ? post.imageUrl : `https://suconsultorfinanciero.online${post.imageUrl?.startsWith('/') ? post.imageUrl : `/${post.imageUrl}`}`} />
+
+                {/* JSON-LD Structured Data */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": currentUrl
+                        },
+                        "headline": post.title,
+                        "description": post.excerpt,
+                        "image": post.imageUrl?.startsWith('http') ? post.imageUrl : `https://suconsultorfinanciero.online${post.imageUrl?.startsWith('/') ? post.imageUrl : `/${post.imageUrl}`}`,
+                        "author": {
+                            "@type": "Person",
+                            "name": post.author
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Su Consultor Financiero",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://suconsultorfinanciero.online/logo.png"
+                            }
+                        },
+                        "datePublished": post.date
+                    })}
+                </script>
             </Helmet>
 
             <article className="section-padding container">

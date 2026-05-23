@@ -59,9 +59,16 @@ async function start() {
         const title = `${post.title} | Su Consultor Financiero`;
         const description = post.excerpt;
         const image = post.imageUrl.startsWith('http') ? post.imageUrl : `https://suconsultorfinanciero.online${post.imageUrl}`;
-        const url = `https://suconsultorfinanciero.online/blog/${post.id}`;
         
-        generatePage(`blog/${post.id}`, title, description, image, url);
+        // Generar versión con ID numérico (compatibilidad)
+        const urlId = `https://suconsultorfinanciero.online/blog/${post.id}`;
+        generatePage(`blog/${post.id}`, title, description, image, urlId);
+
+        // Generar versión con Slug amigable (SEO)
+        if (post.slug) {
+            const urlSlug = `https://suconsultorfinanciero.online/blog/${post.slug}`;
+            generatePage(`blog/${post.slug}`, title, description, image, urlSlug);
+        }
     }
 
     // 2. Cargar datos de Inmuebles
@@ -131,9 +138,9 @@ async function start() {
         '/valorar'
     ];
 
-    // Agregar artículos de blog
+    // Agregar artículos de blog (usando slugs)
     for (const post of blogData) {
-        sitemapUrls.push(`/blog/${post.id}`);
+        sitemapUrls.push(`/blog/${post.slug || post.id}`);
     }
 
     // Agregar inmuebles

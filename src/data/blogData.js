@@ -1,6 +1,7 @@
 export const blogData = [
     {
         id: 1,
+        slug: "como-mejorar-historial-crediticio-rapido",
         title: "Cómo Mejorar tu Historial Crediticio Rápido",
         excerpt: "Descubre los pasos esenciales para limpiar tu reporte en las centrales de riesgo y acceder a mejores tasas de interés.",
         content: `
@@ -19,6 +20,7 @@ export const blogData = [
     },
     {
         id: 2,
+        slug: "compra-de-cartera-ahorra-en-tus-deudas",
         title: "Compra de Cartera: Ahorra en tus Deudas",
         excerpt: "Analizamos cómo un asesor financiero te ayuda a elegir entre compra de cartera o rediferir deudas para maximizar tu ahorro.",
         content: `
@@ -36,6 +38,7 @@ export const blogData = [
     },
     {
         id: 3,
+        slug: "tasas-de-interes-en-colombia-2026",
         title: "Tasas de Interés en Colombia 2026",
         excerpt: "Aprende a diferenciar entre la Efectiva Anual (EA), la Tasa Nominal y la importancia de la cuota variable vs fija.",
         content: `
@@ -52,6 +55,7 @@ export const blogData = [
     },
     {
         id: 4,
+        slug: "crear-un-fondo-de-emergencia-desde-cero",
         title: "Crear un Fondo de Emergencia desde Cero",
         excerpt: "Por qué necesitas tener ahorrado de 3 a 6 meses de tus gastos fijos y cómo empezar a construirlo sin desequilibrar tu presupuesto.",
         content: `
@@ -73,6 +77,7 @@ export const blogData = [
     },
     {
         id: 5,
+        slug: "3-trampas-de-las-tarjetas-de-credito",
         title: "3 Trampas de las Tarjetas de Crédito",
         excerpt: "Cómo los bancos ganan dinero con tus errores y cómo puedes usar tu tarjeta como un experto sin pagar un solo peso en intereses.",
         content: `
@@ -92,6 +97,7 @@ export const blogData = [
     },
     {
         id: 6,
+        slug: "leasing-vs-credito-hipotecario",
         title: "Leasing vs Crédito Hipotecario",
         excerpt: "¿Sabías que en el Leasing la casa no es tuya legalmente hasta el final? Comparamos beneficios tributarios y costos reales.",
         content: `
@@ -112,6 +118,7 @@ export const blogData = [
     },
     {
         id: 7,
+        slug: "guia-para-comprar-vivienda-en-colombia",
         title: "Guía para Comprar Vivienda en Colombia",
         excerpt: "No solo es tener la cuota inicial. Te contamos los gastos 'ocultos' de escrituración y cómo pre-aprobar tu crédito con éxito.",
         content: `
@@ -127,6 +134,7 @@ export const blogData = [
     },
     {
         id: 8,
+        slug: "datacredito-y-centrales-de-riesgo-mitos",
         title: "Datacrédito y Centrales de Riesgo: Mitos",
         excerpt: "¿Estar en Datacrédito es malo? Desmentimos los temores sobre los reportes y te enseñamos a usarlos a tu favor.",
         content: `
@@ -144,6 +152,7 @@ export const blogData = [
     },
     {
         id: 9,
+        slug: "5-claves-para-negociar-tasa-con-el-banco",
         title: "5 Claves para Negociar Tasa con el Banco",
         excerpt: "No aceptes la primera tasa que te ofrezcan. Te enseñamos cómo los expertos logran condiciones preferenciales en el mercado de Medellín.",
         content: `
@@ -165,6 +174,7 @@ export const blogData = [
     },
     {
         id: 10,
+        slug: "tasas-del-banco-de-la-republica-2026",
         title: "Tasas del Banco de la República 2026",
         excerpt: "Analizamos las últimas decisiones del Banco de la República y cómo impactan tu bolsillo, desde el crédito hipotecario hasta las tarjetas.",
         content: `
@@ -181,6 +191,7 @@ export const blogData = [
     },
     {
         id: 11,
+        slug: "inversion-inmobiliaria-en-medellin",
         title: "Inversión Inmobiliaria en Medellín",
         excerpt: "Por qué barrios como Calasanz, Prado Centro y sectores de Itagüí siguen siendo minas de oro para la inversión en 2026.",
         content: `
@@ -197,6 +208,7 @@ export const blogData = [
     },
     {
         id: 12,
+        slug: "asesor-financiero-compra-de-cartera",
         title: "Asesor Financiero: Compra de Cartera",
         excerpt: "No todas las compras de cartera son iguales. Descubre cómo un asesor experto en Medellín puede ahorrarte millones negociando con los bancos.",
         content: `
