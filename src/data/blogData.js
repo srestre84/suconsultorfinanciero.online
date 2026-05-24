@@ -248,7 +248,7 @@ export const blogData = [
         `,
         date: "2026-05-02",
         author: "Asesor Financiero",
-        imageUrl: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_datacredito.png"
     },
     {
         id: 14,
@@ -269,7 +269,7 @@ export const blogData = [
         `,
         date: "2026-05-10",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_abono_capital.png"
     },
     {
         id: 15,
@@ -287,6 +287,6 @@ export const blogData = [
         `,
         date: "2026-05-18",
         author: "Asesor Financiero",
-        imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_paz_salvo.png"
     }
 ];
