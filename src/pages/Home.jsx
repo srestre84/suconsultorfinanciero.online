@@ -10,11 +10,11 @@ import Testimonials from '../components/Testimonials';
 import RateCalculator from '../components/RateCalculator';
 
 import Mission from '../components/Mission';
-import AboutMe from '../components/AboutMe';
 import Hero from '../components/Hero';
 import BankSearch from '../components/BankSearch';
 import PropertyCard from '../components/PropertyCard';
 import { properties } from '../data/properties';
+import { blogData } from '../data/blogData';
 import './PropertyPreview.css';
 
 
@@ -105,8 +105,57 @@ function Home() {
             <Hero />
             <BankSearch />
 
-            <section className="section-padding container" style={{ paddingBottom: '0' }}>
-                <Newsletter />
+            {/* Sección de Artículos Recientes (Blog Preview) */}
+            <section className="section-padding container" id="blog-preview">
+                <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+                    <span className="prop-preview-badge">Educación</span>
+                    <h2 style={{ color: 'var(--azul-oscuro)', marginTop: '0.5rem' }}>Últimas Publicaciones 📚</h2>
+                    <p style={{ maxWidth: '700px', margin: '0.5rem auto 0', fontSize: '1.1rem' }}>
+                        Mantente al día con consejos financieros, guías de tasas y estrategias para mejorar tu historial crediticio en Colombia.
+                    </p>
+                </div>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem' }}>
+                    {[...blogData]
+                        .sort((a, b) => new Date(b.date) - new Date(a.date))
+                        .slice(0, 3)
+                        .map((post) => (
+                            <div key={post.id} className="glass shadow-hover animate-fade-in" style={{ display: 'flex', flexDirection: 'column', borderRadius: '15px', overflow: 'hidden', transition: 'transform 0.3s ease' }}>
+                                <img
+                                    src={post.imageUrl}
+                                    alt={post.title}
+                                    style={{ width: '100%', height: '200px', objectFit: 'cover' }}
+                                    loading="lazy"
+                                />
+                                <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                                    <div style={{ fontSize: '0.85rem', color: '#666', marginBottom: '0.5rem' }}>
+                                        {post.date} • Por {post.author}
+                                    </div>
+                                    <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', color: 'var(--azul-oscuro)', lineHeight: '1.4' }}>
+                                        {post.title}
+                                    </h3>
+                                    <p style={{ fontSize: '0.95rem', color: '#555', flexGrow: 1, marginBottom: '1.5rem', lineHeight: '1.6' }}>
+                                        {post.excerpt}
+                                    </p>
+                                    <div style={{ marginTop: 'auto' }}>
+                                        <Link
+                                            to={`/blog/${post.slug || post.id}`}
+                                            className="btn btn-outline"
+                                            style={{ padding: '0.5rem 1rem', width: '100%', textAlign: 'center', display: 'block' }}
+                                        >
+                                            Leer artículo
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                </div>
+
+                <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+                    <Link to="/blog" className="btn btn-primary">
+                        Ir al Blog completo
+                    </Link>
+                </div>
             </section>
 
 
@@ -158,6 +207,11 @@ function Home() {
             {/* Sección de Testimonios (Social Proof) */}
             <Testimonials />
 
+            {/* Boletín de Suscripción / Lead Magnet */}
+            <section className="section-padding container" style={{ paddingBottom: '0' }}>
+                <Newsletter />
+            </section>
+
             {/* Nueva Sección de Consultorías */}
             <Consulting />
 
@@ -174,7 +228,6 @@ function Home() {
                 </div>
             </section>
 
-            <AboutMe />
             <InstagramSection />
 
         </main>
