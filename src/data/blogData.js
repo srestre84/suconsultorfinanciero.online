@@ -225,5 +225,68 @@ export const blogData = [
         date: "2026-04-27",
         author: "Asesor Financiero",
         imageUrl: "/asesoria-blog.png"
+    },
+    {
+        id: 13,
+        slug: "puntaje-minimo-datacredito-para-aprobar-credito",
+        title: "Puntaje Mínimo en Datacrédito para Aprobar un Crédito",
+        excerpt: "¿Qué puntaje exigen los bancos colombianos en 2026? Te explicamos el score ideal para crédito de vivienda, compra de cartera y tarjetas.",
+        content: `
+            <p>Una de las preguntas más repetidas por los colombianos es: <strong>¿cuál es el puntaje mínimo en Datacrédito que necesito para que me aprueben un préstamo?</strong> La respuesta depende del tipo de producto financiero que busques y de la entidad. Te explicamos los rangos clave en 2026.</p>
+            <h3>Los Rangos de Score en Colombia</h3>
+            <p>El score crediticio en Datacrédito y TransUnion oscila entre 150 y 950 puntos. A mayor puntaje, menor es el riesgo que representas para los bancos:</p>
+            <ul>
+                <li><strong>Menos de 600 puntos:</strong> Perfil de alto riesgo. Difícilmente obtendrás aprobaciones, salvo en microcréditos o cooperativas con tasas altas.</li>
+                <li><strong>De 600 a 700 puntos:</strong> Riesgo moderado. Apto para tarjetas de crédito básicas, planes de telefonía o créditos de consumo de montos bajos.</li>
+                <li><strong>De 700 a 750 puntos:</strong> Buen perfil. Apto para compras de cartera y créditos de libre inversión con tasas estándar del mercado.</li>
+                <li><strong>Más de 750 puntos:</strong> Perfil sobresaliente (Cliente Diamante). Tienes las puertas abiertas para créditos hipotecarios, leasing habitacional y tasas de interés preferenciales.</li>
+            </ul>
+            <h3>¿Qué puntaje se necesita para vivienda o compra de cartera?</h3>
+            <p>Para un <strong>Crédito Hipotecario</strong>, los bancos suelen exigir un puntaje mínimo de **720 a 750 puntos**, ya que son obligaciones a muy largo plazo (15 a 30 años). Para una **Compra de Cartera**, un puntaje superior a **730** es ideal para que las entidades compitan por tu deuda y te ofrezcan la menor tasa del mercado.</p>
+            <h3>Cómo subir tu puntaje en 3 meses</h3>
+            <p>Si tu score está bajo, la forma más rápida de subirlo es ponerte al día con cualquier mora menor, mantener tus tarjetas de crédito por debajo del 30% de uso y evitar realizar muchas solicitudes de crédito en un periodo corto de tiempo, ya que cada consulta resta algunos puntos temporalmente.</p>
+        `,
+        date: "2026-05-02",
+        author: "Asesor Financiero",
+        imageUrl: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 14,
+        slug: "abono-a-capital-credito-hipotecario-ahorra-millones",
+        title: "Abono a Capital en Crédito Hipotecario: Ahorra Millones",
+        excerpt: "Aprende cómo hacer abonos inteligentes a tu deuda de vivienda para reducir el plazo a la mitad y ahorrar miles de millones en intereses.",
+        content: `
+            <p>El mayor error de los colombianos al pagar un crédito hipotecario es limitarse a pagar únicamente la cuota mensual obligatoria durante los 15 o 20 años pactados. Esto significa que terminarás pagando hasta dos o tres veces el valor real del inmueble en puros intereses. La solución se llama <strong>Abono Inteligente a Capital</strong>.</p>
+            <h3>¿Cómo funciona el Abono a Capital?</h3>
+            <p>Por ley en Colombia (Ley de Vivienda 546 de 1999), todos los usuarios de créditos de vivienda tienen derecho a realizar pagos extraordinarios y prepagos sin ninguna penalización. Cuando haces un abono extra, debes indicarle al banco que este dinero vaya **directamente a capital**.</p>
+            <h3>Las dos modalidades de abono</h3>
+            <ul>
+                <li><strong>Reducción de Cuota:</strong> Mantienes el mismo plazo del crédito (ej. 15 años), pero tu cuota mensual baja de inmediato. Es ideal si tu flujo de caja mensual está muy apretado.</li>
+                <li><strong>Reducción de Plazo (Recomendado):</strong> Mantienes el mismo valor de la cuota mensual, pero el dinero extra se usa para recortar meses o años al final del crédito. Matemáticamente, esta opción es la ganadora porque es la que **más intereses te ahorra**.</li>
+            </ul>
+            <h3>Un ejemplo real</h3>
+            <p>Si tienes un crédito hipotecario por **$150.000.000 COP** a 20 años con una cuota mensual de $1.600.000 COP: al hacer un abono extraordinario de **$5.000.000 COP** directamente a capital bajo la modalidad de reducción de plazo en el año 2, no solo reduces el tiempo de deuda en casi 18 meses, sino que le dejas de pagar al banco más de **$15.000.000 COP en intereses** futuros.</p>
+        `,
+        date: "2026-05-10",
+        author: "Sebastián - Consultor",
+        imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 15,
+        slug: "como-obtener-paz-y-salvo-deuda-colombia",
+        title: "Cómo Obtener un Paz y Salvo de Deuda en Colombia",
+        excerpt: "La guía definitiva para solicitar el certificado de paz y salvo, limpiar tus reportes en centrales de riesgo y reclamar tus derechos.",
+        content: `
+            <p>Una vez que pagas una deuda que tenías en mora o bajo cobro coactivo, el proceso no termina ahí. El paso final y obligatorio para limpiar tu historial financiero es obtener el <strong>Certificado de Paz y Salvo</strong> oficial.</p>
+            <h3>¿Por qué es indispensable el Paz y Salvo?</h3>
+            <p>Las centrales de riesgo (Datacrédito y TransUnion) se alimentan de los datos que reportan los bancos y comercios. Si pagas una deuda pero la entidad se demora en reportar el pago, seguirás apareciendo con saldo en mora. El Paz y Salvo es tu única garantía física ante cualquier error del sistema.</p>
+            <h3>¿Cuánto tiempo tienen para entregártelo?</h3>
+            <p>Por normativas de la Superintendencia Financiera y del estatuto del consumidor en Colombia, una vez saldada la obligación, las entidades tienen la obligación de expedir el paz y salvo de forma gratuita en un plazo no mayor a **5 días hábiles** para canales digitales y hasta **15 días** si requiere trámite físico especial.</p>
+            <h3>Qué hacer si el banco no te entrega el Paz y Salvo</h3>
+            <p>Si pasa el término legal y no recibes respuesta, puedes radicar un **Derecho de Petición** ante el defensor del consumidor financiero de la entidad o ante la Superintendencia Financiera. Una vez obtengas el certificado, si el reporte negativo en Datacrédito no desaparece, puedes subir tú mismo el documento en el portal web de la central de riesgo como una reclamación formal. Por ley, si en 15 días hábiles el banco no responde la disputa, Datacrédito eliminará el reporte negativo de forma inmediata.</p>
+        `,
+        date: "2026-05-18",
+        author: "Asesor Financiero",
+        imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     }
 ];
