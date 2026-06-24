@@ -1,19 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import RateCalculator from '../components/RateCalculator';
+import DebtCapacityCalculator from '../components/DebtCapacityCalculator';
 
 function CalculatorDetail() {
+    const [activeTab, setActiveTab] = useState('capacity');
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     const currentUrl = `https://suconsultorfinanciero.online/calculadora`;
-    const shareMessage = "🧮 **Calculadora de Tasas Financieras** | Convierte tasas Efectiva Anual, Nominal Mes Vencido y más de forma instantánea. Una herramienta esencial para tus finanzas:";
+    const shareMessage = activeTab === 'capacity' ? 
+        "📊 **Simulador de Capacidad de Crédito Hipotecario** | Calcula cuánto te presta un banco según la Ley de Vivienda y tus ingresos en Colombia de forma rápida:" :
+        "🧮 **Calculadora de Tasas Financieras** | Convierte tasas Efectiva Anual, Nominal Mes Vencido y más de forma instantánea. Una herramienta esencial para tus finanzas:";
 
     const handleShare = async () => {
         const shareData = {
-            title: "Calculadora de Tasas | Su Consultor Financiero",
+            title: activeTab === 'capacity' ? "Simulador de Capacidad de Crédito" : "Calculadora de Tasas",
             text: shareMessage,
             url: currentUrl
         };
@@ -28,8 +33,13 @@ function CalculatorDetail() {
             window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareMessage + ' ' + currentUrl)}`, '_blank');
         }
     };
-    const title = "Calculadora de Tasas de Interés | Su Consultor Financiero";
-    const description = "Convierte fácilmente entre tasas Efectiva Anual (EA), Mes Vencido (MV), Trimestre Vencido y más. La herramienta esencial para entender tus préstamos e inversiones.";
+    const title = activeTab === 'capacity' ? 
+        "Simulador de Capacidad de Crédito Hipotecario | Su Consultor Financiero" : 
+        "Calculadora de Tasas de Interés | Su Consultor Financiero";
+        
+    const description = activeTab === 'capacity' ?
+        "Calcula la cuota mensual máxima y el monto de préstamo estimado que te otorgarían los bancos según la Ley de Vivienda en Colombia." :
+        "Convierte fácilmente entre tasas Efectiva Anual (EA), Mes Vencido (MV), Trimestre Vencido y más. La herramienta esencial para entender tus préstamos e inversiones.";
 
     return (
         <main className="calculator-detail-page">
@@ -57,7 +67,7 @@ function CalculatorDetail() {
                     </Link>
 
                     <h1 style={{ color: 'var(--azul-oscuro)', fontSize: '2.5rem', marginBottom: '1rem', textAlign: 'center' }}>
-                        Calculadora de Tasas
+                        {activeTab === 'capacity' ? 'Simulador de Capacidad' : 'Calculadora de Tasas'}
                     </h1>
 
                     <div className="share-links-top" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '2rem' }}>
@@ -65,7 +75,7 @@ function CalculatorDetail() {
                         {navigator.share ? (
                             <button onClick={handleShare} className="btn btn-secondary btn-sm" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', borderRadius: '12px', padding: '0.5rem 1rem' }}>
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-                                Compartir calculadora
+                                Compartir herramienta
                             </button>
                         ) : (
                             <>
@@ -83,17 +93,38 @@ function CalculatorDetail() {
                     </div>
 
                     <p style={{ textAlign: 'center', marginBottom: '3rem', fontSize: '1.2rem', color: '#666' }}>
-                        Nuestra herramienta gratuita para que siempre sepas cuánto estás pagando realmente.
+                        {activeTab === 'capacity' ? 
+                            'Calcula de forma preliminar tu capacidad máxima antes de solicitar tu crédito hipotecario.' :
+                            'Nuestra herramienta gratuita para que siempre sepas cuánto estás pagando realmente.'
+                        }
                     </p>
 
-                    <div className="glass" style={{ padding: '2rem', borderRadius: '30px', marginBottom: '3rem' }}>
-                        <RateCalculator />
+                    {/* Contenedor de Tabs */}
+                    <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+                        <button 
+                            className={`btn ${activeTab === 'capacity' ? 'btn-primary' : 'btn-outline'}`}
+                            onClick={() => setActiveTab('capacity')}
+                            style={{ borderRadius: '25px', padding: '0.6rem 1.5rem', fontWeight: 'bold' }}
+                        >
+                            📊 Capacidad de Endeudamiento
+                        </button>
+                        <button 
+                            className={`btn ${activeTab === 'rates' ? 'btn-primary' : 'btn-outline'}`}
+                            onClick={() => setActiveTab('rates')}
+                            style={{ borderRadius: '25px', padding: '0.6rem 1.5rem', fontWeight: 'bold' }}
+                        >
+                            🧮 Convertidor de Tasas
+                        </button>
+                    </div>
+
+                    <div className="glass" style={{ padding: '2.5rem 2rem', borderRadius: '30px', marginBottom: '3rem' }}>
+                        {activeTab === 'capacity' ? <DebtCapacityCalculator /> : <RateCalculator />}
                     </div>
 
                     <div style={{ marginTop: '4rem', textAlign: 'center', background: 'rgba(var(--mostaza-rgb), 0.1)', padding: '2rem', borderRadius: '20px' }}>
                         <h3 style={{ color: 'var(--azul-oscuro)', marginBottom: '1rem' }}>¿Necesitas una asesoría personalizada?</h3>
                         <p style={{ marginBottom: '1.5rem' }}>Te ayudamos a encontrar el crédito con la mejor tasa del mercado según tu perfil.</p>
-                        <a href="https://wa.me/573167443613?text=Hola, usé la calculadora de tasas y me gustaría recibir asesoría personalizada." target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                        <a href="https://wa.me/573167443613?text=Hola, usé el simulador de capacidad en la web y me gustaría recibir asesoría personalizada." target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                             Hablar con un experto
                         </a>
                     </div>

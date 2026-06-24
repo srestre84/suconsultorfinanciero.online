@@ -8,6 +8,7 @@ import Newsletter from '../components/Newsletter';
 import Consulting from '../components/Consulting';
 import Testimonials from '../components/Testimonials';
 import RateCalculator from '../components/RateCalculator';
+import DebtCapacityCalculator from '../components/DebtCapacityCalculator';
 
 import Mission from '../components/Mission';
 import Hero from '../components/Hero';
@@ -22,6 +23,7 @@ import { useParams } from 'react-router-dom';
 
 function Home() {
     const { id: routeId } = useParams();
+    const [activeCalcTab, setActiveCalcTab] = React.useState('capacity');
 
     React.useEffect(() => {
         if (routeId) {
@@ -193,15 +195,36 @@ function Home() {
 
             <Dictionary />
 
-            {/* Sección de Calculadora de Tasas en línea */}
+            {/* Sección de Calculadora y Simuladores en línea */}
             <section className="section-padding container" id="calculadora">
                 <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                    <h2 style={{ color: 'var(--azul-oscuro)' }}>Convierte tus Tasas Fácilmente 🧮</h2>
-                    <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem' }}>
-                        Ya no dependas del chatbot. Usa directamente nuestra calculadora interactiva para convertir cualquier tasa de crédito del mercado.
+                    <h2 style={{ color: 'var(--azul-oscuro)' }}>Herramientas Financieras Gratuitas 🧮</h2>
+                    <p style={{ maxWidth: '800px', margin: '0.5rem auto 2rem', fontSize: '1.1rem' }}>
+                        Simula tu capacidad de crédito hipotecario o convierte tasas de interés al instante con nuestras herramientas interactivas.
                     </p>
                 </div>
-                <RateCalculator />
+
+                {/* Contenedor de Tabs en Home */}
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
+                    <button 
+                        className={`btn ${activeCalcTab === 'capacity' ? 'btn-primary' : 'btn-outline'}`}
+                        onClick={() => setActiveCalcTab('capacity')}
+                        style={{ borderRadius: '25px', padding: '0.6rem 1.5rem', fontWeight: 'bold' }}
+                    >
+                        📊 Capacidad de Endeudamiento
+                    </button>
+                    <button 
+                        className={`btn ${activeCalcTab === 'rates' ? 'btn-primary' : 'btn-outline'}`}
+                        onClick={() => setActiveCalcTab('rates')}
+                        style={{ borderRadius: '25px', padding: '0.6rem 1.5rem', fontWeight: 'bold' }}
+                    >
+                        🧮 Convertidor de Tasas
+                    </button>
+                </div>
+
+                <div className="glass" style={{ padding: '2.5rem 2rem', borderRadius: '30px' }}>
+                    {activeCalcTab === 'capacity' ? <DebtCapacityCalculator /> : <RateCalculator />}
+                </div>
             </section>
 
             {/* Sección de Testimonios (Social Proof) */}

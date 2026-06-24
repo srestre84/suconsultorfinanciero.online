@@ -1,0 +1,263 @@
+.debt-capacity-calculator {
+    padding: 1rem 0;
+}
+
+.debt-calculator-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.debt-calculator-header h3 {
+    color: var(--azul-oscuro);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.debt-calculator-header p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.debt-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.debt-input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .debt-input-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+.debt-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.debt-input-group label {
+    font-weight: 600;
+    color: var(--azul-oscuro);
+    font-size: 0.95rem;
+}
+
+.debt-input-group input[type="number"],
+.debt-input-group select {
+    padding: 0.8rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.debt-input-group input[type="number"]:focus,
+.debt-input-group select:focus {
+    border-color: var(--mostaza);
+    box-shadow: 0 0 0 3px rgba(225, 173, 1, 0.15);
+}
+
+.debt-helper {
+    font-size: 0.8rem;
+    color: var(--mostaza);
+    font-weight: bold;
+    padding-left: 0.2rem;
+}
+
+.debt-range-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: #e2e8f0;
+    outline: none;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.debt-range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--mostaza);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.1s ease;
+}
+
+.debt-range-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.debt-range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #64748b;
+    padding: 0 0.2rem;
+}
+
+.debt-calc-btn {
+    background: linear-gradient(135deg, var(--azul-oscuro) 0%, #001f44 100%);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 43, 91, 0.2);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.debt-calc-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 43, 91, 0.3);
+    background: linear-gradient(135deg, var(--mostaza) 0%, #ff9e00 100%);
+}
+
+.debt-results {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px dashed #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.debt-results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .debt-results-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.debt-result-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.debt-result-card.highlight {
+    background: rgba(189, 224, 254, 0.25);
+    border: 1px solid rgba(189, 224, 254, 0.6);
+}
+
+.debt-result-card.highlight-gold {
+    background: rgba(225, 173, 1, 0.08);
+    border: 1px solid rgba(225, 173, 1, 0.35);
+}
+
+.debt-result-title {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.debt-result-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+}
+
+.debt-result-card.highlight-gold .debt-result-value {
+    color: #c78f00;
+}
+
+.debt-result-desc {
+    font-size: 0.8rem;
+    color: #555;
+    line-height: 1.4;
+    margin: 0.2rem 0 0;
+}
+
+.debt-recommendation-box {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 1.2rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.debt-recommendation-box h4 {
+    color: var(--azul-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+.warning-text {
+    color: #ef4444;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.debt-results-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.debt-whatsapp-btn {
+    flex-grow: 2;
+    background: #25d366;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.debt-whatsapp-btn:hover {
+    background: #20ba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.3);
+}
+
+.debt-share-btn {
+    flex-grow: 1;
+    background: white;
+    color: var(--azul-oscuro);
+    border: 1px solid var(--azul-oscuro);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.debt-share-btn:hover {
+    background: #f1f5f9;
+    transform: translateY(-2px);
+}
