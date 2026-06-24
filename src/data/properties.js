@@ -229,7 +229,7 @@ export const properties = [
         id: 'apartacasa-calazans-medellin',
         tipo: 'Casa',
         titulo: 'Apartacasa en venta — Calazans, Medellín',
-        estado: 'Disponible',
+        estado: 'Vendido',
         precio: 810000000,
         precioFormateado: '$810.000.000',
         ubicacion: {
@@ -280,7 +280,7 @@ export const properties = [
         id: 'casa-prado-centro-medellin',
         tipo: 'Casa',
         titulo: 'Casa en venta — Prado Centro, Medellín',
-        estado: 'Disponible',
+        estado: 'Vendido',
         precio: 360000000,
         precioFormateado: '$360.000.000',
         precioArrendamiento: 2200000,

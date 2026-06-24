@@ -288,5 +288,62 @@ export const blogData = [
         date: "2026-05-18",
         author: "Asesor Financiero",
         imageUrl: "/blog_paz_salvo.png"
+    },
+    {
+        id: 16,
+        slug: "credito-hipotecario-uvr-o-pesos-colombia-2026",
+        title: "¿Crédito Hipotecario en UVR o en Pesos? Cuál Elegir en 2026",
+        excerpt: "Analizamos la inflación actual y la tendencia de tasas para ayudarte a decidir qué sistema de amortización te conviene más para tu vivienda.",
+        content: `
+            <p>Una de las decisiones más cruciales al momento de firmar tu crédito hipotecario o leasing habitacional en Colombia es elegir el sistema de amortización: **¿en UVR (Unidad de Valor Real) o en Pesos?** Con los movimientos económicos y de inflación de 2026, la respuesta no es única, pero sí hay una opción matemáticamente más segura.</p>
+            
+            <h3>¿Cómo funciona el Crédito en Pesos?</h3>
+            <p>En el sistema en Pesos, tanto la tasa de interés como la cuota mensual son **fijas** durante toda la vida del crédito (que puede ser de 15 a 20 años). Sabes exactamente cuánto vas a pagar desde la primera hasta la última cuota. El saldo de tu deuda baja de forma constante desde el mes uno.</p>
+
+            <h3>¿Cómo funciona el Crédito en UVR?</h3>
+            <p>La UVR es una unidad de cuenta que se actualiza diariamente con base en la inflación (IPC). En este sistema, la tasa de interés que te cobra el banco es fija (ej. 7% + UVR), pero el saldo de la deuda y el valor de la cuota mensual varían según suba o baje la inflación en Colombia. Si la inflación es alta, tu cuota y tu deuda en pesos subirán.</p>
+
+            <h3>Comparativa de Ventajas en 2026</h3>
+            <ul>
+                <li><strong>Capacidad de pago inicial:</strong> La UVR suele ofrecer una cuota inicial más baja, lo que permite a personas de menores ingresos calificar para créditos más grandes. En Pesos, la primera cuota es más alta.</li>
+                <li><strong>Estabilidad y tranquilidad:</strong> El sistema en Pesos te protege de incrementos inesperados del costo de vida. Sabes que tu cuota no cambiará, permitiéndote planificar tu presupuesto familiar a largo plazo.</li>
+                <li><strong>Evolución de la deuda:</strong> En Pesos, la deuda se reduce mes a mes de manera visible. En UVR, durante los primeros años, el saldo en pesos de tu deuda puede llegar a subir si la inflación es alta, aunque estés pagando juiciosamente.</li>
+            </ul>
+
+            <h3>Vedicto de la Consultoría Financiera</h3>
+            <p>En el panorama de 2026, con tasas de interés que muestran tendencia a estabilizarse y una inflación controlada pero latente, **la recomendación general es optar por Pesos**. Si ya tienes un crédito en UVR que se ha vuelto costoso, recuerda que puedes realizar una **compra de cartera** o solicitar una novación para pasar tu crédito de UVR a Pesos. Nosotros evaluamos tu caso y calculamos el ahorro neto sin costo.</p>
+        `,
+        date: "2026-06-24",
+        author: "Sebastián - Consultor",
+        imageUrl: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 17,
+        slug: "gastos-de-escrituracion-vivienda-colombia",
+        title: "Gastos de Escrituración en Colombia: El Costo Real de Comprar Casa",
+        excerpt: "Evita sorpresas financieras de última hora. Te explicamos detalladamente cuánto cuestan las escrituras, el registro y los avalúos en 2026.",
+        content: `
+            <p>El error financiero más común al comprar vivienda en Colombia es creer que solo se necesita el dinero de la cuota inicial y el crédito aprobado. A la hora de recibir tu inmueble nuevo o usado, te enfrentarás a los **gastos de escrituración y registro**, una suma de dinero que debes pagar en efectivo de inmediato. Aquí te desglosamos cuánto cuesta realmente este trámite en 2026.</p>
+            
+            <h3>El Costo Total Estimado</h3>
+            <p>Como regla general, debes reservar entre el **3% y el 5% del valor comercial de la vivienda** para cubrir estos gastos legales. Si estás comprando una vivienda de **$200.000.000 COP**, calcula tener ahorrados entre **$6.000.000 y $10.000.000 COP** adicionales solo para el cierre legal.</p>
+
+            <h3>¿Cuáles son los rubros que debes pagar?</h3>
+            <ol>
+                <li><strong>Derechos Notariales:</strong> Corresponden al trabajo de la notaría para redactar y firmar la escritura. Equivale aproximadamente al **0.3%** del valor del inmueble. Por ley y costumbre mercantil, este gasto se divide en partes iguales (50/50) entre el comprador y el vendedor.</li>
+                <li><strong>Retención en la Fuente:</strong> Es un impuesto que paga **exclusivamente el vendedor** y corresponde al 1% del valor de la venta.</li>
+                <li><strong>Impuesto de Registro (Beneficencia):</strong> Se paga a la Gobernación de tu departamento (ej. Gobernación de Antioquia) y equivale al **1%** del valor del negocio. Este rubro lo asume en su totalidad el **comprador**.</li>
+                <li><strong>Derechos de Registro (Oficina de Instrumentos Públicos):</strong> Es el cobro por registrar la escritura en el folio de matrícula inmobiliaria para que legalmente seas el dueño. Equivale al **0.5%** del valor del inmueble, más un costo adicional por registrar la hipoteca si compraste con crédito bancario. Lo paga el **comprador**.</li>
+                <li><strong>Estudio de Títulos y Avalúo:</strong> Si compras con crédito hipotecario, el banco te cobrará el avalúo del inmueble (aprox. 0.15% del valor) y el estudio jurídico de la propiedad (aprox. 0.12%).</li>
+            </ol>
+
+            <h3>¿Cómo reducir estos costos?</h3>
+            <p>Si la vivienda que compras es una Vivienda de Interés Social (VIS), las tarifas notariales y de registro tienen descuentos de hasta el 50% por ley gubernamental. Además, si financias mediante **Leasing Habitacional**, el costo de registro es menor porque el banco es el dueño legal inicial, lo cual alivia tu flujo de caja en el momento de la entrega.</p>
+            
+            <p>¿Tienes dudas sobre los gastos de cierre de tu negocio inmobiliario? ¡Escríbenos! Estructuramos tu presupuesto completo de compra de vivienda para que no tengas sorpresas.</p>
+        `,
+        date: "2026-06-24",
+        author: "Asesor Financiero",
+        imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     }
 ];
