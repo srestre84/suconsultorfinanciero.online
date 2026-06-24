@@ -156,6 +156,46 @@
     background: var(--mostaza);
 }
 
+.chat-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    align-self: flex-start;
+    padding-left: 1rem;
+    max-width: 85%;
+}
+
+.chat-option-button {
+    background: white;
+    border: 1px solid var(--azul-oscuro);
+    color: var(--azul-oscuro);
+    padding: 0.5rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.chat-option-button:hover {
+    background: var(--azul-oscuro);
+    color: white;
+    transform: translateX(3px);
+}
+
+.whatsapp-chat-link {
+    transition: all 0.3s ease;
+}
+
+.whatsapp-chat-link:hover {
+    transform: translateY(-2px);
+    background-color: #20ba5a !important;
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4) !important;
+}
+
 @media (max-width: 768px) {
     .chatbot-container {
         display: none !important;
