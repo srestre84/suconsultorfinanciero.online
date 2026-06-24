@@ -7,6 +7,7 @@ const Chatbot = () => {
     
     const initialOptions = [
         { label: '📊 Simular Crédito / Amortización', value: 'simulacion' },
+        { label: '🧮 Calcular / Convertir Tasa', value: 'calcular_tasa' },
         { label: '📖 Definiciones Financieras', value: 'definiciones' },
         { label: '💬 Escribir al WhatsApp', value: 'whatsapp' }
     ];
@@ -52,6 +53,48 @@ const Chatbot = () => {
                     { label: '🏦 ¿Qué es la Compra de Cartera?', value: 'def_compra' },
                     { label: '⚖️ ¿Qué es la Tasa de Usura?', value: 'def_usura' },
                     { label: '📋 Ver lista de conceptos', value: 'def_lista' },
+                    { label: '🏠 Volver al menú', value: 'menu' }
+                ];
+            } else if (value === 'calcular_tasa') {
+                responseText = "Puedo ayudarte a calcular y convertir tasas de interés (Efectiva Anual, Nominal Mes Vencido, Trimestre Vencido, etc.) al instante. Por favor escribe la tasa que deseas calcular/convertir (ej. <b>12% EA</b>, <b>1.5% MV</b>, o <b>2% TV</b>) o selecciona una opción rápida:";
+                nextOptions = [
+                    { label: '📈 Convertir 12% EA', value: 'calc_12_EA' },
+                    { label: '📈 Convertir 1.5% MV', value: 'calc_1.5_MV' },
+                    { label: '📈 Convertir 2.0% TV', value: 'calc_2.0_TV' },
+                    { label: '🏠 Volver al menú', value: 'menu' }
+                ];
+            } else if (value.startsWith('calc_')) {
+                const parts = value.split('_');
+                const rateValue = parseFloat(parts[1]);
+                const rateType = parts[2];
+
+                // Cálculo de EA base
+                let eaDecimal = 0;
+                if (rateType === 'EA') {
+                    eaDecimal = rateValue / 100;
+                } else if (rateType === 'MV') {
+                    eaDecimal = Math.pow(1 + (rateValue / 100), 12) - 1;
+                } else if (rateType === 'TV') {
+                    eaDecimal = Math.pow(1 + (rateValue / 100), 4) - 1;
+                } else if (rateType === 'SV') {
+                    eaDecimal = Math.pow(1 + (rateValue / 100), 2) - 1;
+                }
+
+                // Generar equivalencias
+                const eaPorcentaje = (eaDecimal * 100).toFixed(4);
+                const mvPorcentaje = ((Math.pow(1 + eaDecimal, 1 / 12) - 1) * 100).toFixed(4);
+                const tvPorcentaje = ((Math.pow(1 + eaDecimal, 1 / 4) - 1) * 100).toFixed(4);
+                const svPorcentaje = ((Math.pow(1 + eaDecimal, 1 / 2) - 1) * 100).toFixed(4);
+
+                responseText = `Para una tasa del <b>${rateValue}% ${rateType}</b>, las equivalencias calculadas son:<br/><ul>`;
+                if (rateType !== 'EA') responseText += `<li><b>${eaPorcentaje}%</b> Efectiva Anual (EA)</li>`;
+                if (rateType !== 'MV') responseText += `<li><b>${mvPorcentaje}%</b> Nominal Mes Vencido (NMV)</li>`;
+                if (rateType !== 'TV') responseText += `<li><b>${tvPorcentaje}%</b> Nominal Trimestre Vencido (NTV)</li>`;
+                if (rateType !== 'SV') responseText += `<li><b>${svPorcentaje}%</b> Nominal Semestre Vencido (NSV)</li>`;
+                responseText += `</ul>`;
+                
+                nextOptions = [
+                    { label: '🧮 Convertir otra tasa', value: 'calcular_tasa' },
                     { label: '🏠 Volver al menú', value: 'menu' }
                 ];
             } else if (value === 'whatsapp') {
@@ -169,6 +212,18 @@ const Chatbot = () => {
                     sender: 'bot',
                     options: [
                         { label: '💬 Consultar viabilidad en WhatsApp', value: 'whatsapp' },
+                        { label: '🏠 Volver al menú', value: 'menu' }
+                    ]
+                }]);
+            } else if (["CALCULAR TASA", "CONVERTIR TASA", "CALCULADORA DE TASA", "CALCULAR LA TASA", "CONVERSION DE TASA", "CONVERSIÓN DE TASA", "CONVERSOR DE TASA"].some(phrase => textUpper.includes(phrase))) {
+                const responseText = "Puedo ayudarte a calcular la conversión de tasas de interés al instante. Por favor escribe la tasa que deseas convertir (por ejemplo: <b>12% EA</b>, <b>1.5% MV</b>, o <b>2.0% TV</b>), o selecciona una de estas tasas comunes:";
+                setMessages(prev => [...prev, {
+                    text: responseText,
+                    sender: 'bot',
+                    options: [
+                        { label: '📈 Convertir 12% EA', value: 'calc_12_EA' },
+                        { label: '📈 Convertir 1.5% MV', value: 'calc_1.5_MV' },
+                        { label: '📈 Convertir 2.0% TV', value: 'calc_2.0_TV' },
                         { label: '🏠 Volver al menú', value: 'menu' }
                     ]
                 }]);
