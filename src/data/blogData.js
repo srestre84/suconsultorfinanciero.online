@@ -374,7 +374,7 @@ export const blogData = [
         `,
         date: "2026-07-17",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1554224155-6b9793ee2b41?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_renta_2026.png"
     },
     {
         id: 19,
@@ -400,7 +400,7 @@ export const blogData = [
         `,
         date: "2026-07-17",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_cdt_ahorro.png"
     },
     {
         id: 20,
@@ -426,7 +426,7 @@ export const blogData = [
         `,
         date: "2026-07-17",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_vivienda_usada.png"
     },
     {
         id: 21,
@@ -451,6 +451,6 @@ export const blogData = [
         `,
         date: "2026-07-17",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_compra_cartera_2026.png"
     }
 ];
