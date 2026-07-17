@@ -39,14 +39,14 @@ function Home() {
     return (
         <main>
             <Helmet>
-                <title>Su Consultor Financiero | Crédito Hipotecario y Compra de Cartera</title>
-                <meta name="description" content="Especialistas en Crédito Hipotecario y Compra de Cartera en Medellín y Antioquia. Asesoría integral en Libre Inversión, Vehículo y Libranza." />
+                <title>Su Consultor Financiero | Asesor Financiero Multibanca y Consultoría Sin Costo Colombia</title>
+                <meta name="description" content="Especialistas en compra de cartera y crédito hipotecario en Colombia. Como asesor financiero multibanca, brindo consultoría financiera sin costo a nivel nacional para unificar deudas y ahorrar intereses." />
 
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://suconsultorfinanciero.online/" />
-                <meta property="og:title" content="Su Consultor Financiero | Créditos en Medellín y Antioquia" />
-                <meta property="og:description" content="Especialistas en Crédito Hipotecario, Compra de Cartera, Libre Inversión, Vehículo y Libranza. Encuentra el banco ideal para tu perfil." />
+                <meta property="og:title" content="Su Consultor Financiero | Asesor Financiero Multibanca en Colombia" />
+                <meta property="og:description" content="Optimiza tus créditos con nuestra consultoría financiera sin costo en Colombia. Expertos en compra de cartera, crédito hipotecario y libre inversión." />
                 <meta property="og:image" content="https://suconsultorfinanciero.online/share-preview.png" />
                 <meta property="og:image:secure_url" content="https://suconsultorfinanciero.online/share-preview.png" />
                 <meta property="og:image:type" content="image/png" />
@@ -57,8 +57,8 @@ function Home() {
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://suconsultorfinanciero.online/" />
-                <meta property="twitter:title" content="Crédito Hipotecario y Compra de Cartera | Medellín" />
-                <meta property="twitter:description" content="Mejora tus finanzas con Crédito Hipotecario, Compra de Cartera, Libre Inversión, Vehículo y Libranza. Asesoría experta en Antioquia." />
+                <meta property="twitter:title" content="Asesor Financiero Multibanca y Consultoría de Crédito | Colombia" />
+                <meta property="twitter:description" content="Consigue las mejores tasas de interés en compra de cartera y vivienda. Consultoría financiera sin costo a nivel nacional." />
                 <meta property="twitter:image" content="https://suconsultorfinanciero.online/share-preview.png" />
 
                 {/* JSON-LD LocalBusiness / FinancialService Schema */}

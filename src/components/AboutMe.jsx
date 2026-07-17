@@ -25,13 +25,11 @@ const AboutMe = ({ showReadMore = false }) => {
             <h2 className="section-title">La transparencia es la base de cada decisión financiera.</h2>
             
             <p className="about-intro">
-              Como <strong>Ingeniero Administrador</strong> y consultor con más de una década en el sector, entiendo que cada número cuenta una historia. Te ayudo a escribir la tuya con claridad, sin letras pequeñas y con resultados reales en tu flujo de caja.
+              Como <strong>Ingeniero Administrador</strong> y <strong>asesor financiero multibanca</strong> con más de 15 años de trayectoria, entiendo que cada número cuenta una historia. Te ofrezco una <strong>consultoría financiera sin costo en Colombia</strong> para ayudarte a tomar de forma estratégica decisiones inteligentes con claridad, sin letras pequeñas y con resultados reales en tu flujo de caja.
             </p>
             
             <p className="about-description">
-              Mi trayectoria no es la de un asesor tradicional. Al combinar mi formación en ingeniería con una sólida carrera 
-              en el sector bancario, no solo te presento opciones de crédito; analizo datos, proyecto escenarios y utilizo 
-              herramientas de vanguardia para encontrar la estrategia que realmente te favorezca.
+              Mi labor como <strong>asesor financiero multibanca</strong> te garantiza un portafolio de soluciones real e independiente. Al combinar mi formación en ingeniería con convenios directos en las principales entidades bancarias del país, puedo ofrecerte una <strong>consultoría financiera sin costo en Colombia</strong> enfocada en conseguir las tasas más bajas de interés y ahorrarte millones en tus deudas.
             </p>
 
             <div className="pillars-grid">

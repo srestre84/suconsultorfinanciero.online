@@ -10,7 +10,7 @@ const Hero = () => {
                 <div className="hero-content">
                     <div className="hero-badge animate-fade-in">
                         <span className="badge-dot"></span>
-                        Asesor Financiero: Compra de Cartera y Crédito
+                        Asesor Financiero Multibanca en Colombia
                     </div>
                     
                     <h1 className="hero-title animate-fade-in delay-1">
@@ -18,7 +18,7 @@ const Hero = () => {
                     </h1>
                     
                     <p className="hero-subtitle animate-fade-in delay-2">
-                        Más de 15 años como <strong>asesor financiero</strong> en Medellín y Antioquia, transformando deudas en liquidez a través de compra de cartera y créditos estratégicos.
+                        Más de 15 años de trayectoria brindando <strong>consultoría financiera sin costo en Colombia</strong>. Como <strong>asesor financiero multibanca</strong>, te ayudo a transformar deudas en liquidez y asegurar las tasas de interés más bajas del mercado.
                     </p>
                     
                     <div className="hero-actions animate-fade-in delay-3">

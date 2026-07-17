@@ -345,5 +345,112 @@ export const blogData = [
         date: "2026-06-24",
         author: "Asesor Financiero",
         imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 18,
+        slug: "declaracion-de-renta-colombia-2026-creditos",
+        title: "Declaración de Renta 2026: Cómo usar tus créditos para pagar menos impuestos",
+        excerpt: "Conoce los topes de la DIAN para personas naturales en 2026 y aprende a deducir legalmente usando los intereses de tus créditos de vivienda.",
+        content: `
+            <p>Se acerca la temporada de vencimientos para la <strong>declaración de renta de personas naturales en Colombia en 2026</strong> (sobre el año gravable 2025). Muchos contribuyentes ven esto como un gasto inevitable, pero si tienes deudas activas o compraste vivienda recientemente, tienes en tus manos herramientas legales muy potentes para reducir el impuesto a pagar o incluso generar un saldo a favor.</p>
+
+            <h3>¿Quiénes deben declarar renta en 2026?</h3>
+            <p>La DIAN establece que deben declarar renta quienes cumplan con alguno de los siguientes topes durante el año gravable 2025:</p>
+            <ul>
+                <li>Ingresos brutos iguales o superiores a <strong>$65.800.000 COP</strong> (aprox.).</li>
+                <li>Patrimonio bruto superior a <strong>$211.800.000 COP</strong> (aprox.).</li>
+                <li>Consumos con tarjeta de crédito o compras totales iguales o superiores a <strong>$65.800.000 COP</strong>.</li>
+                <li>Consignaciones bancarias acumuladas superiores a <strong>$65.800.000 COP</strong>.</li>
+            </ul>
+
+            <h3>Deducciones clave: Intereses de Vivienda</h3>
+            <p>Si estás pagando un <strong>crédito hipotecario</strong> o un <strong>leasing habitacional</strong>, puedes deducir los intereses que le pagaste al banco in 2025. La ley en Colombia permite deducir hasta 1.200 UVT anuales por este concepto. Para aplicar este beneficio, debes solicitar a tu entidad financiera el <i>certificado de intereses para declaración de renta</i> y entregárselo a tu contador.</p>
+
+            <h3>Leasing Habitacional y su ventaja tributaria</h3>
+            <p>El leasing tiene un tratamiento fiscal muy interesante. Al inicio, la propiedad legal es del banco, por lo que este activo no suma directamente en tu patrimonio bruto (a menos que decidas declararlo de forma especial), lo cual puede evitar que superes el tope de patrimonio o disminuir el cálculo de tu renta presuntiva si aplica.</p>
+
+            <h3>Consejo de Consultoría Financiera</h3>
+            <p>No dejes la preparación de tus documentos para el último día. Solicita con antelación los certificados de tus deudas, cuentas de ahorro y créditos de libranza o consumo. Como <strong>asesor financiero multibanca</strong>, te ayudamos a proyectar tu capacidad crediticia futura teniendo en cuenta el impacto de tu declaración de renta.</p>
+        `,
+        date: "2026-07-17",
+        author: "Sebastián - Consultor",
+        imageUrl: "https://images.unsplash.com/photo-1554224155-6b9793ee2b41?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 19,
+        slug: "cdt-vs-cuentas-ahorro-alto-rendimiento-colombia-2026",
+        title: "¿CDT o Cuentas de Alto Rendimiento? Dónde rentar tu dinero en la segunda mitad de 2026",
+        excerpt: "Comparamos la rentabilidad y liquidez de los CDT frente a las cuentas de ahorros de alto rendimiento en Colombia para proteger tu capital de la inflación.",
+        content: `
+            <p>El panorama del ahorro en Colombia ha cambiado drásticamente. A medida que el Banco de la República ha ido reduciendo sus tasas de intervención para estimular la economía, los tradicionales CDT (Certificados de Depósito a Término) han visto caer sus rendimientos por debajo de los dos dígitos en muchas entidades. En este escenario, surge una gran duda para los ahorradores: ¿sigue siendo el CDT la mejor opción o conviene migrar a las cuentas de ahorros de alto rendimiento?</p>
+
+            <h3>CDT en 2026: Seguridad pero con ataduras</h3>
+            <p>Los CDT siguen siendo el instrumento favorito para perfiles conservadores. Su principal ventaja es que garantizan una tasa fija durante todo el plazo pactado (ej. 180 o 360 días). Sin embargo, tienen una gran desventaja en la actualidad: <strong>cero liquidez</strong>. Si necesitas el dinero para una emergencia médica o una oportunidad de negocio, no podrás retirarlo hasta la fecha de vencimiento.</p>
+
+            <h3>Cuentas de Alto Rendimiento: El boom de la liquidez</h3>
+            <p>Entidades financieras reguladas (tanto neobancos como bancos tradicionales) han revolucionado el mercado colombiano al ofrecer tasas de interés de entre el 10% y el 12% EA en cuentas de ahorros, pero con <strong>disponibilidad del dinero 24/7</strong>. Esto significa que tu dinero crece día a día mientras mantienes la libertad de retirarlo o transferirlo cuando lo necesites.</p>
+
+            <h3>¿Cuál elegir para tu estrategia de ahorro?</h3>
+            <ul>
+                <li><strong>Elige Cuentas de Alto Rendimiento para:</strong> Tu fondo de emergencia o dinero que planeas usar en el corto plazo (menos de 6 meses). Así combinas rentabilidad y disponibilidad inmediata.</li>
+                <li><strong>Elige CDT para:</strong> Capitales medianos o grandes que sabes con certeza que no vas a necesitar a corto o mediano plazo (1 año o más), asegurando una tasa fija antes de que el emisor baje más los intereses generales.</li>
+            </ul>
+
+            <p>Recuerda que todas estas cuentas y CDT cuentan con el seguro de depósitos de <strong>Fogafín</strong> (que protege tu dinero hasta por $50 millones de pesos por entidad financiera), lo que garantiza la seguridad de tu capital. Nuestra recomendación en **consultoría financiera sin costo** es diversificar ambos instrumentos según tus metas de vida.</p>
+        `,
+        date: "2026-07-17",
+        author: "Sebastián - Consultor",
+        imageUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 20,
+        slug: "vivienda-usada-colombia-claves-financiacion",
+        title: "Vivienda Usada en Colombia: Claves para financiarla sin cometer errores",
+        excerpt: "Conoce los requisitos, trámites de peritaje y las mejores opciones de crédito hipotecario para adquirir vivienda usada este año.",
+        content: `
+            <p>Adquirir vivienda es el sueño y la mayor inversión de la mayoría de los colombianos. Aunque las constructoras ofrecen atractivos proyectos sobre planos, la **vivienda usada** se ha consolidado en 2026 como una alternativa sumamente interesante debido a su entrega inmediata, ubicación en zonas ya consolidadas y un precio por metro cuadrado que suele ser más bajo.</p>
+
+            <h3>¿Cómo se financia la vivienda usada en Colombia?</h3>
+            <p>A diferencia de la vivienda nueva, donde la constructora tiene convenios preestablecidos con un banco, en la vivienda usada eres tú (junto con el vendedor) quien debe gestionar todo el proceso de financiación. Los bancos financian hasta el <strong>70% del valor comercial</strong> del inmueble usado mediante Crédito Hipotecario tradicional, y en algunos casos, hasta el <strong>80% o 85%</strong> a través de Leasing Habitacional.</p>
+
+            <h3>El proceso de legalización paso a paso</h3>
+            <ol>
+                <li><strong>Pre-aprobación del crédito:</strong> Antes de firmar cualquier promesa de compraventa, debes contar con una carta de crédito pre-aprobado para saber exactamente con cuánto presupuesto cuentas.</li>
+                <li><strong>Avalúo comercial y peritaje:</strong> El banco enviará a un perito certificado para revisar el estado físico del inmueble y determinar su valor comercial real. Recuerda que el banco presta sobre el menor valor entre el precio de venta y el avalúo.</li>
+                <li><strong>Estudio de títulos:</strong> El equipo jurídico del banco revisará el certificado de tradición y libertad para asegurarse de que la vivienda no tenga embargos, hipotecas previas sin cancelar o problemas sucesorales.</li>
+                <li><strong>Firma de escrituras y desembolso:</strong> Una vez aprobado el estudio de títulos, se firma la escritura pública en notaría y el banco procede a desembolsar el dinero directamente al vendedor.</li>
+            </ol>
+
+            <h3>Ventajas ocultas del Leasing en Usados</h3>
+            <p>Financiar vivienda usada por Leasing Habitacional en Colombia tiene beneficios fiscales notables: al no estar la propiedad a tu nombre inicialmente, no impacta tu patrimonio para la declaración de renta y las tarifas de escrituración iniciales son menores en algunos aspectos comerciales.</p>
+        `,
+        date: "2026-07-17",
+        author: "Sebastián - Consultor",
+        imageUrl: "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+        id: 21,
+        slug: "tasas-a-la-baja-compra-de-cartera-oportunidad-2026",
+        title: "Tasas a la Baja: Por qué este es el momento perfecto para una Compra de Cartera",
+        excerpt: "El Banco de la República sigue reduciendo intereses. Te mostramos cómo beneficiarte trasladando tus deudas costosas a un banco con mejores tasas.",
+        content: `
+            <p>Si adquiriste un crédito de libre inversión, una tarjeta de crédito o un crédito hipotecario entre 2023 y 2025, es muy probable que estés pagando unas de las tasas de interés más altas de la última década. La buena noticia es que las decisiones recientes del Banco de la República de bajar sus tasas de intervención han desatado una verdadera guerra de tasas entre los bancos comerciales colombianos en 2026, abriendo una ventana de oportunidad única: la **Compra de Cartera**.</p>
+
+            <h3>¿Qué es y cómo te ahorra dinero la Compra de Cartera?</h3>
+            <p>La compra de cartera es una operación financiera donde una entidad bancaria compra tus deudas vigentes con otros bancos, unificándolas bajo una sola obligación y, lo más importante, ofreciéndote una **tasa de interés significativamente inferior**.</p>
+
+            <h3>Un ejemplo matemático del ahorro real</h3>
+            <p>Supongamos que tienes una deuda de libre inversión de **$50.000.000 COP** a una tasa de interés del 22% Efectivo Anual (EA), con una cuota mensual aproximada de $1.400.000 COP. Al hacer una compra de cartera con un banco aliado bajo una tasa del 13% EA:</p>
+            <ul>
+                <li>Tu cuota mensual bajará a cerca de **$1.150.000 COP** (liberando $250.000 COP mensuales de flujo de caja).</li>
+                <li>Te ahorrarás más de **$9.000.000 COP** en puros intereses a lo largo de la vida del crédito.</li>
+            </ul>
+
+            <h3>¿Cómo aprovechar este momento?</h3>
+            <p>Para lograr una compra de cartera exitosa con la tasa más baja posible, necesitas demostrar un buen comportamiento de pago reciente (sin moras) y tener un puntaje de Datacrédito saludable. Como **asesor financiero multibanca**, evaluamos tu perfil crediticio frente a las políticas de más de 8 bancos aliados en Colombia para seleccionar la opción óptima, brindándote una **consultoría financiera sin costo** durante todo el trámite.</p>
+        `,
+        date: "2026-07-17",
+        author: "Sebastián - Consultor",
+        imageUrl: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     }
 ];

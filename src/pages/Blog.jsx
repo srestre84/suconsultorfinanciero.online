@@ -41,7 +41,9 @@ function Blog() {
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem' }}>
-                    {blogData.map((post) => (
+                    {[...blogData]
+                        .sort((a, b) => new Date(b.date) - new Date(a.date))
+                        .map((post) => (
                         <div key={post.id} className="glass shadow-hover" style={{ display: 'flex', flexDirection: 'column', borderRadius: '15px', overflow: 'hidden', transition: 'transform 0.3s ease' }}>
                             <img
                                 src={post.imageUrl}
