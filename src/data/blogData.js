@@ -2,6 +2,7 @@ export const blogData = [
     {
         id: 1,
         slug: "como-mejorar-historial-crediticio-rapido",
+        relatedService: "libre-inversion",
         title: "Cómo Mejorar tu Historial Crediticio Rápido",
         excerpt: "Descubre los pasos esenciales para limpiar tu reporte en las centrales de riesgo y acceder a mejores tasas de interés.",
         content: `
@@ -21,6 +22,7 @@ export const blogData = [
     {
         id: 2,
         slug: "compra-de-cartera-ahorra-en-tus-deudas",
+        relatedService: "compra-cartera",
         title: "Compra de Cartera: Ahorra en tus Deudas",
         excerpt: "Analizamos cómo un asesor financiero te ayuda a elegir entre compra de cartera o rediferir deudas para maximizar tu ahorro.",
         content: `
@@ -39,6 +41,7 @@ export const blogData = [
     {
         id: 3,
         slug: "tasas-de-interes-en-colombia-2026",
+        relatedService: "busqueda-banco-vivienda",
         title: "Tasas de Interés en Colombia 2026",
         excerpt: "Aprende a diferenciar entre la Efectiva Anual (EA), la Tasa Nominal y la importancia de la cuota variable vs fija.",
         content: `
@@ -56,6 +59,7 @@ export const blogData = [
     {
         id: 4,
         slug: "crear-un-fondo-de-emergencia-desde-cero",
+        relatedService: "libre-inversion",
         title: "Crear un Fondo de Emergencia desde Cero",
         excerpt: "Por qué necesitas tener ahorrado de 3 a 6 meses de tus gastos fijos y cómo empezar a construirlo sin desequilibrar tu presupuesto.",
         content: `
@@ -78,6 +82,7 @@ export const blogData = [
     {
         id: 5,
         slug: "3-trampas-de-las-tarjetas-de-credito",
+        relatedService: "compra-cartera",
         title: "3 Trampas de las Tarjetas de Crédito",
         excerpt: "Cómo los bancos ganan dinero con tus errores y cómo puedes usar tu tarjeta como un experto sin pagar un solo peso en intereses.",
         content: `
@@ -98,6 +103,7 @@ export const blogData = [
     {
         id: 6,
         slug: "leasing-vs-credito-hipotecario",
+        relatedService: "hipotecario",
         title: "Leasing vs Crédito Hipotecario",
         excerpt: "¿Sabías que en el Leasing la casa no es tuya legalmente hasta el final? Comparamos beneficios tributarios y costos reales.",
         content: `
@@ -119,6 +125,7 @@ export const blogData = [
     {
         id: 7,
         slug: "guia-para-comprar-vivienda-en-colombia",
+        relatedService: "hipotecario",
         title: "Guía para Comprar Vivienda en Colombia",
         excerpt: "No solo es tener la cuota inicial. Te contamos los gastos 'ocultos' de escrituración y cómo pre-aprobar tu crédito con éxito.",
         content: `
@@ -135,6 +142,7 @@ export const blogData = [
     {
         id: 8,
         slug: "datacredito-y-centrales-de-riesgo-mitos",
+        relatedService: "libre-inversion",
         title: "Datacrédito y Centrales de Riesgo: Mitos",
         excerpt: "¿Estar en Datacrédito es malo? Desmentimos los temores sobre los reportes y te enseñamos a usarlos a tu favor.",
         content: `
@@ -153,6 +161,7 @@ export const blogData = [
     {
         id: 9,
         slug: "5-claves-para-negociar-tasa-con-el-banco",
+        relatedService: "busqueda-banco-vivienda",
         title: "5 Claves para Negociar Tasa con el Banco",
         excerpt: "No aceptes la primera tasa que te ofrezcan. Te enseñamos cómo los expertos logran condiciones preferenciales en el mercado de Medellín.",
         content: `
@@ -175,6 +184,7 @@ export const blogData = [
     {
         id: 10,
         slug: "tasas-del-banco-de-la-republica-2026",
+        relatedService: "busqueda-banco-vivienda",
         title: "Tasas del Banco de la República 2026",
         excerpt: "Analizamos las últimas decisiones del Banco de la República y cómo impactan tu bolsillo, desde el crédito hipotecario hasta las tarjetas.",
         content: `
@@ -192,6 +202,7 @@ export const blogData = [
     {
         id: 11,
         slug: "inversion-inmobiliaria-en-medellin",
+        relatedService: "hipotecario",
         title: "Inversión Inmobiliaria en Medellín",
         excerpt: "Por qué barrios como Calasanz, Prado Centro y sectores de Itagüí siguen siendo minas de oro para la inversión en 2026.",
         content: `
@@ -209,6 +220,7 @@ export const blogData = [
     {
         id: 12,
         slug: "asesor-financiero-compra-de-cartera",
+        relatedService: "compra-cartera",
         title: "Asesor Financiero: Compra de Cartera",
         excerpt: "No todas las compras de cartera son iguales. Descubre cómo un asesor experto en Medellín puede ahorrarte millones negociando con los bancos.",
         content: `
@@ -229,6 +241,7 @@ export const blogData = [
     {
         id: 13,
         slug: "puntaje-minimo-datacredito-para-aprobar-credito",
+        relatedService: "libre-inversion",
         title: "Puntaje Mínimo en Datacrédito para Aprobar un Crédito",
         excerpt: "¿Qué puntaje exigen los bancos colombianos en 2026? Te explicamos el score ideal para crédito de vivienda, compra de cartera y tarjetas.",
         content: `
@@ -253,6 +266,7 @@ export const blogData = [
     {
         id: 14,
         slug: "abono-a-capital-credito-hipotecario-ahorra-millones",
+        relatedService: "hipotecario",
         title: "Abono a Capital en Crédito Hipotecario: Ahorra Millones",
         excerpt: "Aprende cómo hacer abonos inteligentes a tu deuda de vivienda para reducir el plazo a la mitad y ahorrar miles de millones en intereses.",
         content: `
@@ -274,6 +288,7 @@ export const blogData = [
     {
         id: 15,
         slug: "como-obtener-paz-y-salvo-deuda-colombia",
+        relatedService: "compra-cartera",
         title: "Cómo Obtener un Paz y Salvo de Deuda en Colombia",
         excerpt: "La guía definitiva para solicitar el certificado de paz y salvo, limpiar tus reportes en centrales de riesgo y reclamar tus derechos.",
         content: `
@@ -292,6 +307,7 @@ export const blogData = [
     {
         id: 16,
         slug: "credito-hipotecario-uvr-o-pesos-colombia-2026",
+        relatedService: "hipotecario",
         title: "¿Crédito Hipotecario en UVR o en Pesos? Cuál Elegir en 2026",
         excerpt: "Analizamos la inflación actual y la tendencia de tasas para ayudarte a decidir qué sistema de amortización te conviene más para tu vivienda.",
         content: `
@@ -320,6 +336,7 @@ export const blogData = [
     {
         id: 17,
         slug: "gastos-de-escrituracion-vivienda-colombia",
+        relatedService: "hipotecario",
         title: "Gastos de Escrituración en Colombia: El Costo Real de Comprar Casa",
         excerpt: "Evita sorpresas financieras de última hora. Te explicamos detalladamente cuánto cuestan las escrituras, el registro y los avalúos en 2026.",
         content: `
@@ -349,6 +366,7 @@ export const blogData = [
     {
         id: 18,
         slug: "declaracion-de-renta-colombia-2026-creditos",
+        relatedService: "hipotecario",
         title: "Declaración de Renta 2026: Cómo usar tus créditos para pagar menos impuestos",
         excerpt: "Conoce los topes de la DIAN para personas naturales en 2026 y aprende a deducir legalmente usando los intereses de tus créditos de vivienda.",
         content: `
@@ -379,6 +397,7 @@ export const blogData = [
     {
         id: 19,
         slug: "cdt-vs-cuentas-ahorro-alto-rendimiento-colombia-2026",
+        relatedService: "libre-inversion",
         title: "¿CDT o Cuentas de Alto Rendimiento? Dónde rentar tu dinero en la segunda mitad de 2026",
         excerpt: "Comparamos la rentabilidad y liquidez de los CDT frente a las cuentas de ahorros de alto rendimiento en Colombia para proteger tu capital de la inflación.",
         content: `
@@ -405,6 +424,7 @@ export const blogData = [
     {
         id: 20,
         slug: "vivienda-usada-colombia-claves-financiacion",
+        relatedService: "hipotecario",
         title: "Vivienda Usada en Colombia: Claves para financiarla sin cometer errores",
         excerpt: "Conoce los requisitos, trámites de peritaje y las mejores opciones de crédito hipotecario para adquirir vivienda usada este año.",
         content: `
@@ -431,6 +451,7 @@ export const blogData = [
     {
         id: 21,
         slug: "tasas-a-la-baja-compra-de-cartera-oportunidad-2026",
+        relatedService: "compra-cartera",
         title: "Tasas a la Baja: Por qué este es el momento perfecto para una Compra de Cartera",
         excerpt: "El Banco de la República sigue reduciendo intereses. Te mostramos cómo beneficiarte trasladando tus deudas costosas a un banco con mejores tasas.",
         content: `

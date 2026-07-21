@@ -2,11 +2,13 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { blogData } from '../data/blogData';
+import { servicesData } from '../data/servicesData';
 import Comments from '../components/Comments';
 
 function BlogPost() {
     const { slug } = useParams();
     const post = blogData.find(p => p.slug === slug || p.id === parseInt(slug));
+    const service = post ? servicesData.find(s => s.id === post.relatedService) : null;
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -141,6 +143,142 @@ function BlogPost() {
                             color: '#333'
                         }}
                     />
+
+                    {/* Tarjeta de Venta Cruzada (Asesoría Relacionada) */}
+                    {service ? (
+                        <div 
+                            className="glass shadow-hover animate-fade-in delay-2"
+                            style={{
+                                marginTop: '3rem',
+                                padding: '2.5rem',
+                                borderRadius: '20px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '1.5rem',
+                                position: 'relative',
+                                overflow: 'hidden',
+                                border: '1px solid var(--glass-border)',
+                                textAlign: 'left'
+                            }}
+                        >
+                            <div 
+                                style={{
+                                    position: 'absolute',
+                                    top: '-20px',
+                                    right: '-20px',
+                                    fontSize: '8rem',
+                                    opacity: '0.06',
+                                    userSelect: 'none',
+                                    pointerEvents: 'none'
+                                }}
+                            >
+                                {service.icon}
+                            </div>
+                            
+                            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                                <span style={{ fontSize: '2.5rem', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))' }}>{service.icon}</span>
+                                <h3 style={{ color: 'var(--azul-oscuro)', margin: 0, fontSize: '1.6rem', fontWeight: '800' }}>
+                                    ¿Necesitas ayuda con esto? Asesoría Especializada
+                                </h3>
+                            </div>
+                            
+                            <h4 style={{ color: 'var(--mostaza)', margin: 0, fontSize: '1.25rem', fontWeight: '700' }}>
+                                {service.title}
+                            </h4>
+                            
+                            <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: 'var(--text-muted)', margin: 0 }}>
+                                {service.description}
+                            </p>
+                            
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '0.5rem' }}>
+                                <a 
+                                    href={`https://wa.me/573167443613?text=${encodeURIComponent(`Hola, leí tu artículo sobre "${post.title}" y me interesa el servicio de "${service.title}".`)}`}
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="btn"
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        gap: '0.5rem',
+                                        backgroundColor: '#25D366',
+                                        color: '#fff',
+                                        fontWeight: 'bold',
+                                        padding: '0.8rem 1.8rem',
+                                        borderRadius: '30px',
+                                        textDecoration: 'none',
+                                        boxShadow: '0 4px 15px rgba(37, 211, 102, 0.3)',
+                                        border: 'none',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ fill: '#fff' }}><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-7.6 8.38 8.38 0 0 1 3.8.9L22 7l-1.5 5.5Z"/></svg>
+                                    Asesoría por WhatsApp gratis
+                                </a>
+                                <Link 
+                                    to={`/servicios/${service.id}`}
+                                    className="btn"
+                                    style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        gap: '0.5rem',
+                                        fontWeight: 'bold',
+                                        padding: '0.8rem 1.8rem',
+                                        borderRadius: '30px',
+                                        textDecoration: 'none',
+                                        border: '1px solid var(--azul-oscuro)',
+                                        color: 'var(--azul-oscuro)',
+                                        backgroundColor: 'transparent'
+                                    }}
+                                >
+                                    Ver detalles del servicio
+                                </Link>
+                            </div>
+                        </div>
+                    ) : (
+                        <div 
+                            className="glass shadow-hover animate-fade-in delay-2"
+                            style={{
+                                marginTop: '3rem',
+                                padding: '2.5rem',
+                                borderRadius: '20px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '1.2rem',
+                                textAlign: 'center',
+                                alignItems: 'center',
+                                border: '1px solid var(--glass-border)'
+                            }}
+                        >
+                            <h3 style={{ color: 'var(--azul-oscuro)', margin: 0, fontSize: '1.6rem', fontWeight: '800' }}>
+                                ¿Tienes dudas sobre tu caso financiero?
+                            </h3>
+                            <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', margin: 0, maxWidth: '600px' }}>
+                                Agenda un diagnóstico gratuito con nosotros. Analizaremos tu situación financiera bajo una lupa experta para encontrar la estrategia ideal.
+                            </p>
+                            <a 
+                                href={`https://wa.me/573167443613?text=${encodeURIComponent(`Hola, leí tu artículo "${post.title}" y me gustaría agendar una consultoría financiera para evaluar mi caso.`)}`}
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="btn"
+                                style={{
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '0.5rem',
+                                    backgroundColor: 'var(--azul-oscuro)',
+                                    color: '#fff',
+                                    fontWeight: 'bold',
+                                    padding: '0.8rem 2rem',
+                                    borderRadius: '30px',
+                                    textDecoration: 'none',
+                                    boxShadow: '0 4px 15px rgba(0, 43, 91, 0.3)',
+                                    border: 'none',
+                                    cursor: 'pointer'
+                                }}
+                            >
+                                📱 Diagnóstico Financiero Gratis
+                            </a>
+                        </div>
+                    )}
                 </div>
             </article>
 
