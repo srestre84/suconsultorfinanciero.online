@@ -473,5 +473,159 @@ export const blogData = [
         date: "2026-07-17",
         author: "Sebastián - Consultor",
         imageUrl: "/blog_compra_cartera_2026.png"
+    },
+    {
+        id: 22,
+        slug: "credito-de-libranza-colombia-guia-completa",
+        relatedService: "libre-inversion",
+        title: "Crédito de Libranza en Colombia: Guía Completa de Tasas y Requisitos",
+        excerpt: "Descubre cómo funciona el crédito de descuento por nómina o pensión, por qué ofrece las tasas más bajas de consumo y quiénes pueden acceder.",
+        content: `
+            <p>A la hora de buscar financiación para proyectos personales, consolidación de deudas o imprevistos, el <strong>crédito de libranza</strong> se posiciona como una de las alternativas más atractivas del mercado financiero en Colombia. Debido a su mecanismo de pago automático a través del empleador o fondo de pensiones, representa un riesgo mucho menor para las entidades financieras, lo que se traduce directamente en <strong>tasas de interés sustancialmente más bajas</strong> que un crédito de libre inversión tradicional.</p>
+
+            <h3>¿Qué es y cómo funciona el Crédito de Libranza?</h3>
+            <p>La libranza es un mecanismo donde autorizas a tu empleador o entidad pagadora a descontar directamente de tu nómina o mesada pensional la cuota mensual del crédito y girarla al banco. Al eliminar el riesgo de olvido o mora por parte del usuario, los bancos compiten ofreciendo plazos de hasta 108 o 120 meses y montos significativamente más altos.</p>
+
+            <h3>¿Quiénes pueden solicitar un crédito de libranza?</h3>
+            <ul>
+                <li><strong>Pensionados:</strong> Es el segmento preferido por los bancos, con aprobaciones ágiles y montos elevados.</li>
+                <li><strong>Empleados del sector público:</strong> Docentes, personal de salud, miembros de las Fuerzas Militares, Policía y funcionarios de entidades estatales.</li>
+                <li><strong>Empleados de empresas privadas con convenio:</strong> Tu empresa debe tener un convenio de libranza firmado con el banco o entidad financiera.</li>
+            </ul>
+
+            <h3>Ventajas Clave de la Libranza</h3>
+            <ol>
+                <li><strong>Tasa de interés preferencial:</strong> Suele ser entre 400 y 800 puntos básicos más baja que un crédito de consumo convencional.</li>
+                <li><strong>Estudio de crédito más flexible:</strong> En muchos casos, permite la aprobación incluso a personas con scores crediticios moderados o pequeños reportes en centrales de riesgo.</li>
+                <li><strong>Sin trámites mensuales de pago:</strong> Descuento automático directo en tu desprendible de pago.</li>
+            </ol>
+
+            <p>¿Quieres verificar si tu empresa tiene convenio o comparar la mejor tasa de libranza disponible? En <strong>Su Consultor Financiero</strong> te asesoramos sin costo para gestionar tu solicitud con la entidad aliada que mejor se ajuste a tu perfil.</p>
+        `,
+        date: "2026-07-30",
+        author: "Sebastián - Consultor",
+        imageUrl: "/blog_libranza.png"
+    },
+    {
+        id: 23,
+        slug: "credito-libre-inversion-con-garantia-hipotecaria",
+        relatedService: "libre-inversion",
+        title: "Crédito de Libre Inversión con Garantía Hipotecaria: Liquidez Grande para tu Negocio",
+        excerpt: "Aprende cómo usar un inmueble propio como garantía para obtener montos altos de dinero a tasas bajas y plazos extendidos.",
+        content: `
+            <p>Para independientes, comerciantes y empresarios en Colombia, conseguir financiación bancaria de montos elevados ($100 a $500 millones o más) con créditos de consumo tradicionales puede ser un desafío debido a las altas tasas y la rigidez de capacidad de endeudamiento. La solución financiera ideal en estos casos es el <strong>Crédito de Libre Inversión con Garantía Hipotecaria</strong> (también conocido como hipoteca abierta o de libre destinación).</p>
+
+            <h3>¿En qué consiste esta modalidad?</h3>
+            <p>A diferencia del crédito hipotecario de compra de vivienda, en este producto tú ya eres el dueño de un inmueble (casa, apartamento, local o bodega totalmente libre de hipotecas). El banco te otorga un préstamo de <strong>libre destinación</strong> poniendo dicho inmueble como garantía mediante una hipoteca de primer grado.</p>
+
+            <h3>Beneficios frente a un Crédito de Libre Inversión Normal</h3>
+            <ul>
+                <li><strong>Tasas de interés mucho más bajas:</strong> Al estar respaldado por un bien raíz, el riesgo para el banco disminuye, permitiéndote acceder a tasas cercanas a las de un crédito de vivienda.</li>
+                <li><strong>Plazos más largos:</strong> Mientras un crédito de consumo se paga a máximo 5 años, la garantía hipotecaria te permite diferir el pago a 10, 15 o incluso 20 años, logrando cuotas mensuales muy cómodas.</li>
+                <li><strong>Libre destinación real:</strong> Puedes usar los recursos para inyectar capital de trabajo a tu empresa, unificar múltiples deudas costosas, remodelar o emprender un nuevo negocio.</li>
+            </ul>
+
+            <h3>¿Cuánto te prestan los bancos?</h3>
+            <p>Generalmente las entidades financieras prestan entre el <strong>50% y el 60% del valor comercial</strong> del inmueble según el avalúo técnico. Si tu propiedad vale $400.000.000 COP, podrías acceder a un cupo de crédito de hasta $200.000.000 a $240.000.000 COP.</p>
+        `,
+        date: "2026-07-30",
+        author: "Sebastián - Consultor",
+        imageUrl: "/blog_garantia_hipotecaria.png"
+    },
+    {
+        id: 24,
+        slug: "desistimiento-compra-vivienda-sobre-planos-penalizaciones",
+        relatedService: "hipotecario",
+        title: "Desistimiento de Vivienda sobre Planos: Multas, Penalizaciones y Opciones Reales",
+        excerpt: "¿Separaste proyecto y ya no puedes continuar? Te explicamos cuánto te pueden cobrar de penalización y cómo ceder tus derechos.",
+        content: `
+            <p>Comprar vivienda sobre planos es una de las estrategias de ahorro e inversión más utilizadas en Colombia. Sin embargo, situaciones como la pérdida de empleo, cambios en la capacidad crediticia o incrementos imprevistos en los costos de construcción llevan a muchos compradores a plantearse el <strong>desistimiento de la compraventa</strong> ante la constructora o fiduciaria.</p>
+
+            <h3>¿Qué ocurre si decides no continuar con el negocio?</h3>
+            <p>El encargo fiduciario y la promesa de compraventa establecen cláusulas penales por incumplimiento o desistimiento unilateral. Por lo general, la penalización oscila entre el <strong>10% y el 20% sobre el valor total del inmueble</strong> o sobre el dinero abonado a la cuota inicial hasta el momento, según lo pactado en las cláusulas contractuales.</p>
+
+            <h3>Opciones estratégicas antes de perder tu dinero</h3>
+            <ol>
+                <li><strong>Cesión de Derechos Fiduciarios:</strong> En lugar de desistir y pagar la multa, puedes ceder tu contrato a un tercero que esté interesado en comprar en ese proyecto. De esta manera recuperas el 100% de tu dinero ahorrado sin penalizaciones de la constructora.</li>
+                <li><strong>Revisión por demora en la entrega:</strong> Si el retraso en la obra o entrega del proyecto es atribuible a la constructora (fuera de los plazos contractuales permitidos), puedes solicitar la resolución del contrato sin penalización alguna y exigiendo la restitución total de tus aportes.</li>
+                <li><strong>Reestructuración del Crédito Final:</strong> Muchas veces el temor al desistimiento viene de un rechazo inicial del banco. Consultando a tiempo con un asesor financiero multibanca, se pueden presentar alternativas con otras entidades bancarias para lograr la pre-aprobación del crédito hipotecario o leasing.</li>
+            </ol>
+        `,
+        date: "2026-07-30",
+        author: "Asesor Financiero",
+        imageUrl: "/blog_desistimiento_planos.png"
+    },
+    {
+        id: 25,
+        slug: "como-negociar-deudas-castigadas-casas-de-cobro-colombia",
+        relatedService: "compra-cartera",
+        title: "Cómo Negociar Deudas en Mora Severa con Casas de Cobro en Colombia",
+        excerpt: "Aprende a negociar descuentos de hasta el 70% en deudas castigadas con cobradoras como Covinoc, Refinancia o Sistemcobranzas.",
+        content: `
+            <p>Cuando un crédito o tarjeta entra en mora por más de 180 o 360 días, los bancos suelen catalogar la obligación como <strong>cartera castigada</strong> y proceden a vender el paquete de deudas a empresas de cobro jurídico especializadas (casas de cobro). Si este es tu caso, no entres en pánico: estás en la etapa idónea para lograr una <strong>negociación con quita sustancial</strong>.</p>
+
+            <h3>¿Por qué las Casas de Cobro ofrecen grandes descuentos?</h3>
+            <p>Las cobradoras compran los paquetes de deudas castigadas por un porcentaje muy bajo de su valor nominal (a veces por el 10% o 20% del valor adeudado). Por esta razón, tienen un amplio margen de negociación y prefieren recibir un pago único de contado con un descuento del 40%, 50% o hasta 70% del valor total, antes que mantener un proceso ejecutivo largo.</p>
+
+            <h3>Pasos para una negociación exitosa</h3>
+            <ul>
+                <li><strong>Exige la certificación de titularidad:</strong> Antes de hacer cualquier pago, solicita que te demuestren legalmente que ellos son los nuevos dueños de la cartera.</li>
+                <li><strong>Ofrece pago de contado a capital:</strong> Nunca aceptes refinanciaciones a cuotas con casas de cobro, ya que volverán a cargarte intereses altos. Negocia un monto único de liquidación directa a capital.</li>
+                <li><strong>Carta de Acuerdo de Pago firmada:</strong> NUNCA consignes ni un solo peso sin tener una carta de negociación oficial firmada por la cobradora donde conste expresamente que con ese pago la deuda queda totalmente extinta y se expedirá el Paz y Salvo.</li>
+            </ul>
+        `,
+        date: "2026-07-30",
+        author: "Asesor Financiero",
+        imageUrl: "/blog_negociar_deudas.png"
+    },
+    {
+        id: 26,
+        slug: "seguros-credito-hipotecario-incapacidad-desempleo",
+        relatedService: "hipotecario",
+        title: "Seguros en Créditos Hipotecarios: Coberturas de Vida, Desempleo e Incapacidad",
+        excerpt: "Conoce los seguros obligatorios que pagas en tu cuota de vivienda y cómo activarlos legalmente para proteger tu hogar.",
+        content: `
+            <p>Cada mes, al pagar la cuota de tu crédito hipotecario o leasing habitacional en Colombia, notas un rubro destinado al pago de <strong>seguros obligatorios</strong>. Muchas personas ven esto como un gasto adicional molesto, pero la realidad es que representan una red de protección patrimonial invaluable en momentos de crisis.</p>
+
+            <h3>Los Seguros Obligatorios por Ley</h3>
+            <ol>
+                <li><strong>Seguro de Vida e Incapacidad Total y Permanente:</strong> Ampara el saldo adeudado del crédito en caso de fallecimiento o invalidez permanente (igual o superior al 50%) del deudor principal. En este evento, la aseguradora le paga directamente al banco y la vivienda queda libre de deuda para el beneficiario o la familia.</li>
+                <li><strong>Seguro de Incendio y Terremoto:</strong> Protege la estructura física del inmueble contra desastres naturales, incendios o daños estructurales graves.</li>
+            </ol>
+
+            <h3>Seguros Opcionales de gran valor: Cobertura de Desempleo</h3>
+            <p>Muchos bancos ofrecen la opción de incluir un <strong>seguro de desempleo</strong> para trabajadores dependientes. Si sufres un despido sin justa causa, la aseguradora asume el pago de tu cuota mensual de vivienda por un periodo de entre 3 y 6 meses mientras consigues una nueva fuente de ingresos.</p>
+
+            <h3>Libertad de Elección de Aseguradora</h3>
+            <p>¿Sabías que por ley en Colombia (Estatuto Orgánico del Sistema Financiero) no estás obligado a contratar los seguros con la aseguradora que te impone el banco? Puedes solicitar la <strong>endoso de póliza externa</strong> con otra compañía aseguradora del mercado que ofrezca las mismas coberturas a una prima mensual más económica, reduciendo el valor total de tu cuota hipotecaria.</p>
+        `,
+        date: "2026-07-30",
+        author: "Sebastián - Consultor",
+        imageUrl: "/blog_seguros_hipotecarios.png"
+    },
+    {
+        id: 27,
+        slug: "remates-inmobiliarios-colombia-guia-inversionistas",
+        relatedService: "hipotecario",
+        title: "Remates Inmobiliarios en Colombia: ¿Valen la pena en 2026?",
+        excerpt: "Analizamos las subastas judiciales, el porcentaje de descuento real y las precauciones legales para invertir en inmuebles rematados.",
+        content: `
+            <p>El mercado de los <strong>remates inmobiliarios</strong> o subastas judiciales despierta gran interés entre inversionistas en Colombia debido a la posibilidad teórica de adquirir bienes inmuebles (casas, apartamentos, parqueaderos, locales) por un valor que va del <strong>30% al 50% por debajo de su avalúo comercial</strong>. Sin embargo, es un sector que exige alto conocimiento jurídico y prudencia financiera.</p>
+
+            <h3>¿Cómo funciona un remate judicial?</h3>
+            <p>Cuando un deudor no logra saldar un crédito hipotecario o una obligación garantizada, el juez ordena el remate de la propiedad en subasta pública. El precio base de postura en la primera licitación suele ser el 70% del valor del avalúo pericial asignado en el proceso.</p>
+
+            <h3>Claves e inconvenientes que debes evaluar antes de participar</h3>
+            <ul>
+                <li><strong>Pago 100% en efectivo:</strong> No es posible financiar una postura de remate judicial mediante un crédito hipotecario bancario tradicional. Debes contar con la liquidez inmediata (consignación del 40% para postularte y el remanente en 5 días tras la diligencia).</li>
+                <li><strong>Tiempos de entrega y desalojo:</strong> El proceso de cancelación de gravámenes, registro de la auto de aprobación de remate y la diligencia de entrega física del inmueble (si está ocupado por el antiguo dueño o inquilinos) puede tomar entre 6 meses y 2 años.</li>
+                <li><strong>Revisión exhaustiva de deudas de administración e impuestos:</strong> Quien adjudica el remate debe asumir o sanear los pendientes de impuesto predial y cuotas de administración atrasadas, los cuales deben descontarse del cálculo de rentabilidad.</li>
+            </ul>
+
+            <p>En conclusión, los remates son una herramienta poderosa de creación de patrimonio para inversionistas experimentados con liquidez a la vista, pero no son recomendables para quienes buscan comprar su primera vivienda familiar con urgencia o apalancamiento bancario.</p>
+        `,
+        date: "2026-07-30",
+        author: "Sebastián - Consultor",
+        imageUrl: "/blog_remates_inmobiliarios.png"
     }
 ];
