@@ -7,7 +7,7 @@ export const notesData = [
     {
         id: 1,
         slug: "organiza-tu-crecimiento",
-        title: "Consejo Financiero: Organiza tu Crecimiento",
+        title: "Nota Motivacional: Organiza tu Crecimiento",
         subtitle: "Paciencia y Organización",
         quote: "El crecimiento de capital no es una carrera; es una maratón. Una maratón que se gana con organización y paciencia.",
         author: "Sebastián Restrepo R.",
@@ -25,7 +25,7 @@ export const notesData = [
     {
         id: 2,
         slug: "mide-para-crecer",
-        title: "Consejo Financiero: Mide para Crecer",
+        title: "Nota Motivacional: Mide para Crecer",
         subtitle: "Organización y Categorización",
         quote: "La organización es el primer paso hacia la libertad financiera. No puedes gestionar lo que no mides.",
         author: "Sebastián Restrepo R.",
@@ -43,7 +43,7 @@ export const notesData = [
     {
         id: 3,
         slug: "dave-ramsey-presupuesto",
-        title: "Consejo Financiero de Dave Ramsey",
+        title: "Nota Motivacional: El Presupuesto es tu Mapa (Dave Ramsey)",
         subtitle: "El Presupuesto es tu Mapa",
         quote: "El presupuesto es tu mapa hacia la libertad financiera. Le dice a tu dinero a dónde ir en lugar de preguntarte a dónde se fue.",
         author: "Dave Ramsey (Selección de Sebastián Restrepo R.)",
@@ -61,7 +61,7 @@ export const notesData = [
     {
         id: 4,
         slug: "flujo-de-caja-gestion",
-        title: "Consejo Financiero: El Flujo de Caja es Gestión",
+        title: "Nota Motivacional: El Flujo de Caja es Gestión",
         subtitle: "El Arte del Flujo de Caja",
         quote: "El flujo de caja no es solo ganar; es gestionar. Es la diferencia entre tener un mapa y solo tener un boleto.",
         author: "Sebastián Restrepo R.",
@@ -77,7 +77,7 @@ export const notesData = [
     {
         id: 5,
         slug: "warren-buffett-ahorro",
-        title: "Consejo Financiero de Warren Buffett",
+        title: "Nota Motivacional: Ahorro e Inversión Prioritaria (Warren Buffett)",
         subtitle: "Ahorro e Inversión Prioritaria",
         quote: "El ahorro no es el dinero que sobra, sino el dinero que se invierte. No ahorres lo que te queda después de gastar; gasta lo que te queda después de ahorrar e invertir.",
         author: "Warren Buffett (Selección de Sebastián Restrepo R.)",

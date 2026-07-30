@@ -128,7 +128,7 @@ async function start() {
     const { notesData } = await import('../src/data/notesData.js');
 
     // Generar página principal de galería de notas
-    generatePage('notas', 'Notas & Consejos Financieros | Su Consultor Financiero', 'Colección de notas y consejos financieros para compartir en estados de WhatsApp.', 'https://suconsultorfinanciero.online/logo.png', 'https://suconsultorfinanciero.online/notas');
+    generatePage('notas', 'Notas Motivacionales & Consejos Financieros | Su Consultor Financiero', 'Colección de notas motivacionales y consejos financieros para compartir en redes sociales.', 'https://suconsultorfinanciero.online/logo.png', 'https://suconsultorfinanciero.online/notas');
 
     for (const note of notesData) {
         const title = `${note.title} | Su Consultor Financiero`;

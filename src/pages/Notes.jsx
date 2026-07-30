@@ -12,17 +12,17 @@ function Notes() {
     return (
         <div className="notes-gallery-page">
             <Helmet>
-                <title>Notas & Consejos Financieros para Compartir | Su Consultor Financiero</title>
-                <meta name="description" content="Colección de notas y consejos financieros para compartir en estados de WhatsApp, redes sociales y consultar opciones de crédito." />
+                <title>Notas Motivacionales & Consejos Financieros | Su Consultor Financiero</title>
+                <meta name="description" content="Colección de notas motivacionales y consejos financieros para inspirar, compartir en redes sociales y alcanzar tus metas financieras." />
             </Helmet>
 
             <div className="container" style={{ padding: '3rem 1rem 5rem 1rem' }}>
                 <div className="notes-header-banner glass">
-                    <span className="notes-top-badge">RECURSOS PARA COMPARTIR</span>
-                    <h1 className="notes-page-title">Notas & Consejos Financieros 📲</h1>
+                    <span className="notes-top-badge">NOTAS MOTIVACIONALES & RECURSOS</span>
+                    <h1 className="notes-page-title">Notas Motivacionales & Consejos Financieros</h1>
                     <p className="notes-page-desc">
-                        Colección de tarjetas y consejos diseñados para compartir en tu <strong>Estado de WhatsApp</strong> o redes sociales. 
-                        Cada nota cuenta con su propia página explicativa, resumen de servicios y contacto directo.
+                        Colección de notas motivacionales, tarjetas y frases clave diseñadas para inspirar tu crecimiento y compartir en redes sociales. 
+                        Cada nota incluye una reflexión explicativa y guía para alcanzar la libertad financiera.
                     </p>
                 </div>
 

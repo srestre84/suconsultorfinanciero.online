@@ -21,14 +21,14 @@ function NoteDetail() {
                 <h2>Nota no encontrada</h2>
                 <p>El consejo financiero que buscas no existe o ha sido movido.</p>
                 <Link to="/notas" className="btn btn-primary" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
-                    Ver todas las Notas Financieras
+                    Ver todas las Notas Motivacionales
                 </Link>
             </div>
         );
     }
 
     const currentUrl = `https://suconsultorfinanciero.online/notas/${note.slug}`;
-    const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(`💡 *${note.title}*\n\n"${note.quote}"\n\nLee el consejo completo y consulta tus opciones aquí: ${currentUrl}`)}`;
+    const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(`💡 *${note.title}*\n\n"${note.quote}"\n\nLee la nota completa y consulta tus opciones aquí: ${currentUrl}`)}`;
 
     const handleCopyLink = () => {
         navigator.clipboard.writeText(currentUrl);
@@ -60,13 +60,13 @@ function NoteDetail() {
                 {/* NAVEGACIÓN DE RETORNO */}
                 <div style={{ marginBottom: '1.5rem' }}>
                     <Link to="/notas" className="note-back-link">
-                        ← Volver a todas las Notas
+                        ← Volver a todas las Notas Motivacionales
                     </Link>
                 </div>
 
                 {/* TARJETA CABECERA DE LA NOTA */}
                 <div className="note-hero-card glass">
-                    <div className="note-badge">CONSEJO FINANCIERO</div>
+                    <div className="note-badge">NOTA MOTIVACIONAL</div>
                     <span className="note-subtitle">{note.subtitle}</span>
                     <h1 className="note-main-title">{note.title}</h1>
                     
