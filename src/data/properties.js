@@ -86,10 +86,10 @@ export const properties = [
         etiquetas: ['Lote', 'Llanogrande', 'Exclusivo', 'Negociable'],
         fotos: [
             '/inmuebles/lote-llanogrande/fachada.jpg',
-            '/inmuebles/lote-llanogrande/master_plan.png',
-            '/inmuebles/lote-llanogrande/entrada.png',
-            '/inmuebles/lote-llanogrande/zonas_comunes.png',
-            '/inmuebles/lote-llanogrande/mapa.png',
+            '/inmuebles/lote-llanogrande/plantas.jpg',
+            '/inmuebles/lote-llanogrande/zonas_comunes.jpg',
+            '/inmuebles/lote-llanogrande/spa_lobby.jpg',
+            '/inmuebles/lote-llanogrande/porteria.jpg',
         ],
         contacto: {
             whatsapp: '573167443613',
