@@ -43,6 +43,7 @@ const Header = () => {
                     <Link to="/sobre-mi" className="nav-link">Sobre mí</Link>
                     <Link to="/#servicios" className="nav-link">Servicios</Link>
                     <Link to="/inmuebles" className="nav-link">Inmuebles</Link>
+                    <Link to="/notas" className="nav-link">Notas 📲</Link>
                     <Link to="/privacidad" className="nav-link">Privacidad</Link>
                     <Link to="/blog" className="nav-link nav-highlight" style={{ marginRight: '1rem' }}>Blog Financiero</Link>
 

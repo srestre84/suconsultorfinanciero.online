@@ -18,6 +18,8 @@ import CalculatorDetail from './pages/CalculatorDetail';
 import AboutMe from './pages/AboutMe';
 import RateService from './pages/RateService';
 import ManageReviews from './pages/ManageReviews';
+import Notes from './pages/Notes';
+import NoteDetail from './pages/NoteDetail';
 
 import { analytics } from './config/firebase';
 import { logEvent } from 'firebase/analytics';
@@ -87,6 +89,8 @@ function App() {
                         <Route path="/servicios/:id" element={<ServiceDetail />} />
                         <Route path="/diccionario/:id" element={<DictionaryDetail />} />
                         <Route path="/calculadora" element={<CalculatorDetail />} />
+                        <Route path="/notas" element={<Notes />} />
+                        <Route path="/notas/:slug" element={<NoteDetail />} />
                     </Routes>
                     <Footer />
                     <Chatbot />

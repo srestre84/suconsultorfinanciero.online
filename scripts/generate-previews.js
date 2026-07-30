@@ -124,8 +124,22 @@ async function start() {
     );
 
 
-    // 6. Generación de sitemap.xml y robots.txt
-    console.log('--- Generando sitemap.xml y robots.txt ---');
+    // 6. Cargar datos de Notas Financieras
+    const { notesData } = await import('../src/data/notesData.js');
+
+    // Generar página principal de galería de notas
+    generatePage('notas', 'Notas & Consejos Financieros | Su Consultor Financiero', 'Colección de notas y consejos financieros para compartir en estados de WhatsApp.', 'https://suconsultorfinanciero.online/logo.png', 'https://suconsultorfinanciero.online/notas');
+
+    for (const note of notesData) {
+        const title = `${note.title} | Su Consultor Financiero`;
+        const description = `"${note.quote}" - Asesoría financiera profesional en Colombia.`;
+        const image = `https://suconsultorfinanciero.online${note.imageUrl}`;
+        const url = `https://suconsultorfinanciero.online/notas/${note.slug}`;
+
+        generatePage(`notas/${note.slug}`, title, description, image, url);
+    }
+
+    // --- Generación de sitemap.xml y robots.txt ---
     const domain = 'https://suconsultorfinanciero.online';
     const sitemapUrls = [
         '/',
@@ -135,7 +149,8 @@ async function start() {
         '/sobre-mi',
         '/privacidad',
         '/terminos',
-        '/valorar'
+        '/valorar',
+        '/notas'
     ];
 
     // Agregar artículos de blog (usando slugs)
@@ -156,6 +171,11 @@ async function start() {
     // Agregar términos del diccionario
     for (const item of dictionaryData) {
         sitemapUrls.push(`/diccionario/${item.id}`);
+    }
+
+    // Agregar notas financieras
+    for (const note of notesData) {
+        sitemapUrls.push(`/notas/${note.slug}`);
     }
 
     // Generar XML del Sitemap

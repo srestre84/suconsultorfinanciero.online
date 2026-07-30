@@ -1,0 +1,422 @@
+/* NoteDetail.css */
+.note-detail-page {
+    background: var(--color-bg, #f8fafc);
+    min-height: 100vh;
+}
+
+.note-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--azul-oscuro);
+    font-weight: 700;
+    text-decoration: none;
+    background: rgba(0, 43, 91, 0.06);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.note-back-link:hover {
+    background: var(--azul-oscuro);
+    color: var(--blanco-puro);
+    transform: translateX(-3px);
+}
+
+.note-hero-card {
+    padding: 2.5rem 2rem;
+    border-radius: 24px;
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(240,244,248,0.95) 100%);
+    border: 1px solid rgba(0, 43, 91, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 43, 91, 0.08);
+}
+
+.note-badge {
+    display: inline-block;
+    background: var(--mostaza);
+    color: var(--azul-oscuro);
+    font-weight: 800;
+    font-size: 0.85rem;
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.note-subtitle {
+    display: block;
+    font-size: 1.1rem;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.note-main-title {
+    font-size: 2.2rem;
+    color: var(--azul-oscuro);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+}
+
+.note-quote-box {
+    background: rgba(0, 43, 91, 0.04);
+    border-left: 5px solid var(--mostaza);
+    padding: 1.5rem 2rem;
+    border-radius: 0 16px 16px 0;
+    margin: 1.5rem auto 2rem auto;
+    max-width: 750px;
+    text-align: left;
+    position: relative;
+}
+
+.note-quote-icon {
+    font-size: 4rem;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    opacity: 0.15;
+    color: var(--azul-oscuro);
+    font-family: Georgia, serif;
+}
+
+.note-quote-text {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--azul-oscuro);
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+.note-author {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #475569;
+    text-align: right;
+}
+
+.note-image-container {
+    margin: 2rem auto;
+    max-width: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 3px solid #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.note-image-container:hover {
+    transform: scale(1.02);
+}
+
+.note-poster-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.note-share-bar {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn-share-whatsapp {
+    background: #25D366;
+    color: #ffffff;
+    font-weight: 800;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.05rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-share-whatsapp:hover {
+    background: #1eb956;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(37, 211, 102, 0.5);
+    color: #ffffff;
+}
+
+.btn-share-copy {
+    background: var(--azul-oscuro);
+    color: var(--blanco-puro);
+    font-weight: 700;
+    padding: 1rem 1.8rem;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 43, 91, 0.3);
+}
+
+.btn-share-copy:hover {
+    background: #001f42;
+    transform: translateY(-2px);
+}
+
+/* CONTENIDO DE LA NOTA */
+.note-content-body {
+    padding: 2.5rem 2rem;
+    border-radius: 24px;
+    margin-bottom: 2.5rem;
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.section-subtitle {
+    font-size: 1.5rem;
+    color: var(--azul-oscuro);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--mostaza);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.note-html-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #334155;
+}
+
+.note-html-text h3 {
+    color: var(--azul-oscuro);
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* SECCIONES DE SERVICIOS Y VALORES */
+.note-section-services, .note-section-values {
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    margin-bottom: 2.5rem;
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.section-header-badge {
+    display: inline-block;
+    background: rgba(0, 43, 91, 0.08);
+    color: var(--azul-oscuro);
+    font-weight: 800;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.9rem;
+    border-radius: 50px;
+    letter-spacing: 1.2px;
+    margin-bottom: 0.75rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: var(--azul-oscuro);
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+
+.section-intro {
+    font-size: 1.05rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+}
+
+.services-grid-notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-card-mini {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card-mini:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-color: var(--mostaza);
+}
+
+.service-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.service-card-mini h3 {
+    font-size: 1.15rem;
+    color: var(--azul-oscuro);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.service-card-mini p {
+    font-size: 0.92rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.service-link-btn {
+    color: var(--azul-oscuro);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.service-link-btn:hover {
+    color: var(--mostaza);
+}
+
+/* VALORES AGREGADOS */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.value-item {
+    display: flex;
+    gap: 1rem;
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.value-check {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.value-item h4 {
+    font-size: 1.1rem;
+    color: var(--azul-oscuro);
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+}
+
+.value-item p {
+    font-size: 0.92rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* PERFIL Y CONTACTO FINAL */
+.note-profile-card {
+    background: linear-gradient(135deg, var(--azul-oscuro) 0%, #0f172a 100%);
+    color: var(--blanco-puro);
+    padding: 2.5rem 2rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 43, 91, 0.3);
+}
+
+.profile-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--mostaza);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    font-size: 1.6rem;
+    color: var(--blanco-puro);
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+}
+
+.profile-role {
+    font-size: 1rem;
+    color: var(--mostaza);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.profile-contact-text {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 0.4rem;
+}
+
+.profile-disclaimer {
+    display: block;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.5);
+    font-style: italic;
+}
+
+.profile-cta-action {
+    text-align: center;
+}
+
+.btn-cta-whatsapp {
+    background: linear-gradient(135deg, var(--mostaza) 0%, #ffc107 100%);
+    color: var(--azul-oscuro);
+    font-size: 1.15rem;
+    font-weight: 800;
+    padding: 1.1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 8px 25px rgba(225, 173, 1, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-cta-whatsapp:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(225, 173, 1, 0.6);
+    color: var(--azul-oscuro);
+}
+
+@media (max-width: 640px) {
+    .note-main-title {
+        font-size: 1.7rem;
+    }
+    .note-quote-text {
+        font-size: 1.1rem;
+    }
+    .profile-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
