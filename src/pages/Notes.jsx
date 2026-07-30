@@ -17,7 +17,7 @@ function Notes() {
             </Helmet>
 
             <div className="container" style={{ padding: '3rem 1rem 5rem 1rem' }}>
-                <div className="notes-header-banner glass">
+                <div className="notes-header-banner">
                     <span className="notes-top-badge">NOTAS MOTIVACIONALES & RECURSOS</span>
                     <h1 className="notes-page-title">Notas Motivacionales & Consejos Financieros</h1>
                     <p className="notes-page-desc">
