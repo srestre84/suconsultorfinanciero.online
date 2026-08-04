@@ -96,8 +96,8 @@ function BlogPost() {
                                 <div className="prop-share-btns">
                                     <button 
                                         onClick={() => {
-                                            const shareText = `¡Mira este artículo! ${post.title}`;
-                                            window.open(`https://wa.me/?text=${encodeURIComponent(shareText + ' ' + currentUrl)}`, '_blank');
+                                            const shareMsg = `📌 *${post.title}*\n\n${post.excerpt}\n\n👉 Lee el artículo completo aquí:\n${currentUrl}`;
+                                            window.open(`https://wa.me/?text=${encodeURIComponent(shareMsg)}`, '_blank');
                                         }} 
                                         title="Compartir en WhatsApp" 
                                         className="prop-share-btn prop-share-btn--ws"
