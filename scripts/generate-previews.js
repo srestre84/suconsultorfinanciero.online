@@ -48,11 +48,66 @@ function generatePage(routePath, title, description, image, url) {
 async function start() {
     console.log('--- Iniciando generación de previews para redes sociales ---');
 
+    // 0. Generar páginas principales de categoría
+    generatePage(
+        'blog',
+        'Blog de Finanzas Personales, Créditos e Inmuebles | Su Consultor Financiero',
+        'Artículos, guías y consejos expertos sobre compra de cartera, crédito hipotecario, libranzas y finanzas en Colombia.',
+        'https://suconsultorfinanciero.online/share-preview.png',
+        'https://suconsultorfinanciero.online/blog'
+    );
+    generatePage(
+        'inmuebles',
+        'Inmuebles en Venta y Oportunidades | Su Consultor Financiero',
+        'Explora nuestro catálogo de inmuebles destacados en Medellín y Antioquia. Asesoría completa en financiación.',
+        'https://suconsultorfinanciero.online/services-preview.png',
+        'https://suconsultorfinanciero.online/inmuebles'
+    );
+    generatePage(
+        'servicios',
+        'Servicios de Asesoría Financiera | Su Consultor Financiero',
+        'Soluciones profesionales en Crédito Hipotecario, Libre Inversión, Compra de Cartera, Libranzas y Construcción.',
+        'https://suconsultorfinanciero.online/services-preview.png',
+        'https://suconsultorfinanciero.online/servicios'
+    );
+    generatePage(
+        'diccionario',
+        'Diccionario Financiero | Su Consultor Financiero',
+        'Glosario financiero claro y sencillo para entender todos los términos de créditos, tasas e inversiones en Colombia.',
+        'https://suconsultorfinanciero.online/dictionary-preview.png',
+        'https://suconsultorfinanciero.online/diccionario'
+    );
+    generatePage(
+        'sobre-mi',
+        'Sobre Mí - Sebastián Restrepo | Su Consultor Financiero',
+        'Conoce a Sebastián Restrepo, tu consultor financiero experto en Medellín y Antioquia. Más de 10 años acompañando tus metas.',
+        'https://suconsultorfinanciero.online/sebastian-restrepo.jpg',
+        'https://suconsultorfinanciero.online/sobre-mi'
+    );
+    generatePage(
+        'privacidad',
+        'Política de Privacidad | Su Consultor Financiero',
+        'Conoce cómo protegemos y gestionamos tus datos personales bajo la legislación colombiana (Ley 1581 de 2012).',
+        'https://suconsultorfinanciero.online/share-preview.png',
+        'https://suconsultorfinanciero.online/privacidad'
+    );
+    generatePage(
+        'terminos',
+        'Términos y Condiciones | Su Consultor Financiero',
+        'Términos y condiciones de uso de la plataforma web de Su Consultor Financiero en Colombia.',
+        'https://suconsultorfinanciero.online/share-preview.png',
+        'https://suconsultorfinanciero.online/terminos'
+    );
+    generatePage(
+        'valorar',
+        'Califica Nuestro Servicio | Su Consultor Financiero',
+        'Déjanos tu opinión y valoración sobre la asesoría financiera recibida.',
+        'https://suconsultorfinanciero.online/share-preview.png',
+        'https://suconsultorfinanciero.online/valorar'
+    );
+
     // 1. Cargar datos de Blog
-    // Usamos una forma rústica de importar para evitar problemas de dependencias en el script
     const blogFileContent = fs.readFileSync(path.join(rootDir, 'src/data/blogData.js'), 'utf-8');
-    // Extraer el array usando una evaluación simple (solo funciona si el archivo es data pura)
-    // Pero mejor usamos import dinámico ya que estamos en un entorno que lo soporta
     const { blogData } = await import('../src/data/blogData.js');
 
     for (const post of blogData) {
