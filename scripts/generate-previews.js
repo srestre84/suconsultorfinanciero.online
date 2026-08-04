@@ -331,6 +331,10 @@ Sitemap: ${domain}/sitemap.xml
     }
     console.log('robots.txt generado con éxito en dist y public.');
 
+    // Generar CNAME
+    fs.writeFileSync(path.join(distDir, 'CNAME'), 'suconsultorfinanciero.online\n');
+    console.log('CNAME generado con éxito en dist.');
+
     console.log('--- Generación completada con éxito ---');
 }
 
