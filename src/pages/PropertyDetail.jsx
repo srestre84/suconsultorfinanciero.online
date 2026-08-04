@@ -24,28 +24,39 @@ function PropertyDetail() {
 
     const currentUrl = `https://suconsultorfinanciero.online/inmuebles/${property.id}`;
     const whatsappUrl = `https://wa.me/${property.contacto.whatsapp}?text=${encodeURIComponent(property.contacto.texto)}`;
+    const rawImage = property.fotos[0]?.startsWith('http')
+        ? property.fotos[0]
+        : `https://suconsultorfinanciero.online${property.fotos[0]?.startsWith('/') ? '' : '/'}${property.fotos[0]}`;
+    const propertyImage = encodeURI(rawImage);
+    const imageType = propertyImage.toLowerCase().endsWith('.png')
+        ? 'image/png'
+        : propertyImage.toLowerCase().endsWith('.webp')
+        ? 'image/webp'
+        : 'image/jpeg';
 
     return (
         <main className="property-detail-page">
             <Helmet>
                 <title>{property.titulo} | Su Consultor Financiero</title>
                 <meta name="description" content={property.descripcion} />
+                <link rel="canonical" href={currentUrl} />
 
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={currentUrl} />
                 <meta property="og:title" content={property.titulo} />
                 <meta property="og:description" content={property.descripcion} />
-                <meta property="og:image" content={property.fotos[0]?.startsWith('http') ? property.fotos[0] : `https://suconsultorfinanciero.online${property.fotos[0]?.startsWith('/') ? '' : '/'}${property.fotos[0]}`} />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
+                <meta property="og:image" content={propertyImage} />
+                <meta property="og:image:secure_url" content={propertyImage} />
+                <meta property="og:image:type" content={imageType} />
+                <meta property="og:image:alt" content={property.titulo} />
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content={currentUrl} />
                 <meta property="twitter:title" content={property.titulo} />
                 <meta property="twitter:description" content={property.descripcion} />
-                <meta property="twitter:image" content={property.fotos[0]?.startsWith('http') ? property.fotos[0] : `https://suconsultorfinanciero.online${property.fotos[0]?.startsWith('/') ? '' : '/'}${property.fotos[0]}`} />
+                <meta property="twitter:image" content={propertyImage} />
             </Helmet>
 
             <section className="section-padding container">

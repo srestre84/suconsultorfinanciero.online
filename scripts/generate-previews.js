@@ -14,6 +14,27 @@ if (!fs.existsSync(indexHtmlPath)) {
 
 const indexHtml = fs.readFileSync(indexHtmlPath, 'utf-8');
 
+function escapeAttr(str) {
+    if (!str) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\r?\n|\r/g, ' ')
+        .trim();
+}
+
+function escapeTitle(str) {
+    if (!str) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\r?\n|\r/g, ' ')
+        .trim();
+}
+
 // Función para generar una página estática para una ruta
 function generatePage(routePath, title, description, image, url) {
     const targetDir = path.join(distDir, ...routePath.split('/'));
@@ -21,25 +42,50 @@ function generatePage(routePath, title, description, image, url) {
         fs.mkdirSync(targetDir, { recursive: true });
     }
 
+    const encodedImage = encodeURI(image);
+    const safeTitle = escapeAttr(title);
+    const safeDescription = escapeAttr(description);
+    const safeUrl = escapeAttr(url);
+
+    let imageType = 'image/jpeg';
+    const lowerImg = encodedImage.toLowerCase();
+    if (lowerImg.endsWith('.png')) {
+        imageType = 'image/png';
+    } else if (lowerImg.endsWith('.webp')) {
+        imageType = 'image/webp';
+    } else if (lowerImg.endsWith('.gif')) {
+        imageType = 'image/gif';
+    }
+
     let customHtml = indexHtml;
     
     // Reemplazar Meta Tags de Open Graph
-    customHtml = customHtml.replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${title}" />`);
-    customHtml = customHtml.replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${description}" />`);
-    customHtml = customHtml.replace(/<meta property="og:image" content=".*?" \/>/, `<meta property="og:image" content="${image}" />`);
-    customHtml = customHtml.replace(/<meta property="og:url" content=".*?" \/>/, `<meta property="og:url" content="${url}" />`);
+    customHtml = customHtml.replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${safeTitle}" />`);
+    customHtml = customHtml.replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${safeDescription}" />`);
+    customHtml = customHtml.replace(/<meta property="og:image" content=".*?" \/>/, `<meta property="og:image" content="${encodedImage}" />`);
+    customHtml = customHtml.replace(/<meta property="og:image:secure_url" content=".*?" \/>/, `<meta property="og:image:secure_url" content="${encodedImage}" />`);
+    customHtml = customHtml.replace(/<meta property="og:image:type" content=".*?" \/>/, `<meta property="og:image:type" content="${imageType}" />`);
+    customHtml = customHtml.replace(/<meta property="og:image:alt" content=".*?" \/>/, `<meta property="og:image:alt" content="${safeTitle}" />`);
+    customHtml = customHtml.replace(/<meta property="og:url" content=".*?" \/>/, `<meta property="og:url" content="${safeUrl}" />`);
 
     // Reemplazar Meta Tags de Twitter
-    customHtml = customHtml.replace(/<meta property="twitter:title" content=".*?" \/>/, `<meta property="twitter:title" content="${title}" />`);
-    customHtml = customHtml.replace(/<meta property="twitter:description" content=".*?" \/>/, `<meta property="twitter:description" content="${description}" />`);
-    customHtml = customHtml.replace(/<meta property="twitter:image" content=".*?" \/>/, `<meta property="twitter:image" content="${image}" />`);
-    customHtml = customHtml.replace(/<meta property="twitter:url" content=".*?" \/>/, `<meta property="twitter:url" content="${url}" />`);
+    customHtml = customHtml.replace(/<meta property="twitter:title" content=".*?" \/>/, `<meta property="twitter:title" content="${safeTitle}" />`);
+    customHtml = customHtml.replace(/<meta property="twitter:description" content=".*?" \/>/, `<meta property="twitter:description" content="${safeDescription}" />`);
+    customHtml = customHtml.replace(/<meta property="twitter:image" content=".*?" \/>/, `<meta property="twitter:image" content="${encodedImage}" />`);
+    customHtml = customHtml.replace(/<meta property="twitter:url" content=".*?" \/>/, `<meta property="twitter:url" content="${safeUrl}" />`);
 
     // Reemplazar Title Tag
-    customHtml = customHtml.replace(/<title>.*?<\/title>/, `<title>${title}</title>`);
+    customHtml = customHtml.replace(/<title>.*?<\/title>/, `<title>${escapeTitle(title)}</title>`);
     
     // Reemplazar Meta Description General
-    customHtml = customHtml.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${description}" />`);
+    customHtml = customHtml.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${safeDescription}" />`);
+
+    // Agregar o actualizar enlace canónico
+    if (customHtml.includes('<link rel="canonical"')) {
+        customHtml = customHtml.replace(/<link rel="canonical" href=".*?" \/>/, `<link rel="canonical" href="${safeUrl}" />`);
+    } else {
+        customHtml = customHtml.replace('</head>', `    <link rel="canonical" href="${safeUrl}" />\n</head>`);
+    }
 
     fs.writeFileSync(path.join(targetDir, 'index.html'), customHtml);
     console.log(`Página generada: ${routePath}`);
