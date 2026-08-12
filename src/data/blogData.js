@@ -627,5 +627,24 @@ export const blogData = [
         date: "2026-07-30",
         author: "Sebastián - Consultor",
         imageUrl: "/blog_remates_inmobiliarios.png"
+    },
+    {
+        id: 28,
+        slug: "ante-el-terremoto-solidaridad-y-empatia",
+        relatedService: "libre-inversion",
+        title: "Ante el Terremoto: Más allá de lo Intelectual, un Mensaje desde el Corazón",
+        excerpt: "Hay momentos donde las palabras y las teorías financieras se quedan cortas. Una reflexión sincera sobre la empatía y la solidaridad humana.",
+        content: `
+            <p>Hay momentos en los que las palabras sencillamente no alcanzan.</p>
+            <p>Ante la magnitud de lo sucedido con el reciente terremoto, entiendo perfectamente que hablar de <em>"volver a empezar"</em> desde una perspectiva intelectual o racional se queda completamente corto. En circunstancias como esta, la lógica y los discursos quedan congelados frente a la realidad del dolor y el impacto de lo acontecido.</p>
+            <h3>Más allá de lo profesional y financiero</h3>
+            <p>Hoy no les hablo desde la técnica ni desde los números. Es necesario ser absolutamente transparente y humano: <strong>no existe asesoría financiera que pueda brindar una solución ni una ayuda inmediata</strong> ante la pérdida, el shock y la incertidumbre de un desastre natural. En este instante, cualquier planteamiento financiero pasa a un segundo plano.</p>
+            <h3>Impulsos desde el alma y el corazón</h3>
+            <p>Lo único que verdaderamente cabe hoy es conectar como seres humanos. Por eso, no pretendo dar consejos ni teorías en este momento; prefiero enviarles impulsos sinceros y profundos, que salen directo de mi alma y de mi corazón, acompañando a cada persona, familia y comunidad que hoy enfrenta este momento de prueba.</p>
+            <p>Mucha fuerza, coraje y luz para todos. Estamos con ustedes.</p>
+        `,
+        date: "2026-08-12",
+        author: "Sebastián - Consultor",
+        imageUrl: "/blog_terremoto_solidaridad.jpg"
     }
 ];
