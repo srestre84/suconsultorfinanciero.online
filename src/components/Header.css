@@ -60,7 +60,7 @@
 /* --- Nuevos Estilos de Navegación --- */
 .header-nav {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.2rem;
     align-items: center;
 }
 
@@ -71,6 +71,8 @@
     font-weight: 600;
     padding: 0.5rem;
     transition: color 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .nav-link:hover {
@@ -85,6 +87,8 @@
     padding: 0.4rem 1rem;
     color: var(--azul-oscuro);
     transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .nav-highlight:hover {
@@ -106,6 +110,7 @@
     justify-content: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
     color: var(--azul-oscuro);
+    flex-shrink: 0;
 }
 
 .theme-toggle:hover {
