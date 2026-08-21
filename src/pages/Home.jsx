@@ -13,6 +13,7 @@ import DebtCapacityCalculator from '../components/DebtCapacityCalculator';
 import Mission from '../components/Mission';
 import Hero from '../components/Hero';
 import BankSearch from '../components/BankSearch';
+import WhyConsultant from '../components/WhyConsultant';
 import PropertyCard from '../components/PropertyCard';
 import { properties } from '../data/properties';
 import { blogData } from '../data/blogData';
@@ -106,6 +107,7 @@ function Home() {
 
             <Hero />
             <BankSearch />
+            <WhyConsultant />
 
             {/* Sección de Artículos Recientes (Blog Preview) */}
             <section className="section-padding container" id="blog-preview">
