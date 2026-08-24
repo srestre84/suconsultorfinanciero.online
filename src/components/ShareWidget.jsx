@@ -10,7 +10,7 @@ const ShareWidget = () => {
 
     const shareUrl = typeof window !== 'undefined' ? window.location.href : "https://suconsultorfinanciero.online/";
     const shareTitle = typeof document !== 'undefined' ? document.title : "Su Consultor Financiero | Asesoría Multibanca";
-    const shareText = "🤝 **Su Consultor Financiero | Asesoría Multibanca Sin Costo**\n\n¿Tienes un buen perfil financiero? Revisamos tu caso en simultáneo entre +6 bancos aliados para lograr la tasa más baja.\n\n💡 **Valores Agregados:**\n🏛️ Subasta multibanca y tasas VIP\n⏱️ Cero filas (gestión digital o presencial)\n🔒 Desembolso directo (cuenta, cheque o vendedor)\n🛡️ 100% Verificable con mis datos en los bancos\n✨ Asesoría personalizada sin costo\n\n🎯 **Tipos de Crédito:**\n✅ Crédito Hipotecario / Vivienda\n✅ Compra de Cartera\n✅ Libre Inversión\n✅ Libranzas y Construcción\n\nDescubre más aquí:";
+    const shareText = "🤝 **Su Consultor Financiero | Asesoría Multibanca**\n¿Tienes un buen perfil financiero? Revisamos tu crédito en +6 bancos aliados para la tasa más baja.\n💡 **Valores Agregados:**\n🏛️ Subasta multibanca VIP y asesoría 100% sin costo\n⏱️ Cero filas (gestión digital o presencial según el caso)\n🔒 Desembolso directo (cuenta, cheque o vendedor)\n🛡️ 100% Verificable con mis datos personales en los bancos\n🎯 **Créditos:** Vivienda/Hipotecario, Compra de Cartera, Libre Inversión, Libranzas y Construcción.\nDescubre más aquí:";
 
     useEffect(() => {
         if (navigator.share) {
