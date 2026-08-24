@@ -20,7 +20,7 @@ const WhyConsultant = () => {
                         <h3>Subasta entre +8 Bancos</h3>
                         <p>
                             Al ir directo a tu banco de siempre, solo ves <strong>su</strong> tasa. 
-                            Como consultor multibanca, radico tu perfil en simultáneo en varias entidades para que **compitan por ti** y logremos la tasa más baja.
+                            Como consultor multibanca, radico tu perfil en simultáneo en varias entidades para que <strong>compitan por ti</strong> y logremos la tasa más baja.
                         </p>
                     </div>
 
@@ -29,7 +29,7 @@ const WhyConsultant = () => {
                         <h3>Cero Filas y Cero Burocracia</h3>
                         <p>
                             Tu tiempo vale oro. Olvídate de visitar 4 sucursales, llenar carpetas repetitivas y hacer filas. 
-                            Gestionamos todo 100% digital y directo con directores bancarios.
+                            Gestionamos todo de forma digital o presencial (según el caso) y directo con directores bancarios.
                         </p>
                     </div>
 
@@ -38,7 +38,7 @@ const WhyConsultant = () => {
                         <h3>Desembolso Directo del Banco</h3>
                         <p>
                             Seguridad total para ti. Nosotros gestionamos la aprobación, pero el banco desembolsa 
-                            el 100% de los recursos directamente a tu cuenta o a la constructora/vendedor.
+                            el 100% de los recursos directamente a tu cuenta, en cheque o a la constructora/vendedor, según el caso y tipo de crédito.
                         </p>
                     </div>
 
@@ -48,6 +48,16 @@ const WhyConsultant = () => {
                         <p>
                             Recibes acompañamiento experto y personalizado de principio a fin con 
                             <strong> asesoría sin costo</strong> para ti.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="why-trust-banner glass" style={{ margin: '2rem 0', padding: '1.25rem 1.5rem', borderRadius: '15px', borderLeft: '5px solid #25d366', background: 'rgba(255,255,255,0.9)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                    <div style={{ fontSize: '2rem' }}>🛡️</div>
+                    <div>
+                        <h4 style={{ margin: '0 0 0.25rem 0', color: 'var(--azul-oscuro)', fontSize: '1.1rem', fontWeight: 'bold' }}>Seguridad y Respaldo Oficial Verificable</h4>
+                        <p style={{ margin: 0, fontSize: '0.95rem', color: '#444', lineHeight: '1.5' }}>
+                            Para tu total tranquilidad, puedes validar mi vinculación oficial directa con las entidades financieras mediante mis datos personales antes de iniciar cualquier trámite.
                         </p>
                     </div>
                 </div>
@@ -78,7 +88,7 @@ const WhyConsultant = () => {
                                 <tr>
                                     <td><strong>Tiempo y Papelería</strong></td>
                                     <td>Citas, filas y trámites repetitivos</td>
-                                    <td className="highlight-col">100% gestionado por expertos, 0h en filas</td>
+                                    <td className="highlight-col">Gestionado por expertos (digital o presencial según el caso), 0h en filas</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Acompañamiento</strong></td>

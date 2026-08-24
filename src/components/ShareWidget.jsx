@@ -9,8 +9,8 @@ const ShareWidget = () => {
     const [canNativeShare, setCanNativeShare] = useState(false);
 
     const shareUrl = typeof window !== 'undefined' ? window.location.href : "https://suconsultorfinanciero.online/";
-    const shareTitle = typeof document !== 'undefined' ? document.title : "Su Consultor Financiero | Estrategia y Control";
-    const shareText = "🥇 **Su Consultor Financiero | Asesoría Integral**\n\nTe invito a descubrir soluciones profesionales en:\n✅ Crédito Hipotecario\n✅ Libre Inversión\n✅ Compra de Cartera\n✅ Construcción en Sitio Propio\n✅ Libranzas con las mejores tasas para pensionados, profesores y sector público\n\nOptimiza tu flujo de caja y toma el control de tus finanzas. Mira más aquí:";
+    const shareTitle = typeof document !== 'undefined' ? document.title : "Su Consultor Financiero | Asesoría Multibanca";
+    const shareText = "🤝 **Su Consultor Financiero | Asesoría Multibanca Sin Costo**\n\n¿Tienes un buen perfil financiero? Subastamos tu crédito en simultáneo entre +8 bancos aliados para lograr la tasa más baja.\n\n💡 **Valores Agregados:**\n🏛️ Subasta multibanca y tasas VIP\n⏱️ Cero filas (gestión digital o presencial según el caso)\n🔒 Desembolso directo del banco (cuenta, cheque o vendedor)\n🛡️ 100% Verificable (valida mi vinculación oficial directa con mis datos personales)\n✨ Asesoría personalizada 100% sin costo\n\n🎯 **Servicios:** Vivienda/Hipotecario, Compra de Cartera, Libre Inversión, Libranzas y Construcción.\n\nDescubre más aquí:";
 
     useEffect(() => {
         if (navigator.share) {
