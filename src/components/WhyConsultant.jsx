@@ -17,10 +17,10 @@ const WhyConsultant = () => {
                 <div className="why-cards-grid">
                     <div className="why-card glass">
                         <div className="why-card-icon">🏛️</div>
-                        <h3>Subasta entre +8 Bancos</h3>
+                        <h3>Subasta entre +6 Bancos</h3>
                         <p>
                             Al ir directo a tu banco de siempre, solo ves <strong>su</strong> tasa. 
-                            Como consultor multibanca, radico tu perfil en simultáneo en varias entidades para que <strong>compitan por ti</strong> y logremos la tasa más baja.
+                            Como consultor multibanca, reviso tu perfil en simultáneo en varias entidades para que <strong>compitan por ti</strong> y logremos la tasa más baja.
                         </p>
                     </div>
 
@@ -78,7 +78,7 @@ const WhyConsultant = () => {
                                 <tr>
                                     <td><strong>Opciones de tasa</strong></td>
                                     <td>1 sola opción (la de ese banco)</td>
-                                    <td className="highlight-col">Compara entre +8 entidades financieras</td>
+                                    <td className="highlight-col">Compara entre +6 entidades financieras</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Poder de negociación</strong></td>

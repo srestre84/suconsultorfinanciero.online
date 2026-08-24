@@ -41,13 +41,13 @@ function Home() {
         <main>
             <Helmet>
                 <title>Su Consultor Financiero | Asesor Multibanca & Subasta de Créditos Colombia</title>
-                <meta name="description" content="¿Tienes un buen perfil financiero? Como tu asesor multibanca en Colombia, subastamos tu crédito entre +8 bancos aliados para Vivienda, Compra de Cartera y Libre Inversión. Cero filas, gestión digital o presencial según el caso, y asesoría 100% sin costo." />
+                <meta name="description" content="¿Tienes un buen perfil financiero? Como tu asesor multibanca en Colombia, revisamos tu crédito entre +6 bancos aliados para Vivienda, Compra de Cartera y Libre Inversión. Cero filas, gestión digital o presencial según el caso, y asesoría 100% sin costo." />
 
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://suconsultorfinanciero.online/" />
                 <meta property="og:title" content="Su Consultor Financiero | Asesor Multibanca & Subasta de Tasas VIP" />
-                <meta property="og:description" content="Aprovecha tu buen perfil financiero. Subastamos tu crédito entre +8 bancos aliados para la tasa más baja en Vivienda, Compra de Cartera, Libranza y Libre Inversión. Cero filas, gestión digital o presencial y asesoría 100% sin costo." />
+                <meta property="og:description" content="Aprovecha tu buen perfil financiero. Revisamos tu crédito entre +6 bancos aliados para la tasa más baja en Vivienda, Compra de Cartera, Libranza y Libre Inversión. Cero filas, gestión digital o presencial y asesoría 100% sin costo." />
                 <meta property="og:image" content="https://suconsultorfinanciero.online/share-preview.png" />
                 <meta property="og:image:secure_url" content="https://suconsultorfinanciero.online/share-preview.png" />
                 <meta property="og:image:type" content="image/png" />
@@ -59,7 +59,7 @@ function Home() {
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://suconsultorfinanciero.online/" />
                 <meta property="twitter:title" content="Su Consultor Financiero | Asesor Multibanca en Colombia" />
-                <meta property="twitter:description" content="Subastamos tu crédito entre +8 bancos aliados para la mejor tasa en Vivienda, Compra de Cartera y Libre Inversión. Cero filas (gestión digital o presencial) y asesoría 100% sin costo." />
+                <meta property="twitter:description" content="Revisamos tu crédito entre +6 bancos aliados para la mejor tasa en Vivienda, Compra de Cartera y Libre Inversión. Cero filas (gestión digital o presencial) y asesoría 100% sin costo." />
                 <meta property="twitter:image" content="https://suconsultorfinanciero.online/share-preview.png" />
 
                 {/* JSON-LD LocalBusiness / FinancialService Schema */}
