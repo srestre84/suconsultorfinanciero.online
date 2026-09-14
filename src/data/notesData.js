@@ -207,7 +207,7 @@ export const notesData = [
         subtitle: "Consistencia y Hábitos Atómicos",
         quote: "No necesitas un golpe de suerte para transformar tus finanzas; necesitas una mejora diaria del 1% en tus hábitos de gasto y ahorro.",
         author: "James Clear (Selección de Sebastián Restrepo R.)",
-        imageUrl: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        imageUrl: "/notas/james-clear-habito-uno-por-ciento.jpg",
         excerpt: "Las grandes metas financieras no se alcanzan de golpe. La acumulación silenciosa de pequeñas decisiones diarias transforma radicalmente tu patrimonio.",
         content: `
             <p>En <em>Hábitos Atómicos</em>, James Clear expone un principio matemático irrefutable: mejorar solo un 1% cada día te hace 37 veces mejor al cabo de un año. Este concepto cobra su máxima expresión en la administración del dinero personal.</p>
@@ -225,7 +225,7 @@ export const notesData = [
         subtitle: "Paciencia y Disciplina Inversionista",
         quote: "La gran riqueza no se hace comprando ni vendiendo compulsivamente, sino teniendo la paciencia de esperar a que el interés y el tiempo hagan su trabajo.",
         author: "Charlie Munger (Selección de Sebastián Restrepo R.)",
-        imageUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        imageUrl: "/notas/charlie-munger-arte-saber-esperar.jpg",
         excerpt: "Aprende a domar la ansiedad financiera. La verdadera solidez patrimonial premia a quienes saben esperar mientras sus activos maduran.",
         content: `
             <p>Charlie Munger, socio legendario de Warren Buffett en Berkshire Hathaway, repetía con insistencia que el gran enemigo del inversor común no es la falta de oportunidades, sino la prisa por ver resultados inmediatos.</p>
@@ -243,7 +243,7 @@ export const notesData = [
         subtitle: "Vivir por Debajo de tus Posibilidades",
         quote: "La verdadera riqueza no se mide por lo que gastas para impresionar a los demás, sino por la tranquilidad que sientes cuando miras tu cuenta y duermes en paz.",
         author: "Thomas J. Stanley (Selección de Sebastián Restrepo R.)",
-        imageUrl: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        imageUrl: "/notas/riqueza-silenciosa-estilo-de-vida.jpg",
         excerpt: "Comprende la diferencia vital entre aparentar prosperidad y tener solidez financiera real y duradera para tu familia.",
         content: `
             <p>En su célebre investigación <em>El Millonario de al Lado</em>, Thomas J. Stanley descubrió que la mayoría de las personas con alto patrimonio neto no conducen autos de último modelo comprados al 100% de crédito ni visten para impresionar a extraños en redes sociales.</p>
@@ -261,7 +261,7 @@ export const notesData = [
         subtitle: "Superación y Reinvención",
         quote: "Un error con una tarjeta o un mal negocio no es una condena definitiva; es una lección costosa pero valiosa para construir un nuevo comienzo.",
         author: "Sebastián Restrepo R.",
-        imageUrl: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        imageUrl: "/notas/resiliencia-segunda-oportunidad-financiera.jpg",
         excerpt: "El sobreendeudamiento o un reporte negativo no son el fin del camino. Descubre cómo perdonar tus errores del pasado y reestructurar tu futuro hoy.",
         content: `
             <p>En mis más de 15 años como asesor financiero he visto a cientos de personas paralizadas por la culpa de una mala decisión: un préstamo que se salió de control, una sociedad fallida o meses de atraso en cuotas bancarias.</p>
@@ -279,7 +279,7 @@ export const notesData = [
         subtitle: "Unión Familiar y Metas Comunes",
         quote: "Cuando una familia o pareja rema financieramente en la misma dirección, las metas que parecían imposibles se alcanzan en la mitad del tiempo.",
         author: "Sebastián Restrepo R.",
-        imageUrl: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        imageUrl: "/notas/patrimonio-en-pareja-metas-comunes.jpg",
         excerpt: "La sincronía financiera en el hogar es el mayor multiplicador de capital. Aprende a hablar de dinero con transparencia y diseñar sueños compartidos.",
         content: `
             <p>El dinero en el hogar nunca es un tema estrictamente numérico; es un reflejo de prioridades, confianza mutua y visión compartida hacia el futuro.</p>
