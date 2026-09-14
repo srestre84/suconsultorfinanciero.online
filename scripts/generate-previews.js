@@ -234,7 +234,7 @@ async function start() {
     for (const note of notesData) {
         const title = `${note.title} | Su Consultor Financiero`;
         const description = `"${note.quote}" - Asesoría financiera profesional en Colombia.`;
-        const image = `https://suconsultorfinanciero.online${note.imageUrl}`;
+        const image = note.imageUrl?.startsWith('http') ? note.imageUrl : `https://suconsultorfinanciero.online${note.imageUrl?.startsWith('/') ? note.imageUrl : `/${note.imageUrl}`}`;
         const url = `https://suconsultorfinanciero.online/notas/${note.slug}`;
 
         generatePage(`notas/${note.slug}`, title, description, image, url);

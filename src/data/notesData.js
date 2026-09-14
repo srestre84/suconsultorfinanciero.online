@@ -199,6 +199,97 @@ export const notesData = [
             <p>Eliminar deudas tóxicas y construir patrimonio en activos tangibles es el camino más directo para transformar la energía de tu trabajo en libertad duradera para ti y tu familia.</p>
         `,
         date: "2026-08-03"
+    },
+    {
+        id: 12,
+        slug: "james-clear-habito-uno-por-ciento",
+        title: "Nota Motivacional: El Hábito del 1% en tus Finanzas (James Clear)",
+        subtitle: "Consistencia y Hábitos Atómicos",
+        quote: "No necesitas un golpe de suerte para transformar tus finanzas; necesitas una mejora diaria del 1% en tus hábitos de gasto y ahorro.",
+        author: "James Clear (Selección de Sebastián Restrepo R.)",
+        imageUrl: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        excerpt: "Las grandes metas financieras no se alcanzan de golpe. La acumulación silenciosa de pequeñas decisiones diarias transforma radicalmente tu patrimonio.",
+        content: `
+            <p>En <em>Hábitos Atómicos</em>, James Clear expone un principio matemático irrefutable: mejorar solo un 1% cada día te hace 37 veces mejor al cabo de un año. Este concepto cobra su máxima expresión en la administración del dinero personal.</p>
+            <h3>El poder del ajuste microscópico</h3>
+            <p>Muchas personas postergan el orden financiero creyendo que solo vale la pena si pueden ahorrar millones al mes. En la práctica, cancelar una suscripción innecesaria de $35.000 COP, preparar café en casa o redondear tus pagos hacia una alcancía digital crea el impulso inicial que tu psicología necesita.</p>
+            <h3>Automatiza tu 1%</h3>
+            <p>No confíes únicamente en tu fuerza de voluntad cuando llegue el extracto bancario. Programa traslados automáticos el mismo día del pago hacia cuentas rentables o hacia abonos extraordinarios de tus deudas más caras.</p>
+        `,
+        date: "2026-09-02"
+    },
+    {
+        id: 13,
+        slug: "charlie-munger-arte-saber-esperar",
+        title: "Nota Motivacional: El Arte de Saber Esperar (Charlie Munger)",
+        subtitle: "Paciencia y Disciplina Inversionista",
+        quote: "La gran riqueza no se hace comprando ni vendiendo compulsivamente, sino teniendo la paciencia de esperar a que el interés y el tiempo hagan su trabajo.",
+        author: "Charlie Munger (Selección de Sebastián Restrepo R.)",
+        imageUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        excerpt: "Aprende a domar la ansiedad financiera. La verdadera solidez patrimonial premia a quienes saben esperar mientras sus activos maduran.",
+        content: `
+            <p>Charlie Munger, socio legendario de Warren Buffett en Berkshire Hathaway, repetía con insistencia que el gran enemigo del inversor común no es la falta de oportunidades, sino la prisa por ver resultados inmediatos.</p>
+            <h3>El peligro de la hiperactividad financiera</h3>
+            <p>Entrar y salir de inversiones por pánico, cambiar de banco cada mes sin calcular costos o caer en promesas de rentabilidades mágicas del 10% mensual solo destruye capital. Los activos sólidos (como la propiedad raíz bien ubicada o la amortización continua de un crédito hipotecario) necesitan años para desplegar su verdadero poder de valorización.</p>
+            <h3>La virtud de no interrumpir el proceso</h3>
+            <p>Cuando estructuras un plan de pagos o una compra de cartera con un asesor financiero, el mejor movimiento después de optimizar tu tasa suele ser no alterar el curso: mantener la disciplina y dejar que el interés compuesto opere a tu favor.</p>
+        `,
+        date: "2026-09-05"
+    },
+    {
+        id: 14,
+        slug: "riqueza-silenciosa-estilo-de-vida",
+        title: "Nota Motivacional: Riqueza Silenciosa vs. Riqueza Aparente (Thomas J. Stanley)",
+        subtitle: "Vivir por Debajo de tus Posibilidades",
+        quote: "La verdadera riqueza no se mide por lo que gastas para impresionar a los demás, sino por la tranquilidad que sientes cuando miras tu cuenta y duermes en paz.",
+        author: "Thomas J. Stanley (Selección de Sebastián Restrepo R.)",
+        imageUrl: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        excerpt: "Comprende la diferencia vital entre aparentar prosperidad y tener solidez financiera real y duradera para tu familia.",
+        content: `
+            <p>En su célebre investigación <em>El Millonario de al Lado</em>, Thomas J. Stanley descubrió que la mayoría de las personas con alto patrimonio neto no conducen autos de último modelo comprados al 100% de crédito ni visten para impresionar a extraños en redes sociales.</p>
+            <h3>La trampa del estatus prestado</h3>
+            <p>El consumo ostentoso impulsado por cupos de tarjetas de crédito o créditos de consumo de alta tasa es un impuesto voluntario a la autoestima. Cada peso que se va en sostener una imagen ficticia es un peso que se le resta a tu fondo de retiro, a la cuota inicial de tu casa o a tu libertad laboral.</p>
+            <h3>El lujo de la paz mental</h3>
+            <p>Tener un fondo de emergencia de 6 meses, no tener llamadas de cobranza y saber que tu flujo de caja te pertenece a ti y no al banco es el verdadero significado del éxito económico.</p>
+        `,
+        date: "2026-09-08"
+    },
+    {
+        id: 15,
+        slug: "resiliencia-segunda-oportunidad-financiera",
+        title: "Nota Motivacional: Tu Pasado Financiero No Define tu Futuro",
+        subtitle: "Superación y Reinvención",
+        quote: "Un error con una tarjeta o un mal negocio no es una condena definitiva; es una lección costosa pero valiosa para construir un nuevo comienzo.",
+        author: "Sebastián Restrepo R.",
+        imageUrl: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        excerpt: "El sobreendeudamiento o un reporte negativo no son el fin del camino. Descubre cómo perdonar tus errores del pasado y reestructurar tu futuro hoy.",
+        content: `
+            <p>En mis más de 15 años como asesor financiero he visto a cientos de personas paralizadas por la culpa de una mala decisión: un préstamo que se salió de control, una sociedad fallida o meses de atraso en cuotas bancarias.</p>
+            <h3>El perdón financiero es el primer paso técnico</h3>
+            <p>Castigarte mentalmente no paga las cuotas ni sube tu puntaje en Datacrédito. Aceptar la realidad con objetividad matemática te permite pasar de la angustia a la estrategia: negociar paz y salvos, solicitar consolidación de pasivos o acogerse a acuerdos de pago estructurados.</p>
+            <h3>El sistema financiero premia la recuperación</h3>
+            <p>Las centrales de riesgo y las entidades bancarias no guardan rencores personales; responden a números y comportamientos recientes. Cuando ordenas tus cuentas y demuestras 6 a 12 meses de manejo impecable, las puertas del crédito se abren de nuevo.</p>
+        `,
+        date: "2026-09-10"
+    },
+    {
+        id: 16,
+        slug: "patrimonio-en-pareja-metas-comunes",
+        title: "Nota Motivacional: Construir Patrimonio en Equipo",
+        subtitle: "Unión Familiar y Metas Comunes",
+        quote: "Cuando una familia o pareja rema financieramente en la misma dirección, las metas que parecían imposibles se alcanzan en la mitad del tiempo.",
+        author: "Sebastián Restrepo R.",
+        imageUrl: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        excerpt: "La sincronía financiera en el hogar es el mayor multiplicador de capital. Aprende a hablar de dinero con transparencia y diseñar sueños compartidos.",
+        content: `
+            <p>El dinero en el hogar nunca es un tema estrictamente numérico; es un reflejo de prioridades, confianza mutua y visión compartida hacia el futuro.</p>
+            <h3>La fuerza del crédito mancomunado</h3>
+            <p>Al unir ingresos familiares para solicitar un crédito de vivienda o leasing habitacional, la capacidad de endeudamiento se multiplica, permitiendo acceder a mejores inmuebles, negociar tasas preferenciales y liquidar el capital en plazos mucho menores mediante abonos conjuntos.</p>
+            <h3>Conversaciones que construyen libertad</h3>
+            <p>Establezcan una cita mensual para revisar números, celebrar logros de ahorro y planificar los siguientes pasos sin recriminaciones. La claridad en pareja no solo protege la economía del hogar, sino que fortalece la tranquilidad y el bienestar emocional.</p>
+        `,
+        date: "2026-09-12"
     }
 ];
+
 

@@ -45,7 +45,7 @@ function NoteDetail() {
                 {/* Open Graph Meta Tags para Previsualización en WhatsApp y Redes Sociales */}
                 <meta property="og:title" content={note.title} />
                 <meta property="og:description" content={`"${note.quote}"`} />
-                <meta property="og:image" content={`https://suconsultorfinanciero.online${note.imageUrl}`} />
+                <meta property="og:image" content={note.imageUrl?.startsWith('http') ? note.imageUrl : `https://suconsultorfinanciero.online${note.imageUrl?.startsWith('/') ? note.imageUrl : `/${note.imageUrl}`}`} />
                 <meta property="og:url" content={currentUrl} />
                 <meta property="og:type" content="article" />
                 
@@ -53,7 +53,7 @@ function NoteDetail() {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={note.title} />
                 <meta name="twitter:description" content={`"${note.quote}"`} />
-                <meta name="twitter:image" content={`https://suconsultorfinanciero.online${note.imageUrl}`} />
+                <meta name="twitter:image" content={note.imageUrl?.startsWith('http') ? note.imageUrl : `https://suconsultorfinanciero.online${note.imageUrl?.startsWith('/') ? note.imageUrl : `/${note.imageUrl}`}`} />
             </Helmet>
 
             <div className="container" style={{ maxWidth: '950px', padding: '2rem 1rem 5rem 1rem' }}>
