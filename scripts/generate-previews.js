@@ -163,7 +163,7 @@ async function start() {
         'servicios',
         'Servicios de Asesoría Financiera | Su Consultor Financiero',
         'Soluciones profesionales en Crédito Hipotecario, Libre Inversión, Compra de Cartera, Libranzas y Construcción.',
-        'https://suconsultorfinanciero.online/services-preview.png',
+        'https://suconsultorfinanciero.online/share-preview.png',
         'https://suconsultorfinanciero.online/servicios'
     );
     generatePage(
@@ -234,20 +234,13 @@ async function start() {
         generatePage(`inmuebles/${prop.id}`, title, description, image, url);
     }
 
-    // 3. Cargar datos de Servicios (Simulando export de Services.jsx)
-    // Como servicesData está en el componente, lo definimos aquí o lo extraemos si estuviera en un archivo aparte.
-    // Por simplicidad y consistencia, lo definiremos aquí basándonos en Services.jsx
-    const services = [
-        { id: "libre-inversion", title: "Crédito de libre inversión o compra de cartera", description: "Tasas competitivas y plazos desde 36 meses hasta 72 meses sin codeudor." },
-        { id: "inmuebles", title: "Crédito para inmuebles", description: "Asesoría integral para financiación de tu futuro hogar o vivienda de inversión." },
-        { id: "vehiculo", title: "Crédito de vehículo y libranza", description: "Adquiere el vehículo de tus sueños con planes de pago personalizados." },
-        { id: "constructor", title: "Crédito constructor individual", description: "Financia la construcción de tu vivienda a medida en condominios." }
-    ];
+    // 3. Cargar datos de Servicios directamente desde servicesData.js
+    const { servicesData } = await import('../src/data/servicesData.js');
 
-    for (const service of services) {
-        const title = `${service.title} | Servicios`;
-        const description = service.description;
-        const image = "https://suconsultorfinanciero.online/logo.png";
+    for (const service of servicesData) {
+        const title = `${service.title} | Servicios | Su Consultor Financiero`;
+        const description = service.description.length > 160 ? service.description.substring(0, 157) + '...' : service.description;
+        const image = service.image?.startsWith('http') ? service.image : `https://suconsultorfinanciero.online/${service.image || 'share-preview.png'}`;
         const url = `https://suconsultorfinanciero.online/servicios/${service.id}`;
         
         generatePage(`servicios/${service.id}`, title, description, image, url);
@@ -315,7 +308,7 @@ async function start() {
     }
 
     // Agregar servicios
-    for (const service of services) {
+    for (const service of servicesData) {
         sitemapUrls.push(`/servicios/${service.id}`);
     }
 

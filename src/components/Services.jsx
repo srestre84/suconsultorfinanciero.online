@@ -5,9 +5,45 @@ import CorporateIcon from './CorporateIcon';
 import './Services.css';
 
 const Services = () => {
+    const [portfolioCopied, setPortfolioCopied] = React.useState(false);
+
+    const portfolioShareText = `💼 *Su Consultor Financiero | Portafolio Multibanca*
+Acompañamiento 100% gratuito con +6 bancos aliados en Colombia:
+
+🏡 Crédito Hipotecario y Vivienda
+📉 Compra de Cartera (reduce cuotas e intereses)
+🚀 Libre Inversión y Libranza
+🚗 Crédito de Vehículo
+🏗️ Crédito Constructor
+🏢 Catálogo de Inmuebles en Venta
+
+Simula tu crédito y conoce tus opciones aquí:
+https://suconsultorfinanciero.online/`;
+
     const handleWhatsAppClick = (message) => {
         const encodedMessage = encodeURIComponent(message);
         window.open(`https://wa.me/573167443613?text=${encodedMessage}`, '_blank');
+    };
+
+    const handleSharePortfolio = async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: 'Su Consultor Financiero | Portafolio Multibanca',
+                    text: portfolioShareText,
+                });
+                return;
+            } catch (err) {
+                if (err.name === 'AbortError') return;
+            }
+        }
+        window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(portfolioShareText)}`, '_blank');
+    };
+
+    const handleCopyPortfolio = () => {
+        navigator.clipboard.writeText(portfolioShareText);
+        setPortfolioCopied(true);
+        setTimeout(() => setPortfolioCopied(false), 2500);
     };
 
     const handleShare = (e, service) => {
@@ -31,6 +67,34 @@ const Services = () => {
         <section className="section-padding" id="servicios">
             <div className="container">
                 <h2 className="animate-fade-in">Nuestros Servicios</h2>
+
+                {/* BANNER PARA COMPARTIR PORTAFOLIO COMPLETO EN ESTADOS DE WHATSAPP */}
+                <div className="services-share-banner glass animate-fade-in">
+                    <div className="services-share-content">
+                        <span className="services-share-tag">📲 ESTADOS DE WHATSAPP Y REDES</span>
+                        <h3 className="services-share-headline">Comparte todo nuestro portafolio de servicios</h3>
+                        <p className="services-share-subtext">
+                            Comparte en tu Estado de WhatsApp: incluye la tarjeta visual oficial, la lista completa de créditos y el enlace directo a la página web cumpliendo con el límite de texto.
+                        </p>
+                    </div>
+                    <div className="services-share-btn-group">
+                        <button 
+                            onClick={handleSharePortfolio}
+                            className="btn-share-portfolio-ws"
+                            title="Compartir portafolio en tu Estado de WhatsApp"
+                        >
+                            📱 Compartir en mi Estado de WhatsApp
+                        </button>
+                        <button 
+                            onClick={handleCopyPortfolio}
+                            className="btn-copy-portfolio"
+                            title="Copiar texto con lista de servicios y enlace listo para pegar"
+                        >
+                            {portfolioCopied ? '¡Texto Copiado! 📋' : 'Copiar Texto y Enlace 📋'}
+                        </button>
+                    </div>
+                </div>
+
                 <div className="services-grid">
                     {servicesData.map((service, index) => (
                         <div

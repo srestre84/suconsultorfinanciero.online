@@ -337,7 +337,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suconsultorfinanciero.online/servicios/inmuebles</loc>
+    <loc>https://suconsultorfinanciero.online/servicios/compra-cartera</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://suconsultorfinanciero.online/servicios/hipotecario</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -349,7 +355,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suconsultorfinanciero.online/servicios/constructor</loc>
+    <loc>https://suconsultorfinanciero.online/servicios/construccion</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://suconsultorfinanciero.online/servicios/libranza</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://suconsultorfinanciero.online/servicios/busqueda-banco-vivienda</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
