@@ -28,9 +28,14 @@ Asesoría 100% gratuita con +6 bancos para tu mejor tasa:
 Simula tu crédito y conoce tus opciones aquí:
 https://suconsultorfinanciero.online/`;
 
-    const fullShareText = isHome 
-        ? homeShareText 
-        : `${shareTitle}\n\nConoce más detalles y solicita tu asesoría aquí:\n${shareUrl}`;
+    // Si está leyendo un artículo de blog o una nota específica, comparte ese artículo
+    const isSpecificArticle = location.pathname.startsWith('/blog/') && location.pathname !== '/blog';
+    const isSpecificNote = location.pathname.startsWith('/notas/') && location.pathname !== '/notas';
+    const isDetailPost = isSpecificArticle || isSpecificNote;
+
+    const fullShareText = isDetailPost
+        ? `📰 *${shareTitle}*\nTe comparto este contenido de finanzas y créditos:\n${shareUrl}`
+        : homeShareText;
 
     const toggleMenu = async () => {
         if (canNativeShare) {
