@@ -52,18 +52,36 @@ const WhyConsultant = () => {
                     </div>
                 </div>
 
-                <div className="why-trust-banner glass" style={{ margin: '2rem 0', padding: '1.25rem 1.5rem', borderRadius: '15px', borderLeft: '5px solid #25d366', background: 'rgba(255,255,255,0.9)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <div style={{ fontSize: '2rem' }}>🛡️</div>
-                    <div>
-                        <h4 style={{ margin: '0 0 0.25rem 0', color: 'var(--azul-oscuro)', fontSize: '1.1rem', fontWeight: 'bold' }}>Seguridad y Respaldo Oficial Verificable</h4>
-                        <p style={{ margin: 0, fontSize: '0.95rem', color: '#444', lineHeight: '1.5' }}>
-                            Para tu total tranquilidad, puedes validar mi vinculación oficial directa con las entidades financieras mediante mis datos personales antes de iniciar cualquier trámite.
+                {/* Banner de Garantía y Respaldo */}
+                <div className="why-trust-banner glass">
+                    <div className="why-trust-icon">🛡️</div>
+                    <div className="why-trust-info">
+                        <span className="why-trust-badge">Garantía de Transparencia</span>
+                        <h4>¿Quieres validar con qué bancos trabajo?</h4>
+                        <p>
+                            Escríbeme y con gusto <strong>te doy mis datos para que tú mismo hagas la validación directa</strong> ante las entidades financieras antes de iniciar cualquier trámite. Cero riesgos y total tranquilidad para ti.
                         </p>
                     </div>
+                    <a 
+                        href="https://wa.me/573167443613?text=Hola%2C%20quiero%20validar%20con%20qu%C3%A9%20bancos%20trabajas%2C%20%C2%BFme%20compartes%20tus%20datos%20para%20hacer%20la%20validaci%C3%B3n%3F" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="why-trust-btn"
+                    >
+                        <span>💬</span> Escríbeme y Valídalo
+                    </a>
                 </div>
 
                 {/* Tabla comparativa */}
                 <div className="comparison-table-wrapper glass">
+                    {/* Banda de Colombia */}
+                    <div className="colombia-ribbon-wrapper" aria-label="Servicio en Colombia">
+                        <div className="colombia-ribbon">
+                            <span className="colombia-ribbon-flag">🇨🇴</span>
+                            <span className="colombia-ribbon-text">Colombia</span>
+                        </div>
+                    </div>
+
                     <h3 className="table-title">Comparación Directa: Tu Banco vs. Consultor Multibanca</h3>
                     <div className="table-responsive">
                         <table className="comparison-table">
@@ -99,6 +117,11 @@ const WhyConsultant = () => {
                                     <td><strong>Costo del servicio</strong></td>
                                     <td>Depende de la entidad</td>
                                     <td className="highlight-col"><strong>Asesoría Sin Costo</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Garantía de Respaldo</strong></td>
+                                    <td>Asesor de turno en ventanilla</td>
+                                    <td className="highlight-col"><strong>Validación directa:</strong> te entrego mis datos para que valides con los bancos</td>
                                 </tr>
                             </tbody>
                         </table>

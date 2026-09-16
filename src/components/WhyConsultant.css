@@ -70,12 +70,155 @@
     line-height: 1.5;
 }
 
+/* ==========================================
+   BANNER DE GARANTÍA Y RESPALDO
+   ========================================== */
+.why-trust-banner {
+    margin: 2.5rem 0;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(37, 211, 102, 0.3);
+    border-left: 6px solid #25d366;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 253, 244, 0.9) 100%);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.why-trust-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.why-trust-info {
+    flex-grow: 1;
+}
+
+.why-trust-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(37, 211, 102, 0.15);
+    color: #15803d;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.4rem;
+}
+
+.why-trust-info h4 {
+    margin: 0 0 0.35rem 0;
+    color: var(--azul-oscuro, #0f172a);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.why-trust-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.5;
+}
+
+.why-trust-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #25d366;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 0.85rem 1.4rem;
+    border-radius: 50px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    flex-shrink: 0;
+}
+
+.why-trust-btn:hover {
+    background: #1eb954;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+    color: #ffffff;
+}
+
 .comparison-table-wrapper {
+    position: relative;
+    overflow: hidden;
     padding: 2.5rem 2rem;
     border-radius: 24px;
     margin-top: 2rem;
     background: #ffffff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Banda lateral con los colores de la bandera de Colombia (Lado izquierdo) */
+.comparison-table-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(
+        180deg,
+        #FCD116 0%, #FCD116 50%,
+        #003893 50%, #003893 75%,
+        #CE1126 75%, #CE1126 100%
+    );
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    z-index: 2;
+}
+
+/* Banda diagonal de esquina de Colombia (Lado derecho superior) */
+.colombia-ribbon-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.colombia-ribbon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 200px;
+    padding: 7px 0;
+    top: 26px;
+    right: -48px;
+    transform: rotate(45deg);
+    background: #002b5b;
+    color: #ffffff;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    border-top: 3px solid #FCD116;
+    border-bottom: 3px solid #CE1126;
+}
+
+.colombia-ribbon-flag {
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+.colombia-ribbon-text {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .table-title {
@@ -83,6 +226,7 @@
     font-size: 1.4rem;
     color: var(--azul-oscuro, #0f172a);
     margin-bottom: 2rem;
+    padding: 0 2rem;
 }
 
 .table-responsive {
@@ -128,6 +272,47 @@
 }
 
 @media (max-width: 768px) {
+    .why-trust-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem 1.25rem;
+        gap: 1.2rem;
+    }
+
+    .why-trust-btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .comparison-table-wrapper {
+        padding: 2.2rem 1rem 1.8rem;
+    }
+
+    .colombia-ribbon-wrapper {
+        width: 115px;
+        height: 115px;
+    }
+
+    .colombia-ribbon {
+        width: 165px;
+        padding: 5px 0;
+        top: 20px;
+        right: -42px;
+        font-size: 0.68rem;
+        letter-spacing: 1px;
+    }
+
+    .colombia-ribbon-flag {
+        font-size: 0.85rem;
+    }
+
+    .table-title {
+        font-size: 1.15rem;
+        padding: 0 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
     .comparison-table th,
     .comparison-table td {
         padding: 0.75rem 0.75rem;

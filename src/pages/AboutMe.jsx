@@ -67,13 +67,34 @@ const AboutMe = () => {
       {/* Certification/Trust Section */}
       <section className="trust-badges section-padding">
         <div className="container">
-          <div className="glass trust-container animate-fade-in">
-            <h3>Seguridad y Respaldo</h3>
-            <p>
-              Mi labor se basa en la confianza y la legalidad. Si te presento una propuesta de una entidad financiera específica, 
-              <strong> con gusto te facilitaré todos los datos necesarios para que puedas validar mi vinculación directa</strong> con dicha institución. 
-              Tu tranquilidad es mi prioridad en todo el proceso.
+          <div className="glass trust-container animate-fade-in" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+            <span style={{ 
+                display: 'inline-block',
+                padding: '0.35rem 0.9rem',
+                background: 'rgba(37, 211, 102, 0.15)',
+                color: '#15803d',
+                borderRadius: '50px',
+                fontSize: '0.85rem',
+                fontWeight: '700',
+                textTransform: 'uppercase',
+                marginBottom: '1rem'
+            }}>🛡️ Garantía de Transparencia</span>
+            <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--azul-oscuro)' }}>
+              ¿Quieres validar con qué bancos trabajo?
+            </h3>
+            <p style={{ fontSize: '1.05rem', lineHeight: '1.6', color: '#475569', marginBottom: '1.5rem' }}>
+              Mi labor se basa en la confianza y la total legalidad. Si quieres comprobar mis convenios, 
+              <strong> escríbeme y te entrego mis datos personales para que tú mismo hagas la validación directa</strong> con las entidades financieras antes de iniciar cualquier trámite. Tu tranquilidad es mi prioridad número uno.
             </p>
+            <a 
+              href="https://wa.me/573167443613?text=Hola%2C%20quiero%20validar%20con%20qu%C3%A9%20bancos%20trabajas%2C%20%C2%BFme%20compartes%20tus%20datos%20para%20hacer%20la%20validaci%C3%B3n%3F" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-primary"
+              style={{ background: '#25d366', borderColor: '#25d366', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.8rem 1.6rem', borderRadius: '50px', fontWeight: 'bold' }}
+            >
+              <span>💬</span> Escríbeme y Valídalo por WhatsApp
+            </a>
           </div>
         </div>
       </section>
