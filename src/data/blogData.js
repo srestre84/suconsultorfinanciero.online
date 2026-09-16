@@ -17,7 +17,7 @@ export const blogData = [
         `,
         date: "2026-03-01",
         author: "Asesor Financiero",
-        imageUrl: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_historial_crediticio.jpg"
     },
     {
         id: 2,
@@ -36,7 +36,7 @@ export const blogData = [
         `,
         date: "2026-03-05",
         author: "Asesor Financiero",
-        imageUrl: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_compra_cartera_ahorro.jpg"
     },
     {
         id: 3,
@@ -54,7 +54,7 @@ export const blogData = [
         `,
         date: "2026-03-10",
         author: "Asesor Financiero",
-        imageUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_tasas_interes_2026.jpg"
     },
     {
         id: 4,
@@ -77,7 +77,7 @@ export const blogData = [
         `,
         date: "2026-03-12",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_fondo_emergencia.jpg"
     },
     {
         id: 5,
@@ -98,7 +98,7 @@ export const blogData = [
         `,
         date: "2026-03-15",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1556740714-a8395b3bf30f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_tarjetas_credito_trampas.jpg"
     },
     {
         id: 6,
@@ -120,7 +120,7 @@ export const blogData = [
         `,
         date: "2026-03-18",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_leasing_vs_hipotecario.jpg"
     },
     {
         id: 7,
@@ -137,7 +137,7 @@ export const blogData = [
         `,
         date: "2026-03-20",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1582408921715-18e7806365c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_guia_comprar_vivienda.jpg"
     },
     {
         id: 8,
@@ -156,7 +156,7 @@ export const blogData = [
         `,
         date: "2026-03-22",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_datacredito_mitos.jpg"
     },
     {
         id: 9,
@@ -179,7 +179,7 @@ export const blogData = [
         `,
         date: "2026-04-10",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_claves_negociar_tasa.jpg"
     },
     {
         id: 10,
@@ -331,7 +331,7 @@ export const blogData = [
         `,
         date: "2026-06-24",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_uvr_vs_pesos.jpg"
     },
     {
         id: 17,
@@ -361,7 +361,7 @@ export const blogData = [
         `,
         date: "2026-06-24",
         author: "Asesor Financiero",
-        imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_gastos_escrituracion.jpg"
     },
     {
         id: 18,
@@ -671,7 +671,7 @@ export const blogData = [
         `,
         date: "2026-08-24",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_dolar_inversion_2026.jpg"
     },
     {
         id: 30,
@@ -696,7 +696,7 @@ export const blogData = [
         `,
         date: "2026-08-24",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_reconstruccion_resiliencia.jpg"
     },
     {
         id: 31,
@@ -721,7 +721,7 @@ export const blogData = [
         `,
         date: "2026-08-24",
         author: "Asesor Financiero",
-        imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_crecimiento_economico_2026.jpg"
     },
     {
         id: 32,
@@ -747,7 +747,7 @@ export const blogData = [
         `,
         date: "2026-08-24",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_cifras_inversion_2026.jpg"
     },
     {
         id: 33,
@@ -773,7 +773,7 @@ export const blogData = [
         `,
         date: "2026-08-24",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_geopolitica_nuevos_nichos.jpg"
     },
     {
         id: 34,
@@ -799,7 +799,7 @@ export const blogData = [
         `,
         date: "2026-09-03",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_creditos_independientes.jpg"
     },
     {
         id: 35,
@@ -825,7 +825,7 @@ export const blogData = [
         `,
         date: "2026-09-06",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_cesantias_vivienda.jpg"
     },
     {
         id: 36,
@@ -850,7 +850,7 @@ export const blogData = [
         `,
         date: "2026-09-08",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1450133064473-71024230f91b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_ley_vivienda_derechos.jpg"
     },
     {
         id: 37,
@@ -876,7 +876,7 @@ export const blogData = [
         `,
         date: "2026-09-11",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_finanzas_en_pareja.jpg"
     },
     {
         id: 38,
@@ -904,7 +904,7 @@ export const blogData = [
         `,
         date: "2026-09-13",
         author: "Sebastián - Consultor",
-        imageUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        imageUrl: "/blog_estilo_vida_inflado.jpg"
     }
 ];
 

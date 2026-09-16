@@ -35,6 +35,34 @@ function escapeTitle(str) {
         .trim();
 }
 
+// Función para detectar dimensiones de imágenes locales (JPEG y PNG)
+function getImageDimensions(imageRelPath) {
+    try {
+        const cleanPath = imageRelPath.replace(/^https?:\/\/[^\/]+/, '').replace(/^\//, '');
+        const localPath = path.join(rootDir, 'public', cleanPath);
+        if (fs.existsSync(localPath)) {
+            const buffer = fs.readFileSync(localPath);
+            // PNG
+            if (buffer.length > 24 && buffer[0] === 0x89 && buffer[1] === 0x50 && buffer[2] === 0x4E && buffer[3] === 0x47) {
+                return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
+            }
+            // JPEG
+            if (buffer.length > 4 && buffer[0] === 0xFF && buffer[1] === 0xD8) {
+                let offset = 2;
+                while (offset < buffer.length) {
+                    if (buffer[offset] !== 0xFF) break;
+                    const marker = buffer[offset + 1];
+                    if (marker === 0xC0 || marker === 0xC2) {
+                        return { width: buffer.readUInt16BE(offset + 7), height: buffer.readUInt16BE(offset + 5) };
+                    }
+                    offset += 2 + buffer.readUInt16BE(offset + 2);
+                }
+            }
+        }
+    } catch (e) {}
+    return { width: 1200, height: 630 };
+}
+
 // Función para generar una página estática para una ruta
 function generatePage(routePath, title, description, image, url) {
     const targetDir = path.join(distDir, ...routePath.split('/'));
@@ -57,6 +85,11 @@ function generatePage(routePath, title, description, image, url) {
         imageType = 'image/gif';
     }
 
+    // Obtener dimensiones reales para optimizar la tarjeta en WhatsApp / Facebook
+    const dims = getImageDimensions(image);
+    const imgWidth = dims.width || 1200;
+    const imgHeight = dims.height || 630;
+
     let customHtml = indexHtml;
     
     // Reemplazar Meta Tags de Open Graph
@@ -65,8 +98,15 @@ function generatePage(routePath, title, description, image, url) {
     customHtml = customHtml.replace(/<meta property="og:image" content=".*?" \/>/, `<meta property="og:image" content="${encodedImage}" />`);
     customHtml = customHtml.replace(/<meta property="og:image:secure_url" content=".*?" \/>/, `<meta property="og:image:secure_url" content="${encodedImage}" />`);
     customHtml = customHtml.replace(/<meta property="og:image:type" content=".*?" \/>/, `<meta property="og:image:type" content="${imageType}" />`);
+    customHtml = customHtml.replace(/<meta property="og:image:width" content=".*?" \/>/, `<meta property="og:image:width" content="${imgWidth}" />`);
+    customHtml = customHtml.replace(/<meta property="og:image:height" content=".*?" \/>/, `<meta property="og:image:height" content="${imgHeight}" />`);
     customHtml = customHtml.replace(/<meta property="og:image:alt" content=".*?" \/>/, `<meta property="og:image:alt" content="${safeTitle}" />`);
     customHtml = customHtml.replace(/<meta property="og:url" content=".*?" \/>/, `<meta property="og:url" content="${safeUrl}" />`);
+
+    // Asegurar og:site_name
+    if (!customHtml.includes('<meta property="og:site_name"')) {
+        customHtml = customHtml.replace(/<meta property="og:type"/, `<meta property="og:site_name" content="Su Consultor Financiero" />\n    <meta property="og:type"`);
+    }
 
     // Reemplazar Meta Tags de Twitter
     customHtml = customHtml.replace(/<meta property="twitter:title" content=".*?" \/>/, `<meta property="twitter:title" content="${safeTitle}" />`);
@@ -87,8 +127,18 @@ function generatePage(routePath, title, description, image, url) {
         customHtml = customHtml.replace('</head>', `    <link rel="canonical" href="${safeUrl}" />\n</head>`);
     }
 
+    // 1. Escribir versión directorio con index.html (para peticiones /ruta/)
     fs.writeFileSync(path.join(targetDir, 'index.html'), customHtml);
-    console.log(`Página generada: ${routePath}`);
+
+    // 2. Escribir versión plana .html (para peticiones /ruta sin barra en GitHub Pages, evitando 301)
+    const flatHtmlPath = path.join(distDir, `${routePath}.html`);
+    const flatDir = path.dirname(flatHtmlPath);
+    if (!fs.existsSync(flatDir)) {
+        fs.mkdirSync(flatDir, { recursive: true });
+    }
+    fs.writeFileSync(flatHtmlPath, customHtml);
+
+    console.log(`Página generada: ${routePath} (${imgWidth}x${imgHeight})`);
 }
 
 async function start() {

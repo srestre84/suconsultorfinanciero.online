@@ -97,6 +97,14 @@ function NoteDetail() {
                         >
                             📱 Compartir en mi Estado de WhatsApp
                         </a>
+                        <a 
+                            href={note.imageUrl} 
+                            download={`${note.slug}.jpg`}
+                            className="btn-share-download"
+                            title="Descargar imagen en alta resolución para subir directamente como foto a tu Estado de WhatsApp"
+                        >
+                            📥 Descargar Póster para Estado
+                        </a>
                         <button onClick={handleCopyLink} className="btn-share-copy">
                             {copied ? '¡Enlace Copiado! 📋' : 'Copiar Enlace Directo 🔗'}
                         </button>
