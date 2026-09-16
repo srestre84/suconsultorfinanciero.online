@@ -8,37 +8,60 @@ const ShareWidget = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [canNativeShare, setCanNativeShare] = useState(false);
 
-    const shareUrl = typeof window !== 'undefined' ? window.location.href : "https://suconsultorfinanciero.online/";
-    const shareTitle = typeof document !== 'undefined' ? document.title : "Su Consultor Financiero | Asesoría Multibanca";
-    const shareText = "🤝 **Su Consultor Financiero | Asesoría Multibanca**\n¿Tienes un buen perfil financiero? Revisamos tu crédito en +6 bancos aliados para la tasa más baja.\n💡 **Valores Agregados:**\n🏛️ Subasta multibanca VIP y asesoría 100% sin costo\n⏱️ Cero filas (gestión digital o presencial según el caso)\n🔒 Desembolso directo (cuenta, cheque o vendedor)\n🛡️ 100% Verificable con mis datos personales en los bancos\n🎯 **Créditos:** Vivienda/Hipotecario, Compra de Cartera, Libre Inversión, Libranzas y Construcción.\nDescubre más aquí:";
-
     useEffect(() => {
-        if (navigator.share) {
+        if (typeof navigator !== 'undefined' && navigator.share) {
             setCanNativeShare(true);
         }
     }, []);
 
-    const toggleMenu = () => {
+    const isHome = !location.pathname || location.pathname === '/' || location.pathname === '';
+    const shareUrl = typeof window !== 'undefined' 
+        ? (isHome ? 'https://suconsultorfinanciero.online/' : window.location.href)
+        : 'https://suconsultorfinanciero.online/';
+    const shareTitle = typeof document !== 'undefined' ? document.title : "Su Consultor Financiero | Asesoría Multibanca";
+
+    // Texto optimizado para Estados de WhatsApp (< 700 caracteres, sin inmuebles, con link al final)
+    const homeShareText = `💼 *Su Consultor Financiero | Asesoría Multibanca*
+Asesoría 100% gratuita con +6 bancos aliados en Colombia para la mejor tasa:
+
+🏡 Crédito Hipotecario y Vivienda
+📉 Compra de Cartera (reduce cuotas e intereses)
+🚀 Crédito de Libre Inversión
+📋 Crédito de Libranza
+🚗 Crédito de Vehículo
+🏗️ Crédito Constructor
+
+Simula tu crédito y conoce tus opciones aquí:
+https://suconsultorfinanciero.online/`;
+
+    const fullShareText = isHome 
+        ? homeShareText 
+        : `${shareTitle}\n\nConoce más detalles y solicita tu asesoría aquí:\n${shareUrl}`;
+
+    const toggleMenu = async () => {
         if (canNativeShare) {
-            // Emplear API nativa directamente
-            navigator.share({
-                title: shareTitle,
-                text: shareText,
-                url: shareUrl,
-            }).catch((error) => console.log('Error compartiendo', error));
-        } else {
-            setIsOpen(!isOpen);
+            try {
+                await navigator.share({
+                    title: shareTitle,
+                    text: fullShareText,
+                });
+                return;
+            } catch (error) {
+                if (error.name === 'AbortError') return;
+                console.log('Error compartiendo con navigator.share', error);
+            }
         }
+        setIsOpen(!isOpen);
     };
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(`${shareText} ${shareUrl}`);
-        alert('¡Enlace copiado al portapapeles!');
+        navigator.clipboard.writeText(fullShareText);
+        alert('¡Enlace y texto copiados al portapapeles!');
         setIsOpen(false);
     };
 
     const handleWhatsApp = () => {
-        const url = `https://wa.me/?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`;
+        const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(fullShareText)}`;
         window.open(url, '_blank');
         setIsOpen(false);
     };

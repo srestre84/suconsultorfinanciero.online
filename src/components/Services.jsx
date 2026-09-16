@@ -7,15 +7,15 @@ import './Services.css';
 const Services = () => {
     const [portfolioCopied, setPortfolioCopied] = React.useState(false);
 
-    const portfolioShareText = `💼 *Su Consultor Financiero | Portafolio Multibanca*
-Acompañamiento 100% gratuito con +6 bancos aliados en Colombia:
+    const portfolioShareText = `💼 *Su Consultor Financiero | Asesoría Multibanca*
+Asesoría 100% gratuita con +6 bancos aliados en Colombia para la mejor tasa:
 
 🏡 Crédito Hipotecario y Vivienda
 📉 Compra de Cartera (reduce cuotas e intereses)
-🚀 Libre Inversión y Libranza
+🚀 Crédito de Libre Inversión
+📋 Crédito de Libranza
 🚗 Crédito de Vehículo
 🏗️ Crédito Constructor
-🏢 Catálogo de Inmuebles en Venta
 
 Simula tu crédito y conoce tus opciones aquí:
 https://suconsultorfinanciero.online/`;
