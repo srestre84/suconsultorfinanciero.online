@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CorporateIcon from './CorporateIcon';
 import './RateCalculator.css';
 
 const RateCalculator = () => {
@@ -50,7 +51,10 @@ const RateCalculator = () => {
     return (
         <div className="rate-calculator animate-fade-in delay-2">
             <div className="rate-calculator-header" style={{ position: 'relative' }}>
-                <h3>🧮 Calculadora de Tasas</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                    <CorporateIcon name="calculator" size={26} color="blue" />
+                    Calculadora de Tasas
+                </h3>
                 <p>Convierte cualquier tasa de interés a todas sus equivalencias al instante.</p>
                 <div style={{ marginTop: '0.5rem' }}>
                     <button 

@@ -1,4 +1,5 @@
 import React from 'react';
+import CorporateIcon from './CorporateIcon';
 import './WhyConsultant.css';
 
 const WhyConsultant = () => {
@@ -16,7 +17,7 @@ const WhyConsultant = () => {
 
                 <div className="why-cards-grid">
                     <div className="why-card glass">
-                        <div className="why-card-icon">🏛️</div>
+                        <div className="why-card-icon"><CorporateIcon name="building" size={42} color="blue" /></div>
                         <h3>Subasta entre +6 Bancos</h3>
                         <p>
                             Al ir directo a tu banco de siempre, solo ves <strong>su</strong> tasa. 
@@ -25,7 +26,7 @@ const WhyConsultant = () => {
                     </div>
 
                     <div className="why-card glass">
-                        <div className="why-card-icon">⏱️</div>
+                        <div className="why-card-icon"><CorporateIcon name="clock" size={42} color="red" /></div>
                         <h3>Cero Filas y Cero Burocracia</h3>
                         <p>
                             Tu tiempo vale oro. Olvídate de visitar 4 sucursales, llenar carpetas repetitivas y hacer filas. 
@@ -34,7 +35,7 @@ const WhyConsultant = () => {
                     </div>
 
                     <div className="why-card glass">
-                        <div className="why-card-icon">🔒</div>
+                        <div className="why-card-icon"><CorporateIcon name="lock" size={42} color="gold" /></div>
                         <h3>Desembolso Directo del Banco</h3>
                         <p>
                             Seguridad total para ti. Nosotros gestionamos la aprobación, pero el banco desembolsa 
@@ -43,7 +44,7 @@ const WhyConsultant = () => {
                     </div>
 
                     <div className="why-card glass highlighted-card">
-                        <div className="why-card-icon">✨</div>
+                        <div className="why-card-icon"><CorporateIcon name="sparkles" size={42} color="gold" /></div>
                         <h3>Asesoría Sin Costo</h3>
                         <p>
                             Recibes acompañamiento experto y personalizado de principio a fin con 
@@ -54,7 +55,7 @@ const WhyConsultant = () => {
 
                 {/* Banner de Garantía y Respaldo */}
                 <div className="why-trust-banner glass">
-                    <div className="why-trust-icon">🛡️</div>
+                    <div className="why-trust-icon"><CorporateIcon name="shield" size={44} color="blue" /></div>
                     <div className="why-trust-info">
                         <span className="why-trust-badge">Garantía de Transparencia</span>
                         <h4>¿Quieres validar con qué bancos trabajo?</h4>
@@ -68,7 +69,7 @@ const WhyConsultant = () => {
                         rel="noopener noreferrer" 
                         className="why-trust-btn"
                     >
-                        <span>💬</span> Escríbeme y Valídalo
+                        <span><CorporateIcon name="chat" size={16} color="white" /></span> Escríbeme y Valídalo
                     </a>
                 </div>
 
@@ -77,7 +78,7 @@ const WhyConsultant = () => {
                     {/* Banda de Colombia */}
                     <div className="colombia-ribbon-wrapper" aria-label="Servicio en Colombia">
                         <div className="colombia-ribbon">
-                            <span className="colombia-ribbon-flag">🇨🇴</span>
+                            <span className="colombia-ribbon-flag"><CorporateIcon name="colombia" size={18} /></span>
                             <span className="colombia-ribbon-text">Colombia</span>
                         </div>
                     </div>
@@ -88,8 +89,8 @@ const WhyConsultant = () => {
                             <thead>
                                 <tr>
                                     <th>Concepto</th>
-                                    <th>Ir directo a 1 Banco 🏛️</th>
-                                    <th className="highlight-col">Con Tu Consultor Multibanca 🤝</th>
+                                    <th>Ir directo a 1 Banco <CorporateIcon name="building" size={18} color="blue" /></th>
+                                    <th className="highlight-col">Con Tu Consultor Multibanca <CorporateIcon name="handshake" size={18} color="blue" /></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -133,8 +134,10 @@ const WhyConsultant = () => {
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="btn btn-primary btn-large"
+                            style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
                         >
-                            💬 Comparar Mi Tasa Ahora (Asesoría Sin Costo)
+                            <CorporateIcon name="chat" size={20} color="white" />
+                            Comparar Mi Tasa Ahora (Asesoría Sin Costo)
                         </a>
                     </div>
                 </div>

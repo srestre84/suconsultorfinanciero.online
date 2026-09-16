@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import CorporateIcon from './CorporateIcon';
 import './Header.css';
 
 const Header = () => {
@@ -53,7 +54,7 @@ const Header = () => {
                         className="theme-toggle"
                         title={isDarkMode ? "Cambiar a Modo Claro" : "Cambiar a Modo Oscuro"}
                     >
-                        {isDarkMode ? "☀️" : "🌙"}
+                        <CorporateIcon name={isDarkMode ? "sun" : "moon"} size={18} color={isDarkMode ? "gold" : "white"} />
                     </button>
                 </nav>
             </div>

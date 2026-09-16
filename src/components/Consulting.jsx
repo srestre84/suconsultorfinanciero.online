@@ -1,4 +1,5 @@
 import React from 'react';
+import CorporateIcon from './CorporateIcon';
 
 const Consulting = () => {
     // Definimos los tres pilares principales de la consultoría
@@ -54,7 +55,9 @@ const Consulting = () => {
                                 cursor: 'pointer'
                             }}
                         >
-                            <div style={{ fontSize: '3.2rem', marginBottom: '1rem', filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))' }}>{area.icon}</div>
+                            <div style={{ marginBottom: '1rem', filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))' }}>
+                                <CorporateIcon name={area.icon} size={50} />
+                            </div>
                             <h3 style={{ color: 'var(--azul-oscuro)', fontSize: '1.4rem', marginBottom: '1rem', fontWeight: '800' }}>{area.title}</h3>
                             <p style={{ fontSize: '1.05rem', color: 'var(--text-muted)', lineHeight: '1.7' }}>{area.description}</p>
                             <span style={{ marginTop: 'auto', paddingTop: '1.2rem', color: 'var(--azul-claro)', fontWeight: '800', fontSize: '0.95rem', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Consultar ahora →</span>

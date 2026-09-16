@@ -1,4 +1,5 @@
 import React from 'react';
+import CorporateIcon from './CorporateIcon';
 import './Newsletter.css';
 
 function Newsletter() {
@@ -12,7 +13,10 @@ function Newsletter() {
             <div className="newsletter-badge">100% GRATIS</div>
             
             <div className="newsletter-content-wrapper">
-                <h3 className="newsletter-title">Descarga el PDF: Flujo de Caja by SRR 📉</h3>
+                <h3 className="newsletter-title" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
+                    Descarga el PDF: Flujo de Caja by SRR
+                    <CorporateIcon name="trending-down" size={24} color="red" />
+                </h3>
                 <p className="newsletter-desc">
                     Domina el control de tus ingresos y egresos con nuestra metodología exclusiva. 
                     Haz clic abajo para descargar de forma directa y sin registro la plantilla y guía paso a paso para optimizar tus finanzas.
@@ -36,13 +40,15 @@ function Newsletter() {
                             boxShadow: '0 8px 25px rgba(225, 173, 1, 0.5)'
                         }}
                     >
-                        📥 Descargar PDF Gratis Ahora
+                        <CorporateIcon name="download" size={24} color="blue-dark" />
+                        Descargar PDF Gratis Ahora
                     </a>
                 </div>
 
                 <div className="newsletter-share-section" style={{ marginTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1.5rem', width: '100%' }}>
-                    <p style={{ fontSize: '1rem', color: 'var(--mostaza)', marginBottom: '1rem', fontWeight: 'bold' }}>
-                        🚀 ¡Si te sirve este material, ayúdanos compartiéndolo!
+                    <p style={{ fontSize: '1rem', color: 'var(--mostaza)', marginBottom: '1rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                        <CorporateIcon name="rocket" size={18} color="red" />
+                        ¡Si te sirve este material, ayúdanos compartiéndolo!
                     </p>
                     <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                         <a 

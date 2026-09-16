@@ -1,0 +1,97 @@
+/* =========================================================================
+   PALETA CORPORATIVA Y ESTILOS DE ICONOS VECTORIALES
+   Colores corporativos: Rojo (#dc2626), Azul (#002B5b / #1d4ed8), Blanco (#ffffff), Dorado (#ffd700 / #d97706)
+   ========================================================================= */
+
+:root {
+  --corp-blue: #002B5b;
+  --corp-blue-light: #1d4ed8;
+  --corp-blue-sky: #60a5fa;
+  --corp-red: #dc2626;
+  --corp-red-dark: #b91c1c;
+  --corp-white: #ffffff;
+  --corp-gold: #ffd700;
+  --corp-gold-dark: #d97706;
+}
+
+/* Iconos base */
+.corp-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 1;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  flex-shrink: 0;
+}
+
+.corp-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Variantes de color corporativo */
+.corp-icon-blue {
+  color: var(--corp-blue-light);
+  filter: drop-shadow(0 2px 4px rgba(29, 78, 216, 0.2));
+}
+
+.corp-icon-blue-dark {
+  color: var(--corp-blue);
+  filter: drop-shadow(0 2px 4px rgba(0, 43, 91, 0.25));
+}
+
+.corp-icon-red {
+  color: var(--corp-red);
+  filter: drop-shadow(0 2px 4px rgba(220, 38, 38, 0.25));
+}
+
+.corp-icon-white {
+  color: var(--corp-white);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.corp-icon-gold {
+  color: var(--corp-gold-dark);
+  filter: drop-shadow(0 2px 4px rgba(217, 119, 6, 0.25));
+}
+
+/* Badge circular corporativo para tarjetas */
+.corp-badge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0, 43, 91, 0.08);
+}
+
+.corp-badge-icon.blue {
+  background: linear-gradient(135deg, rgba(29, 78, 216, 0.12) 0%, rgba(0, 43, 91, 0.18) 100%);
+  border: 1px solid rgba(29, 78, 216, 0.25);
+  color: var(--corp-blue-light);
+}
+
+.corp-badge-icon.red {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.12) 0%, rgba(185, 28, 28, 0.18) 100%);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  color: var(--corp-red);
+}
+
+.corp-badge-icon.gold {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.18) 0%, rgba(217, 119, 6, 0.22) 100%);
+  border: 1px solid rgba(217, 119, 6, 0.3);
+  color: var(--corp-gold-dark);
+}
+
+.corp-badge-icon.white {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 43, 91, 0.15);
+  color: var(--corp-blue);
+}
+
+/* Hover interactivo para iconos */
+.corp-icon-hover:hover {
+  transform: translateY(-2px) scale(1.08);
+}

@@ -17,6 +17,7 @@ import WhyConsultant from '../components/WhyConsultant';
 import PropertyCard from '../components/PropertyCard';
 import { properties } from '../data/properties';
 import { blogData } from '../data/blogData';
+import CorporateIcon from '../components/CorporateIcon';
 import './PropertyPreview.css';
 
 
@@ -113,7 +114,10 @@ function Home() {
             <section className="section-padding container" id="blog-preview">
                 <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                     <span className="prop-preview-badge">Educación</span>
-                    <h2 style={{ color: 'var(--azul-oscuro)', marginTop: '0.5rem' }}>Últimas Publicaciones 📚</h2>
+                    <h2 style={{ color: 'var(--azul-oscuro)', marginTop: '0.5rem', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                        Últimas Publicaciones
+                        <CorporateIcon name="book" size={24} color="blue" />
+                    </h2>
                     <p style={{ maxWidth: '700px', margin: '0.5rem auto 0', fontSize: '1.1rem' }}>
                         Mantente al día con consejos financieros, guías de tasas y estrategias para mejorar tu historial crediticio en Colombia.
                     </p>
@@ -170,7 +174,10 @@ function Home() {
             <section className="section-padding container prop-preview-section" id="inmuebles">
                 <div className="prop-preview-header">
                     <span className="prop-preview-badge">Oportunidades</span>
-                    <h2 style={{ color: 'var(--azul-oscuro)' }}>Inmuebles Destacados 🏠</h2>
+                    <h2 style={{ color: 'var(--azul-oscuro)', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                        Inmuebles Destacados
+                        <CorporateIcon name="home" size={24} color="blue" />
+                    </h2>
                     <p style={{ maxWidth: '700px', margin: '1rem auto', fontSize: '1.1rem' }}>
                         Propiedades seleccionadas para tu próxima inversión con acompañamiento financiero garantizado.
                     </p>
@@ -200,7 +207,10 @@ function Home() {
             {/* Sección de Calculadora y Simuladores en línea */}
             <section className="section-padding container" id="calculadora">
                 <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                    <h2 style={{ color: 'var(--azul-oscuro)' }}>Herramientas Financieras Gratuitas 🧮</h2>
+                    <h2 style={{ color: 'var(--azul-oscuro)', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                        Herramientas Financieras Gratuitas
+                        <CorporateIcon name="calculator" size={24} color="blue" />
+                    </h2>
                     <p style={{ maxWidth: '800px', margin: '0.5rem auto 2rem', fontSize: '1.1rem' }}>
                         Simula tu capacidad de crédito hipotecario o convierte tasas de interés al instante con nuestras herramientas interactivas.
                     </p>
@@ -211,16 +221,18 @@ function Home() {
                     <button 
                         className={`btn ${activeCalcTab === 'capacity' ? 'btn-primary' : 'btn-outline'}`}
                         onClick={() => setActiveCalcTab('capacity')}
-                        style={{ borderRadius: '25px', padding: '0.6rem 1.5rem', fontWeight: 'bold' }}
+                        style={{ borderRadius: '25px', padding: '0.6rem 1.5rem', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
                     >
-                        📊 Capacidad de Endeudamiento
+                        <CorporateIcon name="chart" size={18} color={activeCalcTab === 'capacity' ? 'white' : 'blue'} />
+                        Capacidad de Endeudamiento
                     </button>
                     <button 
                         className={`btn ${activeCalcTab === 'rates' ? 'btn-primary' : 'btn-outline'}`}
                         onClick={() => setActiveCalcTab('rates')}
-                        style={{ borderRadius: '25px', padding: '0.6rem 1.5rem', fontWeight: 'bold' }}
+                        style={{ borderRadius: '25px', padding: '0.6rem 1.5rem', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
                     >
-                        🧮 Convertidor de Tasas
+                        <CorporateIcon name="calculator" size={18} color={activeCalcTab === 'rates' ? 'white' : 'blue'} />
+                        Convertidor de Tasas
                     </button>
                 </div>
 
@@ -245,10 +257,22 @@ function Home() {
                 <div className="glass animate-fade-in delay-2" style={{ padding: '3rem 2rem', borderRadius: '20px' }}>
                     <h2>Simulaciones y Asesoría</h2>
                     <div style={{ display: 'grid', gap: '1.5rem', marginTop: '2rem' }}>
-                        <p>💡 Podemos realizar una simulación sin compromiso, para evaluar si alguna de las opciones disponibles te puede beneficiar.</p>
-                        <p>🧾 Si lo deseas, puedo enviarte mis datos y números de contacto para que verifiques mi vínculo con las entidades con las que trabajo.</p>
-                        <p>🔒 No utilizo bases de datos externas ni contactos no autorizados. Mi ofrecimiento se basa en referencias construidas a lo largo de mi labor comercial. Solo brindo información si hay interés, y la simulación del producto es totalmente sin compromiso.</p>
-                        <p>📈 Las tasas que se presentan en la simulación pueden variar según la entidad financiera y el plazo elegido. Siempre serán comunicadas con total transparencia, ya que están sujetas a cambios del mercado.</p>
+                        <p style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                            <CorporateIcon name="lightbulb" size={20} color="gold" style={{ marginTop: '2px', flexShrink: 0 }} />
+                            <span>Podemos realizar una simulación sin compromiso, para evaluar si alguna de las opciones disponibles te puede beneficiar.</span>
+                        </p>
+                        <p style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                            <CorporateIcon name="clipboard" size={20} color="blue" style={{ marginTop: '2px', flexShrink: 0 }} />
+                            <span>Si lo deseas, puedo enviarte mis datos y números de contacto para que verifiques mi vínculo con las entidades con las que trabajo.</span>
+                        </p>
+                        <p style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                            <CorporateIcon name="lock" size={20} color="gold" style={{ marginTop: '2px', flexShrink: 0 }} />
+                            <span>No utilizo bases de datos externas ni contactos no autorizados. Mi ofrecimiento se basa en referencias construidas a lo largo de mi labor comercial. Solo brindo información si hay interés, y la simulación del producto es totalmente sin compromiso.</span>
+                        </p>
+                        <p style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                            <CorporateIcon name="trending-up" size={20} color="blue" style={{ marginTop: '2px', flexShrink: 0 }} />
+                            <span>Las tasas que se presentan en la simulación pueden variar según la entidad financiera y el plazo elegido. Siempre serán comunicadas con total transparencia, ya que están sujetas a cambios del mercado.</span>
+                        </p>
                     </div>
                 </div>
             </section>

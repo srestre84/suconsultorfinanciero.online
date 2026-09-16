@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CorporateIcon from './CorporateIcon';
 import './Hero.css';
 
 const Hero = () => {
@@ -28,7 +29,9 @@ const Hero = () => {
                             rel="noopener noreferrer" 
                             className="btn-hero-primary"
                         >
-                            <span className="btn-icon">💬</span>
+                            <span className="btn-icon">
+                                <CorporateIcon name="chat" size={18} color="white" />
+                            </span>
                             Consultoría Gratis
                         </a>
                         <Link to="/#servicios" className="btn-hero-secondary">

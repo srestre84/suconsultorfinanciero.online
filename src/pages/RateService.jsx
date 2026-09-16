@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../config/firebase';
+import CorporateIcon from '../components/CorporateIcon';
 import './RateService.css';
 
 const RateService = () => {
@@ -56,7 +57,9 @@ const RateService = () => {
             <main className="rate-service-page">
                 <div className="container section-padding">
                     <div className="glass success-card animate-fade-in">
-                        <div className="success-icon">✅</div>
+                        <div className="success-icon" style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
+                            <CorporateIcon name="check" size={54} color="blue" />
+                        </div>
                         <h2>¡Gracias por tu reseña, {name}!</h2>
                         <p>Tu opinión es fundamental para nosotros. Sebastián revisará tu comentario y lo publicará pronto en nuestra web.</p>
                         <button onClick={() => window.location.href = '/'} className="btn-primary">Volver al inicio</button>

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { servicesData } from '../data/servicesData';
+import CorporateIcon from '../components/CorporateIcon';
 
 function ServiceDetail() {
     const { id } = useParams();
@@ -68,8 +69,8 @@ function ServiceDetail() {
                         &larr; Volver a servicios
                     </Link>
 
-                    <div className="service-detail-icon" style={{ fontSize: '5rem', marginBottom: '1.5rem' }}>
-                        {service.icon}
+                    <div className="service-detail-icon" style={{ marginBottom: '1.5rem' }}>
+                        <CorporateIcon name={service.icon} size={72} />
                     </div>
 
                     <h1 style={{ color: 'var(--azul-oscuro)', fontSize: '2.5rem', marginBottom: '0.5rem' }}>

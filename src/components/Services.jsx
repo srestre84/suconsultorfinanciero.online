@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { servicesData } from '../data/servicesData';
+import CorporateIcon from './CorporateIcon';
 import './Services.css';
 
 const Services = () => {
@@ -51,7 +52,9 @@ const Services = () => {
                                     position: 'relative'
                                 }}
                             >
-                                <div className="service-icon">{service.icon}</div>
+                                <div className="service-icon">
+                                    <CorporateIcon name={service.icon} size={48} />
+                                </div>
                                 <h3>{service.title}</h3>
                                 <p>{service.description}</p>
                             </div>

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { notesData } from '../data/notesData';
+import CorporateIcon from '../components/CorporateIcon';
 import './Notes.css';
 
 function Notes() {
@@ -48,8 +49,9 @@ function Notes() {
                                         rel="noopener noreferrer" 
                                         className="btn-ws-quick"
                                         title="Compartir directo a WhatsApp"
+                                        style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
                                     >
-                                        📱
+                                        <CorporateIcon name="phone" size={16} color="white" />
                                     </a>
                                 </div>
                             </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import CorporateIcon from './CorporateIcon';
 import './PropertyCard.css';
 
 const formatPrice = (price) =>
@@ -96,8 +97,9 @@ const PropertyCard = ({ property }) => {
             {/* Contenido */}
             <div className="prop-card-body">
                 <h3 className="prop-card-title">{titulo}</h3>
-                <p className="prop-card-location">
-                    📍 {ubicacion.referencia} — {ubicacion.ciudad}, {ubicacion.departamento}
+                <p className="prop-card-location" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                    <CorporateIcon name="map-pin" size={16} color="red" />
+                    <span>{ubicacion.referencia} — {ubicacion.ciudad}, {ubicacion.departamento}</span>
                 </p>
                 <p className="prop-card-address">{ubicacion.edificio} · {ubicacion.direccion}</p>
 
@@ -107,34 +109,34 @@ const PropertyCard = ({ property }) => {
                 {/* Características */}
                 <div className="prop-card-specs">
                     <div className="prop-spec">
-                        <span className="prop-spec-icon">📐</span>
+                        <span className="prop-spec-icon"><CorporateIcon name="ruler" size={16} color="blue" /></span>
                         <span>{caracteristicas.area} m²</span>
                     </div>
                     {caracteristicas.habitaciones !== undefined && (
                         <div className="prop-spec">
-                            <span className="prop-spec-icon">🛏️</span>
+                            <span className="prop-spec-icon"><CorporateIcon name="bed" size={16} color="blue" /></span>
                             <span>{caracteristicas.habitaciones} hab.</span>
                         </div>
                     )}
                     {caracteristicas.banos !== undefined && (
                         <div className="prop-spec">
-                            <span className="prop-spec-icon">🚿</span>
+                            <span className="prop-spec-icon"><CorporateIcon name="bath" size={16} color="blue" /></span>
                             <span>{caracteristicas.banos} baños</span>
                         </div>
                     )}
                     <div className="prop-spec">
-                        <span className="prop-spec-icon">⭐</span>
+                        <span className="prop-spec-icon"><CorporateIcon name="star" size={16} color="gold" /></span>
                         <span>Estrato {caracteristicas.estrato}</span>
                     </div>
                     {caracteristicas.balcon && (
                         <div className="prop-spec">
-                            <span className="prop-spec-icon">🌤️</span>
+                            <span className="prop-spec-icon"><CorporateIcon name="balcony" size={16} color="gold" /></span>
                             <span>Balcón</span>
                         </div>
                     )}
                     {!caracteristicas.parqueadero && (
                         <div className="prop-spec prop-spec--no">
-                            <span className="prop-spec-icon">🚗</span>
+                            <span className="prop-spec-icon"><CorporateIcon name="car" size={16} color="red" /></span>
                             <span>Sin parqueadero</span>
                         </div>
                     )}
@@ -148,12 +150,17 @@ const PropertyCard = ({ property }) => {
                 </div>
 
                 {/* Info adicional */}
-                <div className="prop-card-extra">
+                <div className="prop-card-extra" style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
                     {caracteristicas.predialAnual && (
-                        <span>📋 Predial {caracteristicas.anoPredial}: {formatPrice(caracteristicas.predialAnual)}/año</span>
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                            <CorporateIcon name="clipboard" size={14} color="blue" />
+                            Predial {caracteristicas.anoPredial}: {formatPrice(caracteristicas.predialAnual)}/año
+                        </span>
                     )}
                     {caracteristicas.administracion && (
-                        <span>  |  🏘️ Admón: {formatPrice(caracteristicas.administracion)} /mes</span>
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                            | <CorporateIcon name="village" size={14} color="blue" /> Admón: {formatPrice(caracteristicas.administracion)} /mes
+                        </span>
                     )}
                 </div>
 

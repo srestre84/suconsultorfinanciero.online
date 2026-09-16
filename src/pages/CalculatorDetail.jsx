@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import RateCalculator from '../components/RateCalculator';
 import DebtCapacityCalculator from '../components/DebtCapacityCalculator';
+import CorporateIcon from '../components/CorporateIcon';
 
 function CalculatorDetail() {
     const [activeTab, setActiveTab] = useState('capacity');
@@ -104,16 +105,18 @@ function CalculatorDetail() {
                         <button 
                             className={`btn ${activeTab === 'capacity' ? 'btn-primary' : 'btn-outline'}`}
                             onClick={() => setActiveTab('capacity')}
-                            style={{ borderRadius: '25px', padding: '0.6rem 1.5rem', fontWeight: 'bold' }}
+                            style={{ borderRadius: '25px', padding: '0.6rem 1.5rem', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
                         >
-                            📊 Capacidad de Endeudamiento
+                            <CorporateIcon name="chart" size={18} color={activeTab === 'capacity' ? 'white' : 'blue'} />
+                            Capacidad de Endeudamiento
                         </button>
                         <button 
                             className={`btn ${activeTab === 'rates' ? 'btn-primary' : 'btn-outline'}`}
                             onClick={() => setActiveTab('rates')}
-                            style={{ borderRadius: '25px', padding: '0.6rem 1.5rem', fontWeight: 'bold' }}
+                            style={{ borderRadius: '25px', padding: '0.6rem 1.5rem', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
                         >
-                            🧮 Convertidor de Tasas
+                            <CorporateIcon name="calculator" size={18} color={activeTab === 'rates' ? 'white' : 'blue'} />
+                            Convertidor de Tasas
                         </button>
                     </div>
 

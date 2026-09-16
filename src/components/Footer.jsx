@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CorporateIcon from './CorporateIcon';
 import './Footer.css';
 
 const Footer = () => {
@@ -14,9 +15,18 @@ const Footer = () => {
 
                     <div className="footer-section">
                         <h3>Contacto</h3>
-                        <p>📱 WhatsApp: <a href="https://wa.me/573167443613">+57 316 744 3613</a></p>
-                        <p>📸 Instagram: <a href="https://www.instagram.com/sebastian.restrepor/" target="_blank" rel="noopener noreferrer">@sebastian.restrepor</a></p>
-                        <p>✉️ sebastian.restrepo@suconsultorfinanciero.online</p>
+                        <p style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <CorporateIcon name="phone" size={16} color="blue-dark" />
+                            <span>WhatsApp: <a href="https://wa.me/573167443613">+57 316 744 3613</a></span>
+                        </p>
+                        <p style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <CorporateIcon name="instagram" size={16} color="red" />
+                            <span>Instagram: <a href="https://www.instagram.com/sebastian.restrepor/" target="_blank" rel="noopener noreferrer">@sebastian.restrepor</a></span>
+                        </p>
+                        <p style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <CorporateIcon name="mail" size={16} color="blue-dark" />
+                            <span>sebastian.restrepo@suconsultorfinanciero.online</span>
+                        </p>
                     </div>
                 </div>
 

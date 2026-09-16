@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { collection, query, where, orderBy, onSnapshot } from 'firebase/firestore';
 import { db } from '../config/firebase';
+import CorporateIcon from './CorporateIcon';
 
 const Testimonials = () => {
     const [testimonials, setTestimonials] = useState([]);
@@ -49,7 +50,13 @@ const Testimonials = () => {
     }, []);
 
     const renderStars = (num) => {
-        return "⭐".repeat(num);
+        return (
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '2px' }}>
+                {Array.from({ length: num }).map((_, i) => (
+                    <CorporateIcon key={i} name="star" size={18} color="gold" />
+                ))}
+            </span>
+        );
     };
 
     if (loading) return null;

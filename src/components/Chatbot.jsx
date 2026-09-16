@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Chatbot.css';
 import { dictionaryData } from '../data/dictionaryData';
+import CorporateIcon, { renderCorporateText } from './CorporateIcon';
 
 const Chatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -270,14 +271,18 @@ const Chatbot = () => {
                 className={`chatbot-toggle ${isOpen ? 'open' : ''}`}
                 onClick={toggleChat}
                 aria-label="Abrir asistente financiero"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
-                {isOpen ? '✕' : '🤖'}
+                {isOpen ? '✕' : <CorporateIcon name="bot" size={30} color="white" />}
             </button>
 
             {/* Ventana de Chat */}
             <div className={`chatbot-window ${isOpen ? 'active' : ''}`}>
                 <div className="chatbot-header">
-                    <span className="chatbot-title">🏠 Asistente Financiero</span>
+                    <span className="chatbot-title" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <CorporateIcon name="home" size={18} color="white" />
+                        Asistente Financiero
+                    </span>
                 </div>
 
                 <div className="chatbot-messages">
@@ -302,8 +307,9 @@ const Chatbot = () => {
                                             key={oIdx} 
                                             className="chat-option-button" 
                                             onClick={() => handleOptionClick(opt.value, opt.label)}
+                                            style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
                                         >
-                                            {opt.label}
+                                            {renderCorporateText(opt.label, 16)}
                                         </button>
                                     ))}
                                 </div>

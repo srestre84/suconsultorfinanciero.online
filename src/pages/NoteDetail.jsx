@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { notesData } from '../data/notesData';
+import CorporateIcon from '../components/CorporateIcon';
 import './NoteDetail.css';
 
 function NoteDetail() {
@@ -157,7 +158,9 @@ function NoteDetail() {
 
                     <div className="values-grid">
                         <div className="value-item">
-                            <div className="value-check">✨</div>
+                            <div className="value-check">
+                                <CorporateIcon name="sparkles" size={24} color="gold" />
+                            </div>
                             <div>
                                 <h4>Asesoría 100% Gratuita</h4>
                                 <p>No cobramos honorarios ni estudios crediticios. Mi servicio de consultoría es sin costo para ti.</p>
@@ -165,7 +168,9 @@ function NoteDetail() {
                         </div>
 
                         <div className="value-item">
-                            <div className="value-check">🏛️</div>
+                            <div className="value-check">
+                                <CorporateIcon name="building" size={24} color="blue" />
+                            </div>
                             <div>
                                 <h4>Canales Bancarios Preferenciales</h4>
                                 <p>Manejo acceso directo con las áreas de riesgos de más de 8 bancos aliados en Colombia.</p>
@@ -173,7 +178,9 @@ function NoteDetail() {
                         </div>
 
                         <div className="value-item">
-                            <div className="value-check">⚡</div>
+                            <div className="value-check">
+                                <CorporateIcon name="clock" size={24} color="red" />
+                            </div>
                             <div>
                                 <h4>Agilidad y Cero Filas</h4>
                                 <p>Gestiono la recolección de documentos y el trámite de punta a punta sin que vayas a oficinas.</p>
@@ -181,7 +188,9 @@ function NoteDetail() {
                         </div>
 
                         <div className="value-item">
-                            <div className="value-check">📊</div>
+                            <div className="value-check">
+                                <CorporateIcon name="chart" size={24} color="blue" />
+                            </div>
                             <div>
                                 <h4>Análisis de Ahorro Real</h4>
                                 <p>Evaluamos el costo total anual (tasa + seguros) para garantizarte un ahorro real efectivo.</p>
@@ -216,8 +225,10 @@ function NoteDetail() {
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="btn-cta-whatsapp"
+                            style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
                         >
-                            💬 Agendar Asesoría Gratuita por WhatsApp
+                            <CorporateIcon name="chat" size={18} color="white" />
+                            Agendar Asesoría Gratuita por WhatsApp
                         </a>
                     </div>
                 </div>

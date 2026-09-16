@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CorporateIcon from './CorporateIcon';
 import './DebtCapacityCalculator.css';
 
 const DebtCapacityCalculator = () => {
@@ -85,7 +86,10 @@ const DebtCapacityCalculator = () => {
     return (
         <div className="debt-capacity-calculator animate-fade-in">
             <div className="debt-calculator-header">
-                <h3>📊 Simulador de Capacidad de Crédito</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                    <CorporateIcon name="chart" size={26} color="blue" />
+                    Simulador de Capacidad de Crédito
+                </h3>
                 <p>Calcula la cuota mensual máxima que te prestaría un banco según la Ley de Vivienda en Colombia.</p>
             </div>
 
@@ -173,10 +177,16 @@ const DebtCapacityCalculator = () => {
                     </div>
 
                     <div className="debt-recommendation-box">
-                        <h4>💡 Diagnóstico Financiero:</h4>
+                        <h4 style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                            <CorporateIcon name="lightbulb" size={20} color="gold" />
+                            Diagnóstico Financiero:
+                        </h4>
                         <p>{results.housingRecommendation}</p>
                         {results.netCapacity === 0 && (
-                            <p className="warning-text">⚠️ Alerta: Tus deudas actuales son iguales o superiores a tu límite legal de cuota. Recomendamos realizar una **Compra de Cartera** para unificar y bajar tus cuotas mensuales antes de solicitar tu crédito de vivienda.</p>
+                            <p className="warning-text" style={{ display: 'flex', alignItems: 'flex-start', gap: '6px' }}>
+                                <CorporateIcon name="alert" size={18} color="red" style={{ flexShrink: 0, marginTop: '2px' }} />
+                                <span><strong>Alerta:</strong> Tus deudas actuales son iguales o superiores a tu límite legal de cuota. Recomendamos realizar una <strong>Compra de Cartera</strong> para unificar y bajar tus cuotas mensuales antes de solicitar tu crédito de vivienda.</span>
+                            </p>
                         )}
                     </div>
 
@@ -186,12 +196,15 @@ const DebtCapacityCalculator = () => {
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="debt-whatsapp-btn"
+                            style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
                         >
-                            💬 Solicitar Simulación Oficial e iniciar pre-aprobado
+                            <CorporateIcon name="chat" size={18} color="white" />
+                            Solicitar Simulación Oficial e iniciar pre-aprobado
                         </a>
                         
-                        <button onClick={handleShare} className="debt-share-btn">
-                            🔗 Compartir mi resultado
+                        <button onClick={handleShare} className="debt-share-btn" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                            <CorporateIcon name="share" size={16} color="blue" />
+                            Compartir mi resultado
                         </button>
                     </div>
                 </div>

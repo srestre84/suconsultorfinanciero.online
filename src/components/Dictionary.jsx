@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { dictionaryData } from '../data/dictionaryData';
+import CorporateIcon from './CorporateIcon';
 import './Dictionary.css';
 
 const Dictionary = () => {
@@ -52,7 +53,9 @@ const Dictionary = () => {
                     <p className="dict-subtitle animate-fade-in delay-1">Encuentra los términos más usados en el sistema financiero colombiano.</p>
 
                     <div className="search-container animate-fade-in delay-2">
-                        <span className="search-icon">🔍</span>
+                        <span className="search-icon">
+                            <CorporateIcon name="search" size={20} color="blue" />
+                        </span>
                         <input
                             type="text"
                             placeholder="Buscar término (ej. UVT, EA, Libranza)..."
