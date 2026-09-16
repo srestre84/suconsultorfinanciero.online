@@ -8,15 +8,9 @@ const Services = () => {
     const [portfolioCopied, setPortfolioCopied] = React.useState(false);
 
     const portfolioShareText = `💼 *Su Consultor Financiero | Asesoría Multibanca*
-Asesoría 100% gratuita con +6 bancos aliados en Colombia para la mejor tasa:
-
-🏡 Crédito Hipotecario y Vivienda
-📉 Compra de Cartera (reduce cuotas e intereses)
-🚀 Crédito de Libre Inversión
-📋 Crédito de Libranza
-🚗 Crédito de Vehículo
-🏗️ Crédito Constructor
-
+Asesoría 100% gratuita con +6 bancos para tu mejor tasa:
+🏡 Hipotecario • 📉 Compra Cartera • 🚀 Libre Inversión
+📋 Libranzas • 🚗 Vehículo • 🏗️ Constructor
 Simula tu crédito y conoce tus opciones aquí:
 https://suconsultorfinanciero.online/`;
 
