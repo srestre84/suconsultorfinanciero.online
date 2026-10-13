@@ -8,7 +8,7 @@ export const properties = [
         id: 'apto-vivare-plaza-sabaneta',
         tipo: 'Apartamento',
         titulo: 'Apartamento en venta — Vivare Plaza Residencial, Sabaneta',
-        estado: 'Disponible',
+        estado: 'No disponible',
         precio: 600000000,
         precioFormateado: '$600.000.000',
         ubicacion: {
@@ -101,7 +101,7 @@ export const properties = [
         id: 'apto-pacifica-itagui',
         tipo: 'Apartamento',
         titulo: 'Apartamento en venta — Unidad PACÍFICA, Ditaires',
-        estado: 'Disponible',
+        estado: 'No disponible',
         precio: 570000000,
         precioFormateado: '$570.000.000',
         ubicacion: {
@@ -181,7 +181,7 @@ export const properties = [
         id: 'apto-pilsen-itagui-piso1',
         tipo: 'Apartamento',
         titulo: 'Apartamento en venta — Barrio Pilsen, Itagüí',
-        estado: 'Disponible',
+        estado: 'No disponible',
         precio: 325000000,
         precioFormateado: '$325.000.000',
         ubicacion: {
@@ -331,7 +331,7 @@ export const properties = [
         id: 'casa-la-doctora-sabaneta',
         tipo: 'Casa',
         titulo: 'Casa en venta — Sabaneta, La Doctora',
-        estado: 'Disponible',
+        estado: 'No disponible',
         precio: 0,
         precioFormateado: 'Consultar precio',
         ubicacion: {

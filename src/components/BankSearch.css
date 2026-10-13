@@ -85,7 +85,7 @@
 }
 
 .bank-search-image {
-    flex: 0.8;
+    flex: 0.85;
     position: relative;
     display: flex;
     justify-content: center;
@@ -94,10 +94,17 @@
 
 .bank-search-image img {
     width: 100%;
-    max-width: 450px;
-    height: auto;
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
-    border-radius: 20px;
+    max-width: 480px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(0, 43, 91, 0.16);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.bank-search-image img:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 25px 55px rgba(0, 43, 91, 0.24);
 }
 
 @media (max-width: 992px) {
@@ -114,5 +121,11 @@
     
     .bank-search-image {
         margin-top: 2rem;
+        width: 100%;
+    }
+
+    .bank-search-image img {
+        max-width: 100%;
+        height: 250px;
     }
 }

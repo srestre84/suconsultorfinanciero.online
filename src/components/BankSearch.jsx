@@ -38,7 +38,7 @@ const BankSearch = () => {
                         </div>
                     </div>
                     <div className="bank-search-image">
-                        <img src="/bank-search.png" alt="Búsqueda de banco para vivienda" />
+                        <img src="/bank-search.jpg" alt="Tu casa propia con la mejor financiación bancaria" loading="lazy" />
                     </div>
                 </div>
             </div>

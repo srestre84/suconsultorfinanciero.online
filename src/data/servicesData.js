@@ -60,6 +60,6 @@ export const servicesData = [
         icon: "🏙️",
         whatsappMessage: "Hola, me interesa que me ayudes a buscar el mejor banco para mi crédito de vivienda.",
         shareMessage: "🏡 *¡Tu Casa Propia es Posible!* | Según tu perfil buscamos el mejor Banco para que por fin tengas tu casa propia. Mira cómo lo logramos aquí:",
-        image: "bank-search.png"
+        image: "bank-search.jpg"
     },
 ];
