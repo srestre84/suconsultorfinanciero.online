@@ -289,6 +289,78 @@ export const notesData = [
             <p>Establezcan una cita mensual para revisar números, celebrar logros de ahorro y planificar los siguientes pasos sin recriminaciones. La claridad en pareja no solo protege la economía del hogar, sino que fortalece la tranquilidad y el bienestar emocional.</p>
         `,
         date: "2026-09-12"
+    },
+    {
+        id: 17,
+        slug: "ray-dalio-ciclos-tasas",
+        title: "Nota Motivacional: La Ley de los Ciclos y las Tasas (Ray Dalio)",
+        subtitle: "Ciclos Económicos y Tasas",
+        quote: "Quien no comprende los ciclos de las tasas de interés está condenado a pagar el precio de las decisiones ajenas. El deudor informado aprovecha los vientos a favor.",
+        author: "Ray Dalio (Selección de Sebastián Restrepo R.)",
+        imageUrl: "/notas/ray-dalio-ciclos-tasas.jpg",
+        excerpt: "Aprende a leer los movimientos del mercado para no endeudarte en picos de tasa y renegociar con fuerza cuando el viento cambia a tu favor.",
+        content: `
+            <p>Ray Dalio, fundador de Bridgewater Associates y autor de <em>Principios para Entender las Grandes Crisis de Deuda</em>, ha demostrado que la economía funciona como una máquina impulsada por ciclos de crédito repetitivos.</p>
+            <h3>El ciclo expansivo y contractivo</h3>
+            <p>Cuando las tasas de interés están en sus máximos, el crédito se encarece y la economía se enfría. Pero cuando la inflación cede y los bancos centrales inician el ciclo de recortes, se abre una ventana estratégica donde los deudores inteligentes sustituyen pasivos caros por créditos de tasa baja.</p>
+            <h3>Anticiparse es ganar dinero</h3>
+            <p>No esperes a que el banco te llame para bajarte la tasa por cortesía. Cuando las tasas del mercado bajen, toma la iniciativa con tu consultor financiero para solicitar compra de cartera o renegociación antes de seguir pagando cuotas sobrevaloradas.</p>
+        `,
+        date: "2026-09-25"
+    },
+    {
+        id: 18,
+        slug: "naval-ravikant-paciencia",
+        title: "Nota Motivacional: El Costo Oculto de la Prisa Financiera (Naval Ravikant)",
+        subtitle: "Paciencia y Tiempo",
+        quote: "La paciencia y el interés compuesto son los verdaderos constructores de imperios. Si buscas hacerte rico en un año, lo arriesgarás todo; si estás dispuesto a tardar diez, serás libre para siempre.",
+        author: "Naval Ravikant (Selección de Sebastián Restrepo R.)",
+        imageUrl: "/notas/naval-ravikant-paciencia.jpg",
+        excerpt: "La ansiedad es el impuesto más caro de las finanzas personales. Descubre la ventaja competitiva de pensar a largo plazo mientras los demás se desesperan.",
+        content: `
+            <p>Naval Ravikant, uno de los pensadores modernos y tecnólogos más lúcidos de Silicon Valley, sostiene que <strong>todas las grandes ganancias de la vida provienen del interés compuesto en relaciones, conocimiento y capital</strong>.</p>
+            <h3>El riesgo de los atajos financieros</h3>
+            <p>La prisa por aparentar éxito económico antes de tiempo empuja a miles de personas a endeudarse con tarjetas de crédito en viajes o artículos de lujo que no pueden pagar en efectivo. Ese espejismo hipoteca la libertad de los siguientes cinco años de trabajo.</p>
+            <h3>La recompensa de la constancia</h3>
+            <p>Construir patrimonio a través de cuotas iniciales ordenadas, amortización de hipotecas e inversión en activos sólidos parece lento al principio, pero a la vuelta de 7 a 10 años produce una fortaleza financiera indestructible.</p>
+        `,
+        date: "2026-10-01"
+    },
+    {
+        id: 19,
+        slug: "negociar-banco-estrategia",
+        title: "Nota Motivacional: Negociar con el Banco es un Derecho, No un Favor",
+        subtitle: "Poder de Negociación Crediticia",
+        quote: "El banco es un proveedor comercial, no una autoridad incuestionable. Si eres un cliente puntual, tu historial es la moneda más valiosa para exigir mejores tasas.",
+        author: "Sebastián Restrepo R.",
+        imageUrl: "/notas/negociar-banco-estrategia.jpg",
+        excerpt: "Los bancos compiten por los buenos deudores. Aprende a usar tu score crediticio y tu fidelidad como apalancamiento para pagar menos intereses cada mes.",
+        content: `
+            <p>Muchos usuarios financieros asumen una postura pasiva ante sus entidades bancarias, aceptando incrementos de cuotas, seguros inflados y tasas poco competitivas por temor a que les "nieguen" futuros servicios.</p>
+            <h3>La realidad del negocio bancario</h3>
+            <p>Para un banco, un cliente con excelente score crediticio, ingresos demostrables y hábito de pago intachable es su activo más valioso. Si ese cliente amenaza con trasladar su hipoteca o crédito de consumo a otra entidad, el área de retención tiene facultades para bajar la tasa de interés de forma sustancial.</p>
+            <h3>Tu historial crediticio tiene valor real</h3>
+            <p>Pagar a tiempo en Datacrédito no es solo un deber moral; es tu mayor carta de negociación financiera. Haz valer tu récord crediticio y exige las condiciones que realmente mereces.</p>
+        `,
+        date: "2026-10-05"
+    },
+    {
+        id: 20,
+        slug: "seneca-serenidad-dinero",
+        title: "Nota Motivacional: La Verdadera Riqueza es la Serenidad (Séneca)",
+        subtitle: "Serenidad y Filosofía del Dinero",
+        quote: "No es pobre el que tiene poco, sino el que codicia más de lo que puede sostener. La verdadera solvencia es la paz mental ante la abundancia y la austeridad.",
+        author: "Séneca (Selección de Sebastián Restrepo R.)",
+        imageUrl: "/notas/seneca-serenidad-dinero.jpg",
+        excerpt: "La paz mental no proviene de gastar más para impresionar, sino de dominar tus deseos y blindar la tranquilidad de tu hogar.",
+        content: `
+            <p>Hace más de dos mil años, el filósofo estoico Lucio Anneo Séneca escribió reflexiones sobre el dinero que cobran más vigencia que nunca en la era del consumo digital inmediato.</p>
+            <h3>El agotamiento de la carrera del estatus</h3>
+            <p>Correr tras un estilo de vida que exige endeudarse mes a mes para mantener apariencias sociales es una servidumbre voluntaria. La persona que necesita demostrar éxito constante vive en un estado de vulnerabilidad permanente ante cualquier imprevisto.</p>
+            <h3>La libertad como fin supremo</h3>
+            <p>Cuando tus gastos mensuales son inferiores a tus ingresos, cuando no tienes acreedores llamando a tu puerta y cuando posees un fondo de emergencia para proteger a los tuyos, posees una riqueza que ningún balance bancario superficial puede igualar: serenidad de espíritu.</p>
+        `,
+        date: "2026-10-10"
     }
 ];
 
