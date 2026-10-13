@@ -936,39 +936,33 @@ export const blogData = [
     },
     {
         id: 40,
-        slug: "concurrencia-subsidios-mi-casa-ya-cajas-compensacion",
-        relatedService: "busqueda-banco-vivienda",
-        title: "Concurrencia de Subsidios en Colombia: Cómo Unir Mi Casa Ya y tu Caja de Compensación para Sumar hasta 50 SMLMV",
-        excerpt: "Descubre la figura legal que permite sumar el subsidio de Comfama, Comfenalco o Compensar con Mi Casa Ya del Gobierno, acumulando una ayuda millonaria para tu cuota inicial.",
+        slug: "credito-construccion-vivienda-lote-propio-colombia",
+        relatedService: "construccion",
+        title: "Crédito de Construcción en Lote Propio: Cómo Financiar tu Casa Campestre o Urbana Paso a Paso",
+        excerpt: "Conoce los requisitos, el esquema de desembolsos por avance de obra y cómo los bancos financian hasta el 70% del lote y la construcción en Colombia.",
         content: `
-            <p>Uno de los mayores alivios para las familias colombianas que sueñan con vivienda propia es la <strong>Concurrencia de Subsidios</strong> (amparada bajo el Decreto 1533 de 2019). Esta figura permite a los hogares con menores ingresos sumar dos ayudas estatales simultáneas para pagar la cuota inicial de una vivienda de interés social (VIS).</p>
+            <p>Comprar una casa ya construida no es la única vía para tener vivienda propia. Cada vez más colombianos eligen adquirir un lote —especialmente en zonas campestres de alta valorización como el Oriente Antioqueño, la Sabana o el Eje Cafetero— y construir la casa a su medida. Lo que muchos desconocen es que el sistema financiero cuenta con líneas especializadas de <strong>Crédito de Construcción Individual o Autoconstrucción</strong>.</p>
 
-            <h3>1. ¿Quiénes pueden acceder a la concurrencia?</h3>
-            <p>Para aplicar a la concurrencia de subsidios, el hogar debe cumplir con condiciones puntuales:</p>
+            <h3>1. ¿Cómo funciona el Crédito de Construcción?</h3>
+            <p>A diferencia de un crédito hipotecario tradicional donde el banco entrega el 100% de los recursos en un solo desembolso al vendedor, en la autoconstrucción el dinero se gira en <strong>desembolsos parciales contra actas de avance de obra</strong>:</p>
             <ul>
-                <li><strong>Tope de ingresos:</strong> Ingresos familiares totales que no superen los <strong>2 Salarios Mínimos Mensuales Legales Vigentes (SMLMV)</strong>.</li>
-                <li><strong>No ser propietarios:</strong> Ninguno de los miembros del hogar puede figurar con propiedad raíz en el territorio nacional.</li>
-                <li><strong>No haber sido beneficiario previo:</strong> No haber recibido subsidios de vivienda del Gobierno Nacional ni de Cajas de Compensación con anterioridad.</li>
-                <li><strong>Estar afiliado a Caja de Compensación:</strong> Ser empleado o independiente afiliado que cotice activamente a una caja como Comfama, Comfenalco, Compensar, Colsubsidio, etc.</li>
+                <li><strong>Financiación de Lote + Obra:</strong> Algunas entidades permiten financiar tanto la compra del terreno como el presupuesto de edificación, cubriendo generalmente hasta el 70% del valor total del proyecto.</li>
+                <li><strong>Construcción sobre Lote Propio:</strong> Si ya eres dueño del lote (libre de gravámenes o embargos), el terreno sirve como garantía hipotecaria inicial para financiar hasta el 70% u 80% de los costos directos de la construcción.</li>
             </ul>
 
-            <h3>2. ¿Cuánto dinero puedes recibir en total?</h3>
-            <p>Al unificar ambos programas, el aporte para la cuota inicial alcanza cifras históricas:</p>
-            <ul>
-                <li><strong>Subsidio de Caja de Compensación Familiar:</strong> Hasta 30 SMLMV para hogares con ingresos de hasta 2 salarios mínimos.</li>
-                <li><strong>Subsidio Mi Casa Ya (Gobierno Nacional):</strong> Hasta 20 SMLMV adicionales según la clasificación del Sisbén IV (grupos A1 a C8).</li>
-                <li><strong>Total acumulado:</strong> ¡Hasta <strong>50 SMLMV</strong> de subsidio directo no reembolsable a la cuota inicial!</li>
-            </ul>
-
-            <h3>3. La ruta correcta de postulación (El orden sí importa)</h3>
-            <p>El error más recurrente es intentar pedir Mi Casa Ya primero. La ruta obligatoria exige:</p>
+            <h3>2. Requisitos indispensables para la aprobación bancaria</h3>
+            <p>Para que el comité de crédito del banco apruebe esta modalidad, se deben presentar documentos técnicos rigurosos adicionales a la capacidad de pago:</p>
             <ol>
-                <li>Postularse y obtener la <strong>carta de asignación del subsidio en tu Caja de Compensación</strong>.</li>
-                <li>Acercarte a la entidad financiera o a tu consultor financiero para solicitar el crédito hipotecario o leasing habitacional.</li>
-                <li>La entidad bancaria postula tu crédito al programa Mi Casa Ya en la plataforma del Ministerio de Vivienda, adjuntando la resolución de la caja para activar la concurrencia.</li>
+                <li><strong>Licencia de Construcción vigente:</strong> Expedida por la curaduría urbana o la oficina de planeación municipal correspondiente.</li>
+                <li><strong>Planos arquitectónicos y estructurales aprobados:</strong> Con el visto bueno de ingenieros y arquitectos matriculados.</li>
+                <li><strong>Presupuesto detallado y cronograma de obra:</strong> Flujo estimado de inversión dividido por capítulos (cimentación, estructura, mampostería, acabados).</li>
+                <li><strong>Contrato de obra o interventoría:</strong> Garantía de que un profesional o constructora formalmente constituida liderará el desarrollo.</li>
             </ol>
 
-            <p>Complementariamente, el crédito aprobado goza del beneficio a la tasa de interés (cobertura FRECH), lo que reduce la cuota mensual durante los primeros 7 años del crédito.</p>
+            <h3>3. La mecánica de desembolsos y peritajes</h3>
+            <p>A medida que la obra avanza, un perito avaluador autorizado por el banco visita el terreno para certificar el porcentaje completado. Al cumplir cada hito (por ejemplo, 30% cimentación y estructura, 60% obra gris, 100% acabados y habitabilidad), la entidad gira el tramo correspondiente de capital.</p>
+
+            <p>Con una adecuada planeación financiera y el acompañamiento experto de tu consultor, construir tu propia casa te permite valorizar tu inversión desde el primer ladrillo y diseñar un hogar adaptado exactamente a las necesidades de tu familia.</p>
         `,
         date: "2026-10-06",
         author: "Sebastián - Consultor",
