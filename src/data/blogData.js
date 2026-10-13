@@ -936,109 +936,101 @@ export const blogData = [
     },
     {
         id: 40,
-        slug: "compra-cartera-estrategia-baja-tasas-2026",
-        relatedService: "compra-cartera",
-        title: "Compra de Cartera Inteligente: Cómo Pasar de Deudas Caras al 22% a Tasas de Consolidación Preferenciales",
-        excerpt: "Guía paso a paso para unificar créditos de libre inversión, tarjetas de crédito y préstamos rotativos, liberando flujo de caja sin caer en la trampa de alargar el plazo innecesariamente.",
+        slug: "concurrencia-subsidios-mi-casa-ya-cajas-compensacion",
+        relatedService: "busqueda-banco-vivienda",
+        title: "Concurrencia de Subsidios en Colombia: Cómo Unir Mi Casa Ya y tu Caja de Compensación para Sumar hasta 50 SMLMV",
+        excerpt: "Descubre la figura legal que permite sumar el subsidio de Comfama, Comfenalco o Compensar con Mi Casa Ya del Gobierno, acumulando una ayuda millonaria para tu cuota inicial.",
         content: `
-            <p>Uno de los errores más costosos en la gestión financiera familiar es la dispersión de deudas: tener una tarjeta de crédito cobrando intereses al límite de usura, un crédito rotativo en otro banco y un crédito de vehículo con cuota pesada. La <strong>Compra de Cartera</strong> es la herramienta financiera por excelencia para unificar pasivos bajo una sola cuota y a una fracción del costo original.</p>
+            <p>Uno de los mayores alivios para las familias colombianas que sueñan con vivienda propia es la <strong>Concurrencia de Subsidios</strong> (amparada bajo el Decreto 1533 de 2019). Esta figura permite a los hogares con menores ingresos sumar dos ayudas estatales simultáneas para pagar la cuota inicial de una vivienda de interés social (VIS).</p>
 
-            <h3>1. El Costo Financiero Total (CFT): Más allá de la tasa nominal</h3>
-            <p>Al evaluar una compra de cartera no solo debes mirar la tasa de interés ofrecida, sino el Costo Financiero Total, que incluye seguros de vida deudores, cuotas de manejo y comisiones operativas. Muchas veces un banco ofrece una tasa atractiva pero cobra seguros inflados que anulan el beneficio real.</p>
-
-            <h3>2. Alivio de flujo de caja vs. Liquidación acelerada</h3>
-            <p>Al consolidar tus deudas existen dos caminos estratégicos según tu situación particular:</p>
+            <h3>1. ¿Quiénes pueden acceder a la concurrencia?</h3>
+            <p>Para aplicar a la concurrencia de subsidios, el hogar debe cumplir con condiciones puntuales:</p>
             <ul>
-                <li><strong>Estrategia de Oxigenación (Reducción de cuota):</strong> Si tu flujo de caja mensual está asfixiado, unificar tus deudas te permite reducir tu pago mensual hasta en un 40%, liberando liquidez inmediata para tu tranquilidad y ahorro de emergencia.</li>
-                <li><strong>Estrategia de Aceleración (Mismo pago, menor tiempo):</strong> Si puedes mantener el monto mensual que venías pagando, canalizas el ahorro de tasa directamente a amortizar capital, liquidando una deuda de 5 años en menos de 2.5 años.</li>
+                <li><strong>Tope de ingresos:</strong> Ingresos familiares totales que no superen los <strong>2 Salarios Mínimos Mensuales Legales Vigentes (SMLMV)</strong>.</li>
+                <li><strong>No ser propietarios:</strong> Ninguno de los miembros del hogar puede figurar con propiedad raíz en el territorio nacional.</li>
+                <li><strong>No haber sido beneficiario previo:</strong> No haber recibido subsidios de vivienda del Gobierno Nacional ni de Cajas de Compensación con anterioridad.</li>
+                <li><strong>Estar afiliado a Caja de Compensación:</strong> Ser empleado o independiente afiliado que cotice activamente a una caja como Comfama, Comfenalco, Compensar, Colsubsidio, etc.</li>
             </ul>
 
-            <h3>3. Claves para que los bancos te aprueben compra de cartera inmediata</h3>
-            <p>Los bancos premian a los clientes que nunca han entrado en mora pero que tienen un alto uso de cupos. Si tu score en Datacrédito y TransUnion está al día, las entidades financieras competirán activamente por comprar tu deuda con tasas preferenciales exclusivas.</p>
+            <h3>2. ¿Cuánto dinero puedes recibir en total?</h3>
+            <p>Al unificar ambos programas, el aporte para la cuota inicial alcanza cifras históricas:</p>
+            <ul>
+                <li><strong>Subsidio de Caja de Compensación Familiar:</strong> Hasta 30 SMLMV para hogares con ingresos de hasta 2 salarios mínimos.</li>
+                <li><strong>Subsidio Mi Casa Ya (Gobierno Nacional):</strong> Hasta 20 SMLMV adicionales según la clasificación del Sisbén IV (grupos A1 a C8).</li>
+                <li><strong>Total acumulado:</strong> ¡Hasta <strong>50 SMLMV</strong> de subsidio directo no reembolsable a la cuota inicial!</li>
+            </ul>
+
+            <h3>3. La ruta correcta de postulación (El orden sí importa)</h3>
+            <p>El error más recurrente es intentar pedir Mi Casa Ya primero. La ruta obligatoria exige:</p>
+            <ol>
+                <li>Postularse y obtener la <strong>carta de asignación del subsidio en tu Caja de Compensación</strong>.</li>
+                <li>Acercarte a la entidad financiera o a tu consultor financiero para solicitar el crédito hipotecario o leasing habitacional.</li>
+                <li>La entidad bancaria postula tu crédito al programa Mi Casa Ya en la plataforma del Ministerio de Vivienda, adjuntando la resolución de la caja para activar la concurrencia.</li>
+            </ol>
+
+            <p>Complementariamente, el crédito aprobado goza del beneficio a la tasa de interés (cobertura FRECH), lo que reduce la cuota mensual durante los primeros 7 años del crédito.</p>
         `,
         date: "2026-10-06",
-        author: "Sebastián - Consultor",
-        imageUrl: "/blog_compra_cartera_inteligente_2026.jpg"
-    },
-    {
-        id: 41,
-        slug: "leasing-habitacional-vs-credito-hipotecario-2026",
-        relatedService: "hipotecario",
-        title: "Leasing Habitacional vs. Crédito Hipotecario en 2026: Cuál Elegir Según tus Metas y Situación Tributaria",
-        excerpt: "Compara porcentaje de financiación, titularidad del inmueble, beneficios tributarios en retención en la fuente y protección patrimonial entre leasing y crédito tradicional.",
-        content: `
-            <p>A la hora de comprar vivienda en Colombia, una de las dudas más frecuentes entre compradores e inversionistas es: <strong>¿Me conviene más un Crédito Hipotecario tradicional o un Leasing Habitacional?</strong> Ambas figuras tienen propósitos y ventajas completamente distintas que dependen de tus ingresos, tu patrimonio y tu régimen tributario.</p>
-
-            <h3>1. Comparativo Técnico de Estructuración</h3>
-            <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0;">
-                <thead>
-                    <tr style="background: rgba(0,43,91,0.06); text-align: left;">
-                        <th style="padding: 10px; border-bottom: 2px solid var(--azul-oscuro);">Característica</th>
-                        <th style="padding: 10px; border-bottom: 2px solid var(--azul-oscuro);">Crédito Hipotecario</th>
-                        <th style="padding: 10px; border-bottom: 2px solid var(--azul-oscuro);">Leasing Habitacional</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Financiación Máxima</strong></td>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">Hasta el 70% del avalúo (No VIS)</td>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">Hasta el 80% o incluso 85%</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Titularidad</strong></td>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">A tu nombre desde el primer día con hipoteca</td>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">A nombre del banco hasta ejercer la opción de compra</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Impacto en Patrimonio</strong></td>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">Suma al patrimonio bruto en renta</td>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">No suma al patrimonio bruto (ideal para no inflar topes)</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Gastos de Cesión</strong></td>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">Requiere escrituración completa</td>
-                        <td style="padding: 10px; border-bottom: 1px solid #ddd;">Cesión del contrato ágil y económica</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3>2. ¿Cuándo elegir Leasing Habitacional?</h3>
-            <p>Es la alternativa predilecta para profesionales y empresarios con ingresos medios-altos que desean:</p>
-            <ul>
-                <li>Aportar una menor cuota inicial (solo el 15% o 20%).</li>
-                <li>Deducir intereses y canon en la cédula general de renta para mitigar la retención en la fuente.</li>
-                <li>Inversionistas que buscan vender o ceder el contrato del inmueble sin asumir los altos costos de una doble escrituración y registro.</li>
-            </ul>
-
-            <h3>3. ¿Cuándo elegir Crédito Hipotecario?</h3>
-            <p>Es idóneo para familias que priorizan la propiedad jurídica inmediata en el certificado de tradición y libertad, que cuentan con el 30% de cuota inicial y que prefieren no tener una opción de compra pendiente al final del plazo.</p>
-        `,
-        date: "2026-10-09",
         author: "Sebastián - Consultor",
         imageUrl: "/blog_leasing_vs_hipotecario_2026.jpg"
     },
     {
-        id: 42,
-        slug: "credito-para-independientes-requisitos-bancos-colombia",
-        relatedService: "libre-inversion",
-        title: "Créditos para Independientes en Colombia: La Guía para Lograr Aprobación Bancaria sin Rechazos",
-        excerpt: "Aprende cómo estructurar tus extractos bancarios, declaración de renta y planilla PILA para superar los filtros de riesgo de los bancos y acceder a montos altos de financiación.",
+        id: 41,
+        slug: "endoso-seguros-credito-hipotecario-ahorro-cuota",
+        relatedService: "hipotecario",
+        title: "El Secreto del Endoso de Seguros en Créditos Hipotecarios: Cómo Ahorrar hasta el 60% en tu Cuota Mensual",
+        excerpt: "Conoce tu derecho legal a contratar pólizas de vida e incendio con aseguradoras externas y endosarlas a tu banco, eliminando los sobrecostos de las pólizas colectivas.",
         content: `
-            <p>En Colombia, más del 48% de la fuerza productiva genera ingresos como trabajador independiente, consultor, comerciante o socio de empresa. Sin embargo, este es el segmento que más tropieza al momento de solicitar créditos de vivienda o libre inversión, no por falta de capacidad de pago, sino por <strong>fallas en la sustentación documental</strong> ante las áreas de riesgo bancario.</p>
+            <p>Cuando pagas la cuota mensual de tu crédito de vivienda o leasing habitacional, una porción considerable de tu dinero no va ni a capital ni a intereses, sino al pago de <strong>seguros obligatorios</strong>: el seguro de vida deudores y el seguro de todo riesgo (incendio y terremoto). Lo que la gran mayoría de colombianos ignora es que <strong>no estás obligado a pagar los seguros que el banco te impone</strong>.</p>
 
-            <h3>1. Los tres pilares que evalúa el analista de riesgos</h3>
-            <p>A diferencia de un empleado con carta laboral y desprendibles fijos, a un independiente se le evalúa la consistencia de su negocio:</p>
+            <h3>1. El sobrecosto de las pólizas colectivas bancarias</h3>
+            <p>Los bancos contratan pólizas colectivas que suelen tener primas elevadas y comisiones de intermediación que encarecen el extracto mes a mes. En un crédito de $350.000.000 COP, los seguros del banco pueden costar entre $180.000 y $260.000 COP mensuales. En 20 años de crédito, esto equivale a más de $50.000.000 COP en primas.</p>
+
+            <h3>2. La figura del Endoso: Tu derecho por Ley</h3>
+            <p>De acuerdo con la Circular Básica Jurídica de la <strong>Superintendencia Financiera de Colombia</strong> y el Estatuto Orgánico del Sistema Financiero, todo deudor tiene derecho a:</p>
             <ul>
-                <li><strong>Extractos bancarios de los últimos 6 meses:</strong> El banco no mira solo el total de depósitos; analiza el promedio de saldo diario, la rotación de fondos y que no existan sobregiros ni cheques devueltos.</li>
-                <li><strong>Declaración de Renta:</strong> Debe ser coherente con el estilo de vida crediticio. Declarar ingresos mínimos para pagar menos impuestos puede ser letal al solicitar un crédito hipotecario de $400 millones.</li>
-                <li><strong>Aportes a Seguridad Social (PILA):</strong> Los bancos exigen coherencia entre el Ingreso Base de Cotización (IBC) en salud y pensión y los ingresos reportados para certificar formalidad.</li>
+                <li>Contratar una póliza individual de vida y daños con la aseguradora de su preferencia (como Seguros Sura, Allianz, Seguros Bolívar, Liberty, Mapfre, etc.).</li>
+                <li>Solicitar el <strong>endoso de la póliza</strong> a favor del banco acreedor como primer beneficiario a título oneroso.</li>
+                <li>El banco está en la <strong>obligación legal de aceptar el endoso</strong> siempre y cuando la póliza externa iguale o supere las coberturas mínimas requeridas.</li>
             </ul>
 
-            <h3>2. Los errores más comunes que causan rechazo inmediato</h3>
-            <p>Mezclar cuentas personales con las del negocio, transferir fondos entre cuentas propias para "inflar movimientos" (técnica fácilmente detectada por los algoritmos bancarios) o depender exclusivamente de ingresos en efectivo sin bancarizar son las causas del 80% de las negaciones.</p>
+            <h3>3. ¿Cuánto dinero puedes ahorrar realmente?</h3>
+            <p>Al cotizar una póliza individual externa con base en tu edad y estado de salud real, el costo mensual de los seguros puede descender de $220.000 COP a tan solo $85.000 COP mensuales. Ese ahorro de $135.000 COP cada mes, si se destina como abono extraordinario a capital, acorta tu crédito hipotecario en casi 3 años.</p>
 
-            <h3>3. La consultoría financiera como puente de éxito</h3>
-            <p>Antes de radicar tu solicitud y quemar una consulta en Datacrédito, en nuestra consultoría estructuramos tu carpeta crediticia, calculamos tu índice de cobertura de deuda y te presentamos únicamente ante las entidades bancarias cuyas políticas son más flexibles y receptivas con el perfil independiente.</p>
+            <p>En nuestra consultoría financiera te ayudamos a tramitar el endoso de tus seguros ante tu entidad bancaria sin fricciones ni dilataciones innecesarias.</p>
+        `,
+        date: "2026-10-09",
+        author: "Sebastián - Consultor",
+        imageUrl: "/blog_compra_cartera_inteligente_2026.jpg"
+    },
+    {
+        id: 42,
+        slug: "ganancia-ocasional-venta-inmuebles-exenciones-colombia",
+        relatedService: "libre-inversion",
+        title: "Venta de Inmuebles e Impuestos en Colombia: Cómo Eximir Legalmente la Ganancia Ocasional en 2026",
+        excerpt: "Aprende cómo opera el impuesto del 15% de ganancia ocasional al vender tu casa o lote y las exenciones tributarias de hasta 5.000 UVT que puedes aplicar ante la DIAN.",
+        content: `
+            <p>Vender una propiedad raíz es uno de los momentos más gratificantes para cualquier familia o inversionista inmobiliario. Sin embargo, al momento de escriturar y declarar renta ante la DIAN, muchos propietarios se llevan una desagradable sorpresa al enterarse de que deben pagar el <strong>impuesto de Ganancia Ocasional (tarifa del 15%)</strong> sobre la utilidad obtenida.</p>
+
+            <h3>1. ¿Cuándo se genera la Ganancia Ocasional?</h3>
+            <p>Para efectos tributarios en Colombia:</p>
+            <ul>
+                <li>Si vendes un inmueble que poseíste por <strong>menos de 2 años</strong>, la ganancia se considera renta líquida ordinaria y se grava a las tarifas progresivas generales (hasta el 39%).</li>
+                <li>Si el inmueble estuvo en tu patrimonio durante <strong>2 años o más</strong>, la utilidad se clasifica como <em>Ganancia Ocasional</em> gravada a la tarifa fija del <strong>15%</strong>.</li>
+            </ul>
+
+            <h3>2. La Exención de Oro: Las primeras 5.000 UVT exentas</h3>
+            <p>El Artículo 311-1 del Estatuto Tributario contempla un beneficio extraordinario para los propietarios de <strong>vivienda de habitación</strong>: están exentas del impuesto las primeras <strong>5.000 UVT</strong> de la ganancia ocasional obtenida en la venta de la casa o apartamento donde habitaba el contribuyente.</p>
+            <p>Para acceder legalmente a esta exención se deben cumplir dos condiciones indispensables:</p>
+            <ol>
+                <li>Que el total del dinero obtenido por la venta sea consignado en una <strong>Cuenta AFC (Ahorro para el Fomento de la Construcción)</strong> a nombre del vendedor.</li>
+                <li>O bien, que los recursos se destinen íntegramente a la <strong>adquisición de otra vivienda de habitación</strong> dentro del plazo establecido por la ley.</li>
+            </ol>
+
+            <h3>3. La importancia del costo fiscal en la escritura</h3>
+            <p>Muchas personas cometen el error de escriturar sus inmuebles por el valor catastral mínimo para "ahorrar" en derechos notariales y registro. Esta práctica genera una brecha gigantesca entre el costo fiscal registrado y el valor real de venta, inflando artificialmente la utilidad y multiplicando el impuesto de ganancia ocasional a pagar.</p>
+
+            <p>Una planeación financiera y tributaria previa a la venta de tu inmueble protege tu patrimonio y te permite reinvertir tus ganancias en nuevos proyectos de valorización.</p>
         `,
         date: "2026-10-12",
         author: "Sebastián - Consultor",
