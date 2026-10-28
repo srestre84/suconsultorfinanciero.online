@@ -361,7 +361,77 @@ export const notesData = [
             <p>Cuando tus gastos mensuales son inferiores a tus ingresos, cuando no tienes acreedores llamando a tu puerta y cuando posees un fondo de emergencia para proteger a los tuyos, posees una riqueza que ningún balance bancario superficial puede igualar: serenidad de espíritu.</p>
         `,
         date: "2026-10-10"
+    },
+    {
+        id: 21,
+        slug: "nassim-taleb-antifragilidad",
+        title: "Nota Motivacional: Construye Finanzas Antifrágiles (Nassim Taleb)",
+        subtitle: "Resiliencia y Protección Total",
+        quote: "El verdadero éxito financiero no es rezar para que no haya tormentas, sino diseñar tu economía de tal forma que te fortalezcas cuando la tormenta golpea.",
+        author: "Nassim Nicholas Taleb (Selección de Sebastián Restrepo R.)",
+        imageUrl: "/notas/nassim-taleb-antifragilidad.jpg",
+        excerpt: "Aprende a transformar la incertidumbre económica en una ventaja. Descubre por qué la liquidez y la diversificación te hacen inmune a las crisis.",
+        content: `
+            <p>En su obra cumbre <em>Antifrágil: Las cosas que se benefician del desorden</em>, el ensayista y matemático Nassim Nicholas Taleb explica que existen tres tipos de estructuras: lo frágil (que se rompe ante el impacto), lo robusto (que resiste pero queda igual) y lo <strong>antifrágil</strong> (que aprende, se adapta y sale fortalecido del caos).</p>
+            <h3>La fragilidad de vivir al límite</h3>
+            <p>Una familia o profesional que compromete el 95% de sus ingresos mensuales en gastos fijos y cuotas de deuda es profundamente frágil. Cualquier variación inesperada —un retraso en pagos, una avería vehicular o una emergencia de salud— desencadena una crisis de liquidez y obliga a tomar créditos costosos.</p>
+            <h3>El poder de la opcionalidad y la liquidez</h3>
+            <p>Tener un fondo de emergencia sólido y deudas controladas te da <em>opcionalidad</em>: cuando los mercados caen, cuando bajan las tasas o cuando surge una oportunidad inmobiliaria única, tú tienes el oxígeno y la solvencia para negociar desde una posición de máximo poder.</p>
+        `,
+        date: "2026-10-18"
+    },
+    {
+        id: 22,
+        slug: "john-bogle-paciencia-constancia",
+        title: "Nota Motivacional: La Paciencia Supera a la Especulación (John C. Bogle)",
+        subtitle: "Sencillez y Consistencia a Largo Plazo",
+        quote: "El mayor enemigo de un buen plan financiero es soñar con un plan perfecto. La constancia aburrida siempre supera a la brillantez improvisada.",
+        author: "John C. Bogle (Selección de Sebastián Restrepo R.)",
+        imageUrl: "/notas/john-bogle-paciencia-constancia.jpg",
+        excerpt: "Frente a las modas de dinero fácil y esquemas especulativos, la riqueza real se consolida con ahorro constante, bajas comisiones y tiempo a favor.",
+        content: `
+            <p>John C. Bogle, legendario fundador de The Vanguard Group y creador del primer fondo indexado para personas comunes, revolucionó el mundo financiero demostrando una verdad incómoda: <strong>el éxito financiero no requiere complejidad excesiva, sino disciplina inquebrantable</strong>.</p>
+            <h3>La trampa de querer ganar rápido</h3>
+            <p>La búsqueda constante de 'el negocio del siglo' o inversiones milagrosas suele terminar en comisiones abusivas, deudas mal planificadas y pérdida de capital. Los atajos financieros casi siempre terminan siendo el camino más largo hacia la frustración.</p>
+            <h3>La magia del progreso constante</h3>
+            <p>Ahorrar religiosamente el 10% o 20% de lo que ganas, pagar a tiempo tus obligaciones y amortizar capital en tus créditos hipotecarios puede parecer 'aburrido' en el día a día. Sin embargo, al cabo de los años, ese hábito construye una tranquilidad patrimonial que nadie te podrá arrebatar.</p>
+        `,
+        date: "2026-10-21"
+    },
+    {
+        id: 23,
+        slug: "marco-aurelio-validacion-social",
+        title: "Nota Motivacional: No Compres Admiración Ajena (Marco Aurelio)",
+        subtitle: "Autocontrol y Prioridades Reales",
+        quote: "Cuánto dinero y tranquilidad ganamos en el instante exacto en que dejamos de preocuparnos por lo que los demás piensan de nuestro estilo de vida.",
+        author: "Marco Aurelio (Selección de Sebastián Restrepo R.)",
+        imageUrl: "/notas/marco-aurelio-validacion-social.jpg",
+        excerpt: "Desactivar la necesidad de impresionar al entorno es la mayor reducción de gastos que jamás experimentarás en tu vida financiera.",
+        content: `
+            <p>Marco Aurelio, emperador de Roma y filósofo de la corriente estoica, gobernó el imperio más poderoso del mundo antiguo recordando diariamente en sus <em>Meditaciones</em> el peligro de atar la propia valía al juicio de los demás.</p>
+            <h3>El costo invisible de la comparación</h3>
+            <p>Una enorme porción de las deudas en tarjetas de crédito y créditos de consumo se originan en el deseo silencioso de proyectar un estatus que aún no se posee. Cambiar de vehículo prematuramente o comprar lujos a cuotas no compra respeto verdadero; solo compra intereses bancarios a largo plazo.</p>
+            <h3>La verdadera distinción: Paz mental</h3>
+            <p>No hay mayor elegancia que dormir con la conciencia tranquila sabiendo que tu hogar está blindado, que tus cuentas están al día y que tus decisiones de consumo responden a tus valores reales, no a la aprobación de un círculo social efímero.</p>
+        `,
+        date: "2026-10-25"
+    },
+    {
+        id: 24,
+        slug: "sebastian-restrepo-libertad-tiempo",
+        title: "Nota del Consultor: ¿Cuántos Meses de Libertad Tienes?",
+        subtitle: "Tiempo de Vida y Tranquilidad",
+        quote: "Tu riqueza real no se mide por cuánto ganas en un mes de éxito, sino por cuántos meses podrías vivir con total dignidad y paz si hoy decidieras no trabajar.",
+        author: "Sebastián Restrepo R.",
+        imageUrl: "/notas/sebastian-restrepo-libertad-tiempo.jpg",
+        excerpt: "Descubre el concepto del 'Runway' financiero: la métrica definitiva que convierte tus ingresos en tiempo de calidad y soberanía sobre tu vida.",
+        content: `
+            <p>Cuando evaluamos la situación financiera de un cliente en consultoría, solemos hacer una pregunta reveladora: <em>'Si hoy mismo se detuvieran tus ingresos por completo, ¿exactamente cuántos meses podrías mantener el nivel de vida de tu familia?'</em>.</p>
+            <h3>El espejismo del ingreso alto con cero reservas</h3>
+            <p>Alguien que gana $25 millones de pesos al mes pero gasta $24.5 millones tiene exactamente la misma fragilidad que quien gana un salario mínimo y vive al día. Si su flujo se interrumpe, entra en pánico en cuestión de 30 días. El ingreso elevado sin ahorro estructurado es solo una rueda de hámster más veloz.</p>
+            <h3>Construir pista de aterrizaje (Runway)</h3>
+            <p>La verdadera libertad comienza cuando alcanzas 3, 6 y luego 12 meses de gastos cubiertos en reservas líquidas y activos productivos. En ese momento, dejas de aceptar condiciones laborales o comerciales humillantes por necesidad inmediata, y comienzas a tomar decisiones desde la serenidad y la visión estratégica.</p>
+        `,
+        date: "2026-10-28"
     }
 ];
-
-
