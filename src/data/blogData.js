@@ -1106,6 +1106,6 @@ export const blogData = [
         `,
         date: "2026-10-28",
         author: "Sebastián - Consultor",
-        imageUrl: "/blog_guia_comprar_vivienda.jpg"
+        imageUrl: "/blog_arrendar_vs_comprar.jpg"
     }
 ];
