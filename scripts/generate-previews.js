@@ -90,6 +90,16 @@ function generatePage(routePath, title, description, image, url) {
     const imgWidth = dims.width || 1200;
     const imgHeight = dims.height || 630;
 
+    // Verificar peso de la imagen local para previsualizaciones de WhatsApp (< 300 KB)
+    const cleanImgPath = image.replace(/^https?:\/\/[^\/]+/, '').replace(/^\//, '');
+    const localImgPath = path.join(rootDir, 'public', cleanImgPath);
+    if (fs.existsSync(localImgPath)) {
+        const stat = fs.statSync(localImgPath);
+        if (stat.size > 300 * 1024) {
+            console.warn(`⚠️ [ALERTA WHATSAPP] La imagen ${cleanImgPath} pesa ${(stat.size / 1024).toFixed(1)} KB (>300 KB). WhatsApp podría omitir la vista previa.`);
+        }
+    }
+
     let customHtml = indexHtml;
     
     // Reemplazar Meta Tags de Open Graph
@@ -278,9 +288,16 @@ async function start() {
         const title = `${note.title} | Su Consultor Financiero`;
         const description = `"${note.quote}" - Asesoría financiera profesional en Colombia.`;
         const image = note.imageUrl?.startsWith('http') ? note.imageUrl : `https://suconsultorfinanciero.online${note.imageUrl?.startsWith('/') ? note.imageUrl : `/${note.imageUrl}`}`;
-        const url = `https://suconsultorfinanciero.online/notas/${note.slug}`;
+        
+        // Generar versión con ID numérico (compatibilidad)
+        const urlId = `https://suconsultorfinanciero.online/notas/${note.id}`;
+        generatePage(`notas/${note.id}`, title, description, image, urlId);
 
-        generatePage(`notas/${note.slug}`, title, description, image, url);
+        // Generar versión con Slug amigable (SEO)
+        if (note.slug) {
+            const urlSlug = `https://suconsultorfinanciero.online/notas/${note.slug}`;
+            generatePage(`notas/${note.slug}`, title, description, image, urlSlug);
+        }
     }
 
     // --- Generación de sitemap.xml y robots.txt ---
